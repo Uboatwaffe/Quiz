@@ -3,17 +3,18 @@ package org.ui.questions;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 public class QuestionDate implements ActionListener {
 
     String answer;
+    JFrame frame = new JFrame("Quiz");
     JTextField field = new JTextField("11.11.1111", 10);
     public QuestionDate(String quest, String answer){
         this.answer = answer;
 
         // Default settings
-        JFrame frame = new JFrame("Quiz");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(190,170);
         frame.setLayout(null);
 
@@ -43,7 +44,9 @@ public class QuestionDate implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("SUBMIT"))
-            if(field.getText().equals(this.answer))
-                System.exit(0);
+            if(field.getText().equals(this.answer)) {
+                Count.count++;
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
     }
 }

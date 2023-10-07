@@ -4,8 +4,8 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/UI/pom.xml" />
-        <option value="$PROJECT_DIR$/Exceptions/pom.xml" />
         <option value="$PROJECT_DIR$/Backend/pom.xml" />
+        <option value="$PROJECT_DIR$/Exceptions/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

@@ -3,15 +3,16 @@ package org.ui.questions;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 public class QuestionABC implements ActionListener {
+    JFrame frame = new JFrame("Quiz");
     String answer;
     public QuestionABC(String quest, String answer){
         this.answer = answer;
 
         // Default settings
-        JFrame frame = new JFrame("Quiz");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(190,170);
         frame.setLayout(null);
 
@@ -45,7 +46,9 @@ public class QuestionABC implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals(answer))
-            System.exit(0);
+        if (e.getActionCommand().equals(answer)) {
+            Count.count++;
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        }
     }
 }

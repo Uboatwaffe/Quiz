@@ -4,12 +4,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import org.ui.questions.*;
+import org.ui.hq.HQ;
 import org.ui.tutorial.Tutorial;
 import org.connecting.Connect;
 
 public class Main implements ActionListener {
     static Connect connect = new Connect();
+    HQ hq = new HQ();
 
     Main(){
         // Default settings
@@ -59,16 +60,13 @@ public class Main implements ActionListener {
         if(e.getActionCommand().equals("NO")){
             System.exit(0);
         } else if (e.getActionCommand().equals("YES")) {
-            //new QuestionABC("C", "C");
-            //new QuestionDate("11.11.1111", "11.11.1111");
-            //new QuestionOpen("Bydgoszcz", "Bydgoszcz");
+            hq.start();
         } else if (e.getActionCommand().equals("TUTORIAL")) {
             new Tutorial();
         }
     }
 
     public static void main(String[] args) {
-        //SwingUtilities.invokeLater(Main::new);
-        connect.getConnection();
+        SwingUtilities.invokeLater(Main::new);
     }
 }
