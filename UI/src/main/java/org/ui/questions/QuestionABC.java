@@ -1,5 +1,8 @@
 package org.ui.questions;
 
+import org.ui.score.Incorrect;
+import org.ui.score.Score;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,7 +21,7 @@ public class QuestionABC implements ActionListener {
 
         // Labels
         JLabel question = new JLabel(quest);
-        question.setBounds(5, 5, 150, 15);
+        question.setBounds(5, 5, 300, 15);
 
         // Buttons
         JButton a = new JButton("A");
@@ -47,8 +50,9 @@ public class QuestionABC implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals(answer)) {
-            Count.count++;
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        }
+            new Score(++Count.count);
+        }else
+            new Incorrect(answer);
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

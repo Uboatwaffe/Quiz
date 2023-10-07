@@ -5,11 +5,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+import org.ui.score.Incorrect;
+import org.ui.score.Score;
+
+
 public class QuestionDate implements ActionListener {
 
     String answer;
     JFrame frame = new JFrame("Quiz");
-    JTextField field = new JTextField("11.11.1111", 10);
+    JTextField field = new JTextField("01.09.1939", 10);
     public QuestionDate(String quest, String answer){
         this.answer = answer;
 
@@ -43,10 +47,12 @@ public class QuestionDate implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("SUBMIT"))
-            if(field.getText().equals(this.answer)) {
-                Count.count++;
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            }
+        if (e.getActionCommand().equals("SUBMIT")) {
+            if (field.getText().equals(this.answer)) {
+                new Score(++Count.count);
+            }else
+                new Incorrect(answer);
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        }
     }
 }

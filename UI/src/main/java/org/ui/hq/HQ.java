@@ -7,9 +7,11 @@ import org.ui.questions.Count;
 import org.ui.questions.QuestionABC;
 import org.ui.questions.QuestionDate;
 import org.ui.questions.QuestionOpen;
+import org.ui.score.Score;
 
-public class HQ {
+public class HQ extends Thread{
     Connect connect = new Connect();
+
     String type;
     public void start(){
         try {
@@ -27,6 +29,5 @@ public class HQ {
         }catch (SQLException ignored){
 
         }
-        System.out.println(Count.count);
     }
 }
