@@ -57,7 +57,8 @@ public class Main implements ActionListener {
             System.exit(0);
         } else if (e.getActionCommand().equals("YES")) {
             //new QuestionABC("C", "C");
-            new QuestionDate("11.11.1111", "11.11.1111");
+            //new QuestionDate("11.11.1111", "11.11.1111");
+            new QuestionOpen("Bydgoszcz", "Bydgoszcz");
         }
     }
 
