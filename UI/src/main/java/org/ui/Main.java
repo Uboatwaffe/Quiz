@@ -6,8 +6,10 @@ import java.awt.event.ActionListener;
 
 import org.ui.questions.*;
 import org.ui.tutorial.Tutorial;
+import org.backend.Connect;
 
 public class Main implements ActionListener {
+    static Connect connect = new Connect();
 
     Main(){
         // Default settings
@@ -59,13 +61,14 @@ public class Main implements ActionListener {
         } else if (e.getActionCommand().equals("YES")) {
             //new QuestionABC("C", "C");
             //new QuestionDate("11.11.1111", "11.11.1111");
-            new QuestionOpen("Bydgoszcz", "Bydgoszcz");
+            //new QuestionOpen("Bydgoszcz", "Bydgoszcz");
         } else if (e.getActionCommand().equals("TUTORIAL")) {
             new Tutorial();
         }
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Main::new);
+        //SwingUtilities.invokeLater(Main::new);
+        connect.getConnection();
     }
 }
