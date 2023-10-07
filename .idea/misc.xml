@@ -10,6 +10,7 @@
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/Backend/Connecting/pom.xml" />
         <option value="$PROJECT_DIR$/Backend/Connection/pom.xml" />
       </set>
     </option>

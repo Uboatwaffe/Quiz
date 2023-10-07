@@ -7,6 +7,10 @@
     <groupId>org.backend</groupId>
     <artifactId>Backend</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>Connecting</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>20</maven.compiler.source>

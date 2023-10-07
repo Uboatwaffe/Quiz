@@ -1,4 +1,4 @@
-package org.backend;
+package org.connecting;
 
 import java.sql.*;
 

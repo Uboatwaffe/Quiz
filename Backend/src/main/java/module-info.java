@@ -1,4 +1,4 @@
 module Backend {
     requires java.sql;
-    exports org.backend;
+    exports org.connecting;
 }

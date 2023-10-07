@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 import org.ui.questions.*;
 import org.ui.tutorial.Tutorial;
-import org.backend.Connect;
+import org.connecting.Connect;
 
 public class Main implements ActionListener {
     static Connect connect = new Connect();
