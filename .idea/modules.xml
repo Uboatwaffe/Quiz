@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Backend/Backend.iml" filepath="$PROJECT_DIR$/Backend/Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Backend.iml" filepath="$PROJECT_DIR$/Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exceptions.iml" filepath="$PROJECT_DIR$/Exceptions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Quiz.iml" filepath="$PROJECT_DIR$/.idea/Quiz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UI.iml" filepath="$PROJECT_DIR$/UI.iml" />
     </modules>
   </component>
 </project>
