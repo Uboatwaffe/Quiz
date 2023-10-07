@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import org.ui.questions.*;
+import org.ui.tutorial.Tutorial;
 
 public class Main implements ActionListener {
 
@@ -59,6 +60,8 @@ public class Main implements ActionListener {
             //new QuestionABC("C", "C");
             //new QuestionDate("11.11.1111", "11.11.1111");
             new QuestionOpen("Bydgoszcz", "Bydgoszcz");
+        } else if (e.getActionCommand().equals("TUTORIAL")) {
+            new Tutorial();
         }
     }
 
