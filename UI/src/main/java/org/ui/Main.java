@@ -1,9 +1,10 @@
 package org.ui;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import org.ui.questions.QuestionABC;
 
 public class Main implements ActionListener {
 
@@ -55,7 +56,7 @@ public class Main implements ActionListener {
         if(e.getActionCommand().equals("NO")){
             System.exit(0);
         } else if (e.getActionCommand().equals("YES")) {
-
+            new QuestionABC("C", "C");
         }
     }
 
