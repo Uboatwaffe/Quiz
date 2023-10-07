@@ -13,7 +13,7 @@ public class QuestionDate implements ActionListener {
 
     String answer;
     JFrame frame = new JFrame("Quiz");
-    JTextField field = new JTextField("01.09.1939", 100);
+    JTextField field = new JTextField("This is question about date", 100);
     public QuestionDate(String quest, String answer){
         this.answer = answer;
 

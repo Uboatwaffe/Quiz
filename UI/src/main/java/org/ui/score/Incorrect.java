@@ -24,10 +24,10 @@ public class Incorrect implements ActionListener {
         info.setBounds(5, 25, 150, 15);
 
         JLabel score = new JLabel(answer);
-        score.setBounds(130, 25, 150, 15);
+        score.setBounds(130, 25, 400, 15);
 
         JLabel wrong = new JLabel("You inserted: " + wron);
-        wrong.setBounds(5, 45, 150, 15);
+        wrong.setBounds(5, 45, 400, 15);
 
         // Button
         JButton understood = new JButton("UNDERSTOOD");
