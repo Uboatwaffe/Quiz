@@ -8,8 +8,14 @@
         <option value="$PROJECT_DIR$/Exceptions/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/Backend/Connecting/pom.xml" />
+        <option value="$PROJECT_DIR$/Backend/Connection/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_X" default="true" project-jdk-name="20" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

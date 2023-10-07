@@ -1,18 +1,22 @@
 package org.ui.questions;
 
+import org.ui.score.Incorrect;
+import org.ui.score.Score;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 public class QuestionOpen implements ActionListener {
     String answer;
-    JTextField field = new JTextField("Bydgoszcz", 10);
+    JFrame frame = new JFrame("Quiz");
+    JTextField field = new JTextField("NO", 10);
     public QuestionOpen(String quest, String answer){
         this.answer = answer;
 
         // Default settings
-        JFrame frame = new JFrame("Quiz");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(190,170);
         frame.setLayout(null);
 
@@ -41,8 +45,12 @@ public class QuestionOpen implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("SUBMIT"))
-            if(field.getText().equals(this.answer))
-                System.exit(0);
+        if (e.getActionCommand().equals("SUBMIT")) {
+            if (field.getText().equals(answer)) {
+                new Score(++Count.count);
+            }else
+                new Incorrect(answer);
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        }
     }
 }

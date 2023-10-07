@@ -36,7 +36,7 @@ public class Tutorial implements ActionListener {
         // Buttons
         JButton understood = new JButton("UNDERSTOOD");
 
-        understood.setBounds(5, 155, 170, 20);
+        understood.setBounds(5, 155, 170, 50);
 
         understood.addActionListener(this);
 
