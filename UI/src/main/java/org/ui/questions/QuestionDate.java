@@ -4,9 +4,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class QuestionABC implements ActionListener {
+public class QuestionDate implements ActionListener {
+
     String answer;
-    public QuestionABC(String quest, String answer){
+    JTextField field = new JTextField("11.11.1111", 10);
+    public QuestionDate(String quest, String answer){
         this.answer = answer;
 
         // Default settings
@@ -19,25 +21,20 @@ public class QuestionABC implements ActionListener {
         JLabel question = new JLabel(quest);
         question.setBounds(5, 5, 150, 15);
 
-        // Buttons
-        JButton a = new JButton("A");
-        JButton b = new JButton("B");
-        JButton c = new JButton("C");
+        // Button
+        JButton submit = new JButton("SUBMIT");
 
-        a.setBounds(5, 45, 52, 70);
-        b.setBounds(62, 45, 52, 70);
-        c.setBounds(117, 45, 52, 70);
+        submit.setBounds(5, 65, 165, 60);
 
-        a.addActionListener(this);
-        b.addActionListener(this);
-        c.addActionListener(this);
+        submit.addActionListener(this);
 
+        // Text-field
+        field.setBounds(5, 25, 165, 30);
 
         // Adding to the frame
         frame.add(question);
-        frame.add(a);
-        frame.add(b);
-        frame.add(c);
+        frame.add(field);
+        frame.add(submit);
 
         // Setting up the visibility
         frame.setVisible(true);
@@ -45,7 +42,8 @@ public class QuestionABC implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals(answer))
-            System.exit(0);
+        if (e.getActionCommand().equals("SUBMIT"))
+            if(field.getText().equals(this.answer))
+                System.exit(0);
     }
 }
