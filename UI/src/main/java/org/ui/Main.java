@@ -11,7 +11,7 @@ public class Main implements ActionListener {
         // Default settings
         JFrame frame = new JFrame("Quiz");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(190,160);
+        frame.setSize(190,170);
         frame.setLayout(null);
 
         // Labels
@@ -25,10 +25,17 @@ public class Main implements ActionListener {
         JButton yes = new JButton("YES");
         JButton no = new JButton("NO");
         JButton admin = new JButton("ADMIN PANEL");
+        JButton tutorial = new JButton("TUTORIAL");
 
         yes.setBounds(5, 55, 80, 20);
         no.setBounds(90, 55, 80, 20);
-        admin.setBounds(5, 80, 165, 20);
+        tutorial.setBounds(5, 80, 165, 20);
+        admin.setBounds(5, 105, 165, 20);
+
+        yes.addActionListener(this);
+        no.addActionListener(this);
+        tutorial.addActionListener(this);
+        admin.addActionListener(this);
 
 
         // Adding to the frame
@@ -36,6 +43,7 @@ public class Main implements ActionListener {
         frame.add(question);
         frame.add(yes);
         frame.add(no);
+        frame.add(tutorial);
         frame.add(admin);
 
         // Setting up the visibility
@@ -44,7 +52,11 @@ public class Main implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if(e.getActionCommand().equals("NO")){
+            System.exit(0);
+        } else if (e.getActionCommand().equals("YES")) {
 
+        }
     }
 
     public static void main(String[] args) {
