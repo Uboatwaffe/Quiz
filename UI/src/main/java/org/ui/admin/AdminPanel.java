@@ -5,12 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class AdminPanel implements ActionListener {
+class AdminPanel implements ActionListener {
     JFrame frame = new JFrame("Admin Panel");
     Manage manage = new Manage();
     ShowAll showAll = new ShowAll();
 
-    public AdminPanel() {
+    AdminPanel() {
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);

@@ -4,13 +4,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import org.connecting.LoggingIn;
 import org.manage.HowMany;
-import org.ui.admin.AdminPanel;
 import org.ui.hq.HQ;
 import org.ui.questions.Count;
-import org.ui.questions.QuestionTrueOrFalse;
 import org.ui.tutorial.Tutorial;
 import org.connecting.Connect;
+import org.ui.admin.Logging;
 
 public class Main implements ActionListener {
     static Connect connect = new Connect();
@@ -37,7 +37,7 @@ public class Main implements ActionListener {
         question.setBounds(5,30, 170, 15);
 
         // Buttons
-        JButton yes = new JButton("YES");
+        JButton yes = new JButton("START");
         JButton no = new JButton("CLOSE");
         JButton admin = new JButton("ADMIN PANEL");
         JButton tutorial = new JButton("TUTORIAL");
@@ -125,7 +125,7 @@ public class Main implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getActionCommand().equals("CLOSE")){
             System.exit(0);
-        } else if (e.getActionCommand().equals("YES")) {
+        } else if (e.getActionCommand().equals("START")) {
             frame.setVisible(false);
             frame3.setVisible(true);
             frame2.setVisible(false);
@@ -148,7 +148,7 @@ public class Main implements ActionListener {
         } else if (e.getActionCommand().equals("I'M NOT")) {
             System.exit(0);
         } else if (e.getActionCommand().equals("ADMIN PANEL")) {
-            new AdminPanel();
+            new Logging();
         }
     }
 
