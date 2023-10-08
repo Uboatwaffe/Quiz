@@ -3,16 +3,11 @@ package org.ui;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 
 import org.connecting.HowMany;
+import org.ui.admin.AdminPanel;
 import org.ui.hq.HQ;
 import org.ui.questions.Count;
-import org.ui.questions.QuestionABC;
-import org.ui.questions.QuestionDate;
-import org.ui.questions.QuestionOpen;
-import org.ui.score.Incorrect;
-import org.ui.score.Score;
 import org.ui.tutorial.Tutorial;
 import org.connecting.Connect;
 
@@ -155,6 +150,7 @@ public class Main implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Main::new);
+        //SwingUtilities.invokeLater(Main::new);
+        new AdminPanel();
     }
 }

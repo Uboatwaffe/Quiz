@@ -1,7 +1,6 @@
 package org.connecting;
 
 import java.sql.*;
-import org.exceptions.CustomException;
 
 public class Connect {
     public ResultSet getConnection() {
