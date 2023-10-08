@@ -15,7 +15,7 @@ public class ToStrings {
 
         try {
             while (resultSet.next()) {
-                db[i++] = i + ") " + resultSet.getString("question");
+                db[i++] = resultSet.getString("id") + ") " + resultSet.getString("question");
             }
         }catch (SQLException ignore){}
 
@@ -32,7 +32,7 @@ public class ToStrings {
 
         try {
             while (resultSet.next()) {
-                db[i++] = i + ") " + resultSet.getString("answer");
+                db[i++] = resultSet.getString("id") + ") " + resultSet.getString("answer");
             }
         }catch (SQLException ignore){}
 

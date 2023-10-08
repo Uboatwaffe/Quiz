@@ -21,7 +21,7 @@ class Manage implements ActionListener {
         JLabel welcome = new JLabel("Welcome to the admin panel!");
         welcome.setBounds(5, 5, 200, 15);
 
-        JLabel question = new JLabel("What question do you want to delete? (Index of it)");
+        JLabel question = new JLabel("What question do you want to delete? (Index of it; -1=all)");
         question.setBounds(5, 30, 400, 15);
 
         // Buttons
