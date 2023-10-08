@@ -57,6 +57,8 @@ public class AdminOther implements ActionListener {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         } else if (e.getActionCommand().equals("TUTORIAL")) {
             new AdminTutorial();
+        } else if (e.getActionCommand().equals("CHANGE PASSWORD")) {
+            new NewPassword();
         }
     }
 }
