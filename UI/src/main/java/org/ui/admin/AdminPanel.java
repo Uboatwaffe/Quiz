@@ -1,19 +1,21 @@
 package org.ui.admin;
 
 import org.ui.Main;
+import org.ui.others.AdminOther;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-class AdminPanel implements ActionListener {
+public class AdminPanel implements ActionListener {
     JFrame frame = new JFrame("Admin Panel");
     Manage manage = new Manage();
     ShowAll showAll = new ShowAll();
 
     Main main = new Main();
 
-    AdminPanel() {
+    public AdminPanel() {
         main.hideMain();
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
@@ -77,6 +79,8 @@ class AdminPanel implements ActionListener {
             manage.add();
         } else if (e.getActionCommand().equals("DELETE QUESTION")) {
             manage.delete();
+        } else if (e.getActionCommand().equals("OTHER")) {
+            new AdminOther();
         }
     }
 }

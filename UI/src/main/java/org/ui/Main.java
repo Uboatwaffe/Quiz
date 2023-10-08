@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import org.connecting.LoggingIn;
 import org.manage.HowMany;
+import org.ui.admin.AdminPanel;
 import org.ui.hq.HQ;
 import org.ui.others.NoQuestions;
 import org.ui.questions.Count;
@@ -165,6 +166,7 @@ public class Main implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Main::new);
+        //SwingUtilities.invokeLater(Main::new);
+        new AdminPanel();
     }
 }
