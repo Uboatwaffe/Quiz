@@ -8,6 +8,7 @@ import org.manage.HowMany;
 import org.ui.admin.AdminPanel;
 import org.ui.hq.HQ;
 import org.ui.questions.Count;
+import org.ui.questions.QuestionTrueOrFalse;
 import org.ui.tutorial.Tutorial;
 import org.connecting.Connect;
 
