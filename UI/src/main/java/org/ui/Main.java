@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import org.connecting.HowMany;
+import org.manage.HowMany;
 import org.ui.admin.AdminPanel;
 import org.ui.hq.HQ;
 import org.ui.questions.Count;

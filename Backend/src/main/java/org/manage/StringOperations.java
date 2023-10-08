@@ -1,4 +1,4 @@
-package manage;
+package org.manage;
 
 public class StringOperations {
     public static void addQuestion(String chain){

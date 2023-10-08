@@ -1,4 +1,6 @@
-package org.connecting;
+package org.manage;
+
+import org.connecting.Connect;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -10,7 +12,9 @@ public class HowMany {
         int i = 0;
         try {
             while (resultSet.next()) i++;
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+
+        }
         return i;
     }
 }

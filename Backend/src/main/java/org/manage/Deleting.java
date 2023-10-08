@@ -1,4 +1,4 @@
-package manage;
+package org.manage;
 import org.connecting.Connecting;
 
 import java.sql.PreparedStatement;

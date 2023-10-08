@@ -1,7 +1,8 @@
 package org.ui.admin;
 
-import manage.Deleting;
-import manage.StringOperations;
+import org.manage.Deleting;
+import org.manage.Sorting;
+import org.manage.StringOperations;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -11,6 +12,7 @@ import java.awt.event.WindowEvent;
 class Manage implements ActionListener {
     JFrame frame = new JFrame("Deleting question");
     JTextField field = new JTextField();
+    Sorting sorting = new Sorting();
     void delete(){
         frame = new JFrame("Deleting question");
         
@@ -98,6 +100,8 @@ class Manage implements ActionListener {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         } else if (e.getActionCommand().equals("ADD QUESTION")) {
             StringOperations.addQuestion(field.getText());
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+
         }
     }
 }

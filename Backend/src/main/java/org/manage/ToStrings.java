@@ -1,4 +1,6 @@
-package org.connecting;
+package org.manage;
+
+import org.connecting.Connect;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
