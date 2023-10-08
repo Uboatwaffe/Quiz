@@ -7,6 +7,7 @@ import java.awt.event.WindowEvent;
 
 public class AdminPanel implements ActionListener {
     JFrame frame = new JFrame("Admin Panel");
+    Manage manage = new Manage();
     ShowAll showAll = new ShowAll();
 
     public AdminPanel() {
@@ -63,9 +64,10 @@ public class AdminPanel implements ActionListener {
         }else if (e.getActionCommand().equals("SHOW ANSWERS")){
             showAll.ShowAnswers();
         } else if (e.getActionCommand().equals("ADD QUESTION")) {
-            
+
         } else if (e.getActionCommand().equals("DELETE QUESTION")) {
-            
+            manage.delete();
+
         }
     }
 }

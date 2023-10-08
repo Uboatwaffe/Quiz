@@ -22,7 +22,7 @@ public class QuestionOpen implements ActionListener {
 
         // Labels
         JLabel question = new JLabel(quest);
-        question.setBounds(5, 5, 150, 15);
+        question.setBounds(5, 5, 400, 15);
 
         // Button
         JButton submit = new JButton("SUBMIT");

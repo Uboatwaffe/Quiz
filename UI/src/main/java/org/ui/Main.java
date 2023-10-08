@@ -146,11 +146,12 @@ public class Main implements ActionListener {
             frame.setVisible(false);
         } else if (e.getActionCommand().equals("I'M NOT")) {
             System.exit(0);
+        } else if (e.getActionCommand().equals("ADMIN PANEL")) {
+            new AdminPanel();
         }
     }
 
     public static void main(String[] args) {
-        //SwingUtilities.invokeLater(Main::new);
-        new AdminPanel();
+        SwingUtilities.invokeLater(Main::new);
     }
 }

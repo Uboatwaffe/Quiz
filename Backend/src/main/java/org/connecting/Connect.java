@@ -8,10 +8,9 @@ public class Connect {
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
+            Statement statement = Connecting.getConnection().createStatement();
 
-            Statement statement = connection.createStatement();
-
+            assert statement != null;
             resultSet = statement.executeQuery("SELECT * FROM set1");
 
         } catch (SQLException ignored) {
