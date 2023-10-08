@@ -64,7 +64,7 @@ public class AdminPanel implements ActionListener {
         }else if (e.getActionCommand().equals("SHOW ANSWERS")){
             showAll.ShowAnswers();
         } else if (e.getActionCommand().equals("ADD QUESTION")) {
-
+            manage.add();
         } else if (e.getActionCommand().equals("DELETE QUESTION")) {
             manage.delete();
 
