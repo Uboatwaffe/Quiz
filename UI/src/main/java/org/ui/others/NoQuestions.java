@@ -1,31 +1,29 @@
-package org.ui.score;
+package org.ui.others;
 
+import org.ui.Main;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class Score implements ActionListener {
+public class NoQuestions implements ActionListener {
     JFrame frame = new JFrame("Quiz");
+    Main main = new Main();
 
-
-    public Score(int sc){
+    public NoQuestions() {
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(440,170);
+        frame.setSize(440, 170);
         frame.setLayout(null);
 
         // Labels
-        JLabel welcome = new JLabel("CORRECT!");
-        welcome.setBounds(180, 5, 150, 15);
+        JLabel welcome = new JLabel("UNFORTUNATELY");
+        welcome.setBounds(160, 5, 150, 15);
 
-        JLabel info = new JLabel("Your score equals: ");
-        info.setBounds(155, 25, 150, 15);
-
-        JLabel score = new JLabel(String.valueOf(sc));
-        score.setBounds(200, 45, 150, 15);
+        JLabel info = new JLabel("There aren't questions");
+        info.setBounds(145, 25, 300, 15);
 
         // Button
         JButton understood = new JButton("UNDERSTOOD");
@@ -37,7 +35,6 @@ public class Score implements ActionListener {
         // Adding to the frame
         frame.add(welcome);
         frame.add(info);
-        frame.add(score);
         frame.add(understood);
 
         // Setting up the visibility
@@ -45,9 +42,11 @@ public class Score implements ActionListener {
     }
 
 
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("UNDERSTOOD")) {
+            main.showMain();
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

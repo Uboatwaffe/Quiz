@@ -7,13 +7,13 @@ import java.awt.event.ActionListener;
 import org.connecting.LoggingIn;
 import org.manage.HowMany;
 import org.ui.hq.HQ;
+import org.ui.others.NoQuestions;
 import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
 import org.connecting.Connect;
 import org.ui.admin.Logging;
 
 public class Main implements ActionListener {
-    static Connect connect = new Connect();
     HQ hq = new HQ();
     HowMany howMany = new HowMany();
     JFrame frame = new JFrame("Quiz");
@@ -22,7 +22,7 @@ public class Main implements ActionListener {
 
     JLabel score = new JLabel(String.valueOf(Count.count));
 
-    Main(){
+    public Main(){
         // Main
         // Default settings
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -126,14 +126,18 @@ public class Main implements ActionListener {
         if(e.getActionCommand().equals("CLOSE")){
             System.exit(0);
         } else if (e.getActionCommand().equals("START")) {
-            frame.setVisible(false);
-            frame3.setVisible(true);
-            frame2.setVisible(false);
-            hq.start();
-            try {
-                hq.join();
-            } catch (InterruptedException ex) {
-                throw new RuntimeException(ex);
+            if(howMany.howMany() != 0) {
+                frame.setVisible(false);
+                frame3.setVisible(true);
+                frame2.setVisible(false);
+                hq.start();
+                try {
+                    hq.join();
+                } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }else{
+                new NoQuestions();
             }
         } else if (e.getActionCommand().equals("TUTORIAL")) {
             new Tutorial();
@@ -148,8 +152,16 @@ public class Main implements ActionListener {
         } else if (e.getActionCommand().equals("I'M NOT")) {
             System.exit(0);
         } else if (e.getActionCommand().equals("ADMIN PANEL")) {
+            frame.setVisible(false);
             new Logging();
         }
+    }
+    public void hideMain(){
+        frame.setVisible(false);
+    }
+
+    public void showMain(){
+        frame.setVisible(true);
     }
 
     public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package org.ui.admin;
 
 import org.connecting.LoggingIn;
+import org.ui.others.WrongPassword;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -55,8 +56,13 @@ public class Logging implements ActionListener {
         if(e.getActionCommand().equals("CLOSE"))
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         else if (e.getActionCommand().equals("LOG IN")) {
-            if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1]))
+            if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
                 new AdminPanel();
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }else {
+                new WrongPassword();
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
         }
     }
 }
