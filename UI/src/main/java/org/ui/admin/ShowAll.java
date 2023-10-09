@@ -16,7 +16,7 @@ class ShowAll {
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
 
-        sorting.sort();
+        //sorting.sort();
 
         JList<String> list = new JList<>(toStrings.questionsInStringArray());
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -37,7 +37,7 @@ class ShowAll {
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
 
-        sorting.sort();
+        //sorting.sort();
 
         JList<String> list = new JList<>(toStrings.answersInStringArray());
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);

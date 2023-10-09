@@ -1,5 +1,7 @@
 package org.connecting;
 
+import org.manage.SQL;
+
 import java.sql.*;
 
 public class Connect {
@@ -11,7 +13,7 @@ public class Connect {
             Statement statement = Connecting.getConnection().createStatement();
 
             assert statement != null;
-            resultSet = statement.executeQuery("SELECT * FROM set1");
+            resultSet = statement.executeQuery("SELECT * FROM " + SQL.getCurrentTable());
 
         } catch (SQLException ignored) {
 
