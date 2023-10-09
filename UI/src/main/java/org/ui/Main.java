@@ -43,16 +43,22 @@ public class Main implements ActionListener {
         JButton no = new JButton("CLOSE");
         JButton admin = new JButton("ADMIN PANEL");
         JButton tutorial = new JButton("TUTORIAL");
+        JButton credit = new JButton("CREDIT");
+        JButton info = new JButton("INFO");
 
-        yes.setBounds(150, 5, 120, 115);
-        no.setBounds(285, 5, 120, 115);
+        yes.setBounds(150, 5, 120, 50);
+        no.setBounds(285, 5, 120, 50);
         tutorial.setBounds(5, 55, 130, 30);
         admin.setBounds(5, 90, 130, 30);
+        credit.setBounds(285, 60, 120, 60);
+        info.setBounds(150, 60, 120, 60);
 
         yes.addActionListener(this);
         no.addActionListener(this);
         tutorial.addActionListener(this);
         admin.addActionListener(this);
+        credit.addActionListener(this);
+        info.addActionListener(this);
 
 
         // Adding to the frame
@@ -62,6 +68,8 @@ public class Main implements ActionListener {
         frame.add(no);
         frame.add(tutorial);
         frame.add(admin);
+        frame.add(credit);
+        frame.add(info);
 
         // Setting up the visibility
         frame.setVisible(true);
@@ -73,8 +81,8 @@ public class Main implements ActionListener {
         frame2.setLayout(null);
 
         // Labels
-        JLabel info = new JLabel("You scored: ");
-        info.setBounds(175, 5, 150, 15);
+        JLabel information = new JLabel("You scored: ");
+        information.setBounds(175, 5, 150, 15);
 
 
         score.setBounds(185,30, 170, 15);
@@ -87,7 +95,7 @@ public class Main implements ActionListener {
         understood.addActionListener(this);
 
         // Adding to the frame
-        frame2.add(info);
+        frame2.add(information);
         frame2.add(score);
         frame2.add(understood);
 
