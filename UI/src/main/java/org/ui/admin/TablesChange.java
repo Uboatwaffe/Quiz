@@ -1,13 +1,18 @@
 package org.ui.admin;
 
 import org.manage.SQL;
+import org.ui.Main;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 public class TablesChange implements ActionListener {
     JFrame frame;
+    String prevTable = "set1";
 
     public TablesChange() {
         frame = new JFrame("Changing table");
@@ -25,6 +30,13 @@ public class TablesChange implements ActionListener {
 
         pane.setBounds(5, 25, 300, 60);
 
+        list.addListSelectionListener(new ListSelectionListener() {
+            @Override
+            public void valueChanged(ListSelectionEvent e) {
+                prevTable = list.getSelectedValue();
+            }
+        });
+
 
         // Buttons
         JButton no = new JButton("CLOSE");
@@ -36,7 +48,6 @@ public class TablesChange implements ActionListener {
         no.addActionListener(this);
         ok.addActionListener(this);
 
-        // Text-field
 
         // Adding to the frame
         frame.add(welcome);
@@ -51,6 +62,11 @@ public class TablesChange implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        if (e.getActionCommand().equals("OK")){
+            SQL.setCurrentTable(prevTable);
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        } else if (e.getActionCommand().equals("CLOSE")) {
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        }
     }
 }

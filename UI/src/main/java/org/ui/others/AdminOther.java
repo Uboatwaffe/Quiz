@@ -1,6 +1,7 @@
 package org.ui.others;
 
 import org.ui.Main;
+import org.ui.admin.TablesChange;
 import org.ui.tutorial.AdminTutorial;
 
 import javax.swing.*;
@@ -59,6 +60,8 @@ public class AdminOther implements ActionListener {
             new AdminTutorial();
         } else if (e.getActionCommand().equals("CHANGE PASSWORD")) {
             new NewPassword();
+        }else if (e.getActionCommand().equals("CHANGE TABLE")) {
+            new TablesChange();
         }
     }
 }

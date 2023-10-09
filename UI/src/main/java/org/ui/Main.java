@@ -167,7 +167,7 @@ public class Main implements ActionListener {
     }
 
     public static void main(String[] args) {
-        //SwingUtilities.invokeLater(Main::new);
-        new TablesChange();
+        SwingUtilities.invokeLater(Main::new);
+        //new TablesChange();
     }
 }
