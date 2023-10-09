@@ -6,10 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Sorting {
+    String[][] db;
+    public Sorting(){
+        db = new String[x+1][3];
+    }
     HowMany howMany = new HowMany();
     Connect connect = new Connect();
     int x = howMany.howMany();
-    String[][] db = new String[x+1][3];
+
     public void sort(){
         ResultSet resultSet = connect.getConnection();
         int i = 0;
@@ -27,6 +31,11 @@ public class Sorting {
             Adding.add(String.valueOf(i+1), db[i][0], db[i][1], db[i][2]);
             i++;
         }
+    }
+
+    public void clear(){
+        x = howMany.howMany();
+        db = new String[x+1][3];
     }
 }
 

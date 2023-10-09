@@ -17,4 +17,16 @@ public class HowMany {
         }
         return i;
     }
+    public int highest(){
+        ResultSet resultSet = connect.getConnection();
+        int i = 0;
+        try {
+            while (resultSet.next()) {
+                i = Integer.valueOf(resultSet.getString("id"));
+            }
+        }catch (SQLException ignore){
+
+        }
+        return i;
+    }
 }
