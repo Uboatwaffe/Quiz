@@ -9,6 +9,8 @@ import org.manage.HowMany;
 import org.ui.admin.AdminPanel;
 import org.ui.admin.TablesChange;
 import org.ui.hq.HQ;
+import org.ui.others.Credit;
+import org.ui.others.Info;
 import org.ui.others.NoQuestions;
 import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
@@ -43,7 +45,7 @@ public class Main implements ActionListener {
         JButton no = new JButton("CLOSE");
         JButton admin = new JButton("ADMIN PANEL");
         JButton tutorial = new JButton("TUTORIAL");
-        JButton credit = new JButton("CREDIT");
+        JButton credit = new JButton("CREDITS");
         JButton info = new JButton("INFO");
 
         yes.setBounds(150, 5, 120, 50);
@@ -164,6 +166,10 @@ public class Main implements ActionListener {
         } else if (e.getActionCommand().equals("ADMIN PANEL")) {
             frame.setVisible(false);
             new Logging();
+        } else if (e.getActionCommand().equals("CREDITS")) {
+            new Credit();
+        }else if (e.getActionCommand().equals("INFO")){
+            new Info();
         }
     }
     public void hideMain(){
