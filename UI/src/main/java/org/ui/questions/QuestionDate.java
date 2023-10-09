@@ -13,13 +13,13 @@ public class QuestionDate implements ActionListener {
 
     String answer;
     JFrame frame = new JFrame("Quiz");
-    JTextField field = new JTextField("01.09.1939", 10);
+    JTextField field = new JTextField("This is question about date", 100);
     public QuestionDate(String quest, String answer){
         this.answer = answer;
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(190,170);
+        frame.setSize(440,170);
         frame.setLayout(null);
 
         // Labels
@@ -29,12 +29,12 @@ public class QuestionDate implements ActionListener {
         // Button
         JButton submit = new JButton("SUBMIT");
 
-        submit.setBounds(5, 65, 165, 60);
+        submit.setBounds(5, 65, 415, 60);
 
         submit.addActionListener(this);
 
         // Text-field
-        field.setBounds(5, 25, 165, 30);
+        field.setBounds(5, 25, 415, 30);
 
         // Adding to the frame
         frame.add(question);
@@ -51,7 +51,7 @@ public class QuestionDate implements ActionListener {
             if (field.getText().equals(this.answer)) {
                 new Score(++Count.count);
             }else
-                new Incorrect(answer);
+                new Incorrect(answer, field.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

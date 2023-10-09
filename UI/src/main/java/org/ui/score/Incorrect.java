@@ -9,27 +9,30 @@ public class Incorrect implements ActionListener {
     JFrame frame = new JFrame("Quiz");
 
 
-    public Incorrect(String answer){
+    public Incorrect(String answer, String wron){
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(190,170);
+        frame.setSize(440,170);
         frame.setLayout(null);
 
         // Labels
         JLabel welcome = new JLabel("INCORRECT!");
-        welcome.setBounds(5, 5, 150, 15);
+        welcome.setBounds(180, 5, 150, 15);
 
         JLabel info = new JLabel("Correct answer was: ");
         info.setBounds(5, 25, 150, 15);
 
         JLabel score = new JLabel(answer);
-        score.setBounds(5, 45, 150, 15);
+        score.setBounds(130, 25, 400, 15);
+
+        JLabel wrong = new JLabel("You inserted: " + wron);
+        wrong.setBounds(5, 45, 400, 15);
 
         // Button
         JButton understood = new JButton("UNDERSTOOD");
 
-        understood.setBounds(5, 65, 165, 60);
+        understood.setBounds(5, 65, 415, 60);
 
         understood.addActionListener(this);
 
@@ -38,6 +41,7 @@ public class Incorrect implements ActionListener {
         frame.add(info);
         frame.add(score);
         frame.add(understood);
+        frame.add(wrong);
 
         // Setting up the visibility
         frame.setVisible(true);

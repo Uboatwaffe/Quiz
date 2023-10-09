@@ -11,28 +11,28 @@ import java.awt.event.WindowEvent;
 public class QuestionOpen implements ActionListener {
     String answer;
     JFrame frame = new JFrame("Quiz");
-    JTextField field = new JTextField("NO", 10);
+    JTextField field = new JTextField("This is an open question", 10);
     public QuestionOpen(String quest, String answer){
         this.answer = answer;
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(190,170);
+        frame.setSize(440,170);
         frame.setLayout(null);
 
         // Labels
         JLabel question = new JLabel(quest);
-        question.setBounds(5, 5, 150, 15);
+        question.setBounds(5, 5, 400, 15);
 
         // Button
         JButton submit = new JButton("SUBMIT");
 
-        submit.setBounds(5, 65, 165, 60);
+        submit.setBounds(5, 65, 415, 60);
 
         submit.addActionListener(this);
 
         // Text-field
-        field.setBounds(5, 25, 165, 30);
+        field.setBounds(5, 25, 415, 30);
 
         // Adding to the frame
         frame.add(question);
@@ -49,7 +49,7 @@ public class QuestionOpen implements ActionListener {
             if (field.getText().equals(answer)) {
                 new Score(++Count.count);
             }else
-                new Incorrect(answer);
+                new Incorrect(answer, field.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

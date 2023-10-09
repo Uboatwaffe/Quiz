@@ -3,10 +3,7 @@ package org.ui.hq;
 import org.connecting.Connect;
 import java.sql.*;
 import org.exceptions.CustomException;
-import org.ui.questions.Count;
-import org.ui.questions.QuestionABC;
-import org.ui.questions.QuestionDate;
-import org.ui.questions.QuestionOpen;
+import org.ui.questions.*;
 import org.ui.score.Score;
 
 public class HQ extends Thread{
@@ -23,6 +20,7 @@ public class HQ extends Thread{
                         case "d" -> new QuestionDate(resultSet.getString("question"), resultSet.getString("answer"));
                         case "c" -> new QuestionABC(resultSet.getString("question"), resultSet.getString("answer"));
                         case "o" -> new QuestionOpen(resultSet.getString("question"), resultSet.getString("answer"));
+                        case "t" -> new QuestionTrueOrFalse(resultSet.getString("question"), resultSet.getString("answer"));
                     }
                 }
             }

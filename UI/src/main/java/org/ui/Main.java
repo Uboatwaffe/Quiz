@@ -3,16 +3,19 @@ package org.ui;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 
-import org.connecting.HowMany;
+import org.connecting.LoggingIn;
+import org.manage.HowMany;
+import org.ui.admin.AdminPanel;
+import org.ui.admin.TablesChange;
 import org.ui.hq.HQ;
+import org.ui.others.NoQuestions;
 import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
 import org.connecting.Connect;
+import org.ui.admin.Logging;
 
 public class Main implements ActionListener {
-    static Connect connect = new Connect();
     HQ hq = new HQ();
     HowMany howMany = new HowMany();
     JFrame frame = new JFrame("Quiz");
@@ -21,11 +24,11 @@ public class Main implements ActionListener {
 
     JLabel score = new JLabel(String.valueOf(Count.count));
 
-    Main(){
+    public Main(){
         // Main
         // Default settings
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(190,170);
+        frame.setSize(440,170);
         frame.setLayout(null);
 
         // Labels
@@ -36,15 +39,15 @@ public class Main implements ActionListener {
         question.setBounds(5,30, 170, 15);
 
         // Buttons
-        JButton yes = new JButton("YES");
-        JButton no = new JButton("NO");
+        JButton yes = new JButton("START");
+        JButton no = new JButton("CLOSE");
         JButton admin = new JButton("ADMIN PANEL");
         JButton tutorial = new JButton("TUTORIAL");
 
-        yes.setBounds(5, 55, 80, 20);
-        no.setBounds(90, 55, 80, 20);
-        tutorial.setBounds(5, 80, 165, 20);
-        admin.setBounds(5, 105, 165, 20);
+        yes.setBounds(150, 5, 120, 115);
+        no.setBounds(285, 5, 120, 115);
+        tutorial.setBounds(5, 55, 130, 30);
+        admin.setBounds(5, 90, 130, 30);
 
         yes.addActionListener(this);
         no.addActionListener(this);
@@ -66,20 +69,20 @@ public class Main implements ActionListener {
         // Second
         // Default settings
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame2.setSize(190,170);
+        frame2.setSize(440,170);
         frame2.setLayout(null);
 
         // Labels
         JLabel info = new JLabel("You scored: ");
-        info.setBounds(5, 5, 150, 15);
+        info.setBounds(175, 5, 150, 15);
 
 
-        score.setBounds(5,30, 170, 15);
+        score.setBounds(185,30, 170, 15);
 
         // Button
         JButton understood = new JButton("UNDERSTOOD");
 
-        understood.setBounds(5, 65, 165, 60);
+        understood.setBounds(5, 65, 415, 60);
 
         understood.addActionListener(this);
 
@@ -91,26 +94,26 @@ public class Main implements ActionListener {
         // Third
         // Default settings
         frame3.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame3.setSize(190,170);
+        frame3.setSize(440,170);
         frame3.setLayout(null);
 
         // Labels
         JLabel info2 = new JLabel("Are you ready to get to");
-        info2.setBounds(5, 5, 150, 15);
+        info2.setBounds(155, 5, 150, 15);
 
         JLabel info3 = new JLabel("know your score?");
-        info3.setBounds(5, 30, 150, 15);
+        info3.setBounds(165, 30, 150, 15);
 
         // Button
         JButton iam = new JButton("I AM");
 
-        iam.setBounds(5, 65, 80, 60);
+        iam.setBounds(5, 65, 205, 60);
 
         iam.addActionListener(this);
 
         JButton iamnot = new JButton("I'M NOT");
 
-        iamnot.setBounds(90, 65, 80, 60);
+        iamnot.setBounds(215, 65, 205, 60);
 
         iamnot.addActionListener(this);
 
@@ -122,17 +125,21 @@ public class Main implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("NO")){
+        if(e.getActionCommand().equals("CLOSE")){
             System.exit(0);
-        } else if (e.getActionCommand().equals("YES")) {
-            frame.setVisible(false);
-            frame3.setVisible(true);
-            frame2.setVisible(false);
-            hq.start();
-            try {
-                hq.join();
-            } catch (InterruptedException ex) {
-                throw new RuntimeException(ex);
+        } else if (e.getActionCommand().equals("START")) {
+            if(howMany.howMany() != 0) {
+                frame.setVisible(false);
+                frame3.setVisible(true);
+                frame2.setVisible(false);
+                hq.start();
+                try {
+                    hq.join();
+                } catch (InterruptedException ex) {
+                    throw new RuntimeException(ex);
+                }
+            }else{
+                new NoQuestions();
             }
         } else if (e.getActionCommand().equals("TUTORIAL")) {
             new Tutorial();
@@ -146,10 +153,21 @@ public class Main implements ActionListener {
             frame.setVisible(false);
         } else if (e.getActionCommand().equals("I'M NOT")) {
             System.exit(0);
+        } else if (e.getActionCommand().equals("ADMIN PANEL")) {
+            frame.setVisible(false);
+            new Logging();
         }
+    }
+    public void hideMain(){
+        frame.setVisible(false);
+    }
+
+    public void showMain(){
+        frame.setVisible(true);
     }
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(Main::new);
+        //new TablesChange();
     }
 }

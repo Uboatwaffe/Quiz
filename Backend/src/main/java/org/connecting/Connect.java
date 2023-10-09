@@ -1,7 +1,8 @@
 package org.connecting;
 
+import org.manage.SQL;
+
 import java.sql.*;
-import org.exceptions.CustomException;
 
 public class Connect {
     public ResultSet getConnection() {
@@ -9,11 +10,10 @@ public class Connect {
 
         try {
 
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
+            Statement statement = Connecting.getConnection().createStatement();
 
-            Statement statement = connection.createStatement();
-
-            resultSet = statement.executeQuery("SELECT * FROM set1");
+            assert statement != null;
+            resultSet = statement.executeQuery("SELECT * FROM " + SQL.getCurrentTable());
 
         } catch (SQLException ignored) {
 
