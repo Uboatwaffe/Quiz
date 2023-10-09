@@ -86,7 +86,6 @@ public class Main implements ActionListener {
         JLabel information = new JLabel("You scored: ");
         information.setBounds(175, 5, 150, 15);
 
-
         score.setBounds(185,30, 170, 15);
 
         // Button
