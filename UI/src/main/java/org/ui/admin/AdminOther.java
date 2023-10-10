@@ -1,7 +1,8 @@
-package org.ui.others;
+package org.ui.admin;
 
 import org.ui.Main;
 import org.ui.admin.TablesChange;
+import org.ui.others.NewPassword;
 import org.ui.tutorial.AdminTutorial;
 
 import javax.swing.*;
@@ -23,7 +24,7 @@ public class AdminOther implements ActionListener {
         JButton tutorial = new JButton("TUTORIAL");
         JButton changePassword = new JButton("CHANGE PASSWORD");
         JButton close = new JButton("CLOSE");
-        JButton addT = new JButton("ADD TABLE");
+        JButton addT = new JButton("TABLE MANAGEMENT");
         JButton changeTable = new JButton("CHANGE TABLE");
 
         tutorial.setBounds(180, 5, 150, 55);
@@ -62,6 +63,8 @@ public class AdminOther implements ActionListener {
             new NewPassword();
         }else if (e.getActionCommand().equals("CHANGE TABLE")) {
             new TablesChange();
+        } else if (e.getActionCommand().equals("TABLE MANAGEMENT")) {
+            new TablesManage();
         }
     }
 }

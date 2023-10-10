@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import org.connecting.LoggingIn;
 import org.manage.HowMany;
 import org.score.ScoreDB;
+import org.ui.admin.AdminOther;
 import org.ui.admin.AdminPanel;
 import org.ui.admin.TablesChange;
 import org.ui.hq.HQ;
@@ -184,6 +185,7 @@ public class Main implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(Main::new);
+        //SwingUtilities.invokeLater(Main::new);
+        new AdminOther();
     }
 }

@@ -1,7 +1,6 @@
 package org.ui.admin;
 
 import org.ui.Main;
-import org.ui.others.AdminOther;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
