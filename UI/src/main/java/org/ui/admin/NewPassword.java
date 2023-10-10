@@ -1,4 +1,4 @@
-package org.ui.others;
+package org.ui.admin;
 
 import org.connecting.LoggingIn;
 import org.manage.ChangePassword;

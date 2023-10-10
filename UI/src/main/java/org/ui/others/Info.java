@@ -20,7 +20,7 @@ public class Info implements ActionListener {
         frame.setLayout(null);
 
         // Labels
-        JLabel string1 = new JLabel("Info:");
+        JLabel string1 = new JLabel("INFO:");
         string1.setBounds(5, 5, 150, 15);
 
         JLabel string2 = new JLabel("Current set: " + SQL.getCurrentTable());
@@ -29,16 +29,22 @@ public class Info implements ActionListener {
         JLabel string3 = new JLabel("Number of questions: " + howMany.howMany());
         string3.setBounds(5,55, 200, 15);
 
-        JLabel string4 = new JLabel("Points: ");
+        JLabel string4 = new JLabel("POINTS: ");
         string4.setBounds(5,80, 200, 15);
 
         String[] db = ScoreDB.getStats();
 
-        JLabel string5 = new JLabel("Current: " + db[1] + "          All: " + db[2]);
+        JLabel string5 = new JLabel("Last: " + db[1] + "          All: " + db[2]);
         string5.setBounds(5, 105, 300, 15);
 
-        JLabel string6 = new JLabel("Attempts: " + db[0] + "      Average: " + (Integer.parseInt(db[2])/Integer.parseInt(db[0])));
-        string6.setBounds(5, 130, 300, 15);
+        JLabel string6;
+
+        if(Integer.parseInt(db[0]) != 0) {
+            string6 = new JLabel("Attempts: " + db[0] + "      Average: " + (Double.parseDouble(db[2]) / Double.parseDouble(db[0])));
+        }else {
+            string6 = new JLabel("Attempts: " + db[0]);
+        }
+        string6.setBounds(5, 130, 180, 15);
 
         // Buttons
         JButton understood = new JButton("UNDERSTOOD");

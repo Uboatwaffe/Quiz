@@ -1,11 +1,9 @@
-package org.ui.others;
+package org.ui.admin;
 
-import org.ui.Main;
-import org.ui.admin.TablesChange;
+import org.reset.Reset;
 import org.ui.tutorial.AdminTutorial;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
@@ -21,14 +19,16 @@ public class AdminOther implements ActionListener {
 
         // Buttons
         JButton tutorial = new JButton("TUTORIAL");
-        JButton changePassword = new JButton("CHANGE PASSWORD");
+        JButton changePassword = new JButton("DETAILS");
         JButton close = new JButton("CLOSE");
-        JButton addT = new JButton("ADD TABLE");
+        JButton reset = new JButton("RESET");
+        JButton addT = new JButton("TABLE MANAGEMENT");
         JButton changeTable = new JButton("CHANGE TABLE");
 
         tutorial.setBounds(180, 5, 150, 55);
-        changePassword.setBounds(180, 65, 235, 55);
+        changePassword.setBounds(180, 65, 150, 55);
         close.setBounds(335, 5, 80, 55);
+        reset.setBounds(335, 65, 80, 55);
         addT.setBounds(5, 5, 170, 55);
         changeTable.setBounds(5, 65, 170, 55);
 
@@ -37,7 +37,7 @@ public class AdminOther implements ActionListener {
         changeTable.addActionListener(this);
         close.addActionListener(this);
         addT.addActionListener(this);
-
+        reset.addActionListener(this);
 
         // Adding to the frame
         frame.add(addT);
@@ -45,6 +45,7 @@ public class AdminOther implements ActionListener {
         frame.add(tutorial);
         frame.add(changePassword);
         frame.add(changeTable);
+        frame.add(reset);
 
         // Setting up the visibility
         frame.setVisible(true);
@@ -58,10 +59,15 @@ public class AdminOther implements ActionListener {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         } else if (e.getActionCommand().equals("TUTORIAL")) {
             new AdminTutorial();
-        } else if (e.getActionCommand().equals("CHANGE PASSWORD")) {
+        } else if (e.getActionCommand().equals("DETAILS")) {
             new NewPassword();
         }else if (e.getActionCommand().equals("CHANGE TABLE")) {
             new TablesChange();
+        } else if (e.getActionCommand().equals("TABLE MANAGEMENT")) {
+            new TablesManage();
+        } else if (e.getActionCommand().equals("RESET")) {
+            Reset.reset();
+            frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
         }
     }
 }

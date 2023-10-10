@@ -3,6 +3,7 @@ package org.score;
 import org.connecting.Connecting;
 import org.manage.SQL;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -36,6 +37,18 @@ public class ScoreDB {
 
         return db;
 
+    }
+    public static void setStats(String points) {
+        String[] db = getStats();
+
+        String sql = "UPDATE `quiz`.`score` SET `attempts` = '"+ (Integer.parseInt(db[0])+1) +"', `points` = '"+ points +"', `allPoints` = '"+ (Integer.parseInt(db[2])+Integer.parseInt(points)) +"' WHERE (`name` = '"+ SQL.getCurrentTable() +"');";
+
+        try {
+            PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
+            statement.executeUpdate();
+        } catch (SQLException | NullPointerException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

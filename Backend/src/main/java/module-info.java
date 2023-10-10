@@ -4,4 +4,6 @@ module Backend {
     exports org.connecting;
     exports org.manage;
     exports org.score;
+    exports org.tables;
+    exports org.reset;
 }
