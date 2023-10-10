@@ -53,7 +53,7 @@ public class TablesManage implements ActionListener {
         } else if (e.getActionCommand().equals("ADD TABLE")) {
             new TableAdd();
         } else if (e.getActionCommand().equals("DELETE TABLE")) {
-            
+            new TableDelete();
         }
     }
 }
