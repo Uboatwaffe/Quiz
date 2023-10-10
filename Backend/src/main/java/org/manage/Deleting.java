@@ -9,7 +9,7 @@ public class Deleting {
     public static void delete(String index) {
         String sql = "DELETE FROM "+SQL.getCurrentTable()+" WHERE id='" + index +"'";
         if(index.equals("-1")) {
-            sql = "DELETE FROM set1";
+            sql = "DELETE FROM " + SQL.getCurrentTable();
         }
             try {
                 PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
