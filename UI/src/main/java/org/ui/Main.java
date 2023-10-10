@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import org.connecting.LoggingIn;
 import org.manage.HowMany;
+import org.score.ScoreDB;
 import org.ui.admin.AdminPanel;
 import org.ui.admin.TablesChange;
 import org.ui.hq.HQ;
@@ -137,6 +138,7 @@ public class Main implements ActionListener {
         if(e.getActionCommand().equals("CLOSE")){
             System.exit(0);
         } else if (e.getActionCommand().equals("START")) {
+            Count.count = 0;
             if(howMany.howMany() != 0) {
                 frame.setVisible(false);
                 frame3.setVisible(true);
@@ -156,11 +158,13 @@ public class Main implements ActionListener {
             frame2.setVisible(false);
             frame.setVisible(true);
         } else if (e.getActionCommand().equals("I AM")) {
+            ScoreDB.setStats(String.valueOf(Count.count));
             frame3.setVisible(false);
             score.setText(Count.count + " out of " + howMany.howMany());
             frame2.setVisible(true);
             frame.setVisible(false);
         } else if (e.getActionCommand().equals("I'M NOT")) {
+            ScoreDB.setStats(String.valueOf(Count.count));
             System.exit(0);
         } else if (e.getActionCommand().equals("ADMIN PANEL")) {
             frame.setVisible(false);
