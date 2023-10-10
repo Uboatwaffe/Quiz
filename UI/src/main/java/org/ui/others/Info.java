@@ -2,6 +2,7 @@ package org.ui.others;
 
 import org.manage.HowMany;
 import org.manage.SQL;
+import org.score.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -15,7 +16,7 @@ public class Info implements ActionListener {
 
     public Info(){
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(210,200);
+        frame.setSize(210,250);
         frame.setLayout(null);
 
         // Labels
@@ -31,11 +32,18 @@ public class Info implements ActionListener {
         JLabel string4 = new JLabel("Points: ");
         string4.setBounds(5,80, 200, 15);
 
+        String[] db = ScoreDB.getStats();
+
+        JLabel string5 = new JLabel("Current: " + db[1] + "          All: " + db[2]);
+        string5.setBounds(5, 105, 300, 15);
+
+        JLabel string6 = new JLabel("Attempts: " + db[0] + "      Average: " + (Integer.parseInt(db[2])/Integer.parseInt(db[0])));
+        string6.setBounds(5, 130, 300, 15);
 
         // Buttons
         JButton understood = new JButton("UNDERSTOOD");
 
-        understood.setBounds(5,105, 185, 50);
+        understood.setBounds(5,155, 185, 50);
 
         understood.addActionListener(this);
 
@@ -45,6 +53,8 @@ public class Info implements ActionListener {
         frame.add(string2);
         frame.add(string3);
         frame.add(string4);
+        frame.add(string5);
+        frame.add(string6);
         frame.add(understood);
 
 

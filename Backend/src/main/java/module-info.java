@@ -3,4 +3,5 @@ module Backend {
     requires Exceptions;
     exports org.connecting;
     exports org.manage;
+    exports org.score;
 }
