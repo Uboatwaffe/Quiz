@@ -1,6 +1,7 @@
 package org.reset;
 
 import org.connecting.Connecting;
+import org.manage.Adding;
 import org.manage.ChangePassword;
 import org.manage.Deleting;
 import org.manage.SQL;
@@ -11,6 +12,9 @@ import java.sql.SQLException;
 
 public class Reset {
     static String[] tableNames = SQL.getAllTables();
+    private static String[] db1 = {"True or False", "Close question", "Open question", "Question about date"};
+    private static String[] db2 = {"TRUE", "A", "YES", "11.11.1111"};
+    private static String[] db3 = {"t", "c", "o", "d"};
 
     public static void reset(){
         String[] toDelete = new String[tableNames.length-1];
@@ -25,6 +29,9 @@ public class Reset {
 
         SQL.setCurrentTable(SQL.getAllTables()[0]);
         Deleting.delete("-1");
+        for (int j = 0; j < db1.length; j++) {
+            Adding.add(db1[j], db2[j], db3[j]);
+        }
 
         for (String x:
              toDelete) {
