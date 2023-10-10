@@ -44,7 +44,7 @@ public class Info implements ActionListener {
         }else {
             string6 = new JLabel("Attempts: " + db[0]);
         }
-        string6.setBounds(5, 130, 300, 15);
+        string6.setBounds(5, 130, 180, 15);
 
         // Buttons
         JButton understood = new JButton("UNDERSTOOD");
