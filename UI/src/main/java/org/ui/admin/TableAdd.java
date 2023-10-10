@@ -1,6 +1,7 @@
 package org.ui.admin;
 
 import org.manage.SQL;
+import org.tables.Add;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -67,8 +68,8 @@ public class TableAdd implements ActionListener {
             }
             if (!exists){
                 error.setVisible(false);
-
-
+                Add.add(newName);
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }else {
                 error.setVisible(true);
             }
