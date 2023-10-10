@@ -9,7 +9,7 @@ public class TablesManage implements ActionListener {
     JFrame frame;
 
     public TablesManage() {
-        frame = new JFrame("Changing sets");
+        frame = new JFrame("What to do");
 
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
@@ -51,7 +51,7 @@ public class TablesManage implements ActionListener {
         if (e.getActionCommand().equals("CLOSE")) {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         } else if (e.getActionCommand().equals("ADD TABLE")) {
-            
+            new TableAdd();
         } else if (e.getActionCommand().equals("DELETE TABLE")) {
             
         }
