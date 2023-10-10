@@ -30,7 +30,7 @@ class ShowAll {
         frame.setVisible(true);
     }
     public void ShowAnswers() {
-
+        sorting.sort();
 
         JFrame frame = new JFrame("Here are all of the answers: ");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

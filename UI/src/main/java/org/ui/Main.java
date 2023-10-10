@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 
 import org.connecting.LoggingIn;
 import org.manage.HowMany;
+import org.manage.SQL;
 import org.score.ScoreDB;
 import org.ui.admin.AdminOther;
 import org.ui.admin.AdminPanel;

@@ -13,7 +13,6 @@ public class Sorting {
 
             ResultSet resultSet = connect.getConnection();
 
-            System.out.println(howMany.howMany());
             String[] questions = new String[howMany.howMany()];
             String[] answers = new String[howMany.howMany()];
             String[] types = new String[howMany.howMany()];
