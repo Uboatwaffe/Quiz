@@ -4,7 +4,6 @@ import org.connecting.Connecting;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class ChangePassword {
     Connecting connecting = new Connecting();

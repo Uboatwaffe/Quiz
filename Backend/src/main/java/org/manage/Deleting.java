@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Deleting {
 
     public static void delete(String index) {
-        String sql = "DELETE FROM "+SQL.getCurrentTable()+" WHERE id='" + index +"'";
+        String sql = "DELETE FROM "+ SQL.getCurrentTable() +" WHERE id='" + index +"'";
         if(index.equals("-1")) {
             sql = "DELETE FROM " + SQL.getCurrentTable();
         }
