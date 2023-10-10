@@ -11,7 +11,7 @@ public class AdminTutorial implements ActionListener {
 
     public AdminTutorial(){
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(310,300);
+        frame.setSize(310,285);
         frame.setLayout(null);
 
         // Labels

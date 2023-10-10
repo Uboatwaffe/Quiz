@@ -38,4 +38,3 @@ public class Sorting {
         db = new String[x+1][3];
     }
 }
-

@@ -13,7 +13,7 @@ public class TableDelete implements ActionListener {
 
     JFrame frame;
     JTextField login = new JTextField("Name of the table");
-    JLabel error = new JLabel("There is no such table!");
+    JLabel error = new JLabel("There is no such table or it can't be deleted!");
 
     public TableDelete() {
         frame = new JFrame("Deleting table");
@@ -26,7 +26,7 @@ public class TableDelete implements ActionListener {
         JLabel welcome = new JLabel("Insert name of the table: ");
         welcome.setBounds(5, 5, 200, 15);
 
-        error.setBounds(5, 25, 200, 15);
+        error.setBounds(5, 25, 300, 15);
         error.setVisible(false);
 
         // Buttons
@@ -63,7 +63,7 @@ public class TableDelete implements ActionListener {
             String newName = login.getText();
             boolean exists = false;
             for (int i = 0; i < db.length; i++) {
-                if (newName.equals(db[i])) {
+                if (newName.equals(db[i]) && !newName.equals("set1")) {
                     exists = true;
                     break;
                 }

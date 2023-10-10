@@ -1,13 +1,9 @@
 package org.ui.admin;
 
 import org.reset.Reset;
-import org.ui.Main;
-import org.ui.admin.TablesChange;
-import org.ui.others.NewPassword;
 import org.ui.tutorial.AdminTutorial;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
