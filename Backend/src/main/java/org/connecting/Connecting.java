@@ -8,9 +8,8 @@ import java.sql.SQLException;
 public class Connecting {
     public static Connection getConnection() {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
 
-            return connection;
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
         }catch (SQLException ignore){}
         return null;
     }
