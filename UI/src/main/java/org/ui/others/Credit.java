@@ -18,16 +18,16 @@ public class Credit implements ActionListener {
         JLabel string1 = new JLabel("CREDITS:");
         string1.setBounds(5, 5, 150, 15);
 
-        JLabel string2 = new JLabel("Idea -- Maciej P.");
+        JLabel string2 = new JLabel("User Interface -- Contributor 2");
         string2.setBounds(5,30, 200, 15);
 
-        JLabel string3 = new JLabel("Project structure -- Maciej P.");
+        JLabel string3 = new JLabel("Project structure -- Contributor 1");
         string3.setBounds(5,55, 200, 15);
 
         JLabel string4 = new JLabel("Start of realisation -- 07.10.2023");
         string4.setBounds(5,80, 200, 15);
 
-        JLabel string5 = new JLabel("End of realisation -- 11.10.2023");
+        JLabel string5 = new JLabel("End of realisation -- ??.10.2023");
         string5.setBounds(5,105, 200, 15);
 
         JLabel string6 = new JLabel("Company -- ");
