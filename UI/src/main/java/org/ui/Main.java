@@ -28,7 +28,7 @@ public class Main implements ActionListener {
     private final JFrame frame2 = new JFrame("Score");
     private final JFrame frame3 = new JFrame("Are you ready?");
 
-    JLabel score = new JLabel(String.valueOf(Count.count));
+    JLabel score = new JLabel(String.valueOf(Count.getCount()));
 
     public Main(){
         // Main
@@ -141,7 +141,7 @@ public class Main implements ActionListener {
         if(e.getActionCommand().equals("CLOSE")){
             System.exit(0);
         } else if (e.getActionCommand().equals("START")) {
-            Count.count = 0;
+            Count.setCount(0);
             if(howMany.howMany() != 0) {
                 frame.setVisible(false);
                 frame3.setVisible(true);
@@ -161,13 +161,13 @@ public class Main implements ActionListener {
             frame2.setVisible(false);
             frame.setVisible(true);
         } else if (e.getActionCommand().equals("I AM")) {
-            ScoreDB.setStats(String.valueOf(Count.count));
+            ScoreDB.setStats(String.valueOf(Count.getCount()));
             frame3.setVisible(false);
-            score.setText(Count.count + " out of " + howMany.howMany());
+            score.setText(Count.getCount() + " out of " + howMany.howMany());
             frame2.setVisible(true);
             frame.setVisible(false);
         } else if (e.getActionCommand().equals("I'M NOT")) {
-            ScoreDB.setStats(String.valueOf(Count.count));
+            ScoreDB.setStats(String.valueOf(Count.getCount()));
             System.exit(0);
         } else if (e.getActionCommand().equals("ADMIN PANEL")) {
             frame.setVisible(false);

@@ -49,7 +49,8 @@ public class QuestionDate implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("SUBMIT")) {
             if (field.getText().equals(this.answer)) {
-                new Score(++Count.count);
+                Count.setCount(Count.getCount()+1);
+                new Score(Count.getCount());
             }else
                 new Incorrect(answer, field.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));

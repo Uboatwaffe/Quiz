@@ -1,7 +1,7 @@
 package org.ui.questions;
 
 public class Count {
-    public static int count = 0;
+    private static int count = 0;
 
     public static int getCount() {
         return count;

@@ -55,7 +55,8 @@ public class QuestionABC implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals(answer)) {
-            new Score(++Count.count);
+            Count.setCount(Count.getCount()+1);
+            new Score(Count.getCount());
         }else
             new Incorrect(answer, e.getActionCommand());
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
