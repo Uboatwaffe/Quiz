@@ -1,6 +1,7 @@
 package org.manage;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -12,6 +13,8 @@ public class ChangePassword {
         try {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(SQL);
             statement.executeUpdate();
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
     }
 }

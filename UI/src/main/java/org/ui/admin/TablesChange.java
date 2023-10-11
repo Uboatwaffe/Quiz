@@ -30,12 +30,7 @@ public class TablesChange implements ActionListener {
 
         pane.setBounds(5, 25, 300, 60);
 
-        list.addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                prevTable = list.getSelectedValue();
-            }
-        });
+        list.addListSelectionListener(e -> prevTable = list.getSelectedValue());
 
 
         // Buttons

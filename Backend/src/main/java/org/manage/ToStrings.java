@@ -1,6 +1,7 @@
 package org.manage;
 
 import org.connecting.Connect;
+import org.exceptions.ExceptionUI;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,7 +20,9 @@ public class ToStrings {
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("question");
             }
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
 
         return db;
     }
@@ -36,7 +39,9 @@ public class ToStrings {
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("answer");
             }
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
 
         return db;
     }

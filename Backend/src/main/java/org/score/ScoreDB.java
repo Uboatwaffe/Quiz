@@ -1,6 +1,7 @@
 package org.score;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 import org.manage.SQL;
 
 import java.sql.PreparedStatement;
@@ -33,6 +34,7 @@ public class ScoreDB {
             }
 
         } catch (SQLException ignore) {
+            new ExceptionUI();
         }
 
         return db;
@@ -47,7 +49,7 @@ public class ScoreDB {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            throw new RuntimeException(e);
+            new ExceptionUI();
         }
     }
 

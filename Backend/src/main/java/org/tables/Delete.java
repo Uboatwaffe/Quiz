@@ -1,6 +1,7 @@
 package org.tables;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 import org.manage.SQL;
 
 import java.sql.PreparedStatement;
@@ -30,7 +31,7 @@ public class Delete {
 
             SQL.setCurrentTable(SQL.getAllTables()[0]);
         } catch (SQLException | NullPointerException e) {
-            throw new RuntimeException(e);
+            new ExceptionUI();
         }
     }
 }

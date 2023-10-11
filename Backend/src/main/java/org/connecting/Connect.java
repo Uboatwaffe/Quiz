@@ -1,5 +1,6 @@
 package org.connecting;
 
+import org.exceptions.ExceptionUI;
 import org.manage.SQL;
 
 import java.sql.*;
@@ -16,7 +17,7 @@ public class Connect {
             resultSet = statement.executeQuery("SELECT * FROM " + SQL.getCurrentTable());
 
         } catch (SQLException ignored) {
-
+            new ExceptionUI();
         }
         return resultSet;
     }

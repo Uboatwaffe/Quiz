@@ -1,5 +1,6 @@
 package org.manage;
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -15,7 +16,7 @@ public class Deleting {
                 PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
                 statement.executeUpdate();
             } catch (SQLException | NullPointerException e) {
-                throw new RuntimeException(e);
+                new ExceptionUI();
             }
 
 

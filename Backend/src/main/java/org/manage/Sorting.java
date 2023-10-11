@@ -1,6 +1,7 @@
 package org.manage;
 
 import org.connecting.Connect;
+import org.exceptions.ExceptionUI;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,6 +32,8 @@ public class Sorting {
             for (int j = 0; j < i; j++) {
                 Adding.add(questions[j], answers[j], types[j]);
             }
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
     }
 }

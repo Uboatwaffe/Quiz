@@ -1,6 +1,7 @@
 package org.manage;
 
 import org.connecting.Connect;
+import org.exceptions.ExceptionUI;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,7 +14,7 @@ public class HowMany {
         try {
             while (resultSet.next()) i++;
         }catch (SQLException ignore){
-
+            new ExceptionUI();
         }
         return i;
     }
@@ -25,7 +26,7 @@ public class HowMany {
                 i = Integer.valueOf(resultSet.getString("id"));
             }
         }catch (SQLException ignore){
-
+            new ExceptionUI();
         }
         return i;
     }

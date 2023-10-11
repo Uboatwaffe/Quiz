@@ -1,6 +1,7 @@
 package org.manage;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,7 +15,7 @@ public class Adding {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            throw new RuntimeException(e);
+            new ExceptionUI();
         }
     }
     public static void add(String index, String question, String answer, String type) {
@@ -24,7 +25,7 @@ public class Adding {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            throw new RuntimeException(e);
+            new ExceptionUI();
         }
     }
 }

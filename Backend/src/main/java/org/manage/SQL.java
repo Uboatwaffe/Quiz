@@ -1,6 +1,7 @@
 package org.manage;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,7 +39,9 @@ public class SQL {
                 db[i++] = resultSet.getString("name");
             }
 
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
         return db;
     }
 }

@@ -1,5 +1,7 @@
 package org.connecting;
 
+import org.exceptions.ExceptionUI;
+
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -23,7 +25,7 @@ public class LoggingIn {
             }
 
         } catch (SQLException ignored) {
-
+            new ExceptionUI();
         }
         return db;
     }

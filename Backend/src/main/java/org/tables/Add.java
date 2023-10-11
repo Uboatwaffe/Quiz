@@ -1,6 +1,7 @@
 package org.tables;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 import org.manage.SQL;
 
 import java.sql.PreparedStatement;
@@ -26,7 +27,7 @@ public class Add {
             PreparedStatement statement4 = Connecting.getConnection().prepareStatement(sql3);
             statement4.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            throw new RuntimeException(e);
+            new ExceptionUI();
         }
     }
 }
