@@ -2,15 +2,15 @@ package org.ui.questions;
 
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class QuestionABC implements ActionListener {
-    JFrame frame = new JFrame("Quiz");
-    String answer;
+    // UI for showing close question
+    private final JFrame frame = new JFrame("Quiz");
+    private final String answer;
     public QuestionABC(String quest, String answer){
         this.answer = answer;
 
@@ -55,7 +55,8 @@ public class QuestionABC implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals(answer)) {
-            new Score(++Count.count);
+            Count.setCount(Count.getCount()+1);
+            new Score(Count.getCount());
         }else
             new Incorrect(answer, e.getActionCommand());
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));

@@ -1,18 +1,18 @@
 package org.ui.admin;
 
 import org.ui.Main;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminPanel implements ActionListener {
-    JFrame frame = new JFrame("Admin Panel");
-    Manage manage = new Manage();
-    ShowAll showAll = new ShowAll();
+    // Main menu for AdminPanel
+    private final JFrame frame = new JFrame("Admin Panel");
+    private final Manage manage = new Manage();
+    private final ShowAll showAll = new ShowAll();
 
-    Main main = new Main();
+    private final Main main = new Main();
 
     public AdminPanel() {
         main.hideMain();

@@ -1,20 +1,21 @@
 package org.reset;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 import org.manage.Adding;
 import org.manage.ChangePassword;
 import org.manage.Deleting;
 import org.manage.SQL;
 import org.tables.Delete;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class Reset {
-    static String[] tableNames = SQL.getAllTables();
-    private static String[] db1 = {"True or False", "Close question", "Open question", "Question about date"};
-    private static String[] db2 = {"TRUE", "A", "YES", "11.11.1111"};
-    private static String[] db3 = {"t", "c", "o", "d"};
+    // Resets all data
+    private static final String[] tableNames = SQL.getAllTables();
+    private static final String[] db1 = {"True or False", "Close question", "Open question", "Question about date"};
+    private static final String[] db2 = {"TRUE", "A", "YES", "11.11.1111"};
+    private static final String[] db3 = {"t", "c", "o", "d"};
 
     public static void reset(){
         String[] toDelete = new String[tableNames.length-1];
@@ -51,7 +52,7 @@ public class Reset {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            throw new RuntimeException(e);
+            new ExceptionUI();
         }
     }
 }

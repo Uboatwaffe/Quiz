@@ -1,15 +1,15 @@
 package org.ui.others;
 
 import org.ui.Main;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class NoQuestions implements ActionListener {
-    JFrame frame = new JFrame("Quiz");
-    Main main = new Main();
+    // UI that informs user that there aren't any questions
+    private final JFrame frame = new JFrame("Quiz");
+    private final Main main = new Main();
 
     public NoQuestions() {
 

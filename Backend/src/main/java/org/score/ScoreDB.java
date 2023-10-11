@@ -1,21 +1,22 @@
 package org.score;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 import org.manage.SQL;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ScoreDB {
-    static ResultSet resultSet = null;
-    static String[] db;
+    static private String[] db;
 
     public static String[] getStats() {
+        // Gets all info about current set
+
         try {
             Statement statement = Connecting.getConnection().createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM score WHERE name ='"+ SQL.getCurrentTable() +"'");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM score WHERE name ='" + SQL.getCurrentTable() + "'");
 
             int i = 0;
 
@@ -33,12 +34,15 @@ public class ScoreDB {
             }
 
         } catch (SQLException ignore) {
+            new ExceptionUI();
         }
 
         return db;
 
     }
     public static void setStats(String points) {
+        // Sets all info about current set
+
         String[] db = getStats();
 
         String sql = "UPDATE `quiz`.`score` SET `attempts` = '"+ (Integer.parseInt(db[0])+1) +"', `points` = '"+ points +"', `allPoints` = '"+ (Integer.parseInt(db[2])+Integer.parseInt(points)) +"' WHERE (`name` = '"+ SQL.getCurrentTable() +"');";
@@ -47,7 +51,7 @@ public class ScoreDB {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            throw new RuntimeException(e);
+            new ExceptionUI();
         }
     }
 

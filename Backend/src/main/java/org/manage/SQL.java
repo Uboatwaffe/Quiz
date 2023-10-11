@@ -1,7 +1,7 @@
 package org.manage;
 
 import org.connecting.Connecting;
-
+import org.exceptions.ExceptionUI;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,10 +18,10 @@ public class SQL {
     }
 
     public static String[] getAllTables(){
+        // Returns all tables existing in DB
+
         String[] db = {"set1"};
         try {
-            Connecting connecting = new Connecting();
-
             Statement statement = Connecting.getConnection().createStatement();
 
             assert statement != null;
@@ -38,7 +38,9 @@ public class SQL {
                 db[i++] = resultSet.getString("name");
             }
 
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
         return db;
     }
 }

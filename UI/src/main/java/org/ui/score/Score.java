@@ -1,15 +1,13 @@
 package org.ui.score;
 
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Score implements ActionListener {
-    JFrame frame = new JFrame("Quiz");
-
-
+    // UI for informing user he inserted correct answer
+    private final JFrame frame = new JFrame("Quiz");
     public Score(int sc){
 
         // Default settings

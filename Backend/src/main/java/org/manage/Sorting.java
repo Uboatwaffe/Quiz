@@ -1,12 +1,14 @@
 package org.manage;
 
 import org.connecting.Connect;
-
+import org.exceptions.ExceptionUI;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Sorting {
     public void sort(){
+        // Sorts id numbers so they start from 1 and are continuous
+
         try {
             Connect connect = new Connect();
             HowMany howMany = new HowMany();
@@ -31,6 +33,8 @@ public class Sorting {
             for (int j = 0; j < i; j++) {
                 Adding.add(questions[j], answers[j], types[j]);
             }
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
     }
 }

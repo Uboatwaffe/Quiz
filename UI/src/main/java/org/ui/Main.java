@@ -3,31 +3,25 @@ package org.ui;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import org.connecting.LoggingIn;
 import org.manage.HowMany;
-import org.manage.SQL;
 import org.score.ScoreDB;
-import org.ui.admin.AdminOther;
-import org.ui.admin.AdminPanel;
-import org.ui.admin.TablesChange;
 import org.ui.hq.HQ;
 import org.ui.others.Credit;
 import org.ui.others.Info;
 import org.ui.others.NoQuestions;
 import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
-import org.connecting.Connect;
 import org.ui.admin.Logging;
 
 public class Main implements ActionListener {
-    HQ hq = new HQ();
-    HowMany howMany = new HowMany();
-    JFrame frame = new JFrame("Quiz");
-    JFrame frame2 = new JFrame("Score");
-    JFrame frame3 = new JFrame("Are you ready?");
+    // Main class
+    private final HQ hq = new HQ();
+    private final HowMany howMany = new HowMany();
+    private final JFrame frame = new JFrame("Quiz");
+    private final JFrame frame2 = new JFrame("Score");
+    private final JFrame frame3 = new JFrame("Are you ready?");
 
-    JLabel score = new JLabel(String.valueOf(Count.count));
+    JLabel score = new JLabel(String.valueOf(Count.getCount()));
 
     public Main(){
         // Main
@@ -140,7 +134,7 @@ public class Main implements ActionListener {
         if(e.getActionCommand().equals("CLOSE")){
             System.exit(0);
         } else if (e.getActionCommand().equals("START")) {
-            Count.count = 0;
+            Count.setCount(0);
             if(howMany.howMany() != 0) {
                 frame.setVisible(false);
                 frame3.setVisible(true);
@@ -160,13 +154,13 @@ public class Main implements ActionListener {
             frame2.setVisible(false);
             frame.setVisible(true);
         } else if (e.getActionCommand().equals("I AM")) {
-            ScoreDB.setStats(String.valueOf(Count.count));
+            ScoreDB.setStats(String.valueOf(Count.getCount()));
             frame3.setVisible(false);
-            score.setText(Count.count + " out of " + howMany.howMany());
+            score.setText(Count.getCount() + " out of " + howMany.howMany());
             frame2.setVisible(true);
             frame.setVisible(false);
         } else if (e.getActionCommand().equals("I'M NOT")) {
-            ScoreDB.setStats(String.valueOf(Count.count));
+            ScoreDB.setStats(String.valueOf(Count.getCount()));
             System.exit(0);
         } else if (e.getActionCommand().equals("ADMIN PANEL")) {
             frame.setVisible(false);

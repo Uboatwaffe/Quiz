@@ -1,16 +1,15 @@
 package org.tables;
 
 import org.connecting.Connecting;
+import org.exceptions.ExceptionUI;
 import org.manage.SQL;
-
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class Delete {
-    ResultSet resultSet;
+
     public static void delete(String name) {
+        // Deletes table from DB
 
         try {
 
@@ -30,7 +29,7 @@ public class Delete {
 
             SQL.setCurrentTable(SQL.getAllTables()[0]);
         } catch (SQLException | NullPointerException e) {
-            throw new RuntimeException(e);
+            new ExceptionUI();
         }
     }
 }

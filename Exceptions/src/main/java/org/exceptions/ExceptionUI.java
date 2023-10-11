@@ -1,29 +1,30 @@
-package org.ui.others;
+package org.exceptions;
 
-import org.ui.Main;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 
-public class WrongPassword implements ActionListener {
-    // UI that informs about inserting wrong password/login
-    private final JFrame frame = new JFrame("Quiz");
-    private final Main main = new Main();
 
-    public WrongPassword() {
+public class ExceptionUI implements ActionListener {
+// Shows to user that something went wrong
+
+    public ExceptionUI(){
 
         // Default settings
+        JFrame frame = new JFrame("Error");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(440, 170);
+        frame.setSize(440,170);
         frame.setLayout(null);
 
         // Labels
-        JLabel welcome = new JLabel("UNFORTUNATELY");
-        welcome.setBounds(160, 5, 150, 15);
+        JLabel welcome = new JLabel("SORRY!");
+        welcome.setBounds(185, 5, 150, 15);
 
-        JLabel info = new JLabel("Your login or password was incorrect");
-        info.setBounds(100, 25, 300, 15);
+        JLabel info = new JLabel("Something went wrong...");
+        info.setBounds(140, 25, 150, 15);
+
+        JLabel score = new JLabel();
+        score.setBounds(200, 45, 150, 15);
 
         // Button
         JButton understood = new JButton("UNDERSTOOD");
@@ -35,6 +36,7 @@ public class WrongPassword implements ActionListener {
         // Adding to the frame
         frame.add(welcome);
         frame.add(info);
+        frame.add(score);
         frame.add(understood);
 
         // Setting up the visibility
@@ -42,12 +44,10 @@ public class WrongPassword implements ActionListener {
     }
 
 
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("UNDERSTOOD")) {
-            main.showMain();
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            System.exit(1);
         }
     }
 }

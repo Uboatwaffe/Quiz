@@ -1,12 +1,14 @@
 package org.manage;
 
 import org.connecting.Connect;
-
+import org.exceptions.ExceptionUI;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ToStrings {
     public String[] questionsInStringArray(){
+        // Returns all questions from current set
+
         Connect connect = new Connect();
         HowMany howMany = new HowMany();
 
@@ -19,11 +21,15 @@ public class ToStrings {
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("question");
             }
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
 
         return db;
     }
     public String[] answersInStringArray(){
+        // Returns all answers from current set
+
         Connect connect = new Connect();
         HowMany howMany = new HowMany();
 
@@ -36,7 +42,9 @@ public class ToStrings {
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("answer");
             }
-        }catch (SQLException ignore){}
+        }catch (SQLException ignore){
+            new ExceptionUI();
+        }
 
         return db;
     }

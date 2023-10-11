@@ -1,18 +1,15 @@
 package org.ui.admin;
 
 import org.manage.SQL;
-import org.ui.Main;
-
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class TablesChange implements ActionListener {
-    JFrame frame;
-    String prevTable = "set1";
+    // UI responsible for changing tables
+    private final JFrame frame;
+    private String prevTable = "set1";
 
     public TablesChange() {
         frame = new JFrame("Changing table");
@@ -30,12 +27,7 @@ public class TablesChange implements ActionListener {
 
         pane.setBounds(5, 25, 300, 60);
 
-        list.addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                prevTable = list.getSelectedValue();
-            }
-        });
+        list.addListSelectionListener(e -> prevTable = list.getSelectedValue());
 
 
         // Buttons

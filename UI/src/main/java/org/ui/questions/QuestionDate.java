@@ -4,16 +4,15 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
 
 
 public class QuestionDate implements ActionListener {
-
-    String answer;
-    JFrame frame = new JFrame("Quiz");
-    JTextField field = new JTextField("This is question about date", 100);
+    // UI for showing question about a date
+    private final String answer;
+    private final JFrame frame = new JFrame("Quiz");
+    private final JTextField field = new JTextField("This is question about date", 100);
     public QuestionDate(String quest, String answer){
         this.answer = answer;
 
@@ -49,7 +48,8 @@ public class QuestionDate implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("SUBMIT")) {
             if (field.getText().equals(this.answer)) {
-                new Score(++Count.count);
+                Count.setCount(Count.getCount()+1);
+                new Score(Count.getCount());
             }else
                 new Incorrect(answer, field.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));

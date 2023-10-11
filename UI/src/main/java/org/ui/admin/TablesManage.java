@@ -6,8 +6,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class TablesManage implements ActionListener {
-    JFrame frame;
-
+    // UI that allows you to choose what to do (tables)
+    private final JFrame frame;
     public TablesManage() {
         frame = new JFrame("What to do");
 

@@ -3,16 +3,16 @@ package org.ui.admin;
 import org.connecting.LoggingIn;
 import org.ui.Main;
 import org.ui.others.WrongPassword;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Logging implements ActionListener {
-    JFrame frame;
-    JTextField login = new JTextField("Login");
-    JTextField password = new JTextField("Password");
+    // UI for logging into AdminPanel
+    private final JFrame frame;
+    private final JTextField login = new JTextField("Login");
+    private final JTextField password = new JTextField("Password");
 
     public Logging() {
         frame = new JFrame("Logging in");

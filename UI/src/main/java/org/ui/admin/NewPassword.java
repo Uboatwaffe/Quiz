@@ -1,19 +1,17 @@
 package org.ui.admin;
 
-import org.connecting.LoggingIn;
 import org.manage.ChangePassword;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class NewPassword implements ActionListener {
-    JFrame frame;
-
-    JTextField user = new JTextField("Username");
-    JTextField login = new JTextField("New login");
-    JTextField password = new JTextField("New password");
+    // UI for changing your password/login
+    private final JFrame frame;
+    private final JTextField user = new JTextField("Username");
+    private final JTextField login = new JTextField("New login");
+    private final JTextField password = new JTextField("New password");
 
     public NewPassword() {
         frame = new JFrame("Changing account details");

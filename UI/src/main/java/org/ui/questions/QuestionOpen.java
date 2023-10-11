@@ -2,16 +2,16 @@ package org.ui.questions;
 
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class QuestionOpen implements ActionListener {
-    String answer;
-    JFrame frame = new JFrame("Quiz");
-    JTextField field = new JTextField("This is an open question", 10);
+    // UI for showing open question
+    private final String answer;
+    private final JFrame frame = new JFrame("Quiz");
+    private final JTextField field = new JTextField("This is an open question", 10);
     public QuestionOpen(String quest, String answer){
         this.answer = answer;
 
@@ -47,7 +47,8 @@ public class QuestionOpen implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("SUBMIT")) {
             if (field.getText().equals(answer)) {
-                new Score(++Count.count);
+                Count.setCount(Count.getCount()+1);
+                new Score(Count.getCount());
             }else
                 new Incorrect(answer, field.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
