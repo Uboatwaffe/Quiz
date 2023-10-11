@@ -2,7 +2,6 @@ package org.ui.admin;
 
 import org.reset.Reset;
 import org.ui.tutorial.AdminTutorial;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

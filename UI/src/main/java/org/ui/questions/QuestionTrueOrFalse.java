@@ -2,7 +2,6 @@ package org.ui.questions;
 
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

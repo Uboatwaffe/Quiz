@@ -3,22 +3,14 @@ package org.ui;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import org.connecting.LoggingIn;
-import org.exceptions.ExceptionUI;
 import org.manage.HowMany;
-import org.manage.SQL;
 import org.score.ScoreDB;
-import org.ui.admin.AdminOther;
-import org.ui.admin.AdminPanel;
-import org.ui.admin.TablesChange;
 import org.ui.hq.HQ;
 import org.ui.others.Credit;
 import org.ui.others.Info;
 import org.ui.others.NoQuestions;
 import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
-import org.connecting.Connect;
 import org.ui.admin.Logging;
 
 public class Main implements ActionListener {

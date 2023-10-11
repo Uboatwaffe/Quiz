@@ -2,7 +2,6 @@ package org.ui.admin;
 
 import org.manage.Sorting;
 import org.manage.ToStrings;
-
 import javax.swing.*;
 
 class ShowAll {

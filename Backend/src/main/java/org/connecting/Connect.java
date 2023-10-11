@@ -2,7 +2,6 @@ package org.connecting;
 
 import org.exceptions.ExceptionUI;
 import org.manage.SQL;
-
 import java.sql.*;
 
 public class Connect {

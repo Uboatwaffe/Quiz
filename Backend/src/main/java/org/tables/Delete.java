@@ -3,7 +3,6 @@ package org.tables;
 import org.connecting.Connecting;
 import org.exceptions.ExceptionUI;
 import org.manage.SQL;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 

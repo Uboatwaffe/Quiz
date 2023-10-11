@@ -1,7 +1,6 @@
 package org.connecting;
 
 import org.exceptions.ExceptionUI;
-
 import java.sql.SQLException;
 import java.sql.Statement;
 

@@ -7,7 +7,6 @@ import org.manage.ChangePassword;
 import org.manage.Deleting;
 import org.manage.SQL;
 import org.tables.Delete;
-
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 

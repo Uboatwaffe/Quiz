@@ -3,7 +3,6 @@ package org.score;
 import org.connecting.Connecting;
 import org.exceptions.ExceptionUI;
 import org.manage.SQL;
-
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

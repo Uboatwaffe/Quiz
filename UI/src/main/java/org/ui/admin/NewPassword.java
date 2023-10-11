@@ -1,8 +1,6 @@
 package org.ui.admin;
 
-import org.connecting.LoggingIn;
 import org.manage.ChangePassword;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

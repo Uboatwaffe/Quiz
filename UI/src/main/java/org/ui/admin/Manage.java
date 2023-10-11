@@ -2,7 +2,6 @@ package org.ui.admin;
 
 import org.manage.Deleting;
 import org.manage.StringOperations;
-
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
