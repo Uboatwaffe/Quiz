@@ -10,9 +10,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Logging implements ActionListener {
-    JFrame frame;
-    JTextField login = new JTextField("Login");
-    JTextField password = new JTextField("Password");
+    private final JFrame frame;
+    private final JTextField login = new JTextField("Login");
+    private final JTextField password = new JTextField("Password");
 
     public Logging() {
         frame = new JFrame("Logging in");

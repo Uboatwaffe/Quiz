@@ -9,11 +9,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class NewPassword implements ActionListener {
-    JFrame frame;
+    private final JFrame frame;
 
-    JTextField user = new JTextField("Username");
-    JTextField login = new JTextField("New login");
-    JTextField password = new JTextField("New password");
+    private final JTextField user = new JTextField("Username");
+    private final JTextField login = new JTextField("New login");
+    private final JTextField password = new JTextField("New password");
 
     public NewPassword() {
         frame = new JFrame("Changing account details");

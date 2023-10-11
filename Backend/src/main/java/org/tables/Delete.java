@@ -5,12 +5,10 @@ import org.exceptions.ExceptionUI;
 import org.manage.SQL;
 
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class Delete {
-    ResultSet resultSet;
+
     public static void delete(String name) {
 
         try {

@@ -11,9 +11,9 @@ import java.awt.event.WindowEvent;
 
 public class TableDelete implements ActionListener {
 
-    JFrame frame;
-    JTextField login = new JTextField("Name of the table");
-    JLabel error = new JLabel("There is no such table or it can't be deleted!");
+    private final JFrame frame;
+    private final JTextField login = new JTextField("Name of the table");
+    private final JLabel error = new JLabel("There is no such table or it can't be deleted!");
 
     public TableDelete() {
         frame = new JFrame("Deleting table");

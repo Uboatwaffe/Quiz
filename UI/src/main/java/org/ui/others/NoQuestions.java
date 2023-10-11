@@ -8,8 +8,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class NoQuestions implements ActionListener {
-    JFrame frame = new JFrame("Quiz");
-    Main main = new Main();
+    private final JFrame frame = new JFrame("Quiz");
+    private final Main main = new Main();
 
     public NoQuestions() {
 

@@ -7,8 +7,8 @@ import javax.swing.*;
 
 class ShowAll {
 
-    ToStrings toStrings = new ToStrings();
-    Sorting sorting = new Sorting();
+    private final ToStrings toStrings = new ToStrings();
+    private final Sorting sorting = new Sorting();
 
     public void ShowQuestions() {
         sorting.sort();

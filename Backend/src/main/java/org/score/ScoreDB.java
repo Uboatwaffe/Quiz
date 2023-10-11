@@ -10,13 +10,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class ScoreDB {
-    static ResultSet resultSet = null;
-    static String[] db;
+    static private String[] db;
 
     public static String[] getStats() {
         try {
             Statement statement = Connecting.getConnection().createStatement();
-            resultSet = statement.executeQuery("SELECT * FROM score WHERE name ='"+ SQL.getCurrentTable() +"'");
+            ResultSet resultSet = statement.executeQuery("SELECT * FROM score WHERE name ='" + SQL.getCurrentTable() + "'");
 
             int i = 0;
 

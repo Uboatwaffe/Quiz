@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 
 public class AdminTutorial implements ActionListener {
     // Default settings
-    JFrame frame = new JFrame("Tutorial");
+    private final JFrame frame = new JFrame("Tutorial");
 
     public AdminTutorial(){
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

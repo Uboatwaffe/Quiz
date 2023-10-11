@@ -8,11 +8,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminPanel implements ActionListener {
-    JFrame frame = new JFrame("Admin Panel");
-    Manage manage = new Manage();
-    ShowAll showAll = new ShowAll();
+    private final JFrame frame = new JFrame("Admin Panel");
+    private final Manage manage = new Manage();
+    private final ShowAll showAll = new ShowAll();
 
-    Main main = new Main();
+    private final Main main = new Main();
 
     public AdminPanel() {
         main.hideMain();

@@ -11,9 +11,9 @@ import org.ui.score.Score;
 
 public class QuestionDate implements ActionListener {
 
-    String answer;
-    JFrame frame = new JFrame("Quiz");
-    JTextField field = new JTextField("This is question about date", 100);
+    private final String answer;
+    private final JFrame frame = new JFrame("Quiz");
+    private final JTextField field = new JTextField("This is question about date", 100);
     public QuestionDate(String quest, String answer){
         this.answer = answer;
 

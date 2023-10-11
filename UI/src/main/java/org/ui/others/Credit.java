@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 
 public class Credit implements ActionListener {
     // Default settings
-    JFrame frame = new JFrame("Credits");
+    private final JFrame frame = new JFrame("Credits");
 
     public Credit(){
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

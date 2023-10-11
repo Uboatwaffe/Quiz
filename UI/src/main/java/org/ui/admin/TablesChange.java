@@ -11,8 +11,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class TablesChange implements ActionListener {
-    JFrame frame;
-    String prevTable = "set1";
+    private final JFrame frame;
+    private String prevTable = "set1";
 
     public TablesChange() {
         frame = new JFrame("Changing table");

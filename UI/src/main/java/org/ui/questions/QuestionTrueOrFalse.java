@@ -10,8 +10,8 @@ import java.awt.event.WindowEvent;
 
 public class QuestionTrueOrFalse implements ActionListener {
 
-    JFrame frame = new JFrame("Quiz");
-    String answer;
+    private final JFrame frame = new JFrame("Quiz");
+    private final String answer;
     public QuestionTrueOrFalse(String quest, String answer){
         this.answer = answer;
 

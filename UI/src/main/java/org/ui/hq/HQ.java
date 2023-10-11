@@ -8,15 +8,14 @@ import org.ui.questions.*;
 import org.ui.score.Score;
 
 public class HQ extends Thread{
-    Connect connect = new Connect();
+    private final Connect connect = new Connect();
 
-    String type;
     public void start(){
         try {
             ResultSet resultSet = connect.getConnection();
             if (resultSet != null) {
                 while (resultSet.next()) {
-                    type = resultSet.getString("type");
+                    String type = resultSet.getString("type");
                     switch(type){
                         case "d" -> new QuestionDate(resultSet.getString("question"), resultSet.getString("answer"));
                         case "c" -> new QuestionABC(resultSet.getString("question"), resultSet.getString("answer"));

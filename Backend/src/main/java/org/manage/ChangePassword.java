@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ChangePassword {
-    Connecting connecting = new Connecting();
+    private final Connecting connecting = new Connecting();
     public static void change(String login, String password, String user){
         String SQL = "UPDATE `admin` SET `login` = '"+ login +"', `password` = '"+ password +"' WHERE (`user` = '"+ user +"')";
         try {

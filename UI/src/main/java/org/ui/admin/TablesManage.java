@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class TablesManage implements ActionListener {
-    JFrame frame;
+    private final JFrame frame;
 
     public TablesManage() {
         frame = new JFrame("What to do");

@@ -21,8 +21,6 @@ public class SQL {
     public static String[] getAllTables(){
         String[] db = {"set1"};
         try {
-            Connecting connecting = new Connecting();
-
             Statement statement = Connecting.getConnection().createStatement();
 
             assert statement != null;

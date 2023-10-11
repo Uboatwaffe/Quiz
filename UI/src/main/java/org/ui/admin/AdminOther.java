@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminOther implements ActionListener {
-    JFrame frame = new JFrame("Other");
+    private final JFrame frame = new JFrame("Other");
 
 
     public AdminOther() {

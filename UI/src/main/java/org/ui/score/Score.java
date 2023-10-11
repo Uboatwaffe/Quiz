@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Score implements ActionListener {
-    JFrame frame = new JFrame("Quiz");
+    private final JFrame frame = new JFrame("Quiz");
 
 
     public Score(int sc){

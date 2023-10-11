@@ -2,16 +2,13 @@ package org.tables;
 
 import org.connecting.Connecting;
 import org.exceptions.ExceptionUI;
-import org.manage.SQL;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class Add {
     public static void add(String name){
-        ResultSet resultSet;
 
         try {
             String sql = "CREATE TABLE `quiz`.`"+ name +"` (`id` INT NOT NULL,`question` VARCHAR(90) NOT NULL,`answer` VARCHAR(45) NOT NULL,`type` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`))";

@@ -7,7 +7,7 @@ import java.awt.event.WindowEvent;
 
 public class Tutorial implements ActionListener {
     // Default settings
-    JFrame frame = new JFrame("Quiz");
+    private final JFrame frame = new JFrame("Quiz");
 
     public Tutorial(){
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

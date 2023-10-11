@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class HowMany {
-    Connect connect = new Connect();
+    private final Connect connect = new Connect();
     public int howMany(){
         ResultSet resultSet = connect.getConnection();
         int i = 0;

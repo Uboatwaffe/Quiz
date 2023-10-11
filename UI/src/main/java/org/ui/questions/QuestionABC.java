@@ -9,8 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class QuestionABC implements ActionListener {
-    JFrame frame = new JFrame("Quiz");
-    String answer;
+    private final JFrame frame = new JFrame("Quiz");
+    private final String answer;
     public QuestionABC(String quest, String answer){
         this.answer = answer;
 

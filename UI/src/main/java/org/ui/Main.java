@@ -22,11 +22,11 @@ import org.connecting.Connect;
 import org.ui.admin.Logging;
 
 public class Main implements ActionListener {
-    HQ hq = new HQ();
-    HowMany howMany = new HowMany();
-    JFrame frame = new JFrame("Quiz");
-    JFrame frame2 = new JFrame("Score");
-    JFrame frame3 = new JFrame("Are you ready?");
+    private final HQ hq = new HQ();
+    private final HowMany howMany = new HowMany();
+    private final JFrame frame = new JFrame("Quiz");
+    private final JFrame frame2 = new JFrame("Score");
+    private final JFrame frame3 = new JFrame("Are you ready?");
 
     JLabel score = new JLabel(String.valueOf(Count.count));
 

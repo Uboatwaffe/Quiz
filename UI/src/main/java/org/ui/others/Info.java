@@ -11,8 +11,7 @@ import java.awt.event.WindowEvent;
 
 public class Info implements ActionListener {
     // Default settings
-    JFrame frame = new JFrame("Info");
-    HowMany howMany = new HowMany();
+    private final JFrame frame = new JFrame("Info");
 
     public Info(){
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -26,6 +25,7 @@ public class Info implements ActionListener {
         JLabel string2 = new JLabel("Current set: " + SQL.getCurrentTable());
         string2.setBounds(5,30, 200, 15);
 
+        HowMany howMany = new HowMany();
         JLabel string3 = new JLabel("Number of questions: " + howMany.howMany());
         string3.setBounds(5,55, 200, 15);
 

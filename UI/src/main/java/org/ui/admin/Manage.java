@@ -9,8 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 class Manage implements ActionListener {
-    JFrame frame = new JFrame("Deleting question");
-    JTextField field = new JTextField();
+    private JFrame frame = new JFrame("Deleting question");
+    private final JTextField field = new JTextField();
 
     void delete(){
         frame = new JFrame("Deleting question");
