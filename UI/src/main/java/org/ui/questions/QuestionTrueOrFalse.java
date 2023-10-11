@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class QuestionTrueOrFalse implements ActionListener {
-
+    // UI for showing true or false question
     private final JFrame frame = new JFrame("Quiz");
     private final String answer;
     public QuestionTrueOrFalse(String quest, String answer){

@@ -9,6 +9,7 @@ import java.sql.SQLException;
 public class Delete {
 
     public static void delete(String name) {
+        // Deletes table from DB
 
         try {
 

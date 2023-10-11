@@ -18,6 +18,8 @@ public class SQL {
     }
 
     public static String[] getAllTables(){
+        // Returns all tables existing in DB
+
         String[] db = {"set1"};
         try {
             Statement statement = Connecting.getConnection().createStatement();

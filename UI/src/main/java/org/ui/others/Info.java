@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Info implements ActionListener {
-    // Default settings
+    // UI that shows info about current set
     private final JFrame frame = new JFrame("Info");
 
     public Info(){

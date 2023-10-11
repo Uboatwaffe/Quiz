@@ -8,8 +8,10 @@ import java.sql.SQLException;
 public class ChangePassword {
     private final Connecting connecting = new Connecting();
     public static void change(String login, String password, String user){
+        // Query
         String SQL = "UPDATE `admin` SET `login` = '"+ login +"', `password` = '"+ password +"' WHERE (`user` = '"+ user +"')";
         try {
+            // Executing query
             PreparedStatement statement = Connecting.getConnection().prepareStatement(SQL);
             statement.executeUpdate();
         }catch (SQLException ignore){

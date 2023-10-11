@@ -5,7 +5,7 @@ import org.manage.ToStrings;
 import javax.swing.*;
 
 class ShowAll {
-
+    // UI responsible for showing questions and answers
     private final ToStrings toStrings = new ToStrings();
     private final Sorting sorting = new Sorting();
 

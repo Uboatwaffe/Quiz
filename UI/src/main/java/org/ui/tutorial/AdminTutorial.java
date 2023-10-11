@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminTutorial implements ActionListener {
-    // Default settings
+    // How-to for admin
     private final JFrame frame = new JFrame("Tutorial");
 
     public AdminTutorial(){

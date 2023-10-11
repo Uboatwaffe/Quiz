@@ -12,6 +12,8 @@ public class ScoreDB {
     static private String[] db;
 
     public static String[] getStats() {
+        // Gets all info about current set
+
         try {
             Statement statement = Connecting.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM score WHERE name ='" + SQL.getCurrentTable() + "'");
@@ -39,6 +41,8 @@ public class ScoreDB {
 
     }
     public static void setStats(String points) {
+        // Sets all info about current set
+
         String[] db = getStats();
 
         String sql = "UPDATE `quiz`.`score` SET `attempts` = '"+ (Integer.parseInt(db[0])+1) +"', `points` = '"+ points +"', `allPoints` = '"+ (Integer.parseInt(db[2])+Integer.parseInt(points)) +"' WHERE (`name` = '"+ SQL.getCurrentTable() +"');";

@@ -8,6 +8,8 @@ import java.sql.SQLException;
 public class HowMany {
     private final Connect connect = new Connect();
     public int howMany(){
+        // Returns number of records in current set
+
         ResultSet resultSet = connect.getConnection();
         int i = 0;
         try {
@@ -18,6 +20,8 @@ public class HowMany {
         return i;
     }
     public int highest(){
+        // Returns highest id of records from current set
+
         ResultSet resultSet = connect.getConnection();
         int i = 0;
         try {

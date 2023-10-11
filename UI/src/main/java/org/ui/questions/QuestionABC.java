@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class QuestionABC implements ActionListener {
+    // UI for showing close question
     private final JFrame frame = new JFrame("Quiz");
     private final String answer;
     public QuestionABC(String quest, String answer){

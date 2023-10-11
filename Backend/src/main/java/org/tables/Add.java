@@ -7,6 +7,7 @@ import java.sql.SQLException;
 
 public class Add {
     public static void add(String name){
+        // Adds new table into DB
 
         try {
             String sql = "CREATE TABLE `quiz`.`"+ name +"` (`id` INT NOT NULL,`question` VARCHAR(90) NOT NULL,`answer` VARCHAR(45) NOT NULL,`type` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`))";

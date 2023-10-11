@@ -9,7 +9,7 @@ import org.ui.score.Score;
 
 
 public class QuestionDate implements ActionListener {
-
+    // UI for showing question about a date
     private final String answer;
     private final JFrame frame = new JFrame("Quiz");
     private final JTextField field = new JTextField("This is question about date", 100);

@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 class Manage implements ActionListener {
+    // UI responsible for allowing to add and delete questions
     private JFrame frame = new JFrame("Deleting question");
     private final JTextField field = new JTextField();
 
@@ -61,7 +62,7 @@ class Manage implements ActionListener {
             JLabel welcome = new JLabel("Welcome to the admin panel!");
             welcome.setBounds(5, 5, 200, 15);
 
-            JLabel question = new JLabel("Please insert question in this way: question; answer, type");
+            JLabel question = new JLabel("Please insert question in this way: question; answer; type");
             question.setBounds(5, 30, 400, 15);
 
             // Buttons

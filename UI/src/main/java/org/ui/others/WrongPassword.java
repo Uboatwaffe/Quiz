@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class WrongPassword implements ActionListener {
+    // UI that informs about inserting wrong password/login
     private final JFrame frame = new JFrame("Quiz");
     private final Main main = new Main();
 

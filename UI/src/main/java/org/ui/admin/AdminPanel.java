@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminPanel implements ActionListener {
+    // Main menu for AdminPanel
     private final JFrame frame = new JFrame("Admin Panel");
     private final Manage manage = new Manage();
     private final ShowAll showAll = new ShowAll();

@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 
 public class ExceptionUI implements ActionListener {
-
+// Shows to user that something went wrong
 
     public ExceptionUI(){
 

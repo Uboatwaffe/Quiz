@@ -8,9 +8,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminOther implements ActionListener {
+    // Second menu for AdminPanel
     private final JFrame frame = new JFrame("Other");
-
-
     public AdminOther() {
         frame.setSize(440, 170);
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class TablesChange implements ActionListener {
+    // UI responsible for changing tables
     private final JFrame frame;
     private String prevTable = "set1";
 

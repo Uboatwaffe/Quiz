@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class Connecting {
     public static Connection getConnection() {
         try {
-
+            // Establishing connection to DB
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
         }catch (SQLException ignore){
             new ExceptionUI();

@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class QuestionOpen implements ActionListener {
+    // UI for showing open question
     private final String answer;
     private final JFrame frame = new JFrame("Quiz");
     private final JTextField field = new JTextField("This is an open question", 10);

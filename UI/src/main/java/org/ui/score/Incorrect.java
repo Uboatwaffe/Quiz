@@ -6,9 +6,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Incorrect implements ActionListener {
+    // UI for informing user that his input was wrong
     private final JFrame frame = new JFrame("Quiz");
-
-
     public Incorrect(String answer, String wron){
 
         // Default settings

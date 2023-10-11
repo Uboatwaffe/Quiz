@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 public class ToStrings {
     public String[] questionsInStringArray(){
+        // Returns all questions from current set
+
         Connect connect = new Connect();
         HowMany howMany = new HowMany();
 
@@ -26,6 +28,8 @@ public class ToStrings {
         return db;
     }
     public String[] answersInStringArray(){
+        // Returns all answers from current set
+
         Connect connect = new Connect();
         HowMany howMany = new HowMany();
 

@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Logging implements ActionListener {
+    // UI for logging into AdminPanel
     private final JFrame frame;
     private final JTextField login = new JTextField("Login");
     private final JTextField password = new JTextField("Password");

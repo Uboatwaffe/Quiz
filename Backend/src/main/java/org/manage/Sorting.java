@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 public class Sorting {
     public void sort(){
+        // Sorts id numbers so they start from 1 and are continuous
+
         try {
             Connect connect = new Connect();
             HowMany howMany = new HowMany();

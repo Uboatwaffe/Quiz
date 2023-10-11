@@ -8,9 +8,11 @@ import java.sql.SQLException;
 public class Adding {
     private static final HowMany howMany = new HowMany();
     public static void add(String question, String answer, String type) {
+        // Query
         String sql = "INSERT INTO "+ SQL.getCurrentTable() + " VALUES ('"+ String.valueOf(howMany.highest()+1) +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
 
         try {
+            // Executing query
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
@@ -18,9 +20,11 @@ public class Adding {
         }
     }
     public static void add(String index, String question, String answer, String type) {
+        // Query
         String sql = "INSERT INTO "+ SQL.getCurrentTable() +" VALUES ('"+ index +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
 
         try {
+            // Executing query
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {

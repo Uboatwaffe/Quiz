@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Credit implements ActionListener {
-    // Default settings
+    // UI that shows who made this program
     private final JFrame frame = new JFrame("Credits");
 
     public Credit(){

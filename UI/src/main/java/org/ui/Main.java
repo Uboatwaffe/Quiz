@@ -14,6 +14,7 @@ import org.ui.tutorial.Tutorial;
 import org.ui.admin.Logging;
 
 public class Main implements ActionListener {
+    // Main class
     private final HQ hq = new HQ();
     private final HowMany howMany = new HowMany();
     private final JFrame frame = new JFrame("Quiz");

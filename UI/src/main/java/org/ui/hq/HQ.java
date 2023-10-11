@@ -6,6 +6,7 @@ import org.exceptions.ExceptionUI;
 import org.ui.questions.*;
 
 public class HQ extends Thread{
+    // Class that has its own Thread - responsible for showing questions to user
     private final Connect connect = new Connect();
 
     public void start(){

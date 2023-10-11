@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class NoQuestions implements ActionListener {
+    // UI that informs user that there aren't any questions
     private final JFrame frame = new JFrame("Quiz");
     private final Main main = new Main();
 
