@@ -29,8 +29,8 @@
 ### Please read LICENSE before using this program
 
 ## Creators
-- ##### Maciej --> Project building
-- ##### Zofia --> UI design
+- ##### Contributor 1 --> Project building
+- ##### Contributor 2 --> UI design
 
 ## Contact
 ##### Any issues should be reported via GitHub
