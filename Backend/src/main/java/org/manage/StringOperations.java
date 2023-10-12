@@ -9,7 +9,7 @@ public class StringOperations {
         try {
             String question = chain.substring(0, chain.indexOf(";"));
             String answer = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";"));
-            String type = chain.substring(chain.indexOf(",") + 1);
+            String type = chain.substring(chain.lastIndexOf(";") + 1);
 
             question.trim();
             answer.trim();
