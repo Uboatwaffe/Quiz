@@ -4,9 +4,9 @@
 
 Only versions with ✅ are supported with security
 
-| Version | Supported          |
-| ------- | ------------------ |
-| v0.0.1-betha   | :white_check_mark: |
+| Version | Supported |
+| ------- |------|
+| v0.0.1-betha   |  ✅   |
 
 ## Reporting a Vulnerability
 
