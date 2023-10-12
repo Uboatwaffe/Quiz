@@ -22,7 +22,7 @@ public class NoQuestions implements ActionListener {
         JLabel welcome = new JLabel("UNFORTUNATELY");
         welcome.setBounds(160, 5, 150, 15);
 
-        JLabel info = new JLabel("There aren't questions");
+        JLabel info = new JLabel("There aren't any questions");
         info.setBounds(145, 25, 300, 15);
 
         // Button
