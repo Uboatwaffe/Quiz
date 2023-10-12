@@ -20,13 +20,13 @@ public class HowMany {
         return i;
     }
     public int highest(){
-        // Returns highest id of records from current set
+        // Returns the highest id of records from current set
 
         ResultSet resultSet = connect.getConnection();
         int i = 0;
         try {
             while (resultSet.next()) {
-                i = Integer.valueOf(resultSet.getString("id"));
+                i = Integer.parseInt(resultSet.getString("id"));
             }
         }catch (SQLException ignore){
             new ExceptionUI();

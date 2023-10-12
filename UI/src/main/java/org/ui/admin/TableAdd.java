@@ -60,8 +60,8 @@ public class TableAdd implements ActionListener {
             String[] db = SQL.getAllTables();
             String newName = login.getText();
             boolean exists = false;
-            for (int i = 0; i < db.length; i++) {
-                if (newName.equals(db[i])){
+            for (String s : db) {
+                if (newName.equals(s)) {
                     exists = true;
                     break;
                 }

@@ -21,7 +21,7 @@ public class Main implements ActionListener {
     private final JFrame frame2 = new JFrame("Score");
     private final JFrame frame3 = new JFrame("Are you ready?");
 
-    JLabel score = new JLabel(String.valueOf(Count.getCount()));
+    final JLabel score = new JLabel(String.valueOf(Count.getCount()));
 
     public Main(){
         // Main
