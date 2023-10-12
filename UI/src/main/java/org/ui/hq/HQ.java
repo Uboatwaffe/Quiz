@@ -20,6 +20,7 @@ public class HQ extends Thread{
                         case "c" -> new QuestionABC(resultSet.getString("question"), resultSet.getString("answer"));
                         case "o" -> new QuestionOpen(resultSet.getString("question"), resultSet.getString("answer"));
                         case "t" -> new QuestionTrueOrFalse(resultSet.getString("question"), resultSet.getString("answer"));
+                        default -> new ExceptionUI();
                     }
                 }
             }

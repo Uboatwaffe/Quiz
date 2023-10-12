@@ -3,15 +3,17 @@ package org.exceptions;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 
 public class ExceptionUI implements ActionListener {
-// Shows to user that something went wrong
+    // Shows to user that something went wrong
+    private final JFrame frame = new JFrame("Error");
 
     public ExceptionUI(){
 
         // Default settings
-        JFrame frame = new JFrame("Error");
+
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440,170);
         frame.setLayout(null);
@@ -47,7 +49,7 @@ public class ExceptionUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("UNDERSTOOD")) {
-            System.exit(1);
+            frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
         }
     }
 }
