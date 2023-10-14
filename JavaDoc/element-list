@@ -1,0 +1,16 @@
+module:Backend
+org.connecting
+org.manage
+org.reset
+org.score
+org.tables
+module:Exceptions
+org.exceptions
+module:UI
+org.ui
+org.ui.admin
+org.ui.hq
+org.ui.others
+org.ui.questions
+org.ui.score
+org.ui.tutorial
