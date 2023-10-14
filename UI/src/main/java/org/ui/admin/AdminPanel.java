@@ -5,7 +5,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-
+/**
+ * UI for showing admin panel
+ * @author Maciej
+ * @version 0.1
+ */
 public class AdminPanel implements ActionListener {
     // Main menu for AdminPanel
     private final JFrame frame = new JFrame("Admin Panel");

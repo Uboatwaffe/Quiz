@@ -13,6 +13,11 @@ import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
 import org.ui.admin.Logging;
 
+/**
+ * Main class
+ * @author Maciej
+ * @version 0.1
+ */
 public final class Main implements ActionListener {
     // Main class
     private final HQ hq = new HQ();

@@ -7,7 +7,11 @@ import java.awt.event.WindowEvent;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
 
-
+/**
+ * UI for showing question about date
+ * @author Maciej
+ * @version 0.1
+ */
 public class QuestionDate implements ActionListener {
     // UI for showing question about a date
     private final String answer;

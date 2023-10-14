@@ -6,6 +6,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for changing password/login
+ * @author Maciej
+ * @version 0.1
+ */
 class NewPassword implements ActionListener {
     // UI for changing your password/login
     private final JFrame frame;

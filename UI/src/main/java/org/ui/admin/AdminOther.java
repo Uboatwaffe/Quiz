@@ -7,6 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for showing other options of admin panel
+ * @author Maciej
+ * @version 0.1
+ */
 public class AdminOther implements ActionListener {
     // Second menu for AdminPanel
     private final JFrame frame = new JFrame("Other");

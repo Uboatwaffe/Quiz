@@ -6,7 +6,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-
+/**
+ * UI for showing close question
+ * @author Maciej
+ * @version 0.1
+ */
 public class QuestionABC implements ActionListener {
     // UI for showing close question
     private final JFrame frame = new JFrame("Quiz");

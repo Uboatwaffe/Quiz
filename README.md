@@ -24,6 +24,7 @@
 - Running more than one Thread
 - SQL connection
 - Tests
+- JavaDoc
 
 ## !!! Important !!!
 ### Please read LICENSE before using this program

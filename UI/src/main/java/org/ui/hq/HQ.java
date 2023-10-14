@@ -4,11 +4,18 @@ import org.connecting.Connect;
 import java.sql.*;
 import org.exceptions.ExceptionUI;
 import org.ui.questions.*;
-
+/**
+ * Class that has its own Thread
+ * @author Maciej
+ * @version 0.1
+ */
 public class HQ extends Thread{
     // Class that has its own Thread - responsible for showing questions to user
     private final Connect connect = new Connect();
 
+    /**
+     *  Method that calls other classes that show question
+     */
     public void start(){
         try {
             ResultSet resultSet = connect.getConnection();

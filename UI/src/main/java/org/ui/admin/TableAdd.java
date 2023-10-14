@@ -7,6 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for adding tables
+ * @author Maciej
+ * @version 0.1
+ */
 class TableAdd implements ActionListener {
     // UI responsible for allowing to add new tables
     private final JFrame frame;

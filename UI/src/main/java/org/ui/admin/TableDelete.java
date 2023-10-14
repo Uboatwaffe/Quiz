@@ -7,6 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for deleting tables
+ * @author Maciej
+ * @version 0.1
+ */
 class TableDelete implements ActionListener {
     // UI responsible for allowing to delete tables
     private final JFrame frame;
