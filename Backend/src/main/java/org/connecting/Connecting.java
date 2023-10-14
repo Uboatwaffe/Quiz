@@ -11,9 +11,8 @@ public class Connecting {
         try {
             // Establishing connection to DB
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
-        }catch (SQLException ignore){
-            new ExceptionUI();
+        }catch (SQLException e){
+            throw new RuntimeException(e);
         }
-        return null;
     }
 }

@@ -11,11 +11,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="Backend" target="20" />
       <module name="Connecting" target="20" />
       <module name="Connection" target="20" />
-      <module name="Exceptions" target="20" />
-      <module name="UI" target="20" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,6 +1,6 @@
 # Quiz
 ##### Program that will be used as template for future projects 
-##### This is a sceleton for future work
+##### This is a skeleton for future work
 
 ## Data input
 ### Data is read in three types:
