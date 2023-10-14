@@ -8,11 +8,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Class that is responsible for giving stats about current set
+ * @author Maciej
+ * @version 0.1
+ */
 public class ScoreDB {
     static private String[] db;
 
+    /**
+     * @return String array with all the info about current set
+     */
     public static String[] getStats() {
-        // Gets all info about current set
 
         try {
             Statement statement = Connecting.getConnection().createStatement();
@@ -40,8 +47,12 @@ public class ScoreDB {
         return db;
 
     }
+
+    /**
+     * NOT USED
+     * @param points Sets points to given value
+     */
     public static void setStats(String points) {
-        // Sets all info about current set
 
         String[] db = getStats();
 

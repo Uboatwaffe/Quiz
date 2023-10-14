@@ -4,10 +4,10 @@
 
 Only versions with ✅ are supported with security
 
-| Version | Supported |
-| ------- |-----------|
-| v0.0.1-betha   | ✅         |
-| v0.0.2-betha |  ✅        |
+| Version      | Supported |
+|--------------|-----------|
+| v0.0.1-betha | ⛔       |
+| v0.0.2-betha | ✅         |
 
 ## Reporting a Vulnerability
 

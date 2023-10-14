@@ -7,6 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for adding and deleting questions
+ * @author Maciej
+ * @version 0.1
+ */
 class Manage implements ActionListener {
     // UI responsible for allowing to add and delete questions
     private JFrame frame = new JFrame("Deleting question");

@@ -5,6 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for showing who made this program
+ * @author Maciej
+ * @version 0.1
+ */
 public class Credit implements ActionListener {
     // UI that shows who made this program
     private final JFrame frame = new JFrame("Credits");

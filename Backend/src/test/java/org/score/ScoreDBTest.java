@@ -3,7 +3,12 @@ package org.score;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * Test
+ * @see ScoreDB
+ * @author Maciej
+ * @version 0.1
+ */
 class ScoreDBTest {
 
     @Test

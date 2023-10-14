@@ -4,7 +4,16 @@ import org.exceptions.ExceptionUI;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Class responsible for checking if login/password is correct
+ * @author Maciej
+ * @version 0.1
+ */
 public final class LoggingIn {
+
+    /**
+     * @return String array with password and login used by user 'admin'
+     */
     public static String[] getLoginAndPassword() {
         java.sql.ResultSet resultSet;
 

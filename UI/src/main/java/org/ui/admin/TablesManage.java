@@ -5,6 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for giving the option for what to do
+ * @author Maciej
+ * @version 0.1
+ */
 class TablesManage implements ActionListener {
     // UI that allows you to choose what to do (tables)
     private final JFrame frame;

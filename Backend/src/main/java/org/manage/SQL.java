@@ -6,17 +6,29 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+/**
+ * Class that stores info about tables in DB
+ */
 public class SQL {
     private static String currentTable = getAllTables()[0];
 
+    /**
+     * @param currentTable Sets current table to 'current table
+     */
     public static void setCurrentTable(String currentTable) {
         SQL.currentTable = currentTable;
     }
 
+    /**
+     * @return String with current table
+     */
     public static String getCurrentTable() {
         return currentTable;
     }
 
+    /**
+     * @return String array with names of all tables
+     */
     public static String[] getAllTables(){
         // Returns all tables existing in DB
 

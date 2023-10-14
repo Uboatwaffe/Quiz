@@ -5,9 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-
+/**
+ * UI for showing errors
+ * @author Maciej
+ * @version 0.1
+ */
 public class ExceptionUI implements ActionListener {
-    // Shows to user that something went wrong
     private final JFrame frame = new JFrame("Error");
 
     public ExceptionUI(){

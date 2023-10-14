@@ -6,11 +6,17 @@ import org.manage.SQL;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * @author Maciej
+ * @version 0.1
+ */
 public class Delete {
 
+    /**
+     * Method that deletes table from the DB
+     * @param name Name of the table that will be deleted
+     */
     public static void delete(String name) {
-        // Deletes table from DB
-
         try {
 
             String sql = "DROP TABLE `quiz`.`" + name + "`;";

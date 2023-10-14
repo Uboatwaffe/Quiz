@@ -4,6 +4,11 @@ import org.manage.Sorting;
 import org.manage.ToStrings;
 import javax.swing.*;
 
+/**
+ * UI for showing questions and answers
+ * @author Maciej
+ * @version 0.1
+ */
 class ShowAll {
     // UI responsible for showing questions and answers
     private final ToStrings toStrings = new ToStrings();

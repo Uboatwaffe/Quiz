@@ -5,9 +5,14 @@ import org.exceptions.ExceptionUI;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * Class that sorts records in table
+ * @author Maciej
+ * @version 0.1
+ */
 public class Sorting {
+
     public void sort(){
-        // Sorts id numbers, so they start from 1 and are continuous
 
         try {
             Connect connect = new Connect();

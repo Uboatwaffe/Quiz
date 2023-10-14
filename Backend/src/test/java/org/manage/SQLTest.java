@@ -4,6 +4,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test
+ * @see SQL
+ * @author Maciej
+ * @version 0.1
+ */
 class SQLTest {
 
     @Test

@@ -7,6 +7,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for showing info about current set
+ * @author Maciej
+ * @version 0.1
+ */
 public class Info implements ActionListener {
     // UI that shows info about current set
     private final JFrame frame = new JFrame("Info");

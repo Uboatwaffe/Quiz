@@ -5,6 +5,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * UI for showing that the answer given by the user was correct
+ * @author Maciej
+ * @version 0.1
+ */
 public class Score implements ActionListener {
     // UI for informing user he inserted correct answer
     private final JFrame frame = new JFrame("Quiz");
