@@ -6,14 +6,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class NewPassword implements ActionListener {
+class NewPassword implements ActionListener {
     // UI for changing your password/login
     private final JFrame frame;
     private final JTextField user = new JTextField("Username");
     private final JTextField login = new JTextField("New login");
     private final JTextField password = new JTextField("New password");
 
-    public NewPassword() {
+    NewPassword() {
         frame = new JFrame("Changing account details");
 
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

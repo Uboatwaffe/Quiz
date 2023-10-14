@@ -7,13 +7,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class TableAdd implements ActionListener {
+class TableAdd implements ActionListener {
     // UI responsible for allowing to add new tables
     private final JFrame frame;
     private final JTextField login = new JTextField("New name");
     private final JLabel error = new JLabel("This name is already taken!");
 
-    public TableAdd() {
+    TableAdd() {
         frame = new JFrame("Adding table");
 
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

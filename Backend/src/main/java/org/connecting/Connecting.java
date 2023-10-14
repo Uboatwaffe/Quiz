@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 
-public class Connecting {
+public final class Connecting {
     public static Connection getConnection() {
         try {
             // Establishing connection to DB

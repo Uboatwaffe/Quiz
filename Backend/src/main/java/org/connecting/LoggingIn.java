@@ -4,7 +4,7 @@ import org.exceptions.ExceptionUI;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class LoggingIn {
+public final class LoggingIn {
     public static String[] getLoginAndPassword() {
         java.sql.ResultSet resultSet;
 

@@ -4,7 +4,7 @@ import org.exceptions.ExceptionUI;
 import org.manage.SQL;
 import java.sql.*;
 
-public class Connect {
+public final class Connect {
     public ResultSet getConnection() {
         ResultSet resultSet = null;
 

@@ -5,10 +5,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class TablesManage implements ActionListener {
+class TablesManage implements ActionListener {
     // UI that allows you to choose what to do (tables)
     private final JFrame frame;
-    public TablesManage() {
+    TablesManage() {
         frame = new JFrame("What to do");
 
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);

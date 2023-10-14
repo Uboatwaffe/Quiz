@@ -13,7 +13,7 @@ import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
 import org.ui.admin.Logging;
 
-public class Main implements ActionListener {
+public final class Main implements ActionListener {
     // Main class
     private final HQ hq = new HQ();
     private final HowMany howMany = new HowMany();
