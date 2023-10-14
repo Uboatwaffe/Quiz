@@ -10,13 +10,21 @@ import org.tables.Delete;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * Class that stores all default data
+ * @author Maciej
+ * @version 0.1
+ */
 public class Reset {
-    // Resets all data
     private static final String[] tableNames = SQL.getAllTables();
     private static final String[] db1 = {"True or False", "Close question", "Open question", "Question about date"};
     private static final String[] db2 = {"TRUE", "A", "YES", "11.11.1111"};
     private static final String[] db3 = {"t", "c", "o", "d"};
 
+
+    /**
+     * Method that resets whole configuration
+     */
     public static void reset(){
         String[] toDelete = new String[tableNames.length-1];
         int i = 0;
@@ -43,6 +51,11 @@ public class Reset {
 
         resetScore();
     }
+
+    /**
+     * Method that resets score
+     * NOT USED
+     */
     private static void resetScore(){
         try {
 

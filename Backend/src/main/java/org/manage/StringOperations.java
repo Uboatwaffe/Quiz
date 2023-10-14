@@ -2,10 +2,17 @@ package org.manage;
 
 import org.exceptions.ExceptionUI;
 
+/**
+ * @author Maciej
+ * @version 0.1
+ */
 public class StringOperations {
-    public static void addQuestion(String chain){
-        // Prepares chain of string to be sent to DB
 
+    /**
+     * Method that calls Adding.add() for given data
+     * @param chain String containing question, answer and type
+     */
+    public static void addQuestion(String chain){
         try {
             String question = chain.substring(0, chain.indexOf(";"));
             String answer = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";"));

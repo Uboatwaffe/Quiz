@@ -5,9 +5,17 @@ import org.exceptions.ExceptionUI;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ * @author Maciej
+ * @version 0.1
+ */
 public class Add {
+
+    /**
+     * Method that adds new table to the DB
+     * @param name Name of the new table
+     */
     public static void add(String name){
-        // Adds new table into DB
 
         try {
             String sql = "CREATE TABLE `quiz`.`"+ name +"` (`id` INT NOT NULL,`question` VARCHAR(90) NOT NULL,`answer` VARCHAR(45) NOT NULL,`type` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`))";

@@ -4,17 +4,24 @@ import org.exceptions.ExceptionUI;
 import org.manage.SQL;
 import java.sql.*;
 
+/**
+ * Class responsible for returning data from database
+ * @author Maciej
+ * @version 0.1
+ */
 public final class Connect {
+
+    /**
+     * @return ResultSet with all the data from DB for current table
+     */
     public ResultSet getConnection() {
         ResultSet resultSet = null;
 
         try {
-            // Getting connection to DB
             Statement statement = Connecting.getConnection().createStatement();
 
             assert statement != null;
 
-            // Executing query
             resultSet = statement.executeQuery("SELECT * FROM " + SQL.getCurrentTable());
 
         } catch (SQLException ignored) {
