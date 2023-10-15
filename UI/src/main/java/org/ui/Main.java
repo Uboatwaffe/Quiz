@@ -23,6 +23,7 @@ import org.ui.admin.Logging;
  */
 public final class Main implements ActionListener{
     // Main class
+    @SuppressWarnings("InstantiatingAThreadWithDefaultRunMethod")
     private final HQ hq = new HQ();
     private final HowMany howMany = new HowMany();
     private final JFrame frame = new JFrame("Quiz");

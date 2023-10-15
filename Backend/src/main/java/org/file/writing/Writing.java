@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 public class Writing {
 
 
-    public void writeLog(Class ob, String message) {
+    public void writeLog(@SuppressWarnings("rawtypes") Class ob, String message) {
         try(PrintWriter out = new PrintWriter(new FileWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfesional\\Quiz\\Backend\\src\\main\\resources\\log.txt", true))){
             out.print(ob.getName() + ":\t");
             out.print(message);

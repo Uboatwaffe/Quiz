@@ -12,6 +12,7 @@ import java.sql.SQLException;
  * @author Maciej
  * @version 0.1
  */
+@SuppressWarnings("DataFlowIssue")
 public class Adding {
     private static final HowMany howMany = new HowMany();
     private static final Writing writing = new Writing();
@@ -22,6 +23,7 @@ public class Adding {
      * @param answer Answer to that question
      * @param type Type of this question ('c' || 'o' || 'd' || 't')
      */
+    @SuppressWarnings("DataFlowIssue")
     public static void add(String question, String answer, String type) {
         // Query
         String sql = "INSERT INTO "+ SQL.getCurrentTable() + " VALUES ('"+ (howMany.highest() + 1) +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
@@ -36,24 +38,4 @@ public class Adding {
         }
     }
 
-    /**
-     * Inserts question with all additional info into DB
-     * @param question Question that will be inserted into DB
-     * @param answer Answer to that question
-     * @param type Type of this question ('c' || 'o' || 'd' || 't')
-     * @param index Index of the question
-     */
-    public static void add(String index, String question, String answer, String type) {
-        // Query
-        String sql = "INSERT INTO "+ SQL.getCurrentTable() +" VALUES ('"+ index +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
-
-        try {
-            writing.writeLog(Adding.class, "Adding questions v2");
-            // Executing query
-            PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
-            statement.executeUpdate();
-        } catch (SQLException | NullPointerException e) {
-            new ExceptionUI(Adding.class);
-        }
-    }
 }

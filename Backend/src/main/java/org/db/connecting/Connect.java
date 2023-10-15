@@ -4,7 +4,6 @@ import org.exceptions.ExceptionUI;
 import org.db.manage.SQL;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.*;
 
 /**
