@@ -1,12 +1,15 @@
 package org.ui.admin;
 
-import org.connecting.LoggingIn;
+import org.db.connecting.LoggingIn;
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 import org.ui.Main;
 import org.ui.others.WrongPassword;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI for showing logging in
@@ -18,8 +21,10 @@ public class Logging implements ActionListener {
     private final JFrame frame;
     private final JTextField login = new JTextField("Login");
     private final JTextField password = new JTextField("Password");
+    private final static Writing writing = new Writing();
 
-    public Logging() {
+    public Logging() throws IOException {
+        writing.writeLog(getClass(), "Logging in");
         frame = new JFrame("Logging in");
 
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -59,18 +64,25 @@ public class Logging implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("CLOSE")) {
-            Main main = new Main();
-            main.showMain();
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        }else if (e.getActionCommand().equals("LOG IN")) {
-            if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
-                new AdminPanel();
+        try {
+            if (e.getActionCommand().equals("CLOSE")) {
+                writing.writeLog(getClass(), "Closing");
+                Main main = new Main();
+                main.showMain();
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            }else {
-                new WrongPassword();
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            } else if (e.getActionCommand().equals("LOG IN")) {
+                if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
+                    writing.writeLog(getClass(), "Goto admin panel");
+                    new AdminPanel();
+                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                } else {
+                    writing.writeLog(getClass(), "Goto wrong password");
+                    new WrongPassword();
+                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                }
             }
+        }catch (IOException ignore){
+            new ExceptionUI(getClass());
         }
     }
 }

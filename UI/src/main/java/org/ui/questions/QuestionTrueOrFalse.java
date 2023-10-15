@@ -1,14 +1,17 @@
 package org.ui.questions;
 
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
- * UI for showing true or false questions
+ * UI for showing true or false log.txt
  * @author Maciej
  * @version 0.1
  */
@@ -16,7 +19,10 @@ public class QuestionTrueOrFalse implements ActionListener {
     // UI for showing true or false question
     private final JFrame frame = new JFrame("Quiz");
     private final String answer;
-    public QuestionTrueOrFalse(String quest, String answer){
+    private final static Writing writing = new Writing();
+    public QuestionTrueOrFalse(String quest, String answer) throws IOException {
+        writing.writeLog(getClass(),"True or false question");
+
         this.answer = answer;
 
         // Default settings
@@ -54,11 +60,16 @@ public class QuestionTrueOrFalse implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals(answer)) {
-            Count.setCount(Count.getCount()+1);
-            new Score(Count.getCount());
-        }else
-            new Incorrect(answer, e.getActionCommand());
-        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        try {
+            if (e.getActionCommand().equals(answer)) {
+                Count.setCount(Count.getCount() + 1);
+                new Score(Count.getCount());
+            } else
+                new Incorrect(answer, e.getActionCommand());
+        }catch (IOException ignore){
+            new ExceptionUI(getClass());
+        }finally {
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        }
     }
 }

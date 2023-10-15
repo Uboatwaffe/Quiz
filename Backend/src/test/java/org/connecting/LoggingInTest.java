@@ -1,5 +1,9 @@
 package org.connecting;
 
+import org.db.connecting.LoggingIn;
+
+import java.io.IOException;
+
 import static org.junit.jupiter.api.Assertions.*;
 /**
  * Test
@@ -9,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class LoggingInTest {
     @org.junit.jupiter.api.Test
-    void getLoginAndPassword() {
+    void getLoginAndPassword() throws IOException {
         assertNotNull(LoggingIn.getLoginAndPassword());
     }
 }

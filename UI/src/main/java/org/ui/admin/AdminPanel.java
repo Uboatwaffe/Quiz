@@ -1,10 +1,14 @@
 package org.ui.admin;
 
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 import org.ui.Main;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
+
 /**
  * UI for showing admin panel
  * @author Maciej
@@ -15,10 +19,11 @@ public class AdminPanel implements ActionListener {
     private final JFrame frame = new JFrame("Admin Panel");
     private final Manage manage = new Manage();
     private final ShowAll showAll = new ShowAll();
-
+    private final static Writing writing = new Writing();
     private final Main main = new Main();
 
-    public AdminPanel() {
+    public AdminPanel() throws IOException {
+        writing.writeLog(getClass(), "Admin Panel");
         main.hideMain();
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
@@ -70,20 +75,29 @@ public class AdminPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("CLOSE")) {
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            main.showMain();
-        }
-        else if (e.getActionCommand().equals("SHOW QUESTIONS")) {
-            showAll.ShowQuestions();
-        }else if (e.getActionCommand().equals("SHOW ANSWERS")){
-            showAll.ShowAnswers();
-        } else if (e.getActionCommand().equals("ADD QUESTION")) {
-            manage.add();
-        } else if (e.getActionCommand().equals("DELETE QUESTION")) {
-            manage.delete();
-        } else if (e.getActionCommand().equals("OTHER")) {
-            new AdminOther();
+        try {
+            if (e.getActionCommand().equals("CLOSE")) {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                main.showMain();
+            } else if (e.getActionCommand().equals("SHOW QUESTIONS")) {
+                writing.writeLog(getClass(), "Goto show questions");
+                showAll.ShowQuestions();
+            } else if (e.getActionCommand().equals("SHOW ANSWERS")) {
+                writing.writeLog(getClass(), "Goto show answers");
+                showAll.ShowAnswers();
+            } else if (e.getActionCommand().equals("ADD QUESTION")) {
+                writing.writeLog(getClass(), "Goto add questions");
+                manage.add();
+            } else if (e.getActionCommand().equals("DELETE QUESTION")) {
+                writing.writeLog(getClass(), "Goto delete question");
+                manage.delete();
+            } else if (e.getActionCommand().equals("OTHER")) {
+                writing.writeLog(getClass(), "Goto admin other");
+                new AdminOther();
+            }
+        }catch (IOException ignore){
+            new ExceptionUI(getClass());
         }
     }
 }

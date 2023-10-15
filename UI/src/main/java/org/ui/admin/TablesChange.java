@@ -1,10 +1,14 @@
 package org.ui.admin;
 
-import org.manage.SQL;
+import org.db.manage.SQL;
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI for changing tables
@@ -16,7 +20,10 @@ class TablesChange implements ActionListener {
     private final JFrame frame;
     private String prevTable = "set1";
 
-    TablesChange() {
+    private static final Writing writing = new Writing();
+
+    TablesChange() throws IOException {
+        writing.writeLog(getClass(), "Change tables");
         frame = new JFrame("Changing table");
 
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -59,11 +66,17 @@ class TablesChange implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("OK")){
-            SQL.setCurrentTable(prevTable);
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("CLOSE")) {
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        try {
+            if (e.getActionCommand().equals("OK")) {
+                writing.writeLog(getClass(), "Goto backend/sql");
+                SQL.setCurrentTable(prevTable);
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            } else if (e.getActionCommand().equals("CLOSE")) {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
+        }catch (IOException ignore){
+            new ExceptionUI(getClass());
         }
     }
 }

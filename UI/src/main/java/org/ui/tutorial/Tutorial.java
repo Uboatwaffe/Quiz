@@ -1,9 +1,13 @@
 package org.ui.tutorial;
 
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI for showing tutorial to user
@@ -13,8 +17,10 @@ import java.awt.event.WindowEvent;
 public class Tutorial implements ActionListener {
     // How-to for user
     private final JFrame frame = new JFrame("Quiz");
+    private final static Writing writing = new Writing();
 
-    public Tutorial(){
+    public Tutorial() throws IOException {
+        writing.writeLog(getClass(), "Creating tutorial");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(210,250);
         frame.setLayout(null);
@@ -32,7 +38,7 @@ public class Tutorial implements ActionListener {
         JLabel string4 = new JLabel("2) Date in format of DD.MM.YYYY");
         string4.setBounds(5,80, 200, 15);
 
-        JLabel string5 = new JLabel("3) Open questions should be");
+        JLabel string5 = new JLabel("3) Open log.txt should be");
         string5.setBounds(5,105, 200, 15);
 
         JLabel string6 = new JLabel("typed with CAPS LOCK");
@@ -62,6 +68,11 @@ public class Tutorial implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        try {
+            writing.writeLog(getClass(), "Closing");
+        } catch (IOException ignore) {
+            new ExceptionUI(getClass());
+        }
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

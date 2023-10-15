@@ -1,23 +1,42 @@
 package org.ui.admin;
 
-import org.manage.Deleting;
-import org.manage.StringOperations;
+import org.db.manage.Deleting;
+import org.db.manage.Functional;
+import org.db.manage.StringOperations;
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
- * UI for adding and deleting questions
+ * UI for adding and deleting log.txt
  * @author Maciej
  * @version 0.1
  */
 class Manage implements ActionListener {
-    // UI responsible for allowing to add and delete questions
+    // UI responsible for allowing to add and delete log.txt
     private JFrame frame = new JFrame("Deleting question");
     private final JTextField field = new JTextField();
+    private final static Writing writing = new Writing();
 
-    void delete(){
+
+    final Functional toArray = (chain) -> {
+        writing.writeLog(getClass(), "In lambda");
+        String[] db = new String[3];
+        db[0] = chain.substring(0, chain.indexOf(";")).trim();
+        db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";")).trim();
+        db[2] = chain.substring(chain.lastIndexOf(";") + 1).trim();
+
+        return db;
+    };
+
+    void delete() throws IOException {
+        writing.writeLog(getClass(), "Deleting question");
+
         frame = new JFrame("Deleting question");
         
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -56,7 +75,9 @@ class Manage implements ActionListener {
         frame.setVisible(true);
     }
 
-        void add(){
+        void add() throws IOException {
+            writing.writeLog(getClass(), "Adding question");
+
             frame = new JFrame("Adding question");
 
             frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -93,19 +114,27 @@ class Manage implements ActionListener {
 
             // Setting up the visibility
             frame.setVisible(true);
+
         }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("CLOSE")){
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("DELETE QUESTION")) {
-            Deleting.delete(field.getText());
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("ADD QUESTION")) {
-            StringOperations.addQuestion(field.getText());
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        try {
+            if (e.getActionCommand().equals("CLOSE")) {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            } else if (e.getActionCommand().equals("DELETE QUESTION")) {
+                writing.writeLog(getClass(), "Goto backend/deleting");
+                Deleting.delete(field.getText());
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            } else if (e.getActionCommand().equals("ADD QUESTION")) {
+                writing.writeLog(getClass(), "Goto backend/string operations");
+                StringOperations.addQuestion(toArray, field.getText());
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 
+            }
+        }catch (IOException ignore){
+            new ExceptionUI(getClass());
         }
     }
 }

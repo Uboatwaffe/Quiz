@@ -1,11 +1,15 @@
 package org.ui.others;
 
-import org.manage.HowMany;
-import org.manage.SQL;
+import org.db.manage.HowMany;
+import org.db.manage.SQL;
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI for showing info about current set
@@ -15,8 +19,10 @@ import java.awt.event.WindowEvent;
 public class Info implements ActionListener {
     // UI that shows info about current set
     private final JFrame frame = new JFrame("Info");
+    private final static Writing writing = new Writing();
 
-    public Info(){
+    public Info() throws IOException {
+        writing.writeLog(getClass(),"Info");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(210,175);
         frame.setLayout(null);
@@ -29,7 +35,7 @@ public class Info implements ActionListener {
         string2.setBounds(5,30, 200, 15);
 
         HowMany howMany = new HowMany();
-        JLabel string3 = new JLabel("Number of questions: " + howMany.howMany());
+        JLabel string3 = new JLabel("Number of answers: " + howMany.howMany());
         string3.setBounds(5,55, 200, 15);
 
 
@@ -55,6 +61,11 @@ public class Info implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        try {
+            writing.writeLog(getClass(),"Closing");
+        } catch (IOException ex) {
+            new ExceptionUI(getClass());
+        }
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

@@ -1,9 +1,10 @@
 module Backend {
     requires java.sql;
     requires Exceptions;
-    exports org.connecting;
-    exports org.manage;
-    exports org.score;
-    exports org.tables;
-    exports org.reset;
+    exports org.db.connecting;
+    exports org.db.manage;
+    exports org.db.score;
+    exports org.db.tables;
+    exports org.db.reset;
+    exports org.file.writing;
 }

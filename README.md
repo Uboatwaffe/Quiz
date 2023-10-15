@@ -25,6 +25,7 @@
 - SQL connection
 - Tests
 - JavaDoc
+- Lambda
 
 ## !!! Important !!!
 ### Please read LICENSE before using this program

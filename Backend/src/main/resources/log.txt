@@ -1,0 +1,11 @@
+
+org.ui.Main:	Start program
+org.ui.Main:	Showing info
+org.ui.others.Info:	Info
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connecting:	Establishing connection to DB
+org.db.connecting.Connect:	Getting all data from DB
+org.db.connecting.Connecting:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
+org.ui.others.Info:	Closing
+org.ui.Main:	Ending

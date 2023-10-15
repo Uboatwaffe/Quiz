@@ -1,5 +1,7 @@
 package org.connecting;
 
+import org.db.connecting.Connecting;
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
