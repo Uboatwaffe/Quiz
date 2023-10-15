@@ -1,6 +1,6 @@
 package org.ui.admin;
 
-import org.manage.ChangePassword;
+import org.db.manage.ChangePassword;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

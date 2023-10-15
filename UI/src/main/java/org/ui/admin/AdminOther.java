@@ -1,6 +1,6 @@
 package org.ui.admin;
 
-import org.reset.Reset;
+import org.db.reset.Reset;
 import org.ui.tutorial.AdminTutorial;
 import javax.swing.*;
 import java.awt.event.ActionEvent;

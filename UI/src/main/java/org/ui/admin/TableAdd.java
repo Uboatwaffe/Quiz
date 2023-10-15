@@ -1,7 +1,7 @@
 package org.ui.admin;
 
-import org.manage.SQL;
-import org.tables.Add;
+import org.db.manage.SQL;
+import org.db.tables.Add;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

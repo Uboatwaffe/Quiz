@@ -1,8 +1,8 @@
 package org.ui.admin;
 
-import org.manage.Deleting;
-import org.manage.Functional;
-import org.manage.StringOperations;
+import org.db.manage.Deleting;
+import org.db.manage.Functional;
+import org.db.manage.StringOperations;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

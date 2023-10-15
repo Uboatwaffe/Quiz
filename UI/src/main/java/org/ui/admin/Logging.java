@@ -1,6 +1,6 @@
 package org.ui.admin;
 
-import org.connecting.LoggingIn;
+import org.db.connecting.LoggingIn;
 import org.ui.Main;
 import org.ui.others.WrongPassword;
 import javax.swing.*;

@@ -1,7 +1,7 @@
 package org.ui.others;
 
-import org.manage.HowMany;
-import org.manage.SQL;
+import org.db.manage.HowMany;
+import org.db.manage.SQL;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

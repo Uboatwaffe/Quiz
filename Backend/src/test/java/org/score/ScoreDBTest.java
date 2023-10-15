@@ -1,5 +1,6 @@
 package org.score;
 
+import org.db.score.ScoreDB;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

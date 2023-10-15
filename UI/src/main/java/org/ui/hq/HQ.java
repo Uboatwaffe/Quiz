@@ -1,6 +1,6 @@
 package org.ui.hq;
 
-import org.connecting.Connect;
+import org.db.connecting.Connect;
 import java.sql.*;
 import org.exceptions.ExceptionUI;
 import org.ui.questions.*;

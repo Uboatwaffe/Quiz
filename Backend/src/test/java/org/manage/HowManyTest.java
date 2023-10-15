@@ -1,5 +1,6 @@
 package org.manage;
 
+import org.db.manage.HowMany;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

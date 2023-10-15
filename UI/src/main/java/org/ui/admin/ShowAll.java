@@ -1,7 +1,7 @@
 package org.ui.admin;
 
-import org.manage.Sorting;
-import org.manage.ToStrings;
+import org.db.manage.Sorting;
+import org.db.manage.ToStrings;
 import javax.swing.*;
 
 /**
