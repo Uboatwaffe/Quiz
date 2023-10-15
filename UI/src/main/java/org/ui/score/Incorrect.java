@@ -16,7 +16,7 @@ public class Incorrect implements ActionListener {
     // UI for informing user that his input was wrong
     private final JFrame frame = new JFrame("Quiz");
     private final static Writing writing = new Writing();
-    public Incorrect(String answer, String wron) {
+    public Incorrect(String answer, @SuppressWarnings("SpellCheckingInspection") String wron) {
         writing.writeLog(getClass(), "Incorrect answer");
 
         // Default settings
