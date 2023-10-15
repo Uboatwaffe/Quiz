@@ -1,11 +1,14 @@
 package org.ui.questions;
 
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI for showing open log.txt
@@ -17,7 +20,9 @@ public class QuestionOpen implements ActionListener {
     private final String answer;
     private final JFrame frame = new JFrame("Quiz");
     private final JTextField field = new JTextField("This is an open question", 10);
-    public QuestionOpen(String quest, String answer){
+    private final static Writing writing = new Writing();
+    public QuestionOpen(String quest, String answer) throws IOException {
+        writing.writeLog(getClass(), "Open question");
         this.answer = answer;
 
         // Default settings
@@ -50,12 +55,17 @@ public class QuestionOpen implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("SUBMIT")) {
-            if (field.getText().equals(answer)) {
-                Count.setCount(Count.getCount()+1);
-                new Score(Count.getCount());
-            }else
-                new Incorrect(answer, field.getText());
+        try {
+            if (e.getActionCommand().equals("SUBMIT")) {
+                if (field.getText().equals(answer)) {
+                    Count.setCount(Count.getCount() + 1);
+                    new Score(Count.getCount());
+                } else
+                    new Incorrect(answer, field.getText());
+            }
+        }catch (IOException ignore){
+            new ExceptionUI();
+        }finally {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

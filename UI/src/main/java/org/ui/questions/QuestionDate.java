@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
+
+import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
 
@@ -16,8 +20,11 @@ public class QuestionDate implements ActionListener {
     // UI for showing question about a date
     private final String answer;
     private final JFrame frame = new JFrame("Quiz");
+    private final static Writing writing = new Writing();
     private final JTextField field = new JTextField("This is question about date", 100);
-    public QuestionDate(String quest, String answer){
+    public QuestionDate(String quest, String answer) throws IOException {
+        writing.writeLog(getClass(), "Question about date");
+
         this.answer = answer;
 
         // Default settings
@@ -50,12 +57,19 @@ public class QuestionDate implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("SUBMIT")) {
-            if (field.getText().equals(this.answer)) {
-                Count.setCount(Count.getCount()+1);
-                new Score(Count.getCount());
-            }else
-                new Incorrect(answer, field.getText());
+        try {
+            writing.writeLog(getClass(), "Closing");
+            if (e.getActionCommand().equals("SUBMIT")) {
+                if (field.getText().equals(this.answer)) {
+                    Count.setCount(Count.getCount() + 1);
+                    new Score(Count.getCount());
+                } else
+                    new Incorrect(answer, field.getText());
+            }
+
+        }catch(IOException ignore){
+            new ExceptionUI();
+        }finally{
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

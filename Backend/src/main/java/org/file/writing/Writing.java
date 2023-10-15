@@ -12,7 +12,7 @@ public class Writing {
 
     public void writeLog(Class ob, String message) throws IOException {
         try(PrintWriter out = new PrintWriter(new FileWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfesional\\Quiz\\Backend\\src\\main\\resources\\log.txt", true))){
-            out.print(ob.getName() + ": ");
+            out.print(ob.getName() + ":\t");
             out.print(message);
             out.println();
         }catch (IOException e){

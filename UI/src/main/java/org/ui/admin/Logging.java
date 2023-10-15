@@ -1,12 +1,14 @@
 package org.ui.admin;
 
 import org.db.connecting.LoggingIn;
+import org.exceptions.ExceptionUI;
 import org.ui.Main;
 import org.ui.others.WrongPassword;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI for showing logging in
@@ -59,18 +61,22 @@ public class Logging implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getActionCommand().equals("CLOSE")) {
-            Main main = new Main();
-            main.showMain();
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        }else if (e.getActionCommand().equals("LOG IN")) {
-            if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
-                new AdminPanel();
+        try {
+            if (e.getActionCommand().equals("CLOSE")) {
+                Main main = new Main();
+                main.showMain();
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            }else {
-                new WrongPassword();
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            } else if (e.getActionCommand().equals("LOG IN")) {
+                if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
+                    new AdminPanel();
+                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                } else {
+                    new WrongPassword();
+                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                }
             }
+        }catch (IOException ignore){
+            new ExceptionUI();
         }
     }
 }
