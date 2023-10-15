@@ -18,7 +18,7 @@ public class ToStrings {
     /**
      * @return String array with all the log.txt
      */
-    public String[] questionsInStringArray() throws IOException {
+    public String[] questionsInStringArray() {
         writing.writeLog(getClass(), "Getting questions in array");
 
         Connect connect = new Connect();
@@ -33,7 +33,7 @@ public class ToStrings {
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("question");
             }
-        }catch (SQLException | IOException ignore){
+        }catch (SQLException ignore){
             new ExceptionUI(getClass());
         }
 
@@ -43,7 +43,7 @@ public class ToStrings {
     /**
      * @return String array with all answers
      */
-    public String[] answersInStringArray() throws IOException {
+    public String[] answersInStringArray() {
         writing.writeLog(getClass(), "Getting answers in array");
 
         // Returns all answers from current set
@@ -60,7 +60,7 @@ public class ToStrings {
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("answer");
             }
-        }catch (SQLException | IOException ignore){
+        }catch (SQLException ignore){
             new ExceptionUI(getClass());
         }
 

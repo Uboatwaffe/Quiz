@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for showing errors
@@ -48,9 +47,7 @@ public class ExceptionUI implements ActionListener {
         frame.setVisible(true);
 
         ERRORS errors = new ERRORS();
-        try {
-            errors.writeLog(getClass(), "ERROR from:\t" + ob.getName());
-        } catch (IOException ignore) {}
+        errors.writeLog(getClass(), "ERROR from:\t" + ob.getName());
     }
 
 

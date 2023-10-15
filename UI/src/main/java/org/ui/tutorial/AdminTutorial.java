@@ -1,13 +1,11 @@
 package org.ui.tutorial;
 
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for showing tutorial for admin
@@ -19,7 +17,7 @@ public class AdminTutorial implements ActionListener {
     private final JFrame frame = new JFrame("Tutorial");
     private final static Writing writing = new Writing();
 
-    public AdminTutorial() throws IOException {
+    public AdminTutorial() {
         writing.writeLog(getClass(), "Creating AdminTutorial");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(310,285);
@@ -76,11 +74,7 @@ public class AdminTutorial implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            writing.writeLog(getClass(), "Closing");
-        } catch (IOException ignore) {
-            new ExceptionUI(getClass());
-        }
+        writing.writeLog(getClass(), "Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

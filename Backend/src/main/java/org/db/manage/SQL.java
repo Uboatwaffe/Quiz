@@ -4,7 +4,6 @@ import org.db.connecting.Connecting;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -57,7 +56,7 @@ public class SQL {
                 db[i++] = resultSet.getString("name");
             }
 
-        }catch (SQLException | IOException ignore){
+        }catch (SQLException | NullPointerException ignore){
             new ExceptionUI(SQL.class);
         }
         return db;

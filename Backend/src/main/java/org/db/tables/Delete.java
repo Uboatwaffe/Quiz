@@ -1,12 +1,10 @@
 package org.db.tables;
 
 import org.db.connecting.Connecting;
-import org.db.manage.ChangePassword;
 import org.db.manage.SQL;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -42,7 +40,7 @@ public class Delete {
             statement4.executeUpdate();
 
             SQL.setCurrentTable(SQL.getAllTables()[0]);
-        } catch (SQLException | NullPointerException | IOException e) {
+        } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Delete.class);
         }
     }

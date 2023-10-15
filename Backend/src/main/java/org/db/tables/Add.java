@@ -1,11 +1,9 @@
 package org.db.tables;
 
 import org.db.connecting.Connecting;
-import org.db.manage.ChangePassword;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -39,7 +37,7 @@ public class Add {
 
             PreparedStatement statement4 = Connecting.getConnection().prepareStatement(sql3);
             statement4.executeUpdate();
-        } catch (SQLException | NullPointerException | IOException e) {
+        } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Add.class);
         }
     }

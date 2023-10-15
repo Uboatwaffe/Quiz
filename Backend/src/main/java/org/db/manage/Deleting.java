@@ -4,7 +4,6 @@ import org.db.connecting.Connecting;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -33,7 +32,7 @@ public class Deleting {
             // Executing query
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException | IOException e) {
+        } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Deleting.class);
         }
 

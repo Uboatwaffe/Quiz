@@ -4,9 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
@@ -22,7 +20,7 @@ public class QuestionDate implements ActionListener {
     private final JFrame frame = new JFrame("Quiz");
     private final static Writing writing = new Writing();
     private final JTextField field = new JTextField("This is question about date", 100);
-    public QuestionDate(String quest, String answer) throws IOException {
+    public QuestionDate(String quest, String answer) {
         writing.writeLog(getClass(), "Question about date");
 
         this.answer = answer;
@@ -67,9 +65,7 @@ public class QuestionDate implements ActionListener {
                     new Incorrect(answer, field.getText());
             }
 
-        }catch(IOException ignore){
-            new ExceptionUI(getClass());
-        }finally{
+        } finally{
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

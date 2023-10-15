@@ -1,12 +1,10 @@
 package org.db.score;
 
 import org.db.connecting.Connecting;
-import org.db.manage.ChangePassword;
 import org.db.manage.SQL;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -40,14 +38,13 @@ public class ScoreDB {
 
             resultSet = statement.executeQuery("SELECT * FROM score");
 
-            i = 0;
             while (resultSet.next()){
                 db[0] = resultSet.getString("attempts");
                 db[1] = resultSet.getString("points");
                 db[2] = resultSet.getString("allPoints");
             }
 
-        } catch (SQLException | IOException ignore) {
+        } catch (SQLException ignore) {
             new ExceptionUI(ScoreDB.class);
         }
 
@@ -70,7 +67,7 @@ public class ScoreDB {
 
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException | IOException e) {
+        } catch (SQLException | NullPointerException e) {
             new ExceptionUI(ScoreDB.class);
         }
     }

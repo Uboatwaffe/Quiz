@@ -1,14 +1,12 @@
 package org.ui.admin;
 
 import org.db.manage.ChangePassword;
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for changing password/login
@@ -23,7 +21,7 @@ class NewPassword implements ActionListener {
     private final JTextField password = new JTextField("New password");
     private final static Writing writing = new Writing();
 
-    NewPassword() throws IOException {
+    NewPassword() {
         writing.writeLog(getClass(), "New password/login");
         frame = new JFrame("Changing account details");
 
@@ -62,17 +60,13 @@ class NewPassword implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getActionCommand().equals("CLOSE")) {
-                writing.writeLog(getClass(), "Closing");
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            }else if (e.getActionCommand().equals("SUBMIT")) {
-                writing.writeLog(getClass(), "Goto backend/change password");
-                ChangePassword.change(login.getText(), password.getText(), user.getText());
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            }
-        }catch (IOException ignore){
-            new ExceptionUI(getClass());
+        if (e.getActionCommand().equals("CLOSE")) {
+            writing.writeLog(getClass(), "Closing");
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        }else if (e.getActionCommand().equals("SUBMIT")) {
+            writing.writeLog(getClass(), "Goto backend/change password");
+            ChangePassword.change(login.getText(), password.getText(), user.getText());
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }
 }

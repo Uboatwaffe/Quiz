@@ -3,7 +3,6 @@ package org.db.connecting;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -19,7 +18,7 @@ public final class Connecting {
     /**
      * @return Connection reference to database
      */
-    public static Connection getConnection() throws IOException {
+    public static Connection getConnection() {
         writing.writeLog(Connecting.class, "Establishing connection to DB");
         try {
 

@@ -17,7 +17,7 @@ public final class Connect {
     /**
      * @return ResultSet with all the data from DB for current table
      */
-    public ResultSet getConnection() throws IOException {
+    public ResultSet getConnection() {
         writing.writeLog(getClass(), "Getting all data from DB");
         ResultSet resultSet = null;
 
@@ -28,7 +28,7 @@ public final class Connect {
 
             resultSet = statement.executeQuery("SELECT * FROM " + SQL.getCurrentTable());
 
-        } catch (SQLException ignored) {
+        } catch (SQLException | NullPointerException ignored) {
             new ExceptionUI(getClass());
         }
         return resultSet;

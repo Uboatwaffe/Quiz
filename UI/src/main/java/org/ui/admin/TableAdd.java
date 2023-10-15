@@ -2,14 +2,12 @@ package org.ui.admin;
 
 import org.db.manage.SQL;
 import org.db.tables.Add;
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for adding tables
@@ -23,7 +21,7 @@ class TableAdd implements ActionListener {
     private final JLabel error = new JLabel("This name is already taken!");
     private final static Writing writing = new Writing();
 
-    TableAdd() throws IOException {
+    TableAdd() {
         writing.writeLog(getClass(), "Adding table");
         frame = new JFrame("Adding table");
 
@@ -65,32 +63,28 @@ class TableAdd implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getActionCommand().equals("CLOSE")) {
-                writing.writeLog(getClass(), "Closing");
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            } else if (e.getActionCommand().equals("OK")) {
-                String[] db = SQL.getAllTables();
-                String newName = login.getText();
-                boolean exists = false;
-                for (String s : db) {
-                    if (newName.equals(s)) {
-                        exists = true;
-                        break;
-                    }
-                }
-                if (!exists) {
-                    writing.writeLog(getClass(), "Goto add table");
-                    error.setVisible(false);
-                    Add.add(newName);
-                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-                } else {
-                    writing.writeLog(getClass(), "Error");
-                    error.setVisible(true);
+        if (e.getActionCommand().equals("CLOSE")) {
+            writing.writeLog(getClass(), "Closing");
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        } else if (e.getActionCommand().equals("OK")) {
+            String[] db = SQL.getAllTables();
+            String newName = login.getText();
+            boolean exists = false;
+            for (String s : db) {
+                if (newName.equals(s)) {
+                    exists = true;
+                    break;
                 }
             }
-        }catch (IOException ignore){
-            new ExceptionUI(getClass());
+            if (!exists) {
+                writing.writeLog(getClass(), "Goto add table");
+                error.setVisible(false);
+                Add.add(newName);
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            } else {
+                writing.writeLog(getClass(), "Error");
+                error.setVisible(true);
+            }
         }
     }
 }

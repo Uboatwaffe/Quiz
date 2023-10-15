@@ -17,7 +17,7 @@ class ShowAll {
     private final ToStrings toStrings = new ToStrings();
     private final Sorting sorting = new Sorting();
     private final static Writing writing = new Writing();
-    public void ShowQuestions() throws IOException {
+    public void ShowQuestions() {
         writing.writeLog(getClass(), "Showing questions");
         sorting.sort();
 
@@ -37,7 +37,7 @@ class ShowAll {
         // Setting up the visibility
         frame.setVisible(true);
     }
-    public void ShowAnswers() throws IOException {
+    public void ShowAnswers() {
         writing.writeLog(getClass(), "Showing answers");
         sorting.sort();
 

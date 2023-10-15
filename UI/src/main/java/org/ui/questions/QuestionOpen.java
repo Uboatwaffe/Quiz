@@ -1,6 +1,5 @@
 package org.ui.questions;
 
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
@@ -8,7 +7,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for showing open log.txt
@@ -21,7 +19,7 @@ public class QuestionOpen implements ActionListener {
     private final JFrame frame = new JFrame("Quiz");
     private final JTextField field = new JTextField("This is an open question", 10);
     private final static Writing writing = new Writing();
-    public QuestionOpen(String quest, String answer) throws IOException {
+    public QuestionOpen(String quest, String answer) {
         writing.writeLog(getClass(), "Open question");
         this.answer = answer;
 
@@ -63,9 +61,7 @@ public class QuestionOpen implements ActionListener {
                 } else
                     new Incorrect(answer, field.getText());
             }
-        }catch (IOException ignore){
-            new ExceptionUI(getClass());
-        }finally {
+        } finally {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

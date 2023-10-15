@@ -1,13 +1,11 @@
 package org.ui.admin;
 
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for giving the option for what to do
@@ -18,7 +16,7 @@ class TablesManage implements ActionListener {
     // UI that allows you to choose what to do (tables)
     private final JFrame frame;
     private static final Writing writing = new Writing();
-    TablesManage() throws IOException {
+    TablesManage() {
         writing.writeLog(getClass(), "Tables management");
         frame = new JFrame("What to do");
 
@@ -59,19 +57,15 @@ class TablesManage implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getActionCommand().equals("CLOSE")) {
-                writing.writeLog(getClass(), "Closing");
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            } else if (e.getActionCommand().equals("ADD TABLE")) {
-                writing.writeLog(getClass(), "Goto table add");
-                new TableAdd();
-            } else if (e.getActionCommand().equals("DELETE TABLE")) {
-                writing.writeLog(getClass(), "Goto table delete");
-                new TableDelete();
-            }
-        }catch (IOException ignore){
-            new ExceptionUI(getClass());
+        if (e.getActionCommand().equals("CLOSE")) {
+            writing.writeLog(getClass(), "Closing");
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        } else if (e.getActionCommand().equals("ADD TABLE")) {
+            writing.writeLog(getClass(), "Goto table add");
+            new TableAdd();
+        } else if (e.getActionCommand().equals("DELETE TABLE")) {
+            writing.writeLog(getClass(), "Goto table delete");
+            new TableDelete();
         }
     }
 }

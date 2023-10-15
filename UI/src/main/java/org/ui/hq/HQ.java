@@ -39,7 +39,7 @@ public class HQ extends Thread{
                 }
             }
             writing.writeLog(getClass(), "All questions showed");
-        }catch (SQLException | IOException ignored){
+        }catch (SQLException ignored){
             new ExceptionUI(getClass());
         }
     }

@@ -1,14 +1,12 @@
 package org.ui.admin;
 
 import org.db.reset.Reset;
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 import org.ui.tutorial.AdminTutorial;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for showing other options of admin panel
@@ -19,7 +17,7 @@ public class AdminOther implements ActionListener {
     // Second menu for AdminPanel
     private final JFrame frame = new JFrame("Other");
     private final static Writing writing = new Writing();
-    public AdminOther() throws IOException {
+    public AdminOther() {
         writing.writeLog(getClass(), "Admin Other panel");
         frame.setSize(440, 170);
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -63,29 +61,25 @@ public class AdminOther implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getActionCommand().equals("CLOSE")) {
-                writing.writeLog(getClass(), "Closing");
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            } else if (e.getActionCommand().equals("TUTORIAL")) {
-                writing.writeLog(getClass(), "Goto admin tutorial");
-                new AdminTutorial();
-            } else if (e.getActionCommand().equals("DETAILS")) {
-                writing.writeLog(getClass(), "Goto Details");
-                new NewPassword();
-            } else if (e.getActionCommand().equals("CHANGE TABLE")) {
-                writing.writeLog(getClass(), "Goto show tables");
-                new TablesChange();
-            } else if (e.getActionCommand().equals("TABLE MANAGEMENT")) {
-                writing.writeLog(getClass(),"Goto table management");
-                new TablesManage();
-            } else if (e.getActionCommand().equals("RESET")) {
-                writing.writeLog(getClass(), "Goto reset");
-                Reset.reset();
-                frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
-            }
-        }catch (IOException ignore){
-            new ExceptionUI(getClass());
+        if (e.getActionCommand().equals("CLOSE")) {
+            writing.writeLog(getClass(), "Closing");
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        } else if (e.getActionCommand().equals("TUTORIAL")) {
+            writing.writeLog(getClass(), "Goto admin tutorial");
+            new AdminTutorial();
+        } else if (e.getActionCommand().equals("DETAILS")) {
+            writing.writeLog(getClass(), "Goto Details");
+            new NewPassword();
+        } else if (e.getActionCommand().equals("CHANGE TABLE")) {
+            writing.writeLog(getClass(), "Goto show tables");
+            new TablesChange();
+        } else if (e.getActionCommand().equals("TABLE MANAGEMENT")) {
+            writing.writeLog(getClass(),"Goto table management");
+            new TablesManage();
+        } else if (e.getActionCommand().equals("RESET")) {
+            writing.writeLog(getClass(), "Goto reset");
+            Reset.reset();
+            frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
         }
     }
 }

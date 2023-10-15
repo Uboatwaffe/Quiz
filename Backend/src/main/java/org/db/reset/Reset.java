@@ -9,7 +9,6 @@ import org.db.manage.ChangePassword;
 import org.db.tables.Delete;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -29,7 +28,7 @@ public class Reset {
     /**
      * Method that resets whole configuration
      */
-    public static void reset() throws IOException {
+    public static void reset() {
         writing.writeLog(Reset.class, "Reseting");
 
         String[] toDelete = new String[tableNames.length-1];
@@ -71,7 +70,7 @@ public class Reset {
 
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException | IOException e) {
+        } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Reset.class);
         }
     }

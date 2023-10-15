@@ -1,13 +1,11 @@
 package org.ui.tutorial;
 
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for showing tutorial to user
@@ -19,7 +17,7 @@ public class Tutorial implements ActionListener {
     private final JFrame frame = new JFrame("Quiz");
     private final static Writing writing = new Writing();
 
-    public Tutorial() throws IOException {
+    public Tutorial() {
         writing.writeLog(getClass(), "Creating tutorial");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(210,250);
@@ -68,11 +66,7 @@ public class Tutorial implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            writing.writeLog(getClass(), "Closing");
-        } catch (IOException ignore) {
-            new ExceptionUI(getClass());
-        }
+        writing.writeLog(getClass(), "Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

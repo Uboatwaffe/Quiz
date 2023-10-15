@@ -2,14 +2,12 @@ package org.ui.admin;
 
 import org.db.manage.SQL;
 import org.db.tables.Delete;
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for deleting tables
@@ -23,7 +21,7 @@ class TableDelete implements ActionListener {
     private final JLabel error = new JLabel("There is no such table or it can't be deleted!");
     private final static Writing writing = new Writing();
 
-    TableDelete() throws IOException {
+    TableDelete() {
         writing.writeLog(getClass(), "Delete table");
         frame = new JFrame("Deleting table");
 
@@ -65,32 +63,28 @@ class TableDelete implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getActionCommand().equals("CLOSE")) {
-                writing.writeLog(getClass(), "Closing");
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            } else if (e.getActionCommand().equals("DELETE")) {
-                String[] db = SQL.getAllTables();
-                String newName = login.getText();
-                boolean exists = false;
-                for (String s : db) {
-                    if (newName.equals(s) && !newName.equals("set1")) {
-                        exists = true;
-                        break;
-                    }
-                }
-                if (exists) {
-                    writing.writeLog(getClass(), "Goto backend/deleting table");
-                    error.setVisible(false);
-                    Delete.delete(newName);
-                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-                } else {
-                    writing.writeLog(getClass(), "Error");
-                    error.setVisible(true);
+        if (e.getActionCommand().equals("CLOSE")) {
+            writing.writeLog(getClass(), "Closing");
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+        } else if (e.getActionCommand().equals("DELETE")) {
+            String[] db = SQL.getAllTables();
+            String newName = login.getText();
+            boolean exists = false;
+            for (String s : db) {
+                if (newName.equals(s) && !newName.equals("set1")) {
+                    exists = true;
+                    break;
                 }
             }
-        }catch (IOException ignore){
-            new ExceptionUI(getClass());
+            if (exists) {
+                writing.writeLog(getClass(), "Goto backend/deleting table");
+                error.setVisible(false);
+                Delete.delete(newName);
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            } else {
+                writing.writeLog(getClass(), "Error");
+                error.setVisible(true);
+            }
         }
     }
 }

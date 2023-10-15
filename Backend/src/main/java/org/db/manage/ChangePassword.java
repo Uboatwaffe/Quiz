@@ -4,7 +4,6 @@ import org.db.connecting.Connecting;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -31,7 +30,7 @@ public class ChangePassword {
             // Executing query
             PreparedStatement statement = Connecting.getConnection().prepareStatement(SQL);
             statement.executeUpdate();
-        }catch (SQLException | IOException ignore){
+        }catch (SQLException | NullPointerException ignore){
             new ExceptionUI(ChangePassword.class);
         }
     }

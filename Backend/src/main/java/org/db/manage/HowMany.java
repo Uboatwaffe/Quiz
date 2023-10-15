@@ -28,7 +28,7 @@ public class HowMany {
 
 
             while (resultSet.next()) i++;
-        }catch (SQLException | IOException ignore){
+        }catch (SQLException ignore){
             new ExceptionUI(getClass());
         }
         return i;
@@ -49,7 +49,7 @@ public class HowMany {
             while (resultSet.next()) {
                 i = Integer.parseInt(resultSet.getString("id"));
             }
-        } catch (SQLException | IOException ignore) {
+        } catch (SQLException ignore) {
             new ExceptionUI(getClass());
         }
         return i;

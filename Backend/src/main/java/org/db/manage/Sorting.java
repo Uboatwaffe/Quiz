@@ -45,7 +45,7 @@ public class Sorting {
             for (int j = 0; j < i; j++) {
                 Adding.add(questions[j], answers[j], types[j]);
             }
-        }catch (SQLException | IOException ignore){
+        }catch (SQLException ignore){
             new ExceptionUI(getClass());
         }
     }

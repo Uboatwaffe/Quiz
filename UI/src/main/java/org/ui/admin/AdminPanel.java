@@ -22,7 +22,7 @@ public class AdminPanel implements ActionListener {
     private final static Writing writing = new Writing();
     private final Main main = new Main();
 
-    public AdminPanel() throws IOException {
+    public AdminPanel() {
         writing.writeLog(getClass(), "Admin Panel");
         main.hideMain();
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -75,29 +75,25 @@ public class AdminPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getActionCommand().equals("CLOSE")) {
-                writing.writeLog(getClass(), "Closing");
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-                main.showMain();
-            } else if (e.getActionCommand().equals("SHOW QUESTIONS")) {
-                writing.writeLog(getClass(), "Goto show questions");
-                showAll.ShowQuestions();
-            } else if (e.getActionCommand().equals("SHOW ANSWERS")) {
-                writing.writeLog(getClass(), "Goto show answers");
-                showAll.ShowAnswers();
-            } else if (e.getActionCommand().equals("ADD QUESTION")) {
-                writing.writeLog(getClass(), "Goto add questions");
-                manage.add();
-            } else if (e.getActionCommand().equals("DELETE QUESTION")) {
-                writing.writeLog(getClass(), "Goto delete question");
-                manage.delete();
-            } else if (e.getActionCommand().equals("OTHER")) {
-                writing.writeLog(getClass(), "Goto admin other");
-                new AdminOther();
-            }
-        }catch (IOException ignore){
-            new ExceptionUI(getClass());
+        if (e.getActionCommand().equals("CLOSE")) {
+            writing.writeLog(getClass(), "Closing");
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            main.showMain();
+        } else if (e.getActionCommand().equals("SHOW QUESTIONS")) {
+            writing.writeLog(getClass(), "Goto show questions");
+            showAll.ShowQuestions();
+        } else if (e.getActionCommand().equals("SHOW ANSWERS")) {
+            writing.writeLog(getClass(), "Goto show answers");
+            showAll.ShowAnswers();
+        } else if (e.getActionCommand().equals("ADD QUESTION")) {
+            writing.writeLog(getClass(), "Goto add questions");
+            manage.add();
+        } else if (e.getActionCommand().equals("DELETE QUESTION")) {
+            writing.writeLog(getClass(), "Goto delete question");
+            manage.delete();
+        } else if (e.getActionCommand().equals("OTHER")) {
+            writing.writeLog(getClass(), "Goto admin other");
+            new AdminOther();
         }
     }
 }

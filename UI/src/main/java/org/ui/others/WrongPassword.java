@@ -1,13 +1,11 @@
 package org.ui.others;
 
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 import org.ui.Main;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for showing that inserted password/login was incorrect
@@ -20,7 +18,7 @@ public class WrongPassword implements ActionListener {
     private final static Writing writing = new Writing();
     private final Main main = new Main();
 
-    public WrongPassword() throws IOException {
+    public WrongPassword() {
         writing.writeLog(getClass(), "Wrong password");
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -55,11 +53,7 @@ public class WrongPassword implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("UNDERSTOOD")) {
-            try {
-                writing.writeLog(getClass(), "Closing");
-            } catch (IOException ex) {
-                new ExceptionUI(getClass());
-            }
+            writing.writeLog(getClass(), "Closing");
             main.showMain();
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

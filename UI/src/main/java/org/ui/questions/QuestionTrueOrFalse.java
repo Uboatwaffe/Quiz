@@ -1,6 +1,5 @@
 package org.ui.questions;
 
-import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
@@ -8,7 +7,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.io.IOException;
 
 /**
  * UI for showing true or false log.txt
@@ -20,7 +18,7 @@ public class QuestionTrueOrFalse implements ActionListener {
     private final JFrame frame = new JFrame("Quiz");
     private final String answer;
     private final static Writing writing = new Writing();
-    public QuestionTrueOrFalse(String quest, String answer) throws IOException {
+    public QuestionTrueOrFalse(String quest, String answer) {
         writing.writeLog(getClass(),"True or false question");
 
         this.answer = answer;
@@ -66,9 +64,7 @@ public class QuestionTrueOrFalse implements ActionListener {
                 new Score(Count.getCount());
             } else
                 new Incorrect(answer, e.getActionCommand());
-        }catch (IOException ignore){
-            new ExceptionUI(getClass());
-        }finally {
+        } finally {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }
