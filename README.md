@@ -1,7 +1,6 @@
 # Quiz
 ##### Program that will be used as template for future projects 
 ##### This is a skeleton for future work
-##### Program is written in Java but because of JavaDoc it shows it as 85% HTML
 
 ## Data input
 ### Data is read in three types:
