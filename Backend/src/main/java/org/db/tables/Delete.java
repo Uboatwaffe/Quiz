@@ -36,7 +36,7 @@ public class Delete {
 
             SQL.setCurrentTable(SQL.getAllTables()[0]);
         } catch (SQLException | NullPointerException e) {
-            new ExceptionUI();
+            new ExceptionUI(Delete.class);
         }
     }
 }

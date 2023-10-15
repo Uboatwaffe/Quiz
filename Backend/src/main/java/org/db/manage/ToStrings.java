@@ -29,7 +29,7 @@ public class ToStrings {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("question");
             }
         }catch (SQLException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
 
         return db;
@@ -54,7 +54,7 @@ public class ToStrings {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("answer");
             }
         }catch (SQLException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
 
         return db;

@@ -31,7 +31,7 @@ public class Add {
             PreparedStatement statement4 = Connecting.getConnection().prepareStatement(sql3);
             statement4.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            new ExceptionUI();
+            new ExceptionUI(Add.class);
         }
     }
 }

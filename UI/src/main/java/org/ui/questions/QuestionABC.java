@@ -73,7 +73,7 @@ public class QuestionABC implements ActionListener {
                 new Incorrect(answer, e.getActionCommand());
             }
         }catch (IOException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }finally {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

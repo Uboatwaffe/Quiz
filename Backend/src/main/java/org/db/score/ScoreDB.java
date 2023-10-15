@@ -42,7 +42,7 @@ public class ScoreDB {
             }
 
         } catch (SQLException ignore) {
-            new ExceptionUI();
+            new ExceptionUI(ScoreDB.class);
         }
 
         return db;
@@ -63,7 +63,7 @@ public class ScoreDB {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            new ExceptionUI();
+            new ExceptionUI(ScoreDB.class);
         }
     }
 

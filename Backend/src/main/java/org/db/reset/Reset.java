@@ -65,7 +65,7 @@ public class Reset {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            new ExceptionUI();
+            new ExceptionUI(Reset.class);
         }
     }
 }

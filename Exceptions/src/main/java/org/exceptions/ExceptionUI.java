@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI for showing errors
@@ -12,8 +13,7 @@ import java.awt.event.WindowEvent;
  */
 public class ExceptionUI implements ActionListener {
     private final JFrame frame = new JFrame("Error");
-
-    public ExceptionUI(){
+    public ExceptionUI(Class ob){
 
         // Default settings
 
@@ -46,6 +46,11 @@ public class ExceptionUI implements ActionListener {
 
         // Setting up the visibility
         frame.setVisible(true);
+
+        ERRORS errors = new ERRORS();
+        try {
+            errors.writeLog(getClass(), "ERROR from:\t" + ob.getName());
+        } catch (IOException ignore) {}
     }
 
 

@@ -90,7 +90,7 @@ class TableDelete implements ActionListener {
                 }
             }
         }catch (IOException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
     }
 }

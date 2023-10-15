@@ -35,7 +35,7 @@ public final class LoggingIn {
             }
 
         } catch (SQLException ignored) {
-            new ExceptionUI();
+            new ExceptionUI(LoggingIn.class);
         }
         return db;
     }

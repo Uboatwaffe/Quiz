@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import org.db.manage.HowMany;
 import org.db.score.ScoreDB;
+import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 import org.ui.hq.HQ;
 import org.ui.others.Credit;
@@ -188,7 +189,9 @@ public final class Main implements ActionListener{
                 writing.writeLog(getClass(), "Showing info");
                 new Info();
             }
-        }catch (IOException ignore){}
+        }catch (IOException ignore){
+            new ExceptionUI(getClass());
+        }
     }
     public void hideMain(){
         frame.setVisible(false);

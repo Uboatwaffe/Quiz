@@ -39,7 +39,7 @@ public class Sorting {
                 Adding.add(questions[j], answers[j], types[j]);
             }
         }catch (SQLException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
     }
 }

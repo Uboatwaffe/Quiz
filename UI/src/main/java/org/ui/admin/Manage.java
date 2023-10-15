@@ -24,7 +24,7 @@ class Manage implements ActionListener {
     private final static Writing writing = new Writing();
 
 
-    Functional toArray = (chain) -> {
+    final Functional toArray = (chain) -> {
         writing.writeLog(getClass(), "In lambda");
         String[] db = new String[3];
         db[0] = chain.substring(0, chain.indexOf(";")).trim();
@@ -134,7 +134,7 @@ class Manage implements ActionListener {
 
             }
         }catch (IOException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
     }
 }

@@ -27,7 +27,7 @@ public class ChangePassword {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(SQL);
             statement.executeUpdate();
         }catch (SQLException ignore){
-            new ExceptionUI();
+            new ExceptionUI(ChangePassword.class);
         }
     }
 }

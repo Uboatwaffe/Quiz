@@ -28,7 +28,7 @@ public class Deleting {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            new ExceptionUI();
+            new ExceptionUI(Deleting.class);
         }
 
 

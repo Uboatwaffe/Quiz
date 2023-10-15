@@ -28,7 +28,7 @@ public class Adding {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            new ExceptionUI();
+            new ExceptionUI(Adding.class);
         }
     }
 
@@ -48,7 +48,7 @@ public class Adding {
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
-            new ExceptionUI();
+            new ExceptionUI(Adding.class);
         }
     }
 }

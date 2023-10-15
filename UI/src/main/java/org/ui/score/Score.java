@@ -60,7 +60,7 @@ public class Score implements ActionListener {
             try {
                 writing.writeLog(getClass(), "Closing");
             } catch (IOException ex) {
-                new ExceptionUI();
+                new ExceptionUI(getClass());
             }
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

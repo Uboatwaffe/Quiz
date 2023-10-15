@@ -71,7 +71,7 @@ class TablesManage implements ActionListener {
                 new TableDelete();
             }
         }catch (IOException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
     }
 }

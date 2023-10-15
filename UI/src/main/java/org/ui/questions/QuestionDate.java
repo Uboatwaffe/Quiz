@@ -68,7 +68,7 @@ public class QuestionDate implements ActionListener {
             }
 
         }catch(IOException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }finally{
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

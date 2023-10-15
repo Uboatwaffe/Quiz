@@ -71,7 +71,7 @@ public class Tutorial implements ActionListener {
         try {
             writing.writeLog(getClass(), "Closing");
         } catch (IOException ignore) {
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }

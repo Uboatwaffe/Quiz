@@ -26,7 +26,7 @@ public class StringOperations {
             else
                 throw new RuntimeException();
         }catch (Exception ignore){
-            new ExceptionUI();
+            new ExceptionUI(StringOperations.class);
         }
     }
 }

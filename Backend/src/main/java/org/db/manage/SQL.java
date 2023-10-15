@@ -51,7 +51,7 @@ public class SQL {
             }
 
         }catch (SQLException ignore){
-            new ExceptionUI();
+            new ExceptionUI(SQL.class);
         }
         return db;
     }

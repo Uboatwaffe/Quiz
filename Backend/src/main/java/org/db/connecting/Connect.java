@@ -25,7 +25,7 @@ public final class Connect {
             resultSet = statement.executeQuery("SELECT * FROM " + SQL.getCurrentTable());
 
         } catch (SQLException ignored) {
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
         return resultSet;
     }

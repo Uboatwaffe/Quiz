@@ -20,7 +20,7 @@ public final class Connecting {
 
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
         }catch (SQLException ignore){
-            new ExceptionUI();
+            new ExceptionUI(Connecting.class);
         }
         return null;
     }

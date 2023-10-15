@@ -72,7 +72,7 @@ class NewPassword implements ActionListener {
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         }catch (IOException ignore){
-            new ExceptionUI();
+            new ExceptionUI(getClass());
         }
     }
 }
