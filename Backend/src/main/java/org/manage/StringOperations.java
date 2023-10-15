@@ -12,15 +12,14 @@ public class StringOperations {
      * Method that calls Adding.add() for given data
      * @param chain String containing question, answer and type
      */
-    public static void addQuestion(String chain){
+    public static void addQuestion(Functional functional, String chain){
         try {
-            String question = chain.substring(0, chain.indexOf(";"));
-            String answer = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";"));
-            String type = chain.substring(chain.lastIndexOf(";") + 1);
 
-            question.trim();
-            answer.trim();
-            type.trim();
+            String[] db = functional.toArray(chain);
+
+            String question = db[0];
+            String answer = db[1];
+            String type = db[2];
 
             if (type.equals("o") || type.equals("c") || type.equals("d") || type.equals("t"))
                 Adding.add(question, answer, type);

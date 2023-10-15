@@ -1,6 +1,7 @@
 package org.ui.admin;
 
 import org.manage.Deleting;
+import org.manage.Functional;
 import org.manage.StringOperations;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -16,6 +17,18 @@ class Manage implements ActionListener {
     // UI responsible for allowing to add and delete questions
     private JFrame frame = new JFrame("Deleting question");
     private final JTextField field = new JTextField();
+    Functional toArray = (chain) -> {
+        String[] db = new String[3];
+        db[0] = chain.substring(0, chain.indexOf(";"));
+        db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";"));
+        db[2] = chain.substring(chain.lastIndexOf(";") + 1);
+
+        db[0] = db[0].trim();
+        db[1] = db[1].trim();
+        db[2] = db[2].trim();
+
+        return db;
+    };
 
     void delete(){
         frame = new JFrame("Deleting question");
@@ -93,6 +106,7 @@ class Manage implements ActionListener {
 
             // Setting up the visibility
             frame.setVisible(true);
+
         }
 
     @Override
@@ -103,7 +117,7 @@ class Manage implements ActionListener {
             Deleting.delete(field.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         } else if (e.getActionCommand().equals("ADD QUESTION")) {
-            StringOperations.addQuestion(field.getText());
+            StringOperations.addQuestion(toArray, field.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 
         }
