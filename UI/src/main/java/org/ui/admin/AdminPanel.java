@@ -5,6 +5,8 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
+
 /**
  * UI for showing admin panel
  * @author Maciej
@@ -18,7 +20,7 @@ public class AdminPanel implements ActionListener {
 
     private final Main main = new Main();
 
-    public AdminPanel() {
+    public AdminPanel() throws IOException {
         main.hideMain();
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);

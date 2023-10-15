@@ -29,7 +29,7 @@ public final class Main implements ActionListener{
     private final JFrame frame3 = new JFrame("Are you ready?");
 
     final JLabel score = new JLabel(String.valueOf(Count.getCount()));
-    static Writing writing = new Writing();
+    private final static Writing writing = new Writing();
 
     public Main(){
         // Main

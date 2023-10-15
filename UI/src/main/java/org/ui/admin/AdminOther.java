@@ -1,11 +1,13 @@
 package org.ui.admin;
 
 import org.db.reset.Reset;
+import org.exceptions.ExceptionUI;
 import org.ui.tutorial.AdminTutorial;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 
 /**
  * UI for showing other options of admin panel
@@ -61,7 +63,11 @@ public class AdminOther implements ActionListener {
         if (e.getActionCommand().equals("CLOSE")) {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         } else if (e.getActionCommand().equals("TUTORIAL")) {
-            new AdminTutorial();
+            try {
+                new AdminTutorial();
+            } catch (IOException ignore) {
+                new ExceptionUI();
+            }
         } else if (e.getActionCommand().equals("DETAILS")) {
             new NewPassword();
         }else if (e.getActionCommand().equals("CHANGE TABLE")) {
