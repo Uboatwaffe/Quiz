@@ -13,10 +13,11 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>7.7.0</version>
-            <scope>test</scope>
+            <groupId>JDBC</groupId>
+            <artifactId>JDBC</artifactId>
+            <scope>system</scope>
+            <version>1.0</version>
+            <systemPath>C:\Users\PC\Desktop\Maciek\JavaProfesional\Quiz\lib\JDBC.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
