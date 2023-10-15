@@ -178,7 +178,7 @@ public final class Main implements ActionListener{
                 ScoreDB.setStats(String.valueOf(Count.getCount()));
                 System.exit(0);
             } else if (e.getActionCommand().equals("ADMIN PANEL")) {
-                writing.writeLog(getClass(),"Goto admin panel");
+                writing.writeLog(getClass(),"Goto logging in");
                 frame.setVisible(false);
                 new Logging();
             } else if (e.getActionCommand().equals("CREDITS")) {

@@ -2,7 +2,10 @@ package org.ui.admin;
 
 import org.db.manage.Sorting;
 import org.db.manage.ToStrings;
+import org.file.writing.Writing;
+
 import javax.swing.*;
+import java.io.IOException;
 
 /**
  * UI for showing log.txt and answers
@@ -13,8 +16,9 @@ class ShowAll {
     // UI responsible for showing log.txt and answers
     private final ToStrings toStrings = new ToStrings();
     private final Sorting sorting = new Sorting();
-
-    public void ShowQuestions() {
+    private final static Writing writing = new Writing();
+    public void ShowQuestions() throws IOException {
+        writing.writeLog(getClass(), "Showing questions");
         sorting.sort();
 
         JFrame frame = new JFrame("Here are all of the log.txt: ");
@@ -33,7 +37,8 @@ class ShowAll {
         // Setting up the visibility
         frame.setVisible(true);
     }
-    public void ShowAnswers() {
+    public void ShowAnswers() throws IOException {
+        writing.writeLog(getClass(), "Showing answers");
         sorting.sort();
 
         JFrame frame = new JFrame("Here are all of the answers: ");

@@ -2,6 +2,7 @@ package org.ui.admin;
 
 import org.db.connecting.LoggingIn;
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 import org.ui.Main;
 import org.ui.others.WrongPassword;
 import javax.swing.*;
@@ -20,8 +21,10 @@ public class Logging implements ActionListener {
     private final JFrame frame;
     private final JTextField login = new JTextField("Login");
     private final JTextField password = new JTextField("Password");
+    private final static Writing writing = new Writing();
 
-    public Logging() {
+    public Logging() throws IOException {
+        writing.writeLog(getClass(), "Logging in");
         frame = new JFrame("Logging in");
 
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -63,14 +66,17 @@ public class Logging implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try {
             if (e.getActionCommand().equals("CLOSE")) {
+                writing.writeLog(getClass(), "Closing");
                 Main main = new Main();
                 main.showMain();
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             } else if (e.getActionCommand().equals("LOG IN")) {
                 if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
+                    writing.writeLog(getClass(), "Goto admin panel");
                     new AdminPanel();
                     frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
                 } else {
+                    writing.writeLog(getClass(), "Goto wrong password");
                     new WrongPassword();
                     frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
                 }

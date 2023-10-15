@@ -1,9 +1,25 @@
 
-org.ui.Main: Start
-org.ui.Main: Showing info
-org.ui.Main: Showing credits
-org.ui.Main: to Tutorial
-org.ui.Main: Starting quiz
-org.ui.Main: Showing score
-org.ui.Main: To main menu
-org.ui.Main: Ending
+org.ui.Main:	Start program
+org.ui.Main:	Starting quiz
+org.ui.hq.HQ:	Starts showing questions
+org.ui.hq.HQ:	Showing question with type: t
+org.ui.questions.QuestionTrueOrFalse:	True or false question
+org.ui.hq.HQ:	Showing question with type: c
+org.ui.questions.QuestionABC:	Closed question
+org.ui.hq.HQ:	Showing question with type: o
+org.ui.questions.QuestionOpen:	Open question
+org.ui.hq.HQ:	Showing question with type: d
+org.ui.questions.QuestionDate:	Question about date
+org.ui.hq.HQ:	All questions showed
+org.ui.questions.QuestionDate:	Closing
+org.ui.score.Incorrect:	Incorrect answer
+org.ui.score.Incorrect:	Closing
+org.ui.score.Incorrect:	Incorrect answer
+org.ui.score.Incorrect:	Closing
+org.ui.score.Incorrect:	Incorrect answer
+org.ui.score.Incorrect:	Closing
+org.ui.score.Score:	Correct answer
+org.ui.score.Score:	Closing
+org.ui.Main:	Showing score
+org.ui.Main:	Goto main menu
+org.ui.Main:	Ending
