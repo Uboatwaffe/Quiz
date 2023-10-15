@@ -2,8 +2,6 @@ package org.connecting;
 
 import org.db.connecting.LoggingIn;
 
-import java.io.IOException;
-
 import static org.junit.jupiter.api.Assertions.*;
 /**
  * Test
