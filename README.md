@@ -26,6 +26,9 @@
 - Tests
 - JavaDoc
 - Lambda
+- Writing into file
+- AWT
+- Swing
 
 ## !!! Important !!!
 ### Please read LICENSE before using this program
