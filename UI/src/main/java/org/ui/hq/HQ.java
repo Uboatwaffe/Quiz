@@ -2,7 +2,6 @@ package org.ui.hq;
 
 import org.db.connecting.Connect;
 
-import java.io.IOException;
 import java.sql.*;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;

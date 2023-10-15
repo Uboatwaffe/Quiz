@@ -12,7 +12,7 @@ import java.awt.event.WindowEvent;
  */
 public class ExceptionUI implements ActionListener {
     private final JFrame frame = new JFrame("Error");
-    public ExceptionUI(Class ob){
+    public ExceptionUI(@SuppressWarnings("rawtypes") Class ob){
 
         // Default settings
 

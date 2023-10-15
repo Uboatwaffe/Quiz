@@ -5,7 +5,6 @@ import org.db.manage.ToStrings;
 import org.file.writing.Writing;
 
 import javax.swing.*;
-import java.io.IOException;
 
 /**
  * UI for showing log.txt and answers

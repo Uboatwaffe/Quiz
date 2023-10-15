@@ -4,7 +4,6 @@ import org.db.connecting.Connect;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
