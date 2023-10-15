@@ -16,12 +16,12 @@ class ToStringsTest {
     final ToStrings toStrings = new ToStrings();
 
     @Test
-    void questionsInStringArray() throws IOException {
+    void questionsInStringArray() {
         assertNotNull(toStrings.questionsInStringArray());
     }
 
     @Test
-    void answersInStringArray() throws IOException {
+    void answersInStringArray() {
         assertNotNull(toStrings.answersInStringArray());
     }
 }

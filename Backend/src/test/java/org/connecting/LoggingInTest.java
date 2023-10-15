@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class LoggingInTest {
     @org.junit.jupiter.api.Test
-    void getLoginAndPassword() throws IOException {
+    void getLoginAndPassword() {
         assertNotNull(LoggingIn.getLoginAndPassword());
     }
 }
