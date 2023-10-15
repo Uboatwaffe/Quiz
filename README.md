@@ -34,5 +34,6 @@
 - ##### Contributor 2 --> UI design
 
 ## Contact
+##### If you want to check out JavaDoc go to Quiz/JavaDoc/javadoc.txt and copy the link in the browser
 ##### Any issues should be reported via GitHub
 https://github.com/Uboatwaffe/Quiz
