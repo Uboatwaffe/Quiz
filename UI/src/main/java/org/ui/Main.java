@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import org.db.manage.HowMany;
 import org.db.score.ScoreDB;
+import org.exceptions.ERRORS;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 import org.ui.hq.HQ;
@@ -31,6 +32,7 @@ public final class Main implements ActionListener{
 
     final JLabel score = new JLabel(String.valueOf(Count.getCount()));
     private final static Writing writing = new Writing();
+    private final static ERRORS errors = new ERRORS();
 
     public Main(){
         // Main
@@ -202,6 +204,7 @@ public final class Main implements ActionListener{
     }
 
     public static void main(String[] args) throws IOException {
+        errors.clear();
         writing.clear();
         writing.writeLog(Main.class,"Start program");
         SwingUtilities.invokeLater(Main::new);

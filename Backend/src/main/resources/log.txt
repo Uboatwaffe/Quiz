@@ -2,62 +2,10 @@
 org.ui.Main:	Start program
 org.ui.Main:	Showing info
 org.ui.others.Info:	Info
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connecting:	Establishing connection to DB
+org.db.connecting.Connect:	Getting all data from DB
+org.db.connecting.Connecting:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
 org.ui.others.Info:	Closing
-org.ui.Main:	Showing credits
-org.ui.others.Credit:	Credits
-org.ui.others.Credit:	Closing
-org.ui.Main:	Goto Tutorial
-org.ui.tutorial.Tutorial:	Creating tutorial
-org.ui.tutorial.Tutorial:	Closing
-org.ui.Main:	Goto logging in
-org.ui.admin.Logging:	Logging in
-org.ui.admin.Logging:	Goto admin panel
-org.ui.admin.AdminPanel:	Admin Panel
-org.ui.admin.AdminPanel:	Goto show questions
-org.ui.admin.ShowAll:	Showing questions
-org.ui.admin.AdminPanel:	Goto delete question
-org.ui.admin.Manage:	Deleting question
-org.ui.admin.Manage:	Goto backend/deleting
-org.ui.admin.AdminPanel:	Goto show answers
-org.ui.admin.ShowAll:	Showing answers
-org.ui.admin.AdminPanel:	Goto admin other
-org.ui.admin.AdminOther:	Admin Other panel
-org.ui.admin.AdminOther:	Closing
-org.ui.admin.AdminPanel:	Closing
-org.ui.Main:	Goto logging in
-org.ui.admin.Logging:	Logging in
-org.ui.admin.Logging:	Goto wrong password
-org.ui.others.WrongPassword:	Wrong password
-org.ui.others.WrongPassword:	Closing
-org.ui.Main:	Starting quiz
-org.ui.hq.HQ:	Starts showing questions
-org.ui.hq.HQ:	Showing question with type: t
-org.ui.questions.QuestionTrueOrFalse:	True or false question
-org.ui.hq.HQ:	Showing question with type: c
-org.ui.questions.QuestionABC:	Closed question
-org.ui.hq.HQ:	Showing question with type: o
-org.ui.questions.QuestionOpen:	Open question
-org.ui.hq.HQ:	Showing question with type: d
-org.ui.questions.QuestionDate:	Question about date
-org.ui.hq.HQ:	All questions showed
-org.ui.questions.QuestionDate:	Closing
-org.ui.score.Incorrect:	Incorrect answer
-org.ui.score.Incorrect:	Closing
-org.ui.score.Incorrect:	Incorrect answer
-org.ui.score.Incorrect:	Closing
-org.ui.score.Score:	Correct answer
-org.ui.score.Score:	Closing
-org.ui.score.Score:	Correct answer
-org.ui.score.Score:	Closing
-org.ui.Main:	Showing score
-org.ui.Main:	Goto main menu
-org.ui.Main:	Goto logging in
-org.ui.admin.Logging:	Logging in
-org.ui.admin.Logging:	Goto admin panel
-org.ui.admin.AdminPanel:	Admin Panel
-org.ui.admin.AdminPanel:	Goto add questions
-org.ui.admin.Manage:	Adding question
-org.ui.admin.Manage:	Goto backend/string operations
-org.ui.admin.Manage:	In lambda
-org.ui.admin.AdminPanel:	Closing
 org.ui.Main:	Ending

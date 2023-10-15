@@ -2,6 +2,9 @@ package org.db.connecting;
 
 import org.exceptions.ExceptionUI;
 import org.db.manage.SQL;
+import org.file.writing.Writing;
+
+import java.io.IOException;
 import java.sql.*;
 
 /**
@@ -10,11 +13,12 @@ import java.sql.*;
  * @version 0.1
  */
 public final class Connect {
-
+    private static final Writing writing = new Writing();
     /**
      * @return ResultSet with all the data from DB for current table
      */
-    public ResultSet getConnection() {
+    public ResultSet getConnection() throws IOException {
+        writing.writeLog(getClass(), "Getting all data from DB");
         ResultSet resultSet = null;
 
         try {

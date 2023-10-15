@@ -2,6 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Connecting;
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -34,6 +37,10 @@ public class SQL {
 
         String[] db = {"set1"};
         try {
+            final Writing writing = new Writing();
+            writing.writeLog(SQL.class, "Getting all tables names");
+
+
             Statement statement = Connecting.getConnection().createStatement();
 
             assert statement != null;
@@ -50,7 +57,7 @@ public class SQL {
                 db[i++] = resultSet.getString("name");
             }
 
-        }catch (SQLException ignore){
+        }catch (SQLException | IOException ignore){
             new ExceptionUI(SQL.class);
         }
         return db;

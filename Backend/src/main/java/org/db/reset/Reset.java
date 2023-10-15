@@ -7,6 +7,9 @@ import org.exceptions.ExceptionUI;
 import org.db.manage.Adding;
 import org.db.manage.ChangePassword;
 import org.db.tables.Delete;
+import org.file.writing.Writing;
+
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -20,12 +23,15 @@ public class Reset {
     private static final String[] db1 = {"True or False", "Close question", "Open question", "Question about date"};
     private static final String[] db2 = {"TRUE", "A", "YES", "11.11.1111"};
     private static final String[] db3 = {"t", "c", "o", "d"};
+    private static final Writing writing = new Writing();
 
 
     /**
      * Method that resets whole configuration
      */
-    public static void reset(){
+    public static void reset() throws IOException {
+        writing.writeLog(Reset.class, "Reseting");
+
         String[] toDelete = new String[tableNames.length-1];
         int i = 0;
 
@@ -58,13 +64,14 @@ public class Reset {
      */
     private static void resetScore(){
         try {
+            writing.writeLog(Reset.class, "Reseting score");
 
             String sql = "UPDATE `quiz`.`score` SET `attempts` = '"+ 0 +"', `points` = '"+ 0 +"', `allPoints` = '"+ 0 +"' WHERE (`name` = '"+ SQL.getCurrentTable() +"');";
 
 
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException e) {
+        } catch (SQLException | NullPointerException | IOException e) {
             new ExceptionUI(Reset.class);
         }
     }

@@ -1,9 +1,12 @@
 package org.db.score;
 
 import org.db.connecting.Connecting;
+import org.db.manage.ChangePassword;
 import org.db.manage.SQL;
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,6 +19,7 @@ import java.sql.Statement;
  */
 public class ScoreDB {
     static private String[] db;
+    private static final Writing writing = new Writing();
 
     /**
      * @return String array with all the info about current set
@@ -23,6 +27,8 @@ public class ScoreDB {
     public static String[] getStats() {
 
         try {
+            writing.writeLog(ScoreDB.class, "Getting stats");
+
             Statement statement = Connecting.getConnection().createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM score WHERE name ='" + SQL.getCurrentTable() + "'");
 
@@ -41,7 +47,7 @@ public class ScoreDB {
                 db[2] = resultSet.getString("allPoints");
             }
 
-        } catch (SQLException ignore) {
+        } catch (SQLException | IOException ignore) {
             new ExceptionUI(ScoreDB.class);
         }
 
@@ -60,9 +66,11 @@ public class ScoreDB {
         String sql = "UPDATE `quiz`.`score` SET `attempts` = '"+ (Integer.parseInt(db[0])+1) +"', `points` = '"+ points +"', `allPoints` = '"+ (Integer.parseInt(db[2])+Integer.parseInt(points)) +"' WHERE (`name` = '"+ SQL.getCurrentTable() +"');";
 
         try {
+            writing.writeLog(ScoreDB.class, "Setting stats");
+
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException e) {
+        } catch (SQLException | NullPointerException | IOException e) {
             new ExceptionUI(ScoreDB.class);
         }
     }

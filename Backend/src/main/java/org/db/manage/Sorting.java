@@ -2,6 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Connect;
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -11,10 +14,14 @@ import java.sql.SQLException;
  * @version 0.1
  */
 public class Sorting {
+    private static final Writing writing = new Writing();
+
 
     public void sort(){
 
         try {
+            writing.writeLog(Sorting.class, "Sorts");
+
             Connect connect = new Connect();
             HowMany howMany = new HowMany();
 
@@ -38,7 +45,7 @@ public class Sorting {
             for (int j = 0; j < i; j++) {
                 Adding.add(questions[j], answers[j], types[j]);
             }
-        }catch (SQLException ignore){
+        }catch (SQLException | IOException ignore){
             new ExceptionUI(getClass());
         }
     }

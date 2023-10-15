@@ -2,6 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Connecting;
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -12,6 +15,7 @@ import java.sql.SQLException;
  */
 public class Adding {
     private static final HowMany howMany = new HowMany();
+    private static final Writing writing = new Writing();
 
     /**
      * Inserts question with all additional info into DB
@@ -24,10 +28,11 @@ public class Adding {
         String sql = "INSERT INTO "+ SQL.getCurrentTable() + " VALUES ('"+ String.valueOf(howMany.highest()+1) +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
 
         try {
+            writing.writeLog(Adding.class, "Adding questions");
             // Executing query
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException e) {
+        } catch (SQLException | NullPointerException | IOException e) {
             new ExceptionUI(Adding.class);
         }
     }
@@ -44,10 +49,11 @@ public class Adding {
         String sql = "INSERT INTO "+ SQL.getCurrentTable() +" VALUES ('"+ index +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
 
         try {
+            writing.writeLog(Adding.class, "Adding questions v2");
             // Executing query
             PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException e) {
+        } catch (SQLException | NullPointerException | IOException e) {
             new ExceptionUI(Adding.class);
         }
     }

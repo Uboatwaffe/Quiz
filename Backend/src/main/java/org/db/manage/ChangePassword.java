@@ -2,6 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Connecting;
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -12,6 +15,7 @@ import java.sql.SQLException;
  */
 public class ChangePassword {
     private final Connecting connecting = new Connecting();
+    private static final Writing writing = new Writing();
 
     /**
      * Method that changes login 'n' password
@@ -23,10 +27,11 @@ public class ChangePassword {
         // Query
         String SQL = "UPDATE `admin` SET `login` = '"+ login +"', `password` = '"+ password +"' WHERE (`user` = '"+ user +"')";
         try {
+            writing.writeLog(ChangePassword.class, "Updating admin details");
             // Executing query
             PreparedStatement statement = Connecting.getConnection().prepareStatement(SQL);
             statement.executeUpdate();
-        }catch (SQLException ignore){
+        }catch (SQLException | IOException ignore){
             new ExceptionUI(ChangePassword.class);
         }
     }

@@ -1,6 +1,9 @@
 package org.db.connecting;
 
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
+
+import java.io.IOException;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -10,11 +13,13 @@ import java.sql.Statement;
  * @version 0.1
  */
 public final class LoggingIn {
+    private static final Writing writing = new Writing();
 
     /**
      * @return String array with password and login used by user 'admin'
      */
-    public static String[] getLoginAndPassword() {
+    public static String[] getLoginAndPassword() throws IOException {
+        writing.writeLog(LoggingIn.class, "Getting data to logging in");
         java.sql.ResultSet resultSet;
 
         String[] db = new String[3];
@@ -34,7 +39,7 @@ public final class LoggingIn {
                 db[2] = resultSet.getString("user");
             }
 
-        } catch (SQLException ignored) {
+        } catch (SQLException | IOException ignored) {
             new ExceptionUI(LoggingIn.class);
         }
         return db;

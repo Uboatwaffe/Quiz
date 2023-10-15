@@ -1,12 +1,14 @@
 package org.db.manage;
 
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 
 /**
  * @author Maciej
  * @version 0.1
  */
 public class StringOperations {
+    private static final Writing writing = new Writing();
 
     /**
      * Method that calls Adding.add() for given data
@@ -14,6 +16,7 @@ public class StringOperations {
      */
     public static void addQuestion(Functional functional, String chain){
         try {
+            writing.writeLog(StringOperations.class, "Goto Adding");
 
             String[] db = functional.toArray(chain);
 
@@ -24,7 +27,7 @@ public class StringOperations {
             if (type.equals("o") || type.equals("c") || type.equals("d") || type.equals("t"))
                 Adding.add(question, answer, type);
             else
-                throw new RuntimeException();
+                new ExceptionUI(StringOperations.class);
         }catch (Exception ignore){
             new ExceptionUI(StringOperations.class);
         }

@@ -1,9 +1,12 @@
 package org.db.tables;
 
 import org.db.connecting.Connecting;
+import org.db.manage.ChangePassword;
 import org.db.manage.SQL;
 import org.exceptions.ExceptionUI;
+import org.file.writing.Writing;
 
+import java.io.IOException;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -12,6 +15,8 @@ import java.sql.SQLException;
  * @version 0.1
  */
 public class Delete {
+    private static final Writing writing = new Writing();
+
 
     /**
      * Method that deletes table from the DB
@@ -19,6 +24,8 @@ public class Delete {
      */
     public static void delete(String name) {
         try {
+            writing.writeLog(Delete.class, "Deleting table");
+
 
             String sql = "DROP TABLE `quiz`.`" + name + "`;";
             String sql2 = "DELETE FROM `quiz`.`tables` WHERE (`name` = '" + name + "');";
@@ -35,7 +42,7 @@ public class Delete {
             statement4.executeUpdate();
 
             SQL.setCurrentTable(SQL.getAllTables()[0]);
-        } catch (SQLException | NullPointerException e) {
+        } catch (SQLException | NullPointerException | IOException e) {
             new ExceptionUI(Delete.class);
         }
     }
