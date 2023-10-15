@@ -17,15 +17,12 @@ class Manage implements ActionListener {
     // UI responsible for allowing to add and delete questions
     private JFrame frame = new JFrame("Deleting question");
     private final JTextField field = new JTextField();
+
     Functional toArray = (chain) -> {
         String[] db = new String[3];
-        db[0] = chain.substring(0, chain.indexOf(";"));
-        db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";"));
-        db[2] = chain.substring(chain.lastIndexOf(";") + 1);
-
-        db[0] = db[0].trim();
-        db[1] = db[1].trim();
-        db[2] = db[2].trim();
+        db[0] = chain.substring(0, chain.indexOf(";")).trim();
+        db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";")).trim();
+        db[2] = chain.substring(chain.lastIndexOf(";") + 1).trim();
 
         return db;
     };
