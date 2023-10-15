@@ -17,6 +17,7 @@ import java.sql.SQLException;
  * @author Maciej
  * @version 0.1
  */
+@SuppressWarnings("DataFlowIssue")
 public class Reset {
     private static final String[] tableNames = SQL.getAllTables();
     private static final String[] db1 = {"True or False", "Close question", "Open question", "Question about date"};

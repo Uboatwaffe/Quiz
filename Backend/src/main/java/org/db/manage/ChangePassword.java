@@ -12,6 +12,7 @@ import java.sql.SQLException;
  * @author Maciej
  * @version 0.1
  */
+@SuppressWarnings("DataFlowIssue")
 public class ChangePassword {
     private static final Writing writing = new Writing();
 

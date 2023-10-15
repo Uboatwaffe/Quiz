@@ -15,6 +15,7 @@ import java.sql.Statement;
  * @author Maciej
  * @version 0.1
  */
+@SuppressWarnings("DataFlowIssue")
 public class ScoreDB {
     static private String[] db;
     private static final Writing writing = new Writing();

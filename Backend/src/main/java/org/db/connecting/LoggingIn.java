@@ -11,6 +11,7 @@ import java.sql.Statement;
  * @author Maciej
  * @version 0.1
  */
+@SuppressWarnings("DataFlowIssue")
 public final class LoggingIn {
     private static final Writing writing = new Writing();
 

@@ -43,7 +43,6 @@ public class HowMany {
             writing.writeLog(HowMany.class, "Gets highest id of all records");
 
             ResultSet resultSet = connect.getConnection();
-            i = 0;
 
             while (resultSet.next()) {
                 i = Integer.parseInt(resultSet.getString("id"));

@@ -11,6 +11,7 @@ import java.sql.*;
  * @author Maciej
  * @version 0.1
  */
+@SuppressWarnings("DataFlowIssue")
 public final class Connect {
     private static final Writing writing = new Writing();
     /**
@@ -21,6 +22,7 @@ public final class Connect {
         ResultSet resultSet = null;
 
         try {
+            //noinspection DataFlowIssue
             Statement statement = Connecting.getConnection().createStatement();
 
             assert statement != null;

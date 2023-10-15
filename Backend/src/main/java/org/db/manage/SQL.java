@@ -11,6 +11,7 @@ import java.sql.Statement;
 /**
  * Class that stores info about tables in DB
  */
+@SuppressWarnings("DataFlowIssue")
 public class SQL {
     private static String currentTable = getAllTables()[0];
 
