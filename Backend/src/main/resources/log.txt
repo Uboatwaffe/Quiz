@@ -1,0 +1,9 @@
+
+org.ui.Main: Start
+org.ui.Main: Showing info
+org.ui.Main: Showing credits
+org.ui.Main: to Tutorial
+org.ui.Main: Starting quiz
+org.ui.Main: Showing score
+org.ui.Main: To main menu
+org.ui.Main: Ending

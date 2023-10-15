@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * Class responsible for adding new questions to database
+ * Class responsible for adding new log.txt to database
  * @author Maciej
  * @version 0.1
  */

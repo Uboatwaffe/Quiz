@@ -9,12 +9,12 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * UI for adding and deleting questions
+ * UI for adding and deleting log.txt
  * @author Maciej
  * @version 0.1
  */
 class Manage implements ActionListener {
-    // UI responsible for allowing to add and delete questions
+    // UI responsible for allowing to add and delete log.txt
     private JFrame frame = new JFrame("Deleting question");
     private final JTextField field = new JTextField();
 

@@ -6,4 +6,5 @@ module Backend {
     exports org.db.score;
     exports org.db.tables;
     exports org.db.reset;
+    exports org.file.writing;
 }

@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * UI for showing open questions
+ * UI for showing open log.txt
  * @author Maciej
  * @version 0.1
  */

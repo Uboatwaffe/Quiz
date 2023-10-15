@@ -12,7 +12,7 @@ import java.sql.SQLException;
 public class ToStrings {
 
     /**
-     * @return String array with all the questions
+     * @return String array with all the log.txt
      */
     public String[] questionsInStringArray(){
 

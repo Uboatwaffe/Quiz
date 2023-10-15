@@ -5,19 +5,19 @@ import org.db.manage.ToStrings;
 import javax.swing.*;
 
 /**
- * UI for showing questions and answers
+ * UI for showing log.txt and answers
  * @author Maciej
  * @version 0.1
  */
 class ShowAll {
-    // UI responsible for showing questions and answers
+    // UI responsible for showing log.txt and answers
     private final ToStrings toStrings = new ToStrings();
     private final Sorting sorting = new Sorting();
 
     public void ShowQuestions() {
         sorting.sort();
 
-        JFrame frame = new JFrame("Here are all of the questions: ");
+        JFrame frame = new JFrame("Here are all of the log.txt: ");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
 

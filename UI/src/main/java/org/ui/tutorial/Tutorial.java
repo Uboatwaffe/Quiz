@@ -32,7 +32,7 @@ public class Tutorial implements ActionListener {
         JLabel string4 = new JLabel("2) Date in format of DD.MM.YYYY");
         string4.setBounds(5,80, 200, 15);
 
-        JLabel string5 = new JLabel("3) Open questions should be");
+        JLabel string5 = new JLabel("3) Open log.txt should be");
         string5.setBounds(5,105, 200, 15);
 
         JLabel string6 = new JLabel("typed with CAPS LOCK");
