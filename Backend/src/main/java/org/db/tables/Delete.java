@@ -13,7 +13,7 @@ import java.sql.SQLException;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
-public non-sealed class Delete implements org.db.interfaces.Delete {
+public class Delete{
     private static final Writing writing = new Writing();
 
 

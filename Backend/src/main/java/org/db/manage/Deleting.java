@@ -1,7 +1,6 @@
 package org.db.manage;
 
 import org.db.connecting.Connecting;
-import org.db.interfaces.Delete;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
@@ -14,7 +13,7 @@ import java.sql.SQLException;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
-public non-sealed class Deleting implements Delete {
+public class Deleting{
     private static final Writing writing = new Writing();
 
     /**

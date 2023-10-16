@@ -1,7 +1,6 @@
 package org.db.manage;
 
 import org.db.connecting.Connecting;
-import org.db.interfaces.Add;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
@@ -14,7 +13,7 @@ import java.sql.SQLException;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
-public final class Adding implements Add {
+public final class Adding{
     private static final HowMany howMany = new HowMany();
     private static final Writing writing = new Writing();
 
@@ -25,7 +24,7 @@ public final class Adding implements Add {
      * @param type Type of this question ('c' || 'o' || 'd' || 't')
      */
     @SuppressWarnings("DataFlowIssue")
-    public static void add(String question, String answer, String type) {
+    public void add(String question, String answer, String type) {
         // Query
         String sql = "INSERT INTO "+ SQL.getCurrentTable() + " VALUES ('"+ (howMany.highest() + 1) +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
 
