@@ -1,4 +1,4 @@
-package org.db.manage;
+package org.db.interfaces;
 
 /**
  * Functional interface

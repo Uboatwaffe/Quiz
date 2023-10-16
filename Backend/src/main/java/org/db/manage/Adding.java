@@ -1,6 +1,7 @@
 package org.db.manage;
 
 import org.db.connecting.Connecting;
+import org.db.interfaces.Add;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
@@ -13,7 +14,7 @@ import java.sql.SQLException;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
-public class Adding {
+public final class Adding implements Add {
     private static final HowMany howMany = new HowMany();
     private static final Writing writing = new Writing();
 

@@ -1,7 +1,7 @@
 package org.ui.admin;
 
 import org.db.manage.Deleting;
-import org.db.manage.Functional;
+import org.db.interfaces.Functional;
 import org.db.manage.StringOperations;
 import org.file.writing.Writing;
 

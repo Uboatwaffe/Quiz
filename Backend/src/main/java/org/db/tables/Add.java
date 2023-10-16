@@ -12,7 +12,7 @@ import java.sql.SQLException;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
-public class Add {
+public final class Add implements org.db.interfaces.Add {
     private static final Writing writing = new Writing();
 
 

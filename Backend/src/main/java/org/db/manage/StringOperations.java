@@ -1,5 +1,6 @@
 package org.db.manage;
 
+import org.db.interfaces.Functional;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
