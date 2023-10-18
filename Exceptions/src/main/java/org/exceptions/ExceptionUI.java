@@ -27,8 +27,8 @@ public class ExceptionUI implements ActionListener {
         JLabel info = new JLabel("Something went wrong...");
         info.setBounds(140, 25, 150, 15);
 
-        JLabel score = new JLabel();
-        score.setBounds(200, 45, 150, 15);
+        JLabel score = new JLabel("Caller: " + ob.getName());
+        score.setBounds(5, 45, 2000, 15);
 
         // Button
         JButton understood = new JButton("UNDERSTOOD");

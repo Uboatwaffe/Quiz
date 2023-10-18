@@ -24,7 +24,7 @@ public final class Adding{
      * @param type Type of this question ('c' || 'o' || 'd' || 't')
      */
     @SuppressWarnings("DataFlowIssue")
-    public void add(String question, String answer, String type) {
+    public static void add(String question, String answer, String type) {
         // Query
         String sql = "INSERT INTO "+ SQL.getCurrentTable() + " VALUES ('"+ (howMany.highest() + 1) +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
 
