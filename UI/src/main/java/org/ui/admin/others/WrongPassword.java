@@ -25,6 +25,10 @@ public class WrongPassword implements ActionListener {
      * @see Writing
      */
     private final static Writing writing = new Writing();
+
+    /**
+     * Main class
+     */
     private final Main main = new Main();
     /**
      * Constructor
