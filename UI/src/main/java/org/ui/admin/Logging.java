@@ -62,26 +62,22 @@ public class Logging implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()){
-            case "LOG IN" -> {
+        if (e.getActionCommand().equals("LOG IN")) {
+            if (!login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
+                writing.writeLog(getClass(), "Goto wrong password");
+                new WrongPassword();
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 
-                if (!login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
-                    writing.writeLog(getClass(), "Goto wrong password");
-                    new WrongPassword();
-                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-
-                }else {
-                    writing.writeLog(getClass(), "Goto admin panel");
-                    new AdminPanel();
-                    frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-                }
-            }
-            default -> {
-                writing.writeLog(getClass(), "Closing");
-                Main main = new Main();
-                main.showMain();
+            } else {
+                writing.writeLog(getClass(), "Goto admin panel");
+                new AdminPanel();
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
+        } else {
+            writing.writeLog(getClass(), "Closing");
+            Main main = new Main();
+            main.showMain();
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }
 }

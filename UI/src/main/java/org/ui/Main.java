@@ -5,7 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import org.db.manage.HowMany;
-import org.db.score.ScoreDB;
 import org.exceptions.ERRORS;
 import org.file.writing.Writing;
 import org.ui.hq.HQ;
@@ -171,7 +170,6 @@ public final class Main implements ActionListener{
             }
             case "I AM" -> {
                 writing.writeLog(getClass(),"Showing score");
-                ScoreDB.setStats(String.valueOf(Count.getCount()));
                 frame3.setVisible(false);
                 score.setText(Count.getCount() + " out of " + howMany.howMany());
                 frame2.setVisible(true);
@@ -179,7 +177,6 @@ public final class Main implements ActionListener{
             }
             case "I'M NOT" -> {
                 writing.writeLog(getClass(),"Not showing score");
-                ScoreDB.setStats(String.valueOf(Count.getCount()));
                 showMain();
             }
             case "ADMIN PANEL" -> {

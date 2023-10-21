@@ -3,7 +3,6 @@ module Backend {
     requires Exceptions;
     exports org.db.connecting;
     exports org.db.manage;
-    exports org.db.score;
     exports org.db.tables;
     exports org.db.reset;
     exports org.file.writing;
