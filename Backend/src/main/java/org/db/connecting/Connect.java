@@ -1,10 +1,12 @@
 package org.db.connecting;
 
-import org.exceptions.ExceptionUI;
 import org.db.manage.SQL;
+import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Class responsible for returning data from database
@@ -19,7 +21,9 @@ public final class Connect {
      * @see Writing
      */
     private static final Writing writing = new Writing();
+
     /**
+     * Method that returns ResultSet
      * @return ResultSet with all the data from DB from current table
      */
     public ResultSet getConnection() {

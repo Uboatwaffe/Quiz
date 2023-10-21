@@ -1,3 +1,8 @@
+/**
+ * Module that takes care of whole connectivity with DB,
+ * manages and prepares questions
+ * @author Maciej
+ */
 module Backend {
     requires java.sql;
     requires Exceptions;

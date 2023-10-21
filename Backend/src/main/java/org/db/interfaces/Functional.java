@@ -7,6 +7,7 @@ package org.db.interfaces;
  */
 public interface Functional{
     /**
+     * Method that is used by lambda nr 1
      * @param chain String containing all of data
      * @return String array with question, answer, type
      */

@@ -21,6 +21,7 @@ public class SQL {
     private static String currentTable = getAllTables()[0];
 
     /**
+     * Method
      * @param currentTable Sets current table to 'current table
      */
     public static void setCurrentTable(String currentTable) {
@@ -28,6 +29,7 @@ public class SQL {
     }
 
     /**
+     * Method
      * @return String with current table
      */
     public static String getCurrentTable() {
@@ -35,6 +37,7 @@ public class SQL {
     }
 
     /**
+     * Method
      * @return String array with names of all tables
      */
     public static String[] getAllTables(){

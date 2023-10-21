@@ -22,7 +22,6 @@ public class Sorting {
 
     /**
      * Sorts whole DB
-     * @author Maciej
      */
     public void sort(){
 

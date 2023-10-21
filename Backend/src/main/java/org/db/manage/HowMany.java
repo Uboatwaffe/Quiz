@@ -28,6 +28,7 @@ public class HowMany {
     private static final Writing writing = new Writing();
 
     /**
+     * Method
      * @return Integer with value of number of records in current table
      */
     public int howMany(){
@@ -46,6 +47,7 @@ public class HowMany {
     }
 
     /**
+     * Method
      * @return Integer with value of highest index in current table
      */
     public int highest() {

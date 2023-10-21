@@ -22,6 +22,8 @@ public class StringOperations {
     /**
      * Method that calls Adding.add() for given data
      * @param chain String containing question, answer and type
+     * @param functional Gets String chain into String array
+     * @param functional2 Checks if type of questions is correct
      */
     public static void addQuestion(Functional functional, Functional2 functional2, String chain){
         try {

@@ -7,6 +7,7 @@ package org.db.interfaces;
  */
 public interface Functional2 {
     /**
+     * Method that is used by lambda nr 2
      * @param chain String containing all data
      * @return true if type is correct otherwise false
      */

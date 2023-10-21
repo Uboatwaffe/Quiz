@@ -21,6 +21,7 @@ public class ToStrings {
     private static final Writing writing = new Writing();
 
     /**
+     * Method
      * @return String array with all the questions
      */
     public String[] questionsInStringArray() {
@@ -46,6 +47,7 @@ public class ToStrings {
     }
 
     /**
+     * Method
      * @return String array with all answers
      */
     public String[] answersInStringArray() {

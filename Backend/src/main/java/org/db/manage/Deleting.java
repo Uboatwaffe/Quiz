@@ -22,6 +22,7 @@ public class Deleting{
     private static final Writing writing = new Writing();
 
     /**
+     * Method that deletes question/s
      * @param index Index of question that is going to be deleted, '-1' clears whole table
      */
     public static void delete(String index) {

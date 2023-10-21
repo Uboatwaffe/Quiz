@@ -25,8 +25,14 @@ class Manage implements ActionListener {
 
     /**
      * Text field for getting:
-     * - new question
-     * - index of question that will be deleted
+     * <ul>
+     *     <li>
+     *          new question
+     *      </li>
+     *      <li>
+     *          index of question that will be deleted
+     *      </li>
+     * </ul>
      */
     private final JTextField field = new JTextField();
 

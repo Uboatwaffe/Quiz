@@ -21,6 +21,7 @@ public final class Connecting {
     private static final Writing writing = new Writing();
 
     /**
+     * Method that establishes connection to the DB
      * @return Connection reference to database
      */
     public static Connection getConnection() {
