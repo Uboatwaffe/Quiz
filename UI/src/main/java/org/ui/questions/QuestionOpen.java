@@ -54,13 +54,11 @@ public class QuestionOpen implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
-            if (e.getActionCommand().equals("SUBMIT")) {
-                if (field.getText().equals(answer)) {
-                    Count.setCount(Count.getCount() + 1);
-                    new Score(Count.getCount());
-                } else
-                    new Incorrect(answer, field.getText());
-            }
+            if (field.getText().equals(answer)) {
+                Count.setCount(Count.getCount() + 1);
+                new Score(Count.getCount());
+            } else
+                new Incorrect(answer, field.getText());
         } finally {
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

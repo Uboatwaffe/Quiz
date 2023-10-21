@@ -76,6 +76,7 @@ class TableAdd implements ActionListener {
                     break;
                 }
             }
+
             if (!exists) {
                 writing.writeLog(getClass(), "Goto add table");
                 error.setVisible(false);

@@ -61,25 +61,32 @@ public class AdminOther implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("TUTORIAL")) {
-            writing.writeLog(getClass(), "Goto admin tutorial");
-            new AdminTutorial();
-        } else if (e.getActionCommand().equals("DETAILS")) {
-            writing.writeLog(getClass(), "Goto Details");
-            new NewPassword();
-        } else if (e.getActionCommand().equals("CHANGE TABLE")) {
-            writing.writeLog(getClass(), "Goto show tables");
-            new TablesChange();
-        } else if (e.getActionCommand().equals("TABLE MANAGEMENT")) {
-            writing.writeLog(getClass(),"Goto table management");
-            new TablesManage();
-        } else if (e.getActionCommand().equals("RESET")) {
-            writing.writeLog(getClass(), "Goto reset");
-            Reset.reset();
-            frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
+        switch (e.getActionCommand()) {
+            case "TUTORIAL" -> {
+                writing.writeLog(getClass(), "Goto admin tutorial");
+                new AdminTutorial();
+            }
+            case "DETAILS" -> {
+                writing.writeLog(getClass(), "Goto Details");
+                new NewPassword();
+            }
+            case "CHANGE TABLE" -> {
+                writing.writeLog(getClass(), "Goto show tables");
+                new TablesChange();
+            }
+            case "TABLE MANAGEMENT" -> {
+                writing.writeLog(getClass(), "Goto table management");
+                new TablesManage();
+            }
+            case "RESET" -> {
+                writing.writeLog(getClass(), "Goto reset");
+                Reset.reset();
+                frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
+            }
+            default -> {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
         }
     }
 }

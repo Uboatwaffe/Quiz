@@ -57,15 +57,19 @@ class TablesManage implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("ADD TABLE")) {
-            writing.writeLog(getClass(), "Goto table add");
-            new TableAdd();
-        } else if (e.getActionCommand().equals("DELETE TABLE")) {
-            writing.writeLog(getClass(), "Goto table delete");
-            new TableDelete();
+        switch (e.getActionCommand()){
+            case "ADD TABLE" -> {
+                writing.writeLog(getClass(), "Goto table add");
+                new TableAdd();
+            }
+            case "DELETE TABLE" -> {
+                writing.writeLog(getClass(), "Goto table delete");
+                new TableDelete();
+            }
+            default -> {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
         }
     }
 }

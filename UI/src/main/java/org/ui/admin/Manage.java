@@ -117,18 +117,20 @@ class Manage implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("DELETE QUESTION")) {
-            writing.writeLog(getClass(), "Goto backend/deleting");
-            Deleting.delete(field.getText());
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("ADD QUESTION")) {
-            writing.writeLog(getClass(), "Goto backend/string operations");
-            StringOperations.addQuestion(toArray, field.getText());
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-
+        switch (e.getActionCommand()) {
+            case "DELETE QUESTION" -> {
+                writing.writeLog(getClass(), "Goto backend/deleting");
+                Deleting.delete(field.getText());
+            }
+            case "ADD QUESTION" -> {
+                writing.writeLog(getClass(), "Goto backend/string operations");
+                StringOperations.addQuestion(toArray, field.getText());
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
+            default -> {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
         }
     }
 }

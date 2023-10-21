@@ -73,25 +73,32 @@ public class AdminPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            main.showMain();
-        } else if (e.getActionCommand().equals("SHOW QUESTIONS")) {
-            writing.writeLog(getClass(), "Goto show questions");
-            showAll.ShowQuestions();
-        } else if (e.getActionCommand().equals("SHOW ANSWERS")) {
-            writing.writeLog(getClass(), "Goto show answers");
-            showAll.ShowAnswers();
-        } else if (e.getActionCommand().equals("ADD QUESTION")) {
-            writing.writeLog(getClass(), "Goto add questions");
-            manage.add();
-        } else if (e.getActionCommand().equals("DELETE QUESTION")) {
-            writing.writeLog(getClass(), "Goto delete question");
-            manage.delete();
-        } else if (e.getActionCommand().equals("OTHER")) {
-            writing.writeLog(getClass(), "Goto admin other");
-            new AdminOther();
+        switch (e.getActionCommand()){
+            case "SHOW QUESTIONS" -> {
+                writing.writeLog(getClass(), "Goto show questions");
+                showAll.ShowQuestions();
+            }
+            case "SHOW ANSWERS" -> {
+                writing.writeLog(getClass(), "Goto show answers");
+                showAll.ShowAnswers();
+            }
+            case "ADD QUESTION" -> {
+                writing.writeLog(getClass(), "Goto add questions");
+                manage.add();
+            }
+            case "DELETE QUESTION" -> {
+                writing.writeLog(getClass(), "Goto delete question");
+                manage.delete();
+            }
+            case "OTHER" -> {
+                writing.writeLog(getClass(), "Goto admin other");
+                new AdminOther();
+            }
+            default -> {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                main.showMain();
+            }
         }
     }
 }
