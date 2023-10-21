@@ -1,18 +1,32 @@
 package org.ui.hq;
 
 import org.db.connecting.Connect;
-
-import java.sql.*;
 import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
-import org.ui.questions.*;
+import org.ui.questions.QuestionABC;
+import org.ui.questions.QuestionDate;
+import org.ui.questions.QuestionOpen;
+import org.ui.questions.QuestionTrueOrFalse;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 /**
  * Class that has its own Thread
  * @author Maciej
  * @version 0.1
  */
 public class HQ extends Thread{
+
+    /**
+     * Object that gets data from DB
+     * @see Connect
+     */
     private final Connect connect = new Connect();
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
 
     /**

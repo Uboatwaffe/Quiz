@@ -1,7 +1,8 @@
 package org.ui.admin;
 
+import org.db.interfaces.Functional;
+import org.db.interfaces.Functional2;
 import org.db.manage.Deleting;
-import org.db.interfaces.*;
 import org.db.manage.StringOperations;
 import org.file.writing.Writing;
 
@@ -16,8 +17,23 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class Manage implements ActionListener {
+
+    /**
+     * Frame of the class
+     */
     private JFrame frame = new JFrame("Deleting question");
+
+    /**
+     * Text field for getting:
+     * - new question
+     * - index of question that will be deleted
+     */
     private final JTextField field = new JTextField();
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
 
 

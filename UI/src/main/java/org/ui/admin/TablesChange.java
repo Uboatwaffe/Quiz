@@ -14,10 +14,20 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class TablesChange implements ActionListener {
-    // UI responsible for changing tables
+    /**
+     * Frame of the class
+     */
     private final JFrame frame;
+
+    /**
+     * Field that stores default table name
+     */
     private String prevTable = "set1";
 
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
     /**
      * Constructor

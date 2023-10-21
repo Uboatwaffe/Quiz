@@ -15,10 +15,25 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class TableAdd implements ActionListener {
-    // UI responsible for allowing to add new tables
+    /**
+     * Frame of the class
+     */
     private final JFrame frame;
+
+    /**
+     * Text field for new table name
+     */
     private final JTextField login = new JTextField("New name");
+
+    /**
+     * Label informing about name being in usage
+     */
     private final JLabel error = new JLabel("This name is already taken!");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
     /**
      * Constructor

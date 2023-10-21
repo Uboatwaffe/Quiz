@@ -1,13 +1,13 @@
 package org.ui.questions;
 
+import org.file.writing.Writing;
+import org.ui.score.Incorrect;
+import org.ui.score.Score;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-
-import org.file.writing.Writing;
-import org.ui.score.Incorrect;
-import org.ui.score.Score;
 
 /**
  * UI for showing question about date
@@ -15,10 +15,25 @@ import org.ui.score.Score;
  * @version 0.1
  */
 public class QuestionDate implements ActionListener {
-    // UI for showing question about a date
+    /**
+     * Field that stores user's answer
+     */
     private final String answer;
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
+
+    /**
+     * Text filed for answer
+     */
     private final JTextField field = new JTextField("This is question about date", 100);
     /**
      * Constructor

@@ -13,8 +13,15 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class TablesManage implements ActionListener {
-    // UI that allows you to choose what to do (tables)
+    /**
+     * Frame of the table
+     */
     private final JFrame frame;
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**

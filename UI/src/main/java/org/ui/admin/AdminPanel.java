@@ -2,6 +2,7 @@ package org.ui.admin;
 
 import org.file.writing.Writing;
 import org.ui.Main;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,11 +14,30 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class AdminPanel implements ActionListener {
-    // Main menu for AdminPanel
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Admin Panel");
+
+    /**
+     * Object that is responsible for adding/deleting questions
+     */
     private final Manage manage = new Manage();
+
+    /**
+     * Object that is responsible for showing questions/answers
+     */
     private final ShowAll showAll = new ShowAll();
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
+
+    /**
+     * Main class
+     */
     private final Main main = new Main();
 
     /**

@@ -4,6 +4,7 @@ import org.db.connecting.LoggingIn;
 import org.file.writing.Writing;
 import org.ui.Main;
 import org.ui.admin.others.WrongPassword;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,10 +16,26 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Logging implements ActionListener {
-    // UI for logging into AdminPanel
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame;
+
+    /**
+     * Text field for login
+     */
     private final JTextField login = new JTextField("Login");
+
+    /**
+     * Text field for password
+     */
     private final JTextField password = new JTextField("Password");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
     /**
      * Constructor

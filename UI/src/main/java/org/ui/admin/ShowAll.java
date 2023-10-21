@@ -12,8 +12,20 @@ import javax.swing.*;
  * @version 0.1
  */
 class ShowAll {
+    /**
+     * Object responsible for preparing String chain
+     */
     private final ToStrings toStrings = new ToStrings();
+
+    /**
+     * Object responsible for sorting DB
+     */
     private final Sorting sorting = new Sorting();
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
 
     /**

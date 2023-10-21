@@ -3,6 +3,7 @@ package org.ui.questions;
 import org.file.writing.Writing;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,10 +15,25 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class QuestionOpen implements ActionListener {
-    // UI for showing open question
+    /**
+     * Field that stores user's answer
+     */
     private final String answer;
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Text field for the answer
+     */
     private final JTextField field = new JTextField("This is an open question", 10);
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
 
     /**

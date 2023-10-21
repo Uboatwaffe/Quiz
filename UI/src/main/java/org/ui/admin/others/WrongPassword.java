@@ -2,6 +2,7 @@ package org.ui.admin.others;
 
 import org.file.writing.Writing;
 import org.ui.Main;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,8 +14,16 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class WrongPassword implements ActionListener {
-    // UI that informs about inserting wrong password/login
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
     private final Main main = new Main();
     /**

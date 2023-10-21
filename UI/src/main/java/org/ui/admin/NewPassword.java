@@ -14,11 +14,31 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class NewPassword implements ActionListener {
-    // UI for changing your password/login
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame;
+
+    /**
+     * Text field for current username
+     */
     private final JTextField user = new JTextField("Username");
+
+    /**
+     * Text field for new login
+     */
     private final JTextField login = new JTextField("New login");
+
+    /**
+     * Text field for new password
+     */
     private final JTextField password = new JTextField("New password");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
     /**
      * Constructor

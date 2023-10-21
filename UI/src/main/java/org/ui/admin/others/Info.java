@@ -15,8 +15,16 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Info implements ActionListener {
-    // UI that shows info about current set
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Info");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
     /**
      * Constructor

@@ -3,6 +3,7 @@ package org.ui.questions;
 import org.file.writing.Writing;
 import org.ui.score.Incorrect;
 import org.ui.score.Score;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,9 +15,20 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class QuestionABC implements ActionListener {
-    // UI for showing close question
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Field that stores user's answer
+     */
     private final String answer;
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
 
     /**

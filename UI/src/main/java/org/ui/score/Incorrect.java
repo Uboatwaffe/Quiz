@@ -14,8 +14,15 @@ import java.awt.event.WindowEvent;
  */
 @SuppressWarnings("SpellCheckingInspection")
 public class Incorrect implements ActionListener {
-    // UI for informing user that his input was wrong
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
 
     /**

@@ -15,10 +15,26 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class TableDelete implements ActionListener {
-    // UI responsible for allowing to delete tables
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame;
+
+    /**
+     * Text filed responsible for getting table name
+     */
     private final JTextField login = new JTextField("Name of the table");
+
+    /**
+     * Label that tells user that he can't delete that table
+     */
     private final JLabel error = new JLabel("There is no such table or it can't be deleted!");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
     /**
      * Constructor

@@ -13,8 +13,15 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class AdminTutorial implements ActionListener {
-    // How-to for admin
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Tutorial");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
     /**
      * Constructor

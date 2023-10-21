@@ -13,9 +13,18 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Credit implements ActionListener {
-    // UI that shows who made this program
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Credits");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
+
     /**
      * Constructor
      */

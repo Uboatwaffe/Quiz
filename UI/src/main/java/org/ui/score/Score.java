@@ -13,8 +13,15 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Score implements ActionListener {
-    // UI for informing user he inserted correct answer
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
 
     /**

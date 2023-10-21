@@ -1,19 +1,19 @@
 package org.ui;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import org.db.manage.HowMany;
 import org.exceptions.ERRORS;
 import org.file.writing.Writing;
-import org.ui.hq.HQ;
+import org.ui.admin.Logging;
 import org.ui.admin.others.Credit;
 import org.ui.admin.others.Info;
 import org.ui.admin.others.NoQuestions;
+import org.ui.hq.HQ;
 import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
-import org.ui.admin.Logging;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Main class
@@ -22,15 +22,48 @@ import org.ui.admin.Logging;
  */
 public final class Main implements ActionListener{
     // Main class
+
+    /**
+     * New Thread
+     */
     @SuppressWarnings("InstantiatingAThreadWithDefaultRunMethod")
     private final HQ hq = new HQ();
+
+    /**
+     * Object that is used to gain info about records from DB
+     */
     private final HowMany howMany = new HowMany();
+
+    /**
+     * Frame nr 1 (Main)
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Frame nr 2 (Score)
+     */
     private final JFrame frame2 = new JFrame("Score");
+
+    /**
+     * Frame nr 3 (Ready)
+     */
     private final JFrame frame3 = new JFrame("Are you ready?");
 
+    /**
+     * Label containing current score
+     */
     final JLabel score = new JLabel(String.valueOf(Count.getCount()));
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
+
+    /**
+     * Object used to write error log
+     * @see ERRORS
+     */
     private final static ERRORS errors = new ERRORS();
 
     /**
