@@ -21,6 +21,8 @@ public class QuestionABC implements ActionListener {
 
     /**
      * Constructor
+     * @param quest String with question
+     * @param answer String with expected answer
      */
     public QuestionABC(String quest, String answer) {
         writing.writeLog(getClass(),"Closed question");

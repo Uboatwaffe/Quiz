@@ -16,6 +16,10 @@ class ShowAll {
     private final ToStrings toStrings = new ToStrings();
     private final Sorting sorting = new Sorting();
     private final static Writing writing = new Writing();
+
+    /**
+     * Method that shows all the questions to user
+     */
     public void ShowQuestions() {
         writing.writeLog(getClass(), "Showing questions");
         sorting.sort();
@@ -36,6 +40,10 @@ class ShowAll {
         // Setting up the visibility
         frame.setVisible(true);
     }
+
+    /**
+     * Method that shows all the answers to user
+     */
     public void ShowAnswers() {
         writing.writeLog(getClass(), "Showing answers");
         sorting.sort();

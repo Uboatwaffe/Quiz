@@ -19,6 +19,8 @@ public class Incorrect implements ActionListener {
 
     /**
      * Constructor
+     * @param answer Expected answer
+     * @param wron Given answer
      */
     public Incorrect(String answer, @SuppressWarnings("SpellCheckingInspection") String wron) {
         writing.writeLog(getClass(), "Incorrect answer");

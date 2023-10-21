@@ -22,6 +22,10 @@ class Manage implements ActionListener {
     private final static Writing writing = new Writing();
 
 
+    /**
+     * Lambda responsible for extracting data from one String chain
+     * into 3 records array
+     */
     final Functional toArray = (chain) -> {
         writing.writeLog(getClass(), "In lambda 'toArray'");
         String[] db = new String[3];
@@ -32,6 +36,11 @@ class Manage implements ActionListener {
         return db;
     };
 
+    /**
+     * Lambda responsible for checking if type of the question is correct
+     * and also for checking if any of the questions doesn't contain '.' except for
+     * questions about date
+     */
     final Functional2 checking = (chain) -> {
         writing.writeLog(getClass(), "In lambda 'checking'");
         String[] db = toArray.toArray(chain);
@@ -39,15 +48,19 @@ class Manage implements ActionListener {
         boolean correct = false;
 
         switch (db[2]){
-            case "o", "c", "t", "d" -> {
+            case "o", "c", "t" -> {
                 if(!db[0].contains(".")){
                     correct = true;
                 }
             }
+            case "d" -> correct = true;
         }
         return correct;
     };
 
+    /**
+     * Method that shows UI for deleting questions
+     */
     void delete() {
         writing.writeLog(getClass(), "Deleting question");
 
@@ -89,6 +102,9 @@ class Manage implements ActionListener {
         frame.setVisible(true);
     }
 
+    /**
+     * Method that shows UI responsible for adding question
+     */
     void add() {
         writing.writeLog(getClass(), "Adding question");
 

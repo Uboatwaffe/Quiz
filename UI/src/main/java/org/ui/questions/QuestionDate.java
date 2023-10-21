@@ -22,6 +22,8 @@ public class QuestionDate implements ActionListener {
     private final JTextField field = new JTextField("This is question about date", 100);
     /**
      * Constructor
+     * @param quest String with question
+     * @param answer String with expected answer
      */
     public QuestionDate(String quest, String answer) {
         writing.writeLog(getClass(), "Question about date");

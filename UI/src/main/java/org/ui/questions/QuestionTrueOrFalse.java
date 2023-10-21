@@ -21,6 +21,8 @@ public class QuestionTrueOrFalse implements ActionListener {
 
     /**
      * Constructor
+     * @param quest String with question
+     * @param answer String with expected answer
      */
     public QuestionTrueOrFalse(String quest, String answer) {
         writing.writeLog(getClass(),"True or false question");

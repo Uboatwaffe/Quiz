@@ -3,7 +3,7 @@ package org.ui.admin;
 import org.db.connecting.LoggingIn;
 import org.file.writing.Writing;
 import org.ui.Main;
-import org.ui.others.WrongPassword;
+import org.ui.admin.others.WrongPassword;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

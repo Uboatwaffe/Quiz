@@ -19,6 +19,7 @@ public class Score implements ActionListener {
 
     /**
      * Constructor
+     * @param sc Current score
      */
     public Score(int sc) {
         writing.writeLog(getClass(), "Correct answer");

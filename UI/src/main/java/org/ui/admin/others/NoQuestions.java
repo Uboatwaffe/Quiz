@@ -1,4 +1,4 @@
-package org.ui.others;
+package org.ui.admin.others;
 
 import org.file.writing.Writing;
 import org.ui.Main;

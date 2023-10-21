@@ -8,9 +8,9 @@ import org.db.manage.HowMany;
 import org.exceptions.ERRORS;
 import org.file.writing.Writing;
 import org.ui.hq.HQ;
-import org.ui.others.Credit;
-import org.ui.others.Info;
-import org.ui.others.NoQuestions;
+import org.ui.admin.others.Credit;
+import org.ui.admin.others.Info;
+import org.ui.admin.others.NoQuestions;
 import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
 import org.ui.admin.Logging;
@@ -206,14 +206,24 @@ public final class Main implements ActionListener{
         }
     }
 
+    /**
+     * Method that hides Mains UI
+     */
     public void hideMain(){
         frame.setVisible(false);
     }
 
+    /**
+     * Method that shows Mains UI
+     */
     public void showMain(){
         frame.setVisible(true);
     }
 
+    /**
+     * Main method
+     * @param args argument
+     */
     public static void main(String[] args) {
         errors.clear();
         writing.clear();

@@ -22,6 +22,8 @@ public class QuestionOpen implements ActionListener {
 
     /**
      * Constructor
+     * @param quest String with question
+     * @param answer String with expected answer
      */
     public QuestionOpen(String quest, String answer) {
         writing.writeLog(getClass(), "Open question");

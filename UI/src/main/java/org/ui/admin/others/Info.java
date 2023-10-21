@@ -1,4 +1,4 @@
-package org.ui.others;
+package org.ui.admin.others;
 
 import org.db.manage.HowMany;
 import org.db.manage.SQL;

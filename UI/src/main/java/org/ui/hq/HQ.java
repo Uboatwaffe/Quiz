@@ -17,7 +17,7 @@ public class HQ extends Thread{
     private final static Writing writing = new Writing();
 
     /**
-     *  Method that calls other classes that show question
+     *  Method that calls other classes that show questions
      */
     public void start(){
         try {
