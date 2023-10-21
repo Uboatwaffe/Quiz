@@ -12,6 +12,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.1
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class Incorrect implements ActionListener {
     // UI for informing user that his input was wrong
     private final JFrame frame = new JFrame("Quiz");
@@ -22,7 +23,7 @@ public class Incorrect implements ActionListener {
      * @param answer Expected answer
      * @param wron Given answer
      */
-    public Incorrect(String answer, @SuppressWarnings("SpellCheckingInspection") String wron) {
+    public Incorrect(String answer, String wron) {
         writing.writeLog(getClass(), "Incorrect answer");
 
         // Default settings
