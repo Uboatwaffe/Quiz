@@ -25,7 +25,7 @@ public class QuestionABC implements ActionListener {
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(440,170);
+        frame.setSize(440,200);
         frame.setLayout(null);
 
         // Labels
@@ -37,17 +37,20 @@ public class QuestionABC implements ActionListener {
         JButton b = new JButton("B");
         JButton c = new JButton("C");
         JButton d = new JButton("D");
+        JButton no = new JButton("I DO NOT KNOW");
 
         a.setBounds(5, 45, 100, 70);
         b.setBounds(110, 45, 100, 70);
         c.setBounds(215, 45, 100, 70);
         d.setBounds(320, 45, 100, 70);
+        no.setBounds(5, 120, 415, 35);
 
 
         a.addActionListener(this);
         b.addActionListener(this);
         c.addActionListener(this);
         d.addActionListener(this);
+        no.addActionListener(this);
 
 
         // Adding to the frame
@@ -56,6 +59,7 @@ public class QuestionABC implements ActionListener {
         frame.add(b);
         frame.add(c);
         frame.add(d);
+        frame.add(no);
 
         // Setting up the visibility
         frame.setVisible(true);
@@ -63,16 +67,20 @@ public class QuestionABC implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getActionCommand().equals(answer)) {
-                Count.setCount(Count.getCount() + 1);
-                new Score(Count.getCount());
-            } else {
-                new Incorrect(answer, e.getActionCommand());
+        if(!e.getActionCommand().equals("I DO NOT KNOW")) {
+            try {
+                if (e.getActionCommand().equals(answer)) {
+                    Count.setCount(Count.getCount() + 1);
+                    new Score(Count.getCount());
+                } else {
+                    new Incorrect(answer, e.getActionCommand());
+                }
+            } finally {
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
-        } finally {
+        }else{
+            writing.writeLog(getClass(),"Don't know the answer");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
-
     }
 }

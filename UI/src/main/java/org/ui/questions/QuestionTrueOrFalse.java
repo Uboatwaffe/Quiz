@@ -25,7 +25,7 @@ public class QuestionTrueOrFalse implements ActionListener {
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(440,170);
+        frame.setSize(440,200);
         frame.setLayout(null);
 
         // Labels
@@ -35,15 +35,18 @@ public class QuestionTrueOrFalse implements ActionListener {
         // Buttons
         JButton t = new JButton("TRUE");
         JButton f = new JButton("FALSE");
+        JButton no = new JButton("I DO NOT KNOW");
 
 
         t.setBounds(5, 45, 200, 70);
         f.setBounds(210, 45, 200, 70);
+        no.setBounds(5, 120, 405, 35);
 
 
 
         t.addActionListener(this);
         f.addActionListener(this);
+        no.addActionListener(this);
 
 
 
@@ -51,6 +54,7 @@ public class QuestionTrueOrFalse implements ActionListener {
         frame.add(question);
         frame.add(t);
         frame.add(f);
+        frame.add(no);
 
         // Setting up the visibility
         frame.setVisible(true);
@@ -58,13 +62,19 @@ public class QuestionTrueOrFalse implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        try {
-            if (e.getActionCommand().equals(answer)) {
-                Count.setCount(Count.getCount() + 1);
-                new Score(Count.getCount());
-            } else
-                new Incorrect(answer, e.getActionCommand());
-        } finally {
+        if(!e.getActionCommand().equals("I DO NOT KNOW")) {
+            try {
+                if (e.getActionCommand().equals(answer)) {
+                    Count.setCount(Count.getCount() + 1);
+                    new Score(Count.getCount());
+                } else {
+                    new Incorrect(answer, e.getActionCommand());
+                }
+            } finally {
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
+        }else{
+            writing.writeLog(getClass(),"Don't know the answer");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

@@ -215,5 +215,6 @@ public final class Main implements ActionListener{
         writing.clear();
         writing.writeLog(Main.class,"Start program");
         SwingUtilities.invokeLater(Main::new);
+
     }
 }
