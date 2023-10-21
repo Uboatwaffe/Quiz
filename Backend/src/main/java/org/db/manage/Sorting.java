@@ -13,9 +13,16 @@ import java.sql.SQLException;
  * @version 0.1
  */
 public class Sorting {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
-
+    /**
+     * Sorts whole DB
+     */
     public void sort(){
 
         try {

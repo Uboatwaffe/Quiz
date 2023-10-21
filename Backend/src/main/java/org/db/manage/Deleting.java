@@ -8,15 +8,21 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * Class that deletes log.txt
+ * Class that deletes questions
  * @author Maciej
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
 public class Deleting{
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**
+     * Method that deletes question/s
      * @param index Index of question that is going to be deleted, '-1' clears whole table
      */
     public static void delete(String index) {

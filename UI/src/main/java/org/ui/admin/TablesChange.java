@@ -14,12 +14,24 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class TablesChange implements ActionListener {
-    // UI responsible for changing tables
+    /**
+     * Frame of the class
+     */
     private final JFrame frame;
+
+    /**
+     * Field that stores default table name
+     */
     private String prevTable = "set1";
 
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
-
+    /**
+     * Constructor
+     */
     TablesChange() {
         writing.writeLog(getClass(), "Change tables");
         frame = new JFrame("Changing table");
@@ -61,7 +73,10 @@ class TablesChange implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("OK")) {

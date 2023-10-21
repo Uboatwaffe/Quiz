@@ -1,4 +1,4 @@
-package org.ui.others;
+package org.ui.admin.others;
 
 import org.db.manage.HowMany;
 import org.db.manage.SQL;
@@ -15,10 +15,20 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Info implements ActionListener {
-    // UI that shows info about current set
-    private final JFrame frame = new JFrame("Info");
-    private final static Writing writing = new Writing();
 
+    /**
+     * Frame of the class
+     */
+    private final JFrame frame = new JFrame("Info");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
+    private final static Writing writing = new Writing();
+    /**
+     * Constructor
+     */
     public Info() {
         writing.writeLog(getClass(),"Info");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -33,7 +43,7 @@ public class Info implements ActionListener {
         string2.setBounds(5,30, 200, 15);
 
         HowMany howMany = new HowMany();
-        JLabel string3 = new JLabel("Number of answers: " + howMany.howMany());
+        JLabel string3 = new JLabel("Number of questions: " + howMany.howMany());
         string3.setBounds(5,55, 200, 15);
 
 
@@ -56,7 +66,10 @@ public class Info implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(),"Closing");

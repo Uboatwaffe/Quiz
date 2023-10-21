@@ -2,6 +2,7 @@ package org.ui.admin;
 
 import org.file.writing.Writing;
 import org.ui.Main;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,13 +14,35 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class AdminPanel implements ActionListener {
-    // Main menu for AdminPanel
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Admin Panel");
+
+    /**
+     * Object that is responsible for adding/deleting questions
+     */
     private final Manage manage = new Manage();
+
+    /**
+     * Object that is responsible for showing questions/answers
+     */
     private final ShowAll showAll = new ShowAll();
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
+
+    /**
+     * Main class
+     */
     private final Main main = new Main();
 
+    /**
+     * Constructor
+     */
     public AdminPanel() {
         writing.writeLog(getClass(), "Admin Panel");
         main.hideMain();
@@ -70,28 +93,38 @@ public class AdminPanel implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            main.showMain();
-        } else if (e.getActionCommand().equals("SHOW QUESTIONS")) {
-            writing.writeLog(getClass(), "Goto show questions");
-            showAll.ShowQuestions();
-        } else if (e.getActionCommand().equals("SHOW ANSWERS")) {
-            writing.writeLog(getClass(), "Goto show answers");
-            showAll.ShowAnswers();
-        } else if (e.getActionCommand().equals("ADD QUESTION")) {
-            writing.writeLog(getClass(), "Goto add questions");
-            manage.add();
-        } else if (e.getActionCommand().equals("DELETE QUESTION")) {
-            writing.writeLog(getClass(), "Goto delete question");
-            manage.delete();
-        } else if (e.getActionCommand().equals("OTHER")) {
-            writing.writeLog(getClass(), "Goto admin other");
-            new AdminOther();
+        switch (e.getActionCommand()){
+            case "SHOW QUESTIONS" -> {
+                writing.writeLog(getClass(), "Goto show questions");
+                showAll.ShowQuestions();
+            }
+            case "SHOW ANSWERS" -> {
+                writing.writeLog(getClass(), "Goto show answers");
+                showAll.ShowAnswers();
+            }
+            case "ADD QUESTION" -> {
+                writing.writeLog(getClass(), "Goto add questions");
+                manage.add();
+            }
+            case "DELETE QUESTION" -> {
+                writing.writeLog(getClass(), "Goto delete question");
+                manage.delete();
+            }
+            case "OTHER" -> {
+                writing.writeLog(getClass(), "Goto admin other");
+                new AdminOther();
+            }
+            default -> {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+                main.showMain();
+            }
         }
     }
 }

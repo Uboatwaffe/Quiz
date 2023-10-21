@@ -1,10 +1,12 @@
 package org.db.connecting;
 
-import org.exceptions.ExceptionUI;
 import org.db.manage.SQL;
+import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * Class responsible for returning data from database
@@ -13,9 +15,16 @@ import java.sql.*;
  */
 @SuppressWarnings("DataFlowIssue")
 public final class Connect {
-    private static final Writing writing = new Writing();
+
     /**
-     * @return ResultSet with all the data from DB for current table
+     * Object used to write log
+     * @see Writing
+     */
+    private static final Writing writing = new Writing();
+
+    /**
+     * Method that returns ResultSet
+     * @return ResultSet with all the data from DB from current table
      */
     public ResultSet getConnection() {
         writing.writeLog(getClass(), "Getting all data from DB");

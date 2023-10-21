@@ -8,13 +8,23 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * Class responsible for adding new log.txt to database
+ * Class responsible for adding new questions to database
  * @author Maciej
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
 public final class Adding{
+
+    /**
+     * Object used to getting info about number of records in DB
+     * @see HowMany
+     */
     private static final HowMany howMany = new HowMany();
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**

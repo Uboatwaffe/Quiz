@@ -13,9 +13,15 @@ import java.sql.SQLException;
  * @version 0.1
  */
 public final class Connecting {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**
+     * Method that establishes connection to the DB
      * @return Connection reference to database
      */
     public static Connection getConnection() {

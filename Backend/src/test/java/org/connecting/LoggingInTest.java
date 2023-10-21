@@ -10,6 +10,10 @@ import static org.junit.jupiter.api.Assertions.*;
  * @version 0.1
  */
 class LoggingInTest {
+
+    /**
+     * Test for method getLoginAndPassword()
+     */
     @org.junit.jupiter.api.Test
     void getLoginAndPassword() {
         assertNotNull(LoggingIn.getLoginAndPassword());

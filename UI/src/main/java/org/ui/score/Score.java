@@ -13,9 +13,21 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Score implements ActionListener {
-    // UI for informing user he inserted correct answer
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
+
+    /**
+     * Constructor
+     * @param sc Current score
+     */
     public Score(int sc) {
         writing.writeLog(getClass(), "Correct answer");
 
@@ -51,12 +63,13 @@ public class Score implements ActionListener {
         frame.setVisible(true);
     }
 
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("UNDERSTOOD")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        }
+        writing.writeLog(getClass(), "Closing");
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

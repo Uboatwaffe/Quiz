@@ -13,10 +13,19 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Tutorial implements ActionListener {
-    // How-to for user
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
-    private final static Writing writing = new Writing();
 
+    /**
+     * Object used to write log
+     * @see Writing
+     */
+    private final static Writing writing = new Writing();
+    /**
+     * Constructor
+     */
     public Tutorial() {
         writing.writeLog(getClass(), "Creating tutorial");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -36,7 +45,7 @@ public class Tutorial implements ActionListener {
         JLabel string4 = new JLabel("2) Date in format of DD.MM.YYYY");
         string4.setBounds(5,80, 200, 15);
 
-        JLabel string5 = new JLabel("3) Open log.txt should be");
+        JLabel string5 = new JLabel("3) Open question should be");
         string5.setBounds(5,105, 200, 15);
 
         JLabel string6 = new JLabel("typed with CAPS LOCK");
@@ -63,7 +72,10 @@ public class Tutorial implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(), "Closing");

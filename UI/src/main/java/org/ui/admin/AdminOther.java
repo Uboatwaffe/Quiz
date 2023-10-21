@@ -3,6 +3,7 @@ package org.ui.admin;
 import org.db.reset.Reset;
 import org.file.writing.Writing;
 import org.ui.tutorial.AdminTutorial;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,9 +15,21 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class AdminOther implements ActionListener {
-    // Second menu for AdminPanel
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Other");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public AdminOther() {
         writing.writeLog(getClass(), "Admin Other panel");
         frame.setSize(440, 170);
@@ -58,28 +71,38 @@ public class AdminOther implements ActionListener {
     }
 
 
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("TUTORIAL")) {
-            writing.writeLog(getClass(), "Goto admin tutorial");
-            new AdminTutorial();
-        } else if (e.getActionCommand().equals("DETAILS")) {
-            writing.writeLog(getClass(), "Goto Details");
-            new NewPassword();
-        } else if (e.getActionCommand().equals("CHANGE TABLE")) {
-            writing.writeLog(getClass(), "Goto show tables");
-            new TablesChange();
-        } else if (e.getActionCommand().equals("TABLE MANAGEMENT")) {
-            writing.writeLog(getClass(),"Goto table management");
-            new TablesManage();
-        } else if (e.getActionCommand().equals("RESET")) {
-            writing.writeLog(getClass(), "Goto reset");
-            Reset.reset();
-            frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
+        switch (e.getActionCommand()) {
+            case "TUTORIAL" -> {
+                writing.writeLog(getClass(), "Goto admin tutorial");
+                new AdminTutorial();
+            }
+            case "DETAILS" -> {
+                writing.writeLog(getClass(), "Goto Details");
+                new NewPassword();
+            }
+            case "CHANGE TABLE" -> {
+                writing.writeLog(getClass(), "Goto show tables");
+                new TablesChange();
+            }
+            case "TABLE MANAGEMENT" -> {
+                writing.writeLog(getClass(), "Goto table management");
+                new TablesManage();
+            }
+            case "RESET" -> {
+                writing.writeLog(getClass(), "Goto reset");
+                Reset.reset();
+                frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
+            }
+            default -> {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
         }
     }
 }

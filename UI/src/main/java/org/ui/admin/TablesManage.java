@@ -13,9 +13,20 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class TablesManage implements ActionListener {
-    // UI that allows you to choose what to do (tables)
+    /**
+     * Frame of the table
+     */
     private final JFrame frame;
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     TablesManage() {
         writing.writeLog(getClass(), "Tables management");
         frame = new JFrame("What to do");
@@ -54,18 +65,25 @@ class TablesManage implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("ADD TABLE")) {
-            writing.writeLog(getClass(), "Goto table add");
-            new TableAdd();
-        } else if (e.getActionCommand().equals("DELETE TABLE")) {
-            writing.writeLog(getClass(), "Goto table delete");
-            new TableDelete();
+        switch (e.getActionCommand()){
+            case "ADD TABLE" -> {
+                writing.writeLog(getClass(), "Goto table add");
+                new TableAdd();
+            }
+            case "DELETE TABLE" -> {
+                writing.writeLog(getClass(), "Goto table delete");
+                new TableDelete();
+            }
+            default -> {
+                writing.writeLog(getClass(), "Closing");
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
         }
     }
 }

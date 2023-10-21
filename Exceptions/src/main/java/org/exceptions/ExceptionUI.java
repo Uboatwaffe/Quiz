@@ -11,8 +11,17 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class ExceptionUI implements ActionListener {
+
+    /**
+     * Frame of the program
+     */
     private final JFrame frame = new JFrame("Error");
-    public ExceptionUI(@SuppressWarnings("rawtypes") Class ob){
+
+    /**
+     * Constructor
+     * @param ob Name of class that thrown this Exception
+     */
+    public ExceptionUI(Class<?> ob){
 
         // Default settings
 
@@ -51,6 +60,10 @@ public class ExceptionUI implements ActionListener {
     }
 
 
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("UNDERSTOOD")) {

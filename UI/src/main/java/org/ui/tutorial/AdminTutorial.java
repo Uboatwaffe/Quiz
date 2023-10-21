@@ -13,10 +13,19 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class AdminTutorial implements ActionListener {
-    // How-to for admin
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Tutorial");
-    private final static Writing writing = new Writing();
 
+    /**
+     * Object used to write log
+     * @see Writing
+     */
+    private final static Writing writing = new Writing();
+    /**
+     * Constructor
+     */
     public AdminTutorial() {
         writing.writeLog(getClass(), "Creating AdminTutorial");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -71,7 +80,10 @@ public class AdminTutorial implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(), "Closing");

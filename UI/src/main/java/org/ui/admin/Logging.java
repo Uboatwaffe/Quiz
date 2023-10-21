@@ -3,7 +3,8 @@ package org.ui.admin;
 import org.db.connecting.LoggingIn;
 import org.file.writing.Writing;
 import org.ui.Main;
-import org.ui.others.WrongPassword;
+import org.ui.admin.others.WrongPassword;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,12 +16,30 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Logging implements ActionListener {
-    // UI for logging into AdminPanel
-    private final JFrame frame;
-    private final JTextField login = new JTextField("Login");
-    private final JTextField password = new JTextField("Password");
-    private final static Writing writing = new Writing();
 
+    /**
+     * Frame of the class
+     */
+    private final JFrame frame;
+
+    /**
+     * Text field for login
+     */
+    private final JTextField login = new JTextField("Login");
+
+    /**
+     * Text field for password
+     */
+    private final JTextField password = new JTextField("Password");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
+    private final static Writing writing = new Writing();
+    /**
+     * Constructor
+     */
     public Logging() {
         writing.writeLog(getClass(), "Logging in");
         frame = new JFrame("Logging in");
@@ -59,24 +78,28 @@ public class Logging implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
+        if (e.getActionCommand().equals("LOG IN")) {
+            if (!login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
+                writing.writeLog(getClass(), "Goto wrong password");
+                new WrongPassword();
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+
+            } else {
+                writing.writeLog(getClass(), "Goto admin panel");
+                new AdminPanel();
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
+        } else {
             writing.writeLog(getClass(), "Closing");
             Main main = new Main();
             main.showMain();
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        } else if (e.getActionCommand().equals("LOG IN")) {
-            if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
-                writing.writeLog(getClass(), "Goto admin panel");
-                new AdminPanel();
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            } else {
-                writing.writeLog(getClass(), "Goto wrong password");
-                new WrongPassword();
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-            }
         }
     }
 }

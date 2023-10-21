@@ -1,15 +1,30 @@
 
 org.ui.Main:	Start program
-org.ui.Main:	Goto logging in
-org.ui.admin.Logging:	Logging in
-org.db.connecting.LoggingIn:	Getting data to logging in
+org.ui.Main:	Starting quiz
+org.db.connecting.Connect:	Getting all data from DB
 org.db.connecting.Connecting:	Establishing connection to DB
-org.db.connecting.LoggingIn:	Getting data to logging in
+org.db.manage.SQL:	Getting all tables names
 org.db.connecting.Connecting:	Establishing connection to DB
-org.ui.admin.Logging:	Goto admin panel
-org.ui.admin.AdminPanel:	Admin Panel
-org.ui.admin.AdminPanel:	Goto add questions
-org.ui.admin.Manage:	Adding question
-org.ui.admin.Manage:	Goto backend/string operations
-org.db.manage.StringOperations:	Goto Adding
-org.ui.admin.Manage:	In lambda
+org.db.manage.HowMany:	Counts how many records
+org.ui.hq.HQ:	Starts showing questions
+org.db.connecting.Connect:	Getting all data from DB
+org.db.connecting.Connecting:	Establishing connection to DB
+org.ui.hq.HQ:	Showing question with type: t
+org.ui.questions.QuestionTrueOrFalse:	True or false question
+org.ui.hq.HQ:	Showing question with type: c
+org.ui.questions.QuestionABC:	Closed question
+org.ui.hq.HQ:	Showing question with type: o
+org.ui.questions.QuestionOpen:	Open question
+org.ui.hq.HQ:	Showing question with type: d
+org.ui.questions.QuestionDate:	Question about date
+org.ui.hq.HQ:	All questions showed
+org.ui.questions.QuestionDate:	Don't know the answer
+org.ui.questions.QuestionOpen:	Don't know the answer
+org.ui.questions.QuestionABC:	Don't know the answer
+org.ui.questions.QuestionTrueOrFalse:	Don't know the answer
+org.ui.Main:	Showing score
+org.db.connecting.Connect:	Getting all data from DB
+org.db.connecting.Connecting:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
+org.ui.Main:	Goto main menu
+org.ui.Main:	Ending

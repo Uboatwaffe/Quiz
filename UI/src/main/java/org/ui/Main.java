@@ -1,20 +1,19 @@
 package org.ui;
 
+import org.db.manage.HowMany;
+import org.exceptions.ERRORS;
+import org.file.writing.Writing;
+import org.ui.admin.Logging;
+import org.ui.admin.others.Credit;
+import org.ui.admin.others.Info;
+import org.ui.admin.others.NoQuestions;
+import org.ui.hq.HQ;
+import org.ui.questions.Count;
+import org.ui.tutorial.Tutorial;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import org.db.manage.HowMany;
-import org.db.score.ScoreDB;
-import org.exceptions.ERRORS;
-import org.file.writing.Writing;
-import org.ui.hq.HQ;
-import org.ui.others.Credit;
-import org.ui.others.Info;
-import org.ui.others.NoQuestions;
-import org.ui.questions.Count;
-import org.ui.tutorial.Tutorial;
-import org.ui.admin.Logging;
 
 /**
  * Main class
@@ -23,17 +22,53 @@ import org.ui.admin.Logging;
  */
 public final class Main implements ActionListener{
     // Main class
+
+    /**
+     * New Thread
+     */
     @SuppressWarnings("InstantiatingAThreadWithDefaultRunMethod")
     private final HQ hq = new HQ();
+
+    /**
+     * Object that is used to gain info about records from DB
+     */
     private final HowMany howMany = new HowMany();
+
+    /**
+     * Frame nr 1 (Main)
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Frame nr 2 (Score)
+     */
     private final JFrame frame2 = new JFrame("Score");
+
+    /**
+     * Frame nr 3 (Ready)
+     */
     private final JFrame frame3 = new JFrame("Are you ready?");
 
+    /**
+     * Label containing current score
+     */
     final JLabel score = new JLabel(String.valueOf(Count.getCount()));
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
+
+    /**
+     * Object used to write error log
+     * @see ERRORS
+     */
     private final static ERRORS errors = new ERRORS();
 
+    /**
+     * Constructor
+     */
     public Main(){
         // Main
         // Default settings
@@ -140,69 +175,93 @@ public final class Main implements ActionListener{
         frame3.add(iamnot);
     }
 
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("CLOSE")) {
-            writing.writeLog(getClass(), "Ending");
-            System.exit(0);
-        } else if (e.getActionCommand().equals("START")) {
-            writing.writeLog(getClass(),"Starting quiz");
-            Count.setCount(0);
-            if (howMany.howMany() != 0) {
-                frame.setVisible(false);
-                frame3.setVisible(true);
-                frame2.setVisible(false);
-                hq.start();
-                try {
-                    hq.join();
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
+        switch (e.getActionCommand()){
+            case "START" -> {
+                writing.writeLog(getClass(),"Starting quiz");
+                Count.setCount(0);
+                if (howMany.howMany() != 0) {
+                    frame.setVisible(false);
+                    frame3.setVisible(true);
+                    frame2.setVisible(false);
+                    hq.start();
+                    try {
+                        hq.join();
+                    } catch (InterruptedException ex) {
+                        throw new RuntimeException(ex);
+                    }
+                } else {
+                    new NoQuestions();
                 }
-            } else {
-                new NoQuestions();
             }
-        } else if (e.getActionCommand().equals("TUTORIAL")) {
-            writing.writeLog(getClass(),"Goto Tutorial");
-            new Tutorial();
-        } else if (e.getActionCommand().equals("UNDERSTOOD")) {
-            writing.writeLog(getClass(),"Goto main menu");
-            frame2.setVisible(false);
-            frame.setVisible(true);
-        } else if (e.getActionCommand().equals("I AM")) {
-            writing.writeLog(getClass(),"Showing score");
-            ScoreDB.setStats(String.valueOf(Count.getCount()));
-            frame3.setVisible(false);
-            score.setText(Count.getCount() + " out of " + howMany.howMany());
-            frame2.setVisible(true);
-            frame.setVisible(false);
-        } else if (e.getActionCommand().equals("I'M NOT")) {
-            writing.writeLog(getClass(),"Exiting, not showing score");
-            ScoreDB.setStats(String.valueOf(Count.getCount()));
-            System.exit(0);
-        } else if (e.getActionCommand().equals("ADMIN PANEL")) {
-            writing.writeLog(getClass(),"Goto logging in");
-            frame.setVisible(false);
-            new Logging();
-        } else if (e.getActionCommand().equals("CREDITS")) {
-            writing.writeLog(getClass(),"Showing credits");
-            new Credit();
-        } else if (e.getActionCommand().equals("INFO")) {
-            writing.writeLog(getClass(), "Showing info");
-            new Info();
+            case "TUTORIAL" -> {
+                writing.writeLog(getClass(),"Goto Tutorial");
+                new Tutorial();
+            }
+            case "UNDERSTOOD" -> {
+                writing.writeLog(getClass(),"Goto main menu");
+                frame2.setVisible(false);
+                frame.setVisible(true);
+            }
+            case "I AM" -> {
+                writing.writeLog(getClass(),"Showing score");
+                frame3.setVisible(false);
+                score.setText(Count.getCount() + " out of " + howMany.howMany());
+                frame2.setVisible(true);
+                frame.setVisible(false);
+            }
+            case "I'M NOT" -> {
+                writing.writeLog(getClass(),"Not showing score");
+                showMain();
+            }
+            case "ADMIN PANEL" -> {
+                writing.writeLog(getClass(),"Goto logging in");
+                frame.setVisible(false);
+                new Logging();
+            }
+            case "CREDITS" -> {
+                writing.writeLog(getClass(),"Showing credits");
+                new Credit();
+            }
+            case "INFO" -> {
+                writing.writeLog(getClass(), "Showing info");
+                new Info();
+            }
+            default -> {
+                writing.writeLog(getClass(), "Ending");
+                System.exit(0);
+            }
         }
     }
+
+    /**
+     * Method that hides Mains UI
+     */
     public void hideMain(){
         frame.setVisible(false);
     }
 
+    /**
+     * Method that shows Mains UI
+     */
     public void showMain(){
         frame.setVisible(true);
     }
 
+    /**
+     * Main method
+     * @param args argument
+     */
     public static void main(String[] args) {
         errors.clear();
         writing.clear();
         writing.writeLog(Main.class,"Start program");
         SwingUtilities.invokeLater(Main::new);
+
     }
 }

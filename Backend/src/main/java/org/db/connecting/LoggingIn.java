@@ -13,9 +13,15 @@ import java.sql.Statement;
  */
 @SuppressWarnings("DataFlowIssue")
 public final class LoggingIn {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**
+     * Method that returns current login and password
      * @return String array with password and login used by user 'admin'
      */
     public static String[] getLoginAndPassword() {

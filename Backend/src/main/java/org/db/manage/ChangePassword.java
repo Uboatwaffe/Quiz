@@ -14,10 +14,15 @@ import java.sql.SQLException;
  */
 @SuppressWarnings("DataFlowIssue")
 public class ChangePassword {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**
-     * Method that changes login 'n' password
+     * Method that changes login and password
      * @param login New login
      * @param password New password
      * @param user Name of the user that is logged in

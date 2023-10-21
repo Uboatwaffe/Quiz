@@ -15,12 +15,30 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class TableDelete implements ActionListener {
-    // UI responsible for allowing to delete tables
-    private final JFrame frame;
-    private final JTextField login = new JTextField("Name of the table");
-    private final JLabel error = new JLabel("There is no such table or it can't be deleted!");
-    private final static Writing writing = new Writing();
 
+    /**
+     * Frame of the class
+     */
+    private final JFrame frame;
+
+    /**
+     * Text filed responsible for getting table name
+     */
+    private final JTextField login = new JTextField("Name of the table");
+
+    /**
+     * Label that tells user that he can't delete that table
+     */
+    private final JLabel error = new JLabel("There is no such table or it can't be deleted!");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
+    private final static Writing writing = new Writing();
+    /**
+     * Constructor
+     */
     TableDelete() {
         writing.writeLog(getClass(), "Delete table");
         frame = new JFrame("Deleting table");
@@ -60,7 +78,10 @@ class TableDelete implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("CLOSE")) {

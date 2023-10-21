@@ -14,13 +14,35 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 class NewPassword implements ActionListener {
-    // UI for changing your password/login
-    private final JFrame frame;
-    private final JTextField user = new JTextField("Username");
-    private final JTextField login = new JTextField("New login");
-    private final JTextField password = new JTextField("New password");
-    private final static Writing writing = new Writing();
 
+    /**
+     * Frame of the class
+     */
+    private final JFrame frame;
+
+    /**
+     * Text field for current username
+     */
+    private final JTextField user = new JTextField("Username");
+
+    /**
+     * Text field for new login
+     */
+    private final JTextField login = new JTextField("New login");
+
+    /**
+     * Text field for new password
+     */
+    private final JTextField password = new JTextField("New password");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
+    private final static Writing writing = new Writing();
+    /**
+     * Constructor
+     */
     NewPassword() {
         writing.writeLog(getClass(), "New password/login");
         frame = new JFrame("Changing account details");
@@ -57,7 +79,10 @@ class NewPassword implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("CLOSE")) {

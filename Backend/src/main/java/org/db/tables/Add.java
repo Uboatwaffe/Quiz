@@ -8,11 +8,17 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
+ * Class that is responsible for adding new tables into the DB
  * @author Maciej
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
 public final class Add{
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
 
@@ -28,16 +34,12 @@ public final class Add{
 
             String sql = "CREATE TABLE `quiz`.`"+ name +"` (`id` INT NOT NULL,`question` VARCHAR(90) NOT NULL,`answer` VARCHAR(45) NOT NULL,`type` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`))";
             String sql2 = "INSERT INTO tables VALUES ('"+ name +"')";
-            String sql3 = "INSERT INTO score VALUES ('"+ name +"', '"+ 0 +"', '"+ 0 +"', '"+ 0 +"')";
 
             PreparedStatement statement2 = Connecting.getConnection().prepareStatement(sql);
             statement2.executeUpdate();
 
             PreparedStatement statement3 = Connecting.getConnection().prepareStatement(sql2);
             statement3.executeUpdate();
-
-            PreparedStatement statement4 = Connecting.getConnection().prepareStatement(sql3);
-            statement4.executeUpdate();
         } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Add.class);
         }

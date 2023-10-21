@@ -1,4 +1,4 @@
-package org.ui.others;
+package org.ui.admin.others;
 
 import org.file.writing.Writing;
 
@@ -13,10 +13,21 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class Credit implements ActionListener {
-    // UI that shows who made this program
+
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Credits");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
 
+    /**
+     * Constructor
+     */
     public Credit() {
         writing.writeLog(getClass(),"Credits");
 
@@ -68,7 +79,10 @@ public class Credit implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(), "Closing");

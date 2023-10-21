@@ -8,14 +8,21 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
+ * Class that extracts answers and questions from DB
  * @author Maciej
  * @version 0.1
  */
 public class ToStrings {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**
-     * @return String array with all the log.txt
+     * Method
+     * @return String array with all the questions
      */
     public String[] questionsInStringArray() {
         writing.writeLog(getClass(), "Getting questions in array");
@@ -40,6 +47,7 @@ public class ToStrings {
     }
 
     /**
+     * Method
      * @return String array with all answers
      */
     public String[] answersInStringArray() {

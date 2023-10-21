@@ -1,25 +1,41 @@
-package org.ui.others;
+package org.ui.admin.others;
 
 import org.file.writing.Writing;
 import org.ui.Main;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * UI for showing that inserted password/login was incorrect
+ * UI for showing that there aren't any questions
  * @author Maciej
  * @version 0.1
  */
-public class WrongPassword implements ActionListener {
-    // UI that informs about inserting wrong password/login
-    private final JFrame frame = new JFrame("Quiz");
-    private final static Writing writing = new Writing();
-    private final Main main = new Main();
+public class NoQuestions implements ActionListener {
 
-    public WrongPassword() {
-        writing.writeLog(getClass(), "Wrong password");
+    /**
+     * Frame of the class
+     */
+    private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
+    private final static Writing writing = new Writing();
+
+    /**
+     * Main class
+     */
+    private final Main main = new Main();
+    /**
+     * Constructor
+     */
+    public NoQuestions() {
+        writing.writeLog(getClass(), "No questions");
+
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
@@ -29,8 +45,8 @@ public class WrongPassword implements ActionListener {
         JLabel welcome = new JLabel("UNFORTUNATELY");
         welcome.setBounds(160, 5, 150, 15);
 
-        JLabel info = new JLabel("Your login or password was incorrect");
-        info.setBounds(100, 25, 300, 15);
+        JLabel info = new JLabel("There aren't any questions");
+        info.setBounds(145, 25, 300, 15);
 
         // Button
         JButton understood = new JButton("UNDERSTOOD");
@@ -49,13 +65,14 @@ public class WrongPassword implements ActionListener {
     }
 
 
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("UNDERSTOOD")) {
-            writing.writeLog(getClass(), "Closing");
-            main.showMain();
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        }
+        writing.writeLog(getClass(), "Closing");
+        main.showMain();
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

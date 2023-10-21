@@ -12,11 +12,25 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.1
  */
+@SuppressWarnings("SpellCheckingInspection")
 public class Incorrect implements ActionListener {
-    // UI for informing user that his input was wrong
+    /**
+     * Frame of the class
+     */
     private final JFrame frame = new JFrame("Quiz");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private final static Writing writing = new Writing();
-    public Incorrect(String answer, @SuppressWarnings("SpellCheckingInspection") String wron) {
+
+    /**
+     * Constructor
+     * @param answer Expected answer
+     * @param wron Given answer
+     */
+    public Incorrect(String answer, String wron) {
         writing.writeLog(getClass(), "Incorrect answer");
 
         // Default settings
@@ -55,12 +69,13 @@ public class Incorrect implements ActionListener {
         frame.setVisible(true);
     }
 
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("UNDERSTOOD")) {
-            writing.writeLog(getClass(), "Closing");
-            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
-        }
+        writing.writeLog(getClass(), "Closing");
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }
