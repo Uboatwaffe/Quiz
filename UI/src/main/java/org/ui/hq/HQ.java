@@ -12,7 +12,6 @@ import org.ui.questions.*;
  * @version 0.1
  */
 public class HQ extends Thread{
-    // Class that has its own Thread - responsible for showing log.txt to user
     private final Connect connect = new Connect();
     private final static Writing writing = new Writing();
 

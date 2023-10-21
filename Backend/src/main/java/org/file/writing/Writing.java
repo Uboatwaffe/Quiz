@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Class that writes log into log.txt
+ * Class that writes log into questions
  * @author Maciej
  * @version 0.1
  */

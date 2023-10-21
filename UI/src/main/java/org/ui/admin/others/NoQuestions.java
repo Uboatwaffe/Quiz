@@ -8,12 +8,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * UI for showing that there aren't any log.txt
+ * UI for showing that there aren't any questions
  * @author Maciej
  * @version 0.1
  */
 public class NoQuestions implements ActionListener {
-    // UI that informs user that there aren't any log.txt
     private final JFrame frame = new JFrame("Quiz");
     private final static Writing writing = new Writing();
     private final Main main = new Main();
@@ -32,7 +31,7 @@ public class NoQuestions implements ActionListener {
         JLabel welcome = new JLabel("UNFORTUNATELY");
         welcome.setBounds(160, 5, 150, 15);
 
-        JLabel info = new JLabel("There aren't any log.txt");
+        JLabel info = new JLabel("There aren't any questions");
         info.setBounds(145, 25, 300, 15);
 
         // Button

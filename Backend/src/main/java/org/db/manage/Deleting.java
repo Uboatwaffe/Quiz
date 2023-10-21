@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
- * Class that deletes log.txt
+ * Class that deletes questions
  * @author Maciej
  * @version 0.1
  */

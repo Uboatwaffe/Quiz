@@ -15,7 +15,7 @@ public class ToStrings {
     private static final Writing writing = new Writing();
 
     /**
-     * @return String array with all the log.txt
+     * @return String array with all the questions
      */
     public String[] questionsInStringArray() {
         writing.writeLog(getClass(), "Getting questions in array");

@@ -7,12 +7,11 @@ import org.file.writing.Writing;
 import javax.swing.*;
 
 /**
- * UI for showing log.txt and answers
+ * UI for showing questions and answers
  * @author Maciej
  * @version 0.1
  */
 class ShowAll {
-    // UI responsible for showing log.txt and answers
     private final ToStrings toStrings = new ToStrings();
     private final Sorting sorting = new Sorting();
     private final static Writing writing = new Writing();

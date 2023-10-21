@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * UI for showing true or false log.txt
+ * UI for showing true or false questions
  * @author Maciej
  * @version 0.1
  */
