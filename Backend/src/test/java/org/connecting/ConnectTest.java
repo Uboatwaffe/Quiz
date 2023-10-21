@@ -11,6 +11,10 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
  * @version 0.1
  */
 class ConnectTest {
+
+    /**
+     * Test for method getConnection()
+     */
     @org.junit.jupiter.api.Test
     void getConnection() {
         Connect connect = new Connect();

@@ -6,5 +6,9 @@ package org.db.interfaces;
  * @version 0.1
  */
 public interface Functional2 {
+    /**
+     * @param chain String containing all data
+     * @return true if type is correct otherwise false
+     */
     boolean checkingExtensions(String chain);
 }

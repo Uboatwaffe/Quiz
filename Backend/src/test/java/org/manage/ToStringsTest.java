@@ -13,11 +13,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class ToStringsTest {
     final ToStrings toStrings = new ToStrings();
 
+    /**
+     * Test for method questionsInStringArray()
+     */
     @Test
     void questionsInStringArray() {
         assertNotNull(toStrings.questionsInStringArray());
     }
 
+
+    /**
+     * Test for method answersInStringArray()
+     */
     @Test
     void answersInStringArray() {
         assertNotNull(toStrings.answersInStringArray());

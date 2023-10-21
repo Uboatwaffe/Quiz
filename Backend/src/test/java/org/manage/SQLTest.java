@@ -13,11 +13,18 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class SQLTest {
 
+    /**
+     * Test for method getCurrentTable()
+     */
     @Test
     void getCurrentTable() {
         assertNotNull(SQL.getCurrentTable());
     }
 
+
+    /**
+     * Test for method getAllTables()
+     */
     @Test
     void getAllTables() {
         assertNotNull(SQL.getAllTables());

@@ -13,6 +13,9 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class HowManyTest {
 
+    /**
+     * Test for method howMany()
+     */
     @Test
     void howMany() {
         HowMany howMany = new HowMany();
@@ -20,6 +23,9 @@ class HowManyTest {
         assertNotNull(i);
     }
 
+    /**
+     * Test for method highest()
+     */
     @Test
     void highest() {
         HowMany howMany = new HowMany();
