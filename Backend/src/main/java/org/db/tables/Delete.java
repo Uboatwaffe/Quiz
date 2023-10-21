@@ -9,11 +9,17 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
+ * Class that is responsible for deleting tables from the DB
  * @author Maciej
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
 public class Delete{
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
 

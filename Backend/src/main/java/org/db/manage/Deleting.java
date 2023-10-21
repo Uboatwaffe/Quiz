@@ -14,6 +14,11 @@ import java.sql.SQLException;
  */
 @SuppressWarnings("DataFlowIssue")
 public class Deleting{
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**

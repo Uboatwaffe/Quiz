@@ -28,9 +28,9 @@ org.db.connecting.Connecting:	Establishing connection to DB
 org.db.manage.HowMany:	Counts how many records
 org.ui.Main:	Goto main menu
 org.ui.Main:	Showing info
-org.ui.others.Info:	Info
+org.ui.admin.others.Info:	Info
 org.db.connecting.Connect:	Getting all data from DB
 org.db.connecting.Connecting:	Establishing connection to DB
 org.db.manage.HowMany:	Counts how many records
-org.ui.others.Info:	Closing
+org.ui.admin.others.Info:	Closing
 org.ui.Main:	Ending

@@ -6,10 +6,17 @@ import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
 /**
+ * Class that works on String chains and send it to the adding class
+ * @see Adding
  * @author Maciej
  * @version 0.1
  */
 public class StringOperations {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**

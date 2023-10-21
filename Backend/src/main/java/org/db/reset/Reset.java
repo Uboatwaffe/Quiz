@@ -13,10 +13,31 @@ import org.file.writing.Writing;
  * @version 0.1
  */
 public class Reset {
+
+    /**
+     * Field that stores all tables names
+     */
     private static final String[] tableNames = SQL.getAllTables();
+
+    /**
+     *  Field that stores default questions
+     */
     private static final String[] db1 = {"True or False", "Close question", "Open question", "Question about date"};
+
+    /**
+     * Field that stores default answers
+     */
     private static final String[] db2 = {"TRUE", "A", "YES", "11.11.1111"};
+
+    /**
+     * Field that stores default types of questions
+     */
     private static final String[] db3 = {"t", "c", "o", "d"};
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
 

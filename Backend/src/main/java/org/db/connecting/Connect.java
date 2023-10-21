@@ -13,9 +13,14 @@ import java.sql.*;
  */
 @SuppressWarnings("DataFlowIssue")
 public final class Connect {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
     /**
-     * @return ResultSet with all the data from DB for current table
+     * @return ResultSet with all the data from DB from current table
      */
     public ResultSet getConnection() {
         writing.writeLog(getClass(), "Getting all data from DB");

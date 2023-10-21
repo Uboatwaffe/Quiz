@@ -13,6 +13,11 @@ import java.sql.Statement;
  */
 @SuppressWarnings("DataFlowIssue")
 public class SQL {
+
+    /**
+     *  Sets default table at the beginning
+     *  As the program sets new table this is where it is stored
+     */
     private static String currentTable = getAllTables()[0];
 
     /**

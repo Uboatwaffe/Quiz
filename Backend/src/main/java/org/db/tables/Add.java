@@ -8,11 +8,17 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 /**
+ * Class that is responsible for adding new tables into the DB
  * @author Maciej
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
 public final class Add{
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
 

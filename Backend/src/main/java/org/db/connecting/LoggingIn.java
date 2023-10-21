@@ -13,6 +13,11 @@ import java.sql.Statement;
  */
 @SuppressWarnings("DataFlowIssue")
 public final class LoggingIn {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**

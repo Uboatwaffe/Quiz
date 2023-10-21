@@ -8,10 +8,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
+ * Class that extracts answers and questions from DB
  * @author Maciej
  * @version 0.1
  */
 public class ToStrings {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**

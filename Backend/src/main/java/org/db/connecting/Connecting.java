@@ -13,6 +13,11 @@ import java.sql.SQLException;
  * @version 0.1
  */
 public final class Connecting {
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**

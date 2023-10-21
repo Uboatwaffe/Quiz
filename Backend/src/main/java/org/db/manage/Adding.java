@@ -14,7 +14,17 @@ import java.sql.SQLException;
  */
 @SuppressWarnings("DataFlowIssue")
 public final class Adding{
+
+    /**
+     * Object used to getting info about number of records in DB
+     * @see HowMany
+     */
     private static final HowMany howMany = new HowMany();
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
     private static final Writing writing = new Writing();
 
     /**
