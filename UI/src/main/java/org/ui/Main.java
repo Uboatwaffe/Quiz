@@ -33,6 +33,9 @@ public final class Main implements ActionListener{
     private final static Writing writing = new Writing();
     private final static ERRORS errors = new ERRORS();
 
+    /**
+     * Constructor
+     */
     public Main(){
         // Main
         // Default settings
@@ -139,6 +142,10 @@ public final class Main implements ActionListener{
         frame3.add(iamnot);
     }
 
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()){

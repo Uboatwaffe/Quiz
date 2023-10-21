@@ -17,6 +17,10 @@ public class AdminOther implements ActionListener {
     // Second menu for AdminPanel
     private final JFrame frame = new JFrame("Other");
     private final static Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public AdminOther() {
         writing.writeLog(getClass(), "Admin Other panel");
         frame.setSize(440, 170);
@@ -58,7 +62,10 @@ public class AdminOther implements ActionListener {
     }
 
 
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {

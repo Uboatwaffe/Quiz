@@ -16,6 +16,10 @@ public class Score implements ActionListener {
     // UI for informing user he inserted correct answer
     private final JFrame frame = new JFrame("Quiz");
     private final static Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public Score(int sc) {
         writing.writeLog(getClass(), "Correct answer");
 
@@ -51,7 +55,10 @@ public class Score implements ActionListener {
         frame.setVisible(true);
     }
 
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(), "Closing");

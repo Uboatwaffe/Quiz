@@ -15,7 +15,10 @@ import java.sql.SQLException;
 public class Sorting {
     private static final Writing writing = new Writing();
 
-
+    /**
+     * Sorts whole DB
+     * @author Maciej
+     */
     public void sort(){
 
         try {

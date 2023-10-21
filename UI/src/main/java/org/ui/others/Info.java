@@ -18,7 +18,9 @@ public class Info implements ActionListener {
     // UI that shows info about current set
     private final JFrame frame = new JFrame("Info");
     private final static Writing writing = new Writing();
-
+    /**
+     * Constructor
+     */
     public Info() {
         writing.writeLog(getClass(),"Info");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -56,7 +58,10 @@ public class Info implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(),"Closing");

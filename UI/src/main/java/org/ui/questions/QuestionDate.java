@@ -20,6 +20,9 @@ public class QuestionDate implements ActionListener {
     private final JFrame frame = new JFrame("Quiz");
     private final static Writing writing = new Writing();
     private final JTextField field = new JTextField("This is question about date", 100);
+    /**
+     * Constructor
+     */
     public QuestionDate(String quest, String answer) {
         writing.writeLog(getClass(), "Question about date");
 
@@ -57,7 +60,10 @@ public class QuestionDate implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if(!e.getActionCommand().equals("I DO NOT KNOW")) {

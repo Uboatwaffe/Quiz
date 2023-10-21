@@ -20,7 +20,9 @@ public class Logging implements ActionListener {
     private final JTextField login = new JTextField("Login");
     private final JTextField password = new JTextField("Password");
     private final static Writing writing = new Writing();
-
+    /**
+     * Constructor
+     */
     public Logging() {
         writing.writeLog(getClass(), "Logging in");
         frame = new JFrame("Logging in");
@@ -59,7 +61,10 @@ public class Logging implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("LOG IN")) {

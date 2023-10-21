@@ -17,7 +17,9 @@ public class NoQuestions implements ActionListener {
     private final JFrame frame = new JFrame("Quiz");
     private final static Writing writing = new Writing();
     private final Main main = new Main();
-
+    /**
+     * Constructor
+     */
     public NoQuestions() {
         writing.writeLog(getClass(), "No questions");
 
@@ -50,7 +52,10 @@ public class NoQuestions implements ActionListener {
     }
 
 
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(), "Closing");

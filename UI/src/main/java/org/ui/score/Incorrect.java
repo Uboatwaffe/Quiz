@@ -16,6 +16,10 @@ public class Incorrect implements ActionListener {
     // UI for informing user that his input was wrong
     private final JFrame frame = new JFrame("Quiz");
     private final static Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public Incorrect(String answer, @SuppressWarnings("SpellCheckingInspection") String wron) {
         writing.writeLog(getClass(), "Incorrect answer");
 
@@ -55,7 +59,10 @@ public class Incorrect implements ActionListener {
         frame.setVisible(true);
     }
 
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(), "Closing");

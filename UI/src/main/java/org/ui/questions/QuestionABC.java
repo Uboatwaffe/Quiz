@@ -18,6 +18,10 @@ public class QuestionABC implements ActionListener {
     private final JFrame frame = new JFrame("Quiz");
     private final String answer;
     private final static Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public QuestionABC(String quest, String answer) {
         writing.writeLog(getClass(),"Closed question");
 
@@ -64,7 +68,10 @@ public class QuestionABC implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if(!e.getActionCommand().equals("I DO NOT KNOW")) {

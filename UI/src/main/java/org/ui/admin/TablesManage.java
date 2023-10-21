@@ -16,6 +16,10 @@ class TablesManage implements ActionListener {
     // UI that allows you to choose what to do (tables)
     private final JFrame frame;
     private static final Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     TablesManage() {
         writing.writeLog(getClass(), "Tables management");
         frame = new JFrame("What to do");
@@ -54,7 +58,10 @@ class TablesManage implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()){

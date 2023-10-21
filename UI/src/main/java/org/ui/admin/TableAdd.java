@@ -20,7 +20,9 @@ class TableAdd implements ActionListener {
     private final JTextField login = new JTextField("New name");
     private final JLabel error = new JLabel("This name is already taken!");
     private final static Writing writing = new Writing();
-
+    /**
+     * Constructor
+     */
     TableAdd() {
         writing.writeLog(getClass(), "Adding table");
         frame = new JFrame("Adding table");
@@ -60,7 +62,10 @@ class TableAdd implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("CLOSE")) {

@@ -130,7 +130,10 @@ class Manage implements ActionListener {
         frame.setVisible(true);
 
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {

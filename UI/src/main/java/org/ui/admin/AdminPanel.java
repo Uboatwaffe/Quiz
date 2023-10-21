@@ -20,6 +20,9 @@ public class AdminPanel implements ActionListener {
     private final static Writing writing = new Writing();
     private final Main main = new Main();
 
+    /**
+     * Constructor
+     */
     public AdminPanel() {
         writing.writeLog(getClass(), "Admin Panel");
         main.hideMain();
@@ -70,7 +73,10 @@ public class AdminPanel implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()){

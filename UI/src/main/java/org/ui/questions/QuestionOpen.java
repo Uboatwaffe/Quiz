@@ -19,6 +19,10 @@ public class QuestionOpen implements ActionListener {
     private final JFrame frame = new JFrame("Quiz");
     private final JTextField field = new JTextField("This is an open question", 10);
     private final static Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public QuestionOpen(String quest, String answer) {
         writing.writeLog(getClass(), "Open question");
         this.answer = answer;
@@ -58,7 +62,10 @@ public class QuestionOpen implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if(!e.getActionCommand().equals("I DO NOT KNOW")) {

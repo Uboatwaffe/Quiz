@@ -16,7 +16,9 @@ public class Credit implements ActionListener {
     // UI that shows who made this program
     private final JFrame frame = new JFrame("Credits");
     private final static Writing writing = new Writing();
-
+    /**
+     * Constructor
+     */
     public Credit() {
         writing.writeLog(getClass(),"Credits");
 
@@ -68,7 +70,10 @@ public class Credit implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         writing.writeLog(getClass(), "Closing");

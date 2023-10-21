@@ -20,7 +20,9 @@ class NewPassword implements ActionListener {
     private final JTextField login = new JTextField("New login");
     private final JTextField password = new JTextField("New password");
     private final static Writing writing = new Writing();
-
+    /**
+     * Constructor
+     */
     NewPassword() {
         writing.writeLog(getClass(), "New password/login");
         frame = new JFrame("Changing account details");
@@ -57,7 +59,10 @@ class NewPassword implements ActionListener {
         // Setting up the visibility
         frame.setVisible(true);
     }
-
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("CLOSE")) {
