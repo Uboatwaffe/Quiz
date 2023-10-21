@@ -11,6 +11,10 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  */
 public class ExceptionUI implements ActionListener {
+
+    /**
+     * Frame of the program
+     */
     private final JFrame frame = new JFrame("Error");
 
     /**
