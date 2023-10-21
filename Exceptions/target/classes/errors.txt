@@ -1,2 +1,2 @@
 
-org.exceptions.ExceptionUI:	ERROR from:	org.db.tables.Add
+org.exceptions.ExceptionUI:	ERROR from:	org.db.manage.StringOperations

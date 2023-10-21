@@ -1,8 +1,9 @@
 package org.ui.admin;
 
 import org.db.manage.Deleting;
-import org.db.interfaces.Functional;
+import org.db.interfaces.*;
 import org.db.manage.StringOperations;
+import org.exceptions.ExceptionUI;
 import org.file.writing.Writing;
 
 import javax.swing.*;
@@ -23,13 +24,28 @@ class Manage implements ActionListener {
 
 
     final Functional toArray = (chain) -> {
-        writing.writeLog(getClass(), "In lambda");
+        writing.writeLog(getClass(), "In lambda no. 1");
         String[] db = new String[3];
         db[0] = chain.substring(0, chain.indexOf(";")).trim();
         db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";")).trim();
         db[2] = chain.substring(chain.lastIndexOf(";") + 1).trim();
 
         return db;
+    };
+
+    final Functional2 checking = (chain) -> {
+        String[] db = toArray.toArray(chain);
+
+        boolean correct = false;
+
+        switch (db[2]){
+            case "o", "c", "t", "d" -> {
+                if(!db[0].contains(".")){
+                    correct = true;
+                }
+            }
+        }
+        return correct;
     };
 
     void delete() {
@@ -73,47 +89,47 @@ class Manage implements ActionListener {
         frame.setVisible(true);
     }
 
-        void add() {
-            writing.writeLog(getClass(), "Adding question");
+    void add() {
+        writing.writeLog(getClass(), "Adding question");
 
-            frame = new JFrame("Adding question");
+        frame = new JFrame("Adding question");
 
-            frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-            frame.setSize(440, 170);
-            frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        frame.setSize(440, 170);
+        frame.setLayout(null);
 
-            // Labels
-            JLabel welcome = new JLabel("Welcome to the admin panel!");
-            welcome.setBounds(5, 5, 200, 15);
+        // Labels
+        JLabel welcome = new JLabel("Welcome to the admin panel!");
+        welcome.setBounds(5, 5, 200, 15);
 
-            JLabel question = new JLabel("Please insert question in this way: question; answer; type");
-            question.setBounds(5, 30, 400, 15);
+        JLabel question = new JLabel("Please insert question in this way: question; answer; type");
+        question.setBounds(5, 30, 400, 15);
 
-            // Buttons
-            JButton no = new JButton("CLOSE");
-            JButton delete = new JButton("ADD QUESTION");
+        // Buttons
+        JButton no = new JButton("CLOSE");
+        JButton delete = new JButton("ADD QUESTION");
 
-            no.setBounds(335, 5, 80, 115);
-            delete.setBounds(5, 90, 300, 30);
+        no.setBounds(335, 5, 80, 115);
+        delete.setBounds(5, 90, 300, 30);
 
-            no.addActionListener(this);
-            delete.addActionListener(this);
+        no.addActionListener(this);
+        delete.addActionListener(this);
 
-            // Text-field
-            field.setBounds(5, 50, 300, 30);
+        // Text-field
+        field.setBounds(5, 50, 300, 30);
 
-            // Adding to the frame
-            frame.add(welcome);
-            frame.add(question);
-            frame.add(no);
-            frame.add(delete);
-            frame.add(field);
+        // Adding to the frame
+        frame.add(welcome);
+        frame.add(question);
+        frame.add(no);
+        frame.add(delete);
+        frame.add(field);
 
 
-            // Setting up the visibility
-            frame.setVisible(true);
+        // Setting up the visibility
+        frame.setVisible(true);
 
-        }
+    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -121,10 +137,11 @@ class Manage implements ActionListener {
             case "DELETE QUESTION" -> {
                 writing.writeLog(getClass(), "Goto backend/deleting");
                 Deleting.delete(field.getText());
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
             case "ADD QUESTION" -> {
                 writing.writeLog(getClass(), "Goto backend/string operations");
-                StringOperations.addQuestion(toArray, field.getText());
+                StringOperations.addQuestion(toArray, checking, field.getText());
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
             default -> {
