@@ -26,7 +26,7 @@
 - Tests
 - JavaDoc
 - Lambda
-- Writing into file
+- Writing into the file
 - AWT
 - Swing
 
