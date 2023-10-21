@@ -33,7 +33,7 @@ public class Info implements ActionListener {
         string2.setBounds(5,30, 200, 15);
 
         HowMany howMany = new HowMany();
-        JLabel string3 = new JLabel("Number of answers: " + howMany.howMany());
+        JLabel string3 = new JLabel("Number of questions: " + howMany.howMany());
         string3.setBounds(5,55, 200, 15);
 
 

@@ -24,7 +24,7 @@ class Manage implements ActionListener {
 
 
     final Functional toArray = (chain) -> {
-        writing.writeLog(getClass(), "In lambda no. 1");
+        writing.writeLog(getClass(), "In lambda 'toArray'");
         String[] db = new String[3];
         db[0] = chain.substring(0, chain.indexOf(";")).trim();
         db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";")).trim();
@@ -34,6 +34,7 @@ class Manage implements ActionListener {
     };
 
     final Functional2 checking = (chain) -> {
+        writing.writeLog(getClass(), "In lambda 'checking'");
         String[] db = toArray.toArray(chain);
 
         boolean correct = false;

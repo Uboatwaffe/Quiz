@@ -20,7 +20,7 @@ class ShowAll {
         writing.writeLog(getClass(), "Showing questions");
         sorting.sort();
 
-        JFrame frame = new JFrame("Here are all of the log.txt: ");
+        JFrame frame = new JFrame("Here are all of the questions: ");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
 
