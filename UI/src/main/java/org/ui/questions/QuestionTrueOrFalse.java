@@ -1,8 +1,8 @@
 package org.ui.questions;
 
 import org.file.writing.Writing;
+import org.ui.score.Correct;
 import org.ui.score.Incorrect;
-import org.ui.score.Score;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -90,7 +90,7 @@ public class QuestionTrueOrFalse implements ActionListener {
                 writing.writeLog(getClass(), " <- Closing");
                 if (e.getActionCommand().equals(answer)) {
                     Count.setCount(Count.getCount() + 1);
-                    new Score(Count.getCount());
+                    new Correct(Count.getCount());
                 } else {
                     new Incorrect(answer, e.getActionCommand());
                 }

@@ -1,8 +1,8 @@
 package org.ui.questions;
 
 import org.file.writing.Writing;
+import org.ui.score.Correct;
 import org.ui.score.Incorrect;
-import org.ui.score.Score;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -93,7 +93,7 @@ public class QuestionDate implements ActionListener {
                 if (e.getActionCommand().equals("SUBMIT")) {
                     if (field.getText().equals(this.answer)) {
                         Count.setCount(Count.getCount() + 1);
-                        new Score(Count.getCount());
+                        new Correct(Count.getCount());
                     } else
                         new Incorrect(answer, field.getText());
                 }

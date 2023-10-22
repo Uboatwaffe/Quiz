@@ -12,7 +12,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.1
  */
-public class Score implements ActionListener {
+public class Correct implements ActionListener {
     /**
      * Frame of the class
      */
@@ -28,7 +28,7 @@ public class Score implements ActionListener {
      * Constructor
      * @param sc Current score
      */
-    public Score(int sc) {
+    public Correct(int sc) {
         //Writes log
         writing.writeLog(getClass(), "Constructor");
 
