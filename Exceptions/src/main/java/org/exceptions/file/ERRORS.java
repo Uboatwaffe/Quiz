@@ -19,7 +19,7 @@ public class ERRORS {
      * @param message Message that will be written
      */
     public void writeLog(Class<?> ob, String message) {
-        try(PrintWriter out = new PrintWriter(new FileWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfesional\\Quiz\\Exceptions\\src\\main\\resources\\errors.txt", true))){
+        try(PrintWriter out = new PrintWriter(new FileWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfessional\\Quiz\\Exceptions\\src\\main\\resources\\errors.txt", true))){
             // Writes class name
             out.print(ob.getName() + ":\t");
 
@@ -37,7 +37,7 @@ public class ERRORS {
      * Clears whole file
      */
      public void clear(){
-        try(PrintWriter out = new PrintWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfesional\\Quiz\\Exceptions\\src\\main\\resources\\errors.txt")) {
+        try(PrintWriter out = new PrintWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfessional\\Quiz\\Exceptions\\src\\main\\resources\\errors.txt")) {
 
             // Clears whole file
             out.println("");

@@ -18,7 +18,7 @@
             <artifactId>JDBC</artifactId>
             <scope>system</scope>
             <version>1.0</version>
-            <systemPath>C:\Users\PC\Desktop\Maciek\JavaProfesional\Quiz\lib\JDBC.jar</systemPath>
+            <systemPath>C:\Users\PC\Desktop\Maciek\JavaProfessional\Quiz\lib\JDBC.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
