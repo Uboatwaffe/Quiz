@@ -18,13 +18,21 @@ org.ui.questions.QuestionOpen: Constructor()
 org.ui.hq.HQ: Showing question with type: d
 org.ui.questions.QuestionDate: Constructor()
 org.ui.hq.HQ: All questions showed
-org.ui.questions.QuestionDate:  <- Closing, Don't know the answer
+org.ui.questions.QuestionDate:  <- Closing
+org.ui.score.Incorrect: Constructor()
+org.ui.score.Incorrect:  <- Closing
 org.ui.questions.QuestionOpen:  <- Closing
 org.ui.score.Incorrect: Constructor()
 org.ui.score.Incorrect:  <- Closing
 org.ui.questions.QuestionABC:  <- Closing
-org.ui.score.Incorrect: Constructor()
-org.ui.score.Incorrect:  <- Closing
-org.ui.questions.QuestionTrueOrFalse:  <- Closing, Don't know the answer
+org.ui.score.Correct: Constructor
+org.ui.score.Correct:  <- Closing
+org.ui.questions.QuestionTrueOrFalse:  <- Closing
+org.ui.score.Correct: Constructor
+org.ui.score.Correct:  <- Closing
+org.ui.Main:  -> Main.score
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
 org.ui.Main:  -> Main.menu
 org.ui.Main:  <- EXIT
