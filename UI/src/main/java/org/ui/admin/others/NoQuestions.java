@@ -34,6 +34,7 @@ public class NoQuestions implements ActionListener {
      * Constructor
      */
     public NoQuestions() {
+        // Writing log
         writing.writeLog(getClass(), "No questions");
 
         // Default settings
@@ -71,6 +72,7 @@ public class NoQuestions implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Writing log, showing main menu and closing this window
         writing.writeLog(getClass(), "Closing");
         main.showMain();
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));

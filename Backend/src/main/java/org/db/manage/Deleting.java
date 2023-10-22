@@ -1,7 +1,7 @@
 package org.db.manage;
 
-import org.db.connecting.Connecting;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Connection;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.PreparedStatement;
@@ -34,10 +34,11 @@ public class Deleting{
             sql = "DELETE FROM " + SQL.getCurrentTable();
         }
         try {
+            // Writes log
             writing.writeLog(Deleting.class, "Deleting question");
 
-            // Executing query
-            PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
+            // Executes query
+            PreparedStatement statement = Connection.getConnection().prepareStatement(sql);
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Deleting.class);

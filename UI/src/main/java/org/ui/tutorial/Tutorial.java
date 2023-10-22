@@ -27,7 +27,10 @@ public class Tutorial implements ActionListener {
      * Constructor
      */
     public Tutorial() {
+        //Writes log
         writing.writeLog(getClass(), "Creating tutorial");
+
+        // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(210,250);
         frame.setLayout(null);
@@ -78,6 +81,7 @@ public class Tutorial implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Writes log and closes this window
         writing.writeLog(getClass(), "Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }

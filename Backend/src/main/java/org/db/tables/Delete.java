@@ -1,8 +1,8 @@
 package org.db.tables;
 
-import org.db.connecting.Connecting;
+import org.db.connecting.Connection;
 import org.db.manage.SQL;
-import org.exceptions.ExceptionUI;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.PreparedStatement;
@@ -29,19 +29,22 @@ public class Delete{
      */
     public static void delete(String name) {
         try {
+            // Writes log
             writing.writeLog(Delete.class, "Deleting table");
 
-
+            // Queries
             String sql = "DROP TABLE `quiz`.`" + name + "`;";
             String sql2 = "DELETE FROM `quiz`.`tables` WHERE (`name` = '" + name + "');";
 
-
-            PreparedStatement statement2 = Connecting.getConnection().prepareStatement(sql);
+            // Executing query nr 1
+            PreparedStatement statement2 = Connection.getConnection().prepareStatement(sql);
             statement2.executeUpdate();
 
-            PreparedStatement statement3 = Connecting.getConnection().prepareStatement(sql2);
+            // Executing query nr 2
+            PreparedStatement statement3 = Connection.getConnection().prepareStatement(sql2);
             statement3.executeUpdate();
 
+            // Sets current table to 'set1'
             SQL.setCurrentTable(SQL.getAllTables()[0]);
         } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Delete.class);

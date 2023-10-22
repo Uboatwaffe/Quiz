@@ -1,7 +1,7 @@
 package org.db.manage;
 
-import org.db.connecting.Connect;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Data;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.ResultSet;
@@ -25,24 +25,30 @@ public class ToStrings {
      * @return String array with all the questions
      */
     public String[] questionsInStringArray() {
+        // Writes log
         writing.writeLog(getClass(), "Getting questions in array");
 
-        Connect connect = new Connect();
+        // Objects
+        Data data = new Data();
         HowMany howMany = new HowMany();
 
+        // Creates array based on how many records are in DB
         String[] db = new String[howMany.howMany()];
+
         int i = 0;
+
         try {
-        ResultSet resultSet = connect.getConnection();
+            // Gets data
+            ResultSet resultSet = data.getData();
 
-
+            // Extracts questions from DB and puts them in array
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("question");
             }
         }catch (SQLException ignore){
             new ExceptionUI(getClass());
         }
-
+        // Returns array
         return db;
     }
 
@@ -51,19 +57,23 @@ public class ToStrings {
      * @return String array with all answers
      */
     public String[] answersInStringArray() {
+        // Writes log
         writing.writeLog(getClass(), "Getting answers in array");
 
-        // Returns all answers from current set
-
-        Connect connect = new Connect();
+        // Objects
+        Data data = new Data();
         HowMany howMany = new HowMany();
 
+        // Creates array based on how many records are in DB
         String[] db = new String[howMany.howMany()];
+
         int i = 0;
+
         try {
-        ResultSet resultSet = connect.getConnection();
+            // Gets data
+            ResultSet resultSet = data.getData();
 
-
+            // Extracts answers from DB and puts them in array
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("answer");
             }
@@ -71,6 +81,7 @@ public class ToStrings {
             new ExceptionUI(getClass());
         }
 
+        // Returns array
         return db;
     }
 }

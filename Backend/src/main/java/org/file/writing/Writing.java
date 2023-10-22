@@ -1,6 +1,6 @@
 package org.file.writing;
 
-import org.exceptions.ExceptionUI;
+import org.exceptions.ui.ExceptionUI;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -20,8 +20,13 @@ public class Writing {
      */
     public void writeLog(Class<?> ob, String message) {
         try(PrintWriter out = new PrintWriter(new FileWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfesional\\Quiz\\Backend\\src\\main\\resources\\log.txt", true))){
+            // Prints name of the class
             out.print(ob.getName() + ":\t");
+
+            // Prints the message
             out.print(message);
+
+            // Prints empty line
             out.println();
         }catch (IOException e){
             new ExceptionUI(getClass());
@@ -33,6 +38,7 @@ public class Writing {
      */
     public void clear(){
         try(PrintWriter out = new PrintWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfesional\\Quiz\\Backend\\src\\main\\resources\\log.txt")) {
+            // Clears whole file
             out.println("");
         }catch(IOException e){
             new ExceptionUI(getClass());

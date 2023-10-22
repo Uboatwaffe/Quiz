@@ -33,9 +33,11 @@ class TablesChange implements ActionListener {
      * Constructor
      */
     TablesChange() {
+        // Writing log
         writing.writeLog(getClass(), "Change tables");
-        frame = new JFrame("Changing table");
 
+        // Default settings
+        frame = new JFrame("Changing table");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
@@ -44,11 +46,13 @@ class TablesChange implements ActionListener {
         JLabel welcome = new JLabel("Current table: " + SQL.getCurrentTable());
         welcome.setBounds(5, 5, 200, 15);
 
+        // Initializing list and scroll panel
         JList<String> list = new JList<>(SQL.getAllTables());
         JScrollPane pane = new JScrollPane(list);
 
         pane.setBounds(5, 25, 300, 60);
 
+        // When record is clicked saves its name in 'prevTable'
         list.addListSelectionListener(e -> prevTable = list.getSelectedValue());
 
 
@@ -56,9 +60,11 @@ class TablesChange implements ActionListener {
         JButton no = new JButton("CLOSE");
         JButton ok = new JButton("OK");
 
+        // Setting bounds
         no.setBounds(325, 25, 80, 95);
         ok.setBounds(5, 90, 300, 30);
 
+        // Adding action listeners
         no.addActionListener(this);
         ok.addActionListener(this);
 
@@ -80,10 +86,12 @@ class TablesChange implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("OK")) {
+            // Writes log, sets new current table and then closes this window
             writing.writeLog(getClass(), "Goto backend/sql");
             SQL.setCurrentTable(prevTable);
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         } else if (e.getActionCommand().equals("CLOSE")) {
+            // Writes log and closes this window
             writing.writeLog(getClass(), "Closing");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

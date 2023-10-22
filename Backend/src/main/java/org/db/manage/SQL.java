@@ -1,7 +1,7 @@
 package org.db.manage;
 
-import org.db.connecting.Connecting;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Connection;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.ResultSet;
@@ -41,26 +41,37 @@ public class SQL {
      * @return String array with names of all tables
      */
     public static String[] getAllTables(){
-        // Returns all tables existing in DB
 
+        // Initializes default table name
         String[] db = {"set1"};
+
         try {
+            // Object
             final Writing writing = new Writing();
+
+            // Writes log
             writing.writeLog(SQL.class, "Getting all tables names");
 
+            // Gets connection reference to the DB
+            Statement statement = Connection.getConnection().createStatement();
 
-            Statement statement = Connecting.getConnection().createStatement();
-
-            assert statement != null;
+            // Gets info about names of the existing tables in the DB
             ResultSet resultSet = statement.executeQuery("SELECT * FROM tables");
 
             int i = 0;
+
+            // Counts how many there are
             while (resultSet.next()) i++;
 
+            // Creates array in the size of how many records
             db = new String[i];
 
+            // Gets all the info
             resultSet = statement.executeQuery("SELECT * FROM tables");
+
              i = 0;
+
+             // Extracts info from DB into the array
             while (resultSet.next()){
                 db[i++] = resultSet.getString("name");
             }
@@ -68,6 +79,8 @@ public class SQL {
         }catch (SQLException | NullPointerException ignore){
             new ExceptionUI(SQL.class);
         }
+
+        // Returns array
         return db;
     }
 }

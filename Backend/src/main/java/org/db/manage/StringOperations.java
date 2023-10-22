@@ -2,7 +2,8 @@ package org.db.manage;
 
 import org.db.interfaces.Functional;
 import org.db.interfaces.Functional2;
-import org.exceptions.ExceptionUI;
+import org.exceptions.exceptions.CustomException;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 /**
@@ -27,21 +28,21 @@ public class StringOperations {
      */
     public static void addQuestion(Functional functional, Functional2 functional2, String chain){
         try {
+            // Writes log
             writing.writeLog(StringOperations.class, "Goto Adding");
 
+            // Gets string chain into array
             String[] db = functional.toArray(chain);
 
+            // Checks if type of question isn't forbidden
             boolean correct = functional2.checkingExtensions(chain);
 
-            String question = db[0];
-            String answer = db[1];
-            String type = db[2];
-
+            // If everything is alright adds question to the DB
             if (correct)
-                Adding.add(question, answer, type);
+                Adding.add(db[0], db[1], db[2]);
             else
-                new ExceptionUI(StringOperations.class);
-        }catch (Exception ignore){
+                throw new CustomException(StringOperations.class, "Type of question is incorrect!");
+        }catch (CustomException ignore){
             new ExceptionUI(StringOperations.class);
         }
     }

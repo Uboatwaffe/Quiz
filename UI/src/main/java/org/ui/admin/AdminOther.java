@@ -31,7 +31,10 @@ public class AdminOther implements ActionListener {
      * Constructor
      */
     public AdminOther() {
+        // Writing log
         writing.writeLog(getClass(), "Admin Other panel");
+
+        // Default settings
         frame.setSize(440, 170);
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setLayout(null);
@@ -44,6 +47,7 @@ public class AdminOther implements ActionListener {
         JButton addT = new JButton("TABLE MANAGEMENT");
         JButton changeTable = new JButton("CHANGE TABLE");
 
+        // Setting bounds
         tutorial.setBounds(180, 5, 150, 55);
         changePassword.setBounds(180, 65, 150, 55);
         close.setBounds(335, 5, 80, 55);
@@ -51,6 +55,7 @@ public class AdminOther implements ActionListener {
         addT.setBounds(5, 5, 170, 55);
         changeTable.setBounds(5, 65, 170, 55);
 
+        // Adding action listeners
         tutorial.addActionListener(this);
         changePassword.addActionListener(this);
         changeTable.addActionListener(this);
@@ -79,27 +84,33 @@ public class AdminOther implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "TUTORIAL" -> {
+                // Writing log and going to the AdminTutorial()
                 writing.writeLog(getClass(), "Goto admin tutorial");
                 new AdminTutorial();
             }
             case "DETAILS" -> {
+                // Writing log and going to NewPassword()
                 writing.writeLog(getClass(), "Goto Details");
                 new NewPassword();
             }
             case "CHANGE TABLE" -> {
+                // Writing log and going to TablesChange()
                 writing.writeLog(getClass(), "Goto show tables");
                 new TablesChange();
             }
             case "TABLE MANAGEMENT" -> {
+                // Writing log and going to TablesManage()
                 writing.writeLog(getClass(), "Goto table management");
                 new TablesManage();
             }
             case "RESET" -> {
+                // Writing log going to Reset() and closing this window
                 writing.writeLog(getClass(), "Goto reset");
                 Reset.reset();
                 frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
             }
             default -> {
+                // Writing log and closing this window
                 writing.writeLog(getClass(), "Closing");
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }

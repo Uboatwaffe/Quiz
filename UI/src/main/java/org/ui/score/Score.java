@@ -29,6 +29,7 @@ public class Score implements ActionListener {
      * @param sc Current score
      */
     public Score(int sc) {
+        //Writes log
         writing.writeLog(getClass(), "Correct answer");
 
         // Default settings
@@ -69,6 +70,7 @@ public class Score implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Writes log and closes this window
         writing.writeLog(getClass(), "Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }

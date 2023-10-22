@@ -7,6 +7,9 @@
  *     <li>
  *         Writing down which class made program stumble across problem
  *     </li>
+ *     <li>
+ *         Custom exception
+ *     </li>
  * </ul>
  * @author Maciej
  * @version 0.1

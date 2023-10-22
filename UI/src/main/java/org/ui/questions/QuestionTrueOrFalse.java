@@ -37,8 +37,10 @@ public class QuestionTrueOrFalse implements ActionListener {
      * @param answer String with expected answer
      */
     public QuestionTrueOrFalse(String quest, String answer) {
+        //Writes log
         writing.writeLog(getClass(),"True or false question");
 
+        // Assigns answer
         this.answer = answer;
 
         // Default settings
@@ -55,13 +57,12 @@ public class QuestionTrueOrFalse implements ActionListener {
         JButton f = new JButton("FALSE");
         JButton no = new JButton("I DO NOT KNOW");
 
-
+        // Setting bounds
         t.setBounds(5, 45, 200, 70);
         f.setBounds(210, 45, 200, 70);
         no.setBounds(5, 120, 405, 35);
 
-
-
+        // Adding action listeners
         t.addActionListener(this);
         f.addActionListener(this);
         no.addActionListener(this);
@@ -85,6 +86,8 @@ public class QuestionTrueOrFalse implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(!e.getActionCommand().equals("I DO NOT KNOW")) {
             try {
+                // If answer is correct lets know user and adds 1 point to the score
+                writing.writeLog(getClass(), "Closing");
                 if (e.getActionCommand().equals(answer)) {
                     Count.setCount(Count.getCount() + 1);
                     new Score(Count.getCount());
@@ -92,9 +95,11 @@ public class QuestionTrueOrFalse implements ActionListener {
                     new Incorrect(answer, e.getActionCommand());
                 }
             } finally {
+                // Closes this window
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         }else{
+            // Writes log and closes this window
             writing.writeLog(getClass(),"Don't know the answer");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

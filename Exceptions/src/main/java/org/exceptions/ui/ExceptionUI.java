@@ -1,4 +1,6 @@
-package org.exceptions;
+package org.exceptions.ui;
+
+import org.exceptions.file.ERRORS;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -8,7 +10,7 @@ import java.awt.event.WindowEvent;
 /**
  * UI for showing errors
  * @author Maciej
- * @version 0.1
+ * @version 0.2
  */
 public class ExceptionUI implements ActionListener {
 
@@ -24,7 +26,6 @@ public class ExceptionUI implements ActionListener {
     public ExceptionUI(Class<?> ob){
 
         // Default settings
-
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440,170);
         frame.setLayout(null);
@@ -42,20 +43,25 @@ public class ExceptionUI implements ActionListener {
         // Button
         JButton understood = new JButton("UNDERSTOOD");
 
+        // Setting size
         understood.setBounds(5, 65, 415, 60);
 
+        // Action Listeners
         understood.addActionListener(this);
 
         // Adding to the frame
         frame.add(welcome);
         frame.add(info);
-        frame.add(score);
+        //frame.add(score);
         frame.add(understood);
 
         // Setting up the visibility
         frame.setVisible(true);
 
+        // Object used to writing error log
         ERRORS errors = new ERRORS();
+
+        // Writing error log
         errors.writeLog(getClass(), "ERROR from:\t" + ob.getName());
     }
 
@@ -67,6 +73,7 @@ public class ExceptionUI implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("UNDERSTOOD")) {
+            // Closing window
             frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
         }
     }

@@ -44,29 +44,31 @@ class NewPassword implements ActionListener {
      * Constructor
      */
     NewPassword() {
+        // Writes log
         writing.writeLog(getClass(), "New password/login");
-        frame = new JFrame("Changing account details");
 
+        // Default settings
+        frame = new JFrame("Changing account details");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
-
-        user.setBounds(5, 5, 200, 20);
-
 
         // Buttons
         JButton no = new JButton("CLOSE");
         JButton delete = new JButton("SUBMIT");
 
+        // Setting bounds
         no.setBounds(325, 25, 80, 95);
         delete.setBounds(5, 90, 300, 30);
 
+        // Adding action listeners
         no.addActionListener(this);
         delete.addActionListener(this);
 
         // Text-field
         password.setBounds(5, 55, 300, 30);
         login.setBounds(5, 25, 300, 30);
+        user.setBounds(5, 5, 200, 20);
 
         // Adding to the frame
         frame.add(user);
@@ -86,9 +88,11 @@ class NewPassword implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("CLOSE")) {
+            // Writes log and closes this window
             writing.writeLog(getClass(), "Closing");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }else if (e.getActionCommand().equals("SUBMIT")) {
+            // Writes log, changes login and password then closes this window
             writing.writeLog(getClass(), "Goto backend/change password");
             ChangePassword.change(login.getText(), password.getText(), user.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));

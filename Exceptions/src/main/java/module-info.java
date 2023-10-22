@@ -5,5 +5,7 @@
  */
 module Exceptions {
     requires java.desktop;
-    exports org.exceptions;
+    exports org.exceptions.file;
+    exports org.exceptions.ui;
+    exports org.exceptions.exceptions;
 }

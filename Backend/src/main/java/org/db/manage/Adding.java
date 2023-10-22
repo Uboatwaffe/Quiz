@@ -1,7 +1,7 @@
 package org.db.manage;
 
-import org.db.connecting.Connecting;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Connection;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.PreparedStatement;
@@ -39,9 +39,13 @@ public final class Adding{
         String sql = "INSERT INTO "+ SQL.getCurrentTable() + " VALUES ('"+ (howMany.highest() + 1) +"', '"+ question +"', '"+ answer +"', '"+ type +"');";
 
         try {
+            // Writes log
             writing.writeLog(Adding.class, "Adding questions");
-            // Executing query
-            PreparedStatement statement = Connecting.getConnection().prepareStatement(sql);
+
+            // Prepares query
+            PreparedStatement statement = Connection.getConnection().prepareStatement(sql);
+
+            // Executes query
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Adding.class);

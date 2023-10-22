@@ -34,7 +34,9 @@ public class WrongPassword implements ActionListener {
      * Constructor
      */
     public WrongPassword() {
+        // Writing log
         writing.writeLog(getClass(), "Wrong password");
+
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
@@ -70,6 +72,7 @@ public class WrongPassword implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Writing log, showing main menu and closing this window
         writing.writeLog(getClass(), "Closing");
         main.showMain();
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));

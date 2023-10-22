@@ -1,8 +1,9 @@
 package org.db.connecting;
 
-import org.exceptions.ExceptionUI;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -25,16 +26,19 @@ public final class LoggingIn {
      * @return String array with password and login used by user 'admin'
      */
     public static String[] getLoginAndPassword() {
+        // Writes log
         writing.writeLog(LoggingIn.class, "Getting data to logging in");
-        java.sql.ResultSet resultSet;
 
+        // Initializes result set
+        ResultSet resultSet;
+
+        // Creates Array for data
         String[] db = new String[3];
 
         try {
             // Getting connection to DB
-            Statement statement = Connecting.getConnection().createStatement();
+            Statement statement = Connection.getConnection().createStatement();
 
-            assert statement != null;
             // Executing query
             resultSet = statement.executeQuery("SELECT * FROM admin");
 
@@ -46,8 +50,10 @@ public final class LoggingIn {
             }
 
         } catch (SQLException | NullPointerException ignored) {
+            // If something went wrong informs user about this
             new ExceptionUI(LoggingIn.class);
         }
+        // Returning info
         return db;
     }
 }

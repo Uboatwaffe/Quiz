@@ -14,7 +14,7 @@
 ``DD.MM.YYYY``
 
 ## Used technologies:
-- MySQL Workbench
+- MySQL Database
 - Intellij Community 2023
  
 ## Java language usage
@@ -29,6 +29,7 @@
 - Writing into the file
 - AWT
 - Swing
+- Generics
 
 ## !!! Important !!!
 ### Please read LICENSE before using this program

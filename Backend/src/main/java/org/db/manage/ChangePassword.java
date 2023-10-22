@@ -1,7 +1,7 @@
 package org.db.manage;
 
-import org.db.connecting.Connecting;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Connection;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.PreparedStatement;
@@ -31,9 +31,11 @@ public class ChangePassword {
         // Query
         String SQL = "UPDATE `admin` SET `login` = '"+ login +"', `password` = '"+ password +"' WHERE (`user` = '"+ user +"')";
         try {
+            // Writes log
             writing.writeLog(ChangePassword.class, "Updating admin details");
-            // Executing query
-            PreparedStatement statement = Connecting.getConnection().prepareStatement(SQL);
+
+            // Executes query
+            PreparedStatement statement = Connection.getConnection().prepareStatement(SQL);
             statement.executeUpdate();
         }catch (SQLException | NullPointerException ignore){
             new ExceptionUI(ChangePassword.class);

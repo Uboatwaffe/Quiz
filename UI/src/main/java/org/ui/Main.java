@@ -1,7 +1,7 @@
 package org.ui;
 
 import org.db.manage.HowMany;
-import org.exceptions.ERRORS;
+import org.exceptions.file.ERRORS;
 import org.file.writing.Writing;
 import org.ui.admin.Logging;
 import org.ui.admin.others.Credit;
@@ -91,6 +91,7 @@ public final class Main implements ActionListener{
         JButton credit = new JButton("CREDITS");
         JButton info = new JButton("INFO");
 
+        // Setting bounds
         yes.setBounds(150, 5, 120, 50);
         no.setBounds(285, 5, 120, 50);
         tutorial.setBounds(5, 55, 130, 30);
@@ -98,6 +99,7 @@ public final class Main implements ActionListener{
         credit.setBounds(285, 60, 120, 60);
         info.setBounds(150, 60, 120, 60);
 
+        // Adding action listeners
         yes.addActionListener(this);
         no.addActionListener(this);
         tutorial.addActionListener(this);
@@ -169,6 +171,7 @@ public final class Main implements ActionListener{
 
         iamnot.addActionListener(this);
 
+        // Adding to the frame
         frame3.add(info2);
         frame3.add(info3);
         frame3.add(iam);
@@ -183,32 +186,45 @@ public final class Main implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()){
             case "START" -> {
+                // Writes log
                 writing.writeLog(getClass(),"Starting quiz");
+
+                // Resets score
                 Count.setCount(0);
+
+                // Configures visibility
                 if (howMany.howMany() != 0) {
                     frame.setVisible(false);
                     frame3.setVisible(true);
                     frame2.setVisible(false);
+
+                    // Starts new thread
                     hq.start();
                     try {
+                        // Waits till second thread is done
                         hq.join();
                     } catch (InterruptedException ex) {
                         throw new RuntimeException(ex);
                     }
                 } else {
+                    // If there aren't any questions goes to NoQuestions()
+                    writing.writeLog(getClass(), "Goto -> NoQuestions()");
                     new NoQuestions();
                 }
             }
             case "TUTORIAL" -> {
+                // Writes log and goes to Tutorial()
                 writing.writeLog(getClass(),"Goto Tutorial");
                 new Tutorial();
             }
             case "UNDERSTOOD" -> {
+                // Writes log and configures visibility
                 writing.writeLog(getClass(),"Goto main menu");
                 frame2.setVisible(false);
                 frame.setVisible(true);
             }
             case "I AM" -> {
+                // Writes log and configures visibility and score
                 writing.writeLog(getClass(),"Showing score");
                 frame3.setVisible(false);
                 score.setText(Count.getCount() + " out of " + howMany.howMany());
@@ -216,23 +232,28 @@ public final class Main implements ActionListener{
                 frame.setVisible(false);
             }
             case "I'M NOT" -> {
+                // Writes log and shows main menu
                 writing.writeLog(getClass(),"Not showing score");
                 showMain();
             }
             case "ADMIN PANEL" -> {
+                // Writes log and goes to Logging()
                 writing.writeLog(getClass(),"Goto logging in");
                 frame.setVisible(false);
                 new Logging();
             }
             case "CREDITS" -> {
+                // Writes log and goes to Credit()
                 writing.writeLog(getClass(),"Showing credits");
                 new Credit();
             }
             case "INFO" -> {
+                // Writes log and goes to Info()
                 writing.writeLog(getClass(), "Showing info");
                 new Info();
             }
             default -> {
+                // Writes log and exits program
                 writing.writeLog(getClass(), "Ending");
                 System.exit(0);
             }
@@ -258,10 +279,14 @@ public final class Main implements ActionListener{
      * @param args argument
      */
     public static void main(String[] args) {
+        // Clears both files
         errors.clear();
         writing.clear();
-        writing.writeLog(Main.class,"Start program");
-        SwingUtilities.invokeLater(Main::new);
 
+        // Writes log
+        writing.writeLog(Main.class,"Start program");
+
+        // Starts program
+        SwingUtilities.invokeLater(Main::new);
     }
 }

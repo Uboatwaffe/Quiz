@@ -40,9 +40,11 @@ class TableDelete implements ActionListener {
      * Constructor
      */
     TableDelete() {
+        //Writes log
         writing.writeLog(getClass(), "Delete table");
-        frame = new JFrame("Deleting table");
 
+        // Default settings
+        frame = new JFrame("Deleting table");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
@@ -58,9 +60,11 @@ class TableDelete implements ActionListener {
         JButton no = new JButton("CLOSE");
         JButton ok = new JButton("DELETE");
 
+        // Setting bounds
         no.setBounds(325, 25, 80, 95);
         ok.setBounds(5, 85, 300, 35);
 
+        // Adding action listeners
         no.addActionListener(this);
         ok.addActionListener(this);
 
@@ -85,9 +89,14 @@ class TableDelete implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("CLOSE")) {
+
+            // Writes log and closes this window
             writing.writeLog(getClass(), "Closing");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+
         } else if (e.getActionCommand().equals("DELETE")) {
+
+            // Checks if given name exists
             String[] db = SQL.getAllTables();
             String newName = login.getText();
             boolean exists = false;
@@ -97,14 +106,22 @@ class TableDelete implements ActionListener {
                     break;
                 }
             }
+
+
             if (exists) {
+
+                // If it exists writes log, hides error message, deletes table and closes this window
                 writing.writeLog(getClass(), "Goto backend/deleting table");
                 error.setVisible(false);
                 Delete.delete(newName);
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+
             } else {
+
+                //Writes log and closes this window
                 writing.writeLog(getClass(), "Error");
                 error.setVisible(true);
+
             }
         }
     }

@@ -28,9 +28,11 @@ class TablesManage implements ActionListener {
      * Constructor
      */
     TablesManage() {
+        // Writing log
         writing.writeLog(getClass(), "Tables management");
-        frame = new JFrame("What to do");
 
+        // Default settings
+        frame = new JFrame("What to do");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
@@ -45,11 +47,12 @@ class TablesManage implements ActionListener {
         JButton addTable = new JButton("ADD TABLE");
         JButton deleteTable = new JButton("DELETE TABLE");
 
-
+        // Setting bounds
         no.setBounds(325, 25, 80, 95);
         addTable.setBounds(5, 25, 300, 45);
         deleteTable.setBounds(5, 75, 300, 45);
 
+        // Adding action listeners
         no.addActionListener(this);
         addTable.addActionListener(this);
         deleteTable.addActionListener(this);
@@ -73,14 +76,17 @@ class TablesManage implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()){
             case "ADD TABLE" -> {
+                //Writes log and shows UI for adding table
                 writing.writeLog(getClass(), "Goto table add");
                 new TableAdd();
             }
             case "DELETE TABLE" -> {
+                //Writes log and shows UI for deleting table
                 writing.writeLog(getClass(), "Goto table delete");
                 new TableDelete();
             }
             default -> {
+                //Writes log and closes this window
                 writing.writeLog(getClass(), "Closing");
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }

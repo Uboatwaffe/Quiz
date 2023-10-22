@@ -30,7 +30,10 @@ public class Info implements ActionListener {
      * Constructor
      */
     public Info() {
+        // Writing log
         writing.writeLog(getClass(),"Info");
+
+        // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(210,175);
         frame.setLayout(null);
@@ -72,6 +75,7 @@ public class Info implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Writing log and closing this window
         writing.writeLog(getClass(),"Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }

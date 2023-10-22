@@ -41,9 +41,11 @@ public class Logging implements ActionListener {
      * Constructor
      */
     public Logging() {
+        // Writing log
         writing.writeLog(getClass(), "Logging in");
-        frame = new JFrame("Logging in");
 
+        // Default settings
+        frame = new JFrame("Logging in");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
@@ -57,9 +59,11 @@ public class Logging implements ActionListener {
         JButton no = new JButton("CLOSE");
         JButton delete = new JButton("LOG IN");
 
+        // Setting bounds
         no.setBounds(325, 25, 80, 95);
         delete.setBounds(5, 90, 300, 30);
 
+        // Adding action listeners
         no.addActionListener(this);
         delete.addActionListener(this);
 
@@ -86,19 +90,30 @@ public class Logging implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("LOG IN")) {
             if (!login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
+                // Writing log
                 writing.writeLog(getClass(), "Goto wrong password");
+
+                // Going to WrongPassword() and closing this window
                 new WrongPassword();
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 
             } else {
+                // Writing log
                 writing.writeLog(getClass(), "Goto admin panel");
+
+                // Going to AdminPanel() and closing this window
                 new AdminPanel();
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         } else {
+            // Writing log
             writing.writeLog(getClass(), "Closing");
+
+            // Showing main menu
             Main main = new Main();
             main.showMain();
+
+            // Closing this window
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

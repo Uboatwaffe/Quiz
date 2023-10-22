@@ -32,13 +32,18 @@ class ShowAll {
      * Method that shows all the questions to user
      */
     public void ShowQuestions() {
+        // Writes log
         writing.writeLog(getClass(), "Showing questions");
+
+        // Sorts DB
         sorting.sort();
 
+        // Default settings
         JFrame frame = new JFrame("Here are all of the questions: ");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
 
+        // Initializing list and scroll panel
         JList<String> list = new JList<>(toStrings.questionsInStringArray());
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
@@ -46,7 +51,6 @@ class ShowAll {
 
         // Adding to the frame
         frame.add(jscrlp);
-
 
         // Setting up the visibility
         frame.setVisible(true);
@@ -56,14 +60,18 @@ class ShowAll {
      * Method that shows all the answers to user
      */
     public void ShowAnswers() {
+        // Writing log
         writing.writeLog(getClass(), "Showing answers");
+
+        // Sorting DB
         sorting.sort();
 
+        // Default settings
         JFrame frame = new JFrame("Here are all of the answers: ");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
 
-
+        // Initializing list and scroll panel
         JList<String> list = new JList<>(toStrings.answersInStringArray());
         list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 

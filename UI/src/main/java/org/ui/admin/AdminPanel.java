@@ -44,8 +44,13 @@ public class AdminPanel implements ActionListener {
      * Constructor
      */
     public AdminPanel() {
+        // Writing log
         writing.writeLog(getClass(), "Admin Panel");
+
+        // Hiding main menu
         main.hideMain();
+
+        // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
@@ -65,6 +70,7 @@ public class AdminPanel implements ActionListener {
         JButton add = new JButton("ADD QUESTION");
         JButton delete = new JButton("DELETE QUESTION");
 
+        // Setting bounds
         showQ.setBounds(180, 5, 150, 55);
         showA.setBounds(180, 65, 150, 55);
         no.setBounds(335, 5, 80, 55);
@@ -72,6 +78,7 @@ public class AdminPanel implements ActionListener {
         delete.setBounds(5, 90, 160, 30);
         others.setBounds(335, 65, 80, 55);
 
+        // Adding action listeners
         add.addActionListener(this);
         no.addActionListener(this);
         delete.addActionListener(this);
@@ -101,26 +108,32 @@ public class AdminPanel implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()){
             case "SHOW QUESTIONS" -> {
+                // Writing log and showing questions
                 writing.writeLog(getClass(), "Goto show questions");
                 showAll.ShowQuestions();
             }
             case "SHOW ANSWERS" -> {
+                // Writing log and showing answers
                 writing.writeLog(getClass(), "Goto show answers");
                 showAll.ShowAnswers();
             }
             case "ADD QUESTION" -> {
+                // Writing log and going to class that will add question
                 writing.writeLog(getClass(), "Goto add questions");
                 manage.add();
             }
             case "DELETE QUESTION" -> {
+                // Writing log and going to class that will delete question
                 writing.writeLog(getClass(), "Goto delete question");
                 manage.delete();
             }
             case "OTHER" -> {
+                // Writing log and going to AdminOther()
                 writing.writeLog(getClass(), "Goto admin other");
                 new AdminOther();
             }
             default -> {
+                // Writing log then closing this window and showing main menu
                 writing.writeLog(getClass(), "Closing");
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
                 main.showMain();

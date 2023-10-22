@@ -48,12 +48,18 @@ class Manage implements ActionListener {
      * into 3 records array
      */
     final Functional toArray = (chain) -> {
+        // Writing log
         writing.writeLog(getClass(), "In lambda 'toArray'");
+
+        // Creating array
         String[] db = new String[3];
+
+        // Extracting useful info from given string
         db[0] = chain.substring(0, chain.indexOf(";")).trim();
         db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";")).trim();
         db[2] = chain.substring(chain.lastIndexOf(";") + 1).trim();
 
+        // Returns array with info
         return db;
     };
 
@@ -63,11 +69,15 @@ class Manage implements ActionListener {
      * questions about date
      */
     final Functional2 checking = (chain) -> {
+        // Writing log
         writing.writeLog(getClass(), "In lambda 'checking'");
+
+        // Creating array with all info
         String[] db = toArray.toArray(chain);
 
         boolean correct = false;
 
+        // If type of question is incorrect or question contains '.' (w/out date question) returns false
         switch (db[2]){
             case "o", "c", "t" -> {
                 if(!db[0].contains(".")){
@@ -76,6 +86,8 @@ class Manage implements ActionListener {
             }
             case "d" -> correct = true;
         }
+
+        // Returns true if everything is correct otherwise false
         return correct;
     };
 
@@ -83,10 +95,11 @@ class Manage implements ActionListener {
      * Method that shows UI for deleting questions
      */
     void delete() {
+        // Writes log
         writing.writeLog(getClass(), "Deleting question");
 
+        // Default settings
         frame = new JFrame("Deleting question");
-        
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
@@ -102,9 +115,11 @@ class Manage implements ActionListener {
         JButton no = new JButton("CLOSE");
         JButton delete = new JButton("DELETE QUESTION");
 
+        // Setting bounds
         no.setBounds(335, 5, 80, 115);
         delete.setBounds(5, 90, 300, 30);
 
+        // Adding action listeners
         no.addActionListener(this);
         delete.addActionListener(this);
 
@@ -127,10 +142,11 @@ class Manage implements ActionListener {
      * Method that shows UI responsible for adding question
      */
     void add() {
+        // Writing log
         writing.writeLog(getClass(), "Adding question");
 
+        // Default settings
         frame = new JFrame("Adding question");
-
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
@@ -146,9 +162,11 @@ class Manage implements ActionListener {
         JButton no = new JButton("CLOSE");
         JButton delete = new JButton("ADD QUESTION");
 
+        // Setting bounds
         no.setBounds(335, 5, 80, 115);
         delete.setBounds(5, 90, 300, 30);
 
+        // Adding action listeners
         no.addActionListener(this);
         delete.addActionListener(this);
 
@@ -175,16 +193,19 @@ class Manage implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "DELETE QUESTION" -> {
+                // Writes log, deletes question and closes this window
                 writing.writeLog(getClass(), "Goto backend/deleting");
                 Deleting.delete(field.getText());
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
             case "ADD QUESTION" -> {
+                // Writes log, adds question and closes this window
                 writing.writeLog(getClass(), "Goto backend/string operations");
                 StringOperations.addQuestion(toArray, checking, field.getText());
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
             default -> {
+                // Writes log and closes this window
                 writing.writeLog(getClass(), "Closing");
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }

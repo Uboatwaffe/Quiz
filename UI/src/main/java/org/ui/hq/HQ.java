@@ -1,7 +1,7 @@
 package org.ui.hq;
 
-import org.db.connecting.Connect;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Data;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 import org.ui.questions.QuestionABC;
 import org.ui.questions.QuestionDate;
@@ -19,9 +19,9 @@ public class HQ extends Thread{
 
     /**
      * Object that gets data from DB
-     * @see Connect
+     * @see Data
      */
-    private final Connect connect = new Connect();
+    private final Data data = new Data();
 
     /**
      * Object used to write log
@@ -34,13 +34,21 @@ public class HQ extends Thread{
      */
     public void start(){
         try {
+            //Writes log
             writing.writeLog(getClass(), "Starts showing questions");
 
-            ResultSet resultSet = connect.getConnection();
+            // Gets data from DB
+            ResultSet resultSet = data.getData();
+
             if (resultSet != null) {
                 while (resultSet.next()) {
+                    // Gets type of the question
                     String type = resultSet.getString("type");
+
+                    //Writes log
                     writing.writeLog(getClass(), "Showing question with type: " + type);
+
+                    // Creates corresponding UI for type of the question
                     switch(type){
                         case "d" -> new QuestionDate(resultSet.getString("question"), resultSet.getString("answer"));
                         case "c" -> new QuestionABC(resultSet.getString("question"), resultSet.getString("answer"));
@@ -50,6 +58,7 @@ public class HQ extends Thread{
                     }
                 }
             }
+            //Writes log
             writing.writeLog(getClass(), "All questions showed");
         }catch (SQLException ignored){
             new ExceptionUI(getClass());

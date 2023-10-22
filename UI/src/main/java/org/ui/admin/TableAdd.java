@@ -39,9 +39,11 @@ class TableAdd implements ActionListener {
      * Constructor
      */
     TableAdd() {
+        // Writing log
         writing.writeLog(getClass(), "Adding table");
-        frame = new JFrame("Adding table");
 
+        // Default settings
+        frame = new JFrame("Adding table");
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
         frame.setSize(440, 170);
         frame.setLayout(null);
@@ -50,16 +52,17 @@ class TableAdd implements ActionListener {
         JLabel welcome = new JLabel("Insert new name for the table: ");
         welcome.setBounds(5, 5, 200, 15);
 
-        error.setBounds(5, 25, 200, 15);
-        error.setVisible(false);
 
         // Buttons
         JButton no = new JButton("CLOSE");
         JButton ok = new JButton("OK");
 
+        // Setting bounds
+        error.setBounds(5, 25, 200, 15);
         no.setBounds(325, 25, 80, 95);
         ok.setBounds(5, 85, 300, 35);
 
+        // Adding action listeners
         no.addActionListener(this);
         ok.addActionListener(this);
 
@@ -75,6 +78,7 @@ class TableAdd implements ActionListener {
 
 
         // Setting up the visibility
+        error.setVisible(false);
         frame.setVisible(true);
     }
     /**
@@ -84,9 +88,14 @@ class TableAdd implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("CLOSE")) {
+
+            // Writes log and closes this window
             writing.writeLog(getClass(), "Closing");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+
         } else if (e.getActionCommand().equals("OK")) {
+
+            // Checks if given name exists
             String[] db = SQL.getAllTables();
             String newName = login.getText();
             boolean exists = false;
@@ -98,11 +107,13 @@ class TableAdd implements ActionListener {
             }
 
             if (!exists) {
+                // If it doesn't exist writes log, hides error message, adds table and closes this window
                 writing.writeLog(getClass(), "Goto add table");
                 error.setVisible(false);
                 Add.add(newName);
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             } else {
+                //Writes log and closes this window
                 writing.writeLog(getClass(), "Error");
                 error.setVisible(true);
             }

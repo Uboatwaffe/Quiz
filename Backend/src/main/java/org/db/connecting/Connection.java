@@ -1,9 +1,8 @@
 package org.db.connecting;
 
-import org.exceptions.ExceptionUI;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
@@ -12,7 +11,7 @@ import java.sql.SQLException;
  * @author Maciej
  * @version 0.1
  */
-public final class Connecting {
+public final class Connection {
 
     /**
      * Object used to write log
@@ -24,14 +23,22 @@ public final class Connecting {
      * Method that establishes connection to the DB
      * @return Connection reference to database
      */
-    public static Connection getConnection() {
-        writing.writeLog(Connecting.class, "Establishing connection to DB");
+    public static java.sql.Connection getConnection() {
+
+        // Writes log
+        writing.writeLog(Connection.class, "Establishing connection to DB");
+
         try {
 
+            // Establishes connection with DB and returns it
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
+
         }catch (SQLException ignore){
-            new ExceptionUI(Connecting.class);
+            // If something went wrong informs user about this
+            new ExceptionUI(Connection.class);
+
+            // Doesn't return connection
+            return null;
         }
-        return null;
     }
 }

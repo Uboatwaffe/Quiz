@@ -1,9 +1,9 @@
 package org.db.reset;
 
-import org.db.manage.Deleting;
-import org.db.manage.SQL;
 import org.db.manage.Adding;
 import org.db.manage.ChangePassword;
+import org.db.manage.Deleting;
+import org.db.manage.SQL;
 import org.db.tables.Delete;
 import org.file.writing.Writing;
 
@@ -45,11 +45,17 @@ public class Reset {
      * Method that resets whole configuration
      */
     public static void reset() {
+        // Writes log
         writing.writeLog(Reset.class, "Reseting");
 
+        // Creates array in the size of all tables-1
         String[] toDelete = new String[tableNames.length-1];
         int i = 0;
 
+        /*
+        Puts every table in 'toDelete' except 'set1'
+        This never allows for empty DB
+         */
         for (String x:
              tableNames) {
             if(!x.equals("set1")){
@@ -57,17 +63,24 @@ public class Reset {
             }
         }
 
+        // Sets current table to 'set1' (it is always under 0 index)
         SQL.setCurrentTable(SQL.getAllTables()[0]);
+
+        // Clears 'set1' from all questions
         Deleting.delete("-1");
+
+        // Adds default questions
         for (int j = 0; j < db1.length; j++) {
             Adding.add(db1[j], db2[j], db3[j]);
         }
 
+        // Deletes other tables
         for (String x:
              toDelete) {
             Delete.delete(x);
         }
 
+        // Changes password and login to default ones
         ChangePassword.change("Login", "Password", "admin");
     }
 

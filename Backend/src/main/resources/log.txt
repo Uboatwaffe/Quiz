@@ -1,30 +1,144 @@
 
 org.ui.Main:	Start program
-org.ui.Main:	Starting quiz
-org.db.connecting.Connect:	Getting all data from DB
-org.db.connecting.Connecting:	Establishing connection to DB
+org.ui.Main:	Goto logging in
+org.ui.admin.Logging:	Logging in
+org.db.connecting.LoggingIn:	Getting data to logging in
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.Logging:	Goto admin panel
+org.ui.admin.AdminPanel:	Admin Panel
+org.ui.admin.AdminPanel:	Goto admin other
+org.ui.admin.AdminOther:	Admin Other panel
+org.ui.admin.AdminOther:	Goto show tables
+org.ui.admin.TablesChange:	Change tables
 org.db.manage.SQL:	Getting all tables names
-org.db.connecting.Connecting:	Establishing connection to DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.TablesChange:	Closing
+org.ui.admin.AdminOther:	Goto table management
+org.ui.admin.TablesManage:	Tables management
+org.ui.admin.TablesManage:	Goto table add
+org.ui.admin.TableAdd:	Adding table
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.TableAdd:	Error
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.TableAdd:	Goto add table
+org.db.tables.Add:	Adding tables
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.TablesManage:	Closing
+org.ui.admin.AdminOther:	Goto show tables
+org.ui.admin.TablesChange:	Change tables
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.TablesChange:	Closing
+org.ui.admin.AdminOther:	Closing
+org.ui.admin.AdminPanel:	Goto show questions
+org.ui.admin.ShowAll:	Showing questions
+org.db.manage.Sorting:	Sorts
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
 org.db.manage.HowMany:	Counts how many records
-org.ui.hq.HQ:	Starts showing questions
-org.db.connecting.Connect:	Getting all data from DB
-org.db.connecting.Connecting:	Establishing connection to DB
-org.ui.hq.HQ:	Showing question with type: t
-org.ui.questions.QuestionTrueOrFalse:	True or false question
-org.ui.hq.HQ:	Showing question with type: c
-org.ui.questions.QuestionABC:	Closed question
-org.ui.hq.HQ:	Showing question with type: o
-org.ui.questions.QuestionOpen:	Open question
-org.ui.hq.HQ:	Showing question with type: d
-org.ui.questions.QuestionDate:	Question about date
-org.ui.hq.HQ:	All questions showed
-org.ui.questions.QuestionDate:	Don't know the answer
-org.ui.questions.QuestionOpen:	Don't know the answer
-org.ui.questions.QuestionABC:	Don't know the answer
-org.ui.questions.QuestionTrueOrFalse:	Don't know the answer
-org.ui.Main:	Showing score
-org.db.connecting.Connect:	Getting all data from DB
-org.db.connecting.Connecting:	Establishing connection to DB
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
 org.db.manage.HowMany:	Counts how many records
-org.ui.Main:	Goto main menu
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
+org.db.manage.Deleting:	Deleting question
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.ToStrings:	Getting questions in array
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.AdminPanel:	Goto admin other
+org.ui.admin.AdminOther:	Admin Other panel
+org.ui.admin.AdminOther:	Goto reset
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.reset.Reset:	Reseting
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Deleting:	Deleting question
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Gets highest id of all records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Adding:	Adding questions
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Gets highest id of all records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Adding:	Adding questions
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Gets highest id of all records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Adding:	Adding questions
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Gets highest id of all records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Adding:	Adding questions
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.tables.Delete:	Deleting table
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.SQL:	Getting all tables names
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.ChangePassword:	Updating admin details
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.AdminPanel:	Goto show questions
+org.ui.admin.ShowAll:	Showing questions
+org.db.manage.Sorting:	Sorts
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
+org.db.manage.Deleting:	Deleting question
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Gets highest id of all records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Adding:	Adding questions
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Gets highest id of all records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Adding:	Adding questions
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Gets highest id of all records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Adding:	Adding questions
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Gets highest id of all records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.Adding:	Adding questions
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.ToStrings:	Getting questions in array
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.db.manage.HowMany:	Counts how many records
+org.db.connecting.Data:	Getting all data from DB
+org.db.connecting.Connection:	Establishing connection to DB
+org.ui.admin.AdminPanel:	Closing
 org.ui.Main:	Ending

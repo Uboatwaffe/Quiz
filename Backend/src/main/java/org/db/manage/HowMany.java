@@ -1,7 +1,7 @@
 package org.db.manage;
 
-import org.db.connecting.Connect;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Data;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.ResultSet;
@@ -17,9 +17,9 @@ public class HowMany {
 
     /**
      * Object used to establishing connection to the DB
-     * @see Connect
+     * @see Data
      */
-    private final Connect connect = new Connect();
+    private final Data data = new Data();
 
     /**
      * Object used to write log
@@ -32,17 +32,22 @@ public class HowMany {
      * @return Integer with value of number of records in current table
      */
     public int howMany(){
-        // Returns number of records in current set
         int i = 0;
+
         try {
-            ResultSet resultSet = connect.getConnection();
+            // Gets data from DB
+            ResultSet resultSet = data.getData();
+
+            // Writes log
             writing.writeLog(HowMany.class, "Counts how many records");
 
-
+            // Counts how many records there are
             while (resultSet.next()) i++;
+
         }catch (SQLException ignore){
             new ExceptionUI(getClass());
         }
+        // Returns info
         return i;
     }
 
@@ -51,19 +56,23 @@ public class HowMany {
      * @return Integer with value of highest index in current table
      */
     public int highest() {
-        // Returns the highest id of records from current set
         int i = 0;
+
         try {
+            // Writes log
             writing.writeLog(HowMany.class, "Gets highest id of all records");
 
-            ResultSet resultSet = connect.getConnection();
+            // Gets data from DB
+            ResultSet resultSet = data.getData();
 
+            // Searches for highest index
             while (resultSet.next()) {
                 i = Integer.parseInt(resultSet.getString("id"));
             }
         } catch (SQLException ignore) {
             new ExceptionUI(getClass());
         }
+        // Returns info
         return i;
     }
 }

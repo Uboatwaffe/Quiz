@@ -1,22 +1,23 @@
 package org.connecting;
 
-import org.db.connecting.Connecting;
+import org.db.connecting.Data;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * Test
- * @see Connecting
+ * @see Data
  * @author Maciej
  * @version 0.1
  */
-class ConnectingTest {
+class DataTest {
 
     /**
-     * Test for method getConnection()
+     * Test for method getData()
      */
     @org.junit.jupiter.api.Test
     void getConnection() {
-        assertNotNull(Connecting.getConnection());
+        Data data = new Data();
+        assertNotNull(data.getData());
     }
 }

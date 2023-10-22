@@ -1,7 +1,8 @@
 package org.db.tables;
 
-import org.db.connecting.Connecting;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Connection;
+import org.db.manage.SQL;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.PreparedStatement;
@@ -29,17 +30,22 @@ public final class Add{
     public static void add(String name){
 
         try {
+            // Writes log
             writing.writeLog(Add.class, "Adding tables");
 
-
+            // Queries
             String sql = "CREATE TABLE `quiz`.`"+ name +"` (`id` INT NOT NULL,`question` VARCHAR(90) NOT NULL,`answer` VARCHAR(45) NOT NULL,`type` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`))";
             String sql2 = "INSERT INTO tables VALUES ('"+ name +"')";
 
-            PreparedStatement statement2 = Connecting.getConnection().prepareStatement(sql);
+            // Executing query nr 1
+            PreparedStatement statement2 = Connection.getConnection().prepareStatement(sql);
             statement2.executeUpdate();
 
-            PreparedStatement statement3 = Connecting.getConnection().prepareStatement(sql2);
+            // Executing query nr 2
+            PreparedStatement statement3 = Connection.getConnection().prepareStatement(sql2);
             statement3.executeUpdate();
+
+            SQL.setCurrentTable(SQL.getAllTables()[SQL.getAllTables().length-1]);
         } catch (SQLException | NullPointerException e) {
             new ExceptionUI(Add.class);
         }

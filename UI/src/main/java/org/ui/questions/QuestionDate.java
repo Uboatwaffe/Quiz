@@ -41,8 +41,10 @@ public class QuestionDate implements ActionListener {
      * @param answer String with expected answer
      */
     public QuestionDate(String quest, String answer) {
+        //Writes log
         writing.writeLog(getClass(), "Question about date");
 
+        // Assigns answer
         this.answer = answer;
 
         // Default settings
@@ -58,10 +60,11 @@ public class QuestionDate implements ActionListener {
         JButton submit = new JButton("SUBMIT");
         JButton no = new JButton("I DO NOT KNOW");
 
-
+        // Setting bounds
         submit.setBounds(5, 65, 415, 60);
         no.setBounds(5, 130, 415, 35);
 
+        // Adding action listeners
         submit.addActionListener(this);
         no.addActionListener(this);
 
@@ -85,6 +88,7 @@ public class QuestionDate implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(!e.getActionCommand().equals("I DO NOT KNOW")) {
             try {
+                // If answer is correct lets know user and adds 1 point to the score
                 writing.writeLog(getClass(), "Closing");
                 if (e.getActionCommand().equals("SUBMIT")) {
                     if (field.getText().equals(this.answer)) {
@@ -95,9 +99,11 @@ public class QuestionDate implements ActionListener {
                 }
 
             } finally {
+                // Closes this window
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         }else{
+            // Writes log and closes this window
             writing.writeLog(getClass(),"Don't know the answer");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

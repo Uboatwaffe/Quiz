@@ -1,7 +1,7 @@
 package org.db.manage;
 
-import org.db.connecting.Connect;
-import org.exceptions.ExceptionUI;
+import org.db.connecting.Data;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import java.sql.ResultSet;
@@ -26,28 +26,34 @@ public class Sorting {
     public void sort(){
 
         try {
+            // Writes log
             writing.writeLog(Sorting.class, "Sorts");
 
-            Connect connect = new Connect();
+            // Objects
+            Data data = new Data();
             HowMany howMany = new HowMany();
 
-            ResultSet resultSet = connect.getConnection();
+            // Gets info from DB
+            ResultSet resultSet = data.getData();
 
+            // Arrays
             String[] questions = new String[howMany.howMany()];
             String[] answers = new String[howMany.howMany()];
             String[] types = new String[howMany.howMany()];
 
             int i = 0;
 
+            // Extracting data from DB and putting it in corresponding array
             while(resultSet.next()){
                 questions[i] = resultSet.getString("question");
                 answers[i] = resultSet.getString("answer");
                 types[i++] = resultSet.getString("type");
             }
 
-
+            // Clears whole DB
             Deleting.delete("-1");
 
+            // Inserts previously extracted data into DB without indexes
             for (int j = 0; j < i; j++) {
                 Adding.add(questions[j], answers[j], types[j]);
             }

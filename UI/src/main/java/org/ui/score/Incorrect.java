@@ -31,6 +31,7 @@ public class Incorrect implements ActionListener {
      * @param wron Given answer
      */
     public Incorrect(String answer, String wron) {
+        //Writes log
         writing.writeLog(getClass(), "Incorrect answer");
 
         // Default settings
@@ -75,6 +76,7 @@ public class Incorrect implements ActionListener {
      */
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Writes log and closes this window
         writing.writeLog(getClass(), "Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
