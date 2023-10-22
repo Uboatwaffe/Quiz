@@ -47,7 +47,7 @@ class Manage implements ActionListener {
      * Lambda responsible for extracting data from one String chain
      * into 3 records array
      */
-    final Functional toArray = (chain) -> {
+    private final Functional toArray = (chain) -> {
         // Writing log
         writing.writeLog(getClass(), "In lambda 'toArray'");
 
@@ -68,7 +68,7 @@ class Manage implements ActionListener {
      * and also for checking if any of the questions doesn't contain '.' except for
      * questions about date
      */
-    final Functional2 checking = (chain) -> {
+    private final Functional2 checking = (chain) -> {
         // Writing log
         writing.writeLog(getClass(), "In lambda 'checking'");
 

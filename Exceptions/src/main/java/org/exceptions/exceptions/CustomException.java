@@ -19,17 +19,13 @@ public class CustomException extends Exception{
     private final String message;
 
     /**
-     * Object used to write error log
-     */
-    ERRORS errors = new ERRORS();
-
-    /**
      * Constructor
      * @param ob Name of the class
      * @param message Message passed while throwing this exception
      */
     public CustomException(Class<?> ob,String message){
         this.message = message;
+        ERRORS errors = new ERRORS();
         errors.writeLog(ob, message);
     }
 

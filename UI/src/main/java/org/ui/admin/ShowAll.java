@@ -31,7 +31,7 @@ class ShowAll {
     /**
      * Method that shows all the questions to user
      */
-    public void ShowQuestions() {
+    void ShowQuestions() {
         // Writes log
         writing.writeLog(getClass(), "Showing questions");
 
@@ -59,7 +59,7 @@ class ShowAll {
     /**
      * Method that shows all the answers to user
      */
-    public void ShowAnswers() {
+    void ShowAnswers() {
         // Writing log
         writing.writeLog(getClass(), "Showing answers");
 

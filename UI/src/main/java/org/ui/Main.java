@@ -61,7 +61,7 @@ public final class Main implements ActionListener{
     /**
      * Label containing current score
      */
-    final JLabel score = new JLabel(String.valueOf(Count.getCount()));
+    private final JLabel score = new JLabel(String.valueOf(Count.getCount()));
 
     /**
      * Object used to write log
