@@ -4,17 +4,19 @@
 
 Only versions with ✅ are supported with security
 
-| Version     | Supported  |
-|-------------|------------|
-| v0.0.1-beta | ⛔          |
-| v0.0.2-beta | ⛔          |
-| v0.1.0-beta | ⛔          |
-| v0.1.1-beta | ⛔          |
-| v0.1.2-beta | ⛔          |
-| v0.1.3-beta | ⛔          |
-| v0.1.4-beta | ⛔          |
-| v0.2.0-beta | ⛔          |
-| v0.2.1-beta | ✅          |
+| Version     | Supported |
+|-------------|-----------|
+| v0.0.1-beta | ⛔         |
+| v0.0.2-beta | ⛔         |
+| v0.1.0-beta | ⛔         |
+| v0.1.1-beta | ⛔         |
+| v0.1.2-beta | ⛔         |
+| v0.1.3-beta | ⛔         |
+| v0.1.4-beta | ⛔         |
+| v0.2.0-beta | ⛔         |
+| v0.2.1-beta | ⛔         |
+| v0.2.2-beta | ⛔         |
+| v0.2.3-beta | ✅         |
 
 
 
