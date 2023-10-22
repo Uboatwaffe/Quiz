@@ -16,7 +16,8 @@ Only versions with ✅ are supported with security
 | v0.2.0-beta | ⛔         |
 | v0.2.1-beta | ⛔         |
 | v0.2.2-beta | ⛔         |
-| v0.2.3-beta | ✅         |
+| v0.2.3-beta | ⛔         |
+| v0.2.4-beta | ✅         |
 
 
 
