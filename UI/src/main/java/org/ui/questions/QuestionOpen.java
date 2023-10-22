@@ -43,7 +43,7 @@ public class QuestionOpen implements ActionListener {
      */
     public QuestionOpen(String quest, String answer) {
         //Writes log
-        writing.writeLog(getClass(), "Open question");
+        writing.writeLog(getClass(), "Constructor()");
 
         // Assigns answer
         this.answer = answer;
@@ -92,7 +92,7 @@ public class QuestionOpen implements ActionListener {
         if(!e.getActionCommand().equals("I DO NOT KNOW")) {
             try {
                 // If answer is correct lets know user and adds 1 point to the score
-                writing.writeLog(getClass(), "Closing");
+                writing.writeLog(getClass(), " <- Closing");
                 if (e.getActionCommand().equals("SUBMIT")) {
                     if (field.getText().equals(this.answer)) {
                         Count.setCount(Count.getCount() + 1);
@@ -107,8 +107,7 @@ public class QuestionOpen implements ActionListener {
             }
         }else{
             // Writes log and closes this window
-
-            writing.writeLog(getClass(),"Don't know the answer");
+            writing.writeLog(getClass()," <- Closing, Don't know the answer");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

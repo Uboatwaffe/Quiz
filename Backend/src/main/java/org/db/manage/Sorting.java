@@ -58,6 +58,7 @@ public class Sorting {
                 Adding.add(questions[j], answers[j], types[j]);
             }
         }catch (SQLException ignore){
+            writing.writeLog(Sorting.class, " -> ExceptionUI");
             new ExceptionUI(getClass());
         }
     }

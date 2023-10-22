@@ -41,7 +41,7 @@ class TableDelete implements ActionListener {
      */
     TableDelete() {
         //Writes log
-        writing.writeLog(getClass(), "Delete table");
+        writing.writeLog(getClass(), "Constructor()");
 
         // Default settings
         frame = new JFrame("Deleting table");
@@ -91,7 +91,7 @@ class TableDelete implements ActionListener {
         if (e.getActionCommand().equals("CLOSE")) {
 
             // Writes log and closes this window
-            writing.writeLog(getClass(), "Closing");
+            writing.writeLog(getClass(), " <- Closing");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 
         } else if (e.getActionCommand().equals("DELETE")) {
@@ -111,7 +111,7 @@ class TableDelete implements ActionListener {
             if (exists) {
 
                 // If it exists writes log, hides error message, deletes table and closes this window
-                writing.writeLog(getClass(), "Goto backend/deleting table");
+                writing.writeLog(getClass(), " -> Delete");
                 error.setVisible(false);
                 Delete.delete(newName);
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
@@ -119,7 +119,7 @@ class TableDelete implements ActionListener {
             } else {
 
                 //Writes log and closes this window
-                writing.writeLog(getClass(), "Error");
+                writing.writeLog(getClass(), "Show error");
                 error.setVisible(true);
 
             }

@@ -31,7 +31,7 @@ public class Info implements ActionListener {
      */
     public Info() {
         // Writing log
-        writing.writeLog(getClass(),"Info");
+        writing.writeLog(getClass(),"Constructor()");
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -76,7 +76,7 @@ public class Info implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // Writing log and closing this window
-        writing.writeLog(getClass(),"Closing");
+        writing.writeLog(getClass()," <- Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

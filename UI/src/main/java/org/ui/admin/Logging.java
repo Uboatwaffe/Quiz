@@ -42,7 +42,7 @@ public class Logging implements ActionListener {
      */
     public Logging() {
         // Writing log
-        writing.writeLog(getClass(), "Logging in");
+        writing.writeLog(getClass(), "Constructor()");
 
         // Default settings
         frame = new JFrame("Logging in");
@@ -91,7 +91,7 @@ public class Logging implements ActionListener {
         if (e.getActionCommand().equals("LOG IN")) {
             if (!login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
                 // Writing log
-                writing.writeLog(getClass(), "Goto wrong password");
+                writing.writeLog(getClass(), " -> WrongPassword");
 
                 // Going to WrongPassword() and closing this window
                 new WrongPassword();
@@ -99,7 +99,7 @@ public class Logging implements ActionListener {
 
             } else {
                 // Writing log
-                writing.writeLog(getClass(), "Goto admin panel");
+                writing.writeLog(getClass(), " -> AdminPanel");
 
                 // Going to AdminPanel() and closing this window
                 new AdminPanel();
@@ -107,7 +107,7 @@ public class Logging implements ActionListener {
             }
         } else {
             // Writing log
-            writing.writeLog(getClass(), "Closing");
+            writing.writeLog(getClass(), " <- Closing");
 
             // Showing main menu
             Main main = new Main();

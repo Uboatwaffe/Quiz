@@ -32,7 +32,7 @@ public class AdminOther implements ActionListener {
      */
     public AdminOther() {
         // Writing log
-        writing.writeLog(getClass(), "Admin Other panel");
+        writing.writeLog(getClass(), "Constructor");
 
         // Default settings
         frame.setSize(440, 170);
@@ -85,33 +85,33 @@ public class AdminOther implements ActionListener {
         switch (e.getActionCommand()) {
             case "TUTORIAL" -> {
                 // Writing log and going to the AdminTutorial()
-                writing.writeLog(getClass(), "Goto admin tutorial");
+                writing.writeLog(getClass(), " -> AdminTutorial");
                 new AdminTutorial();
             }
             case "DETAILS" -> {
                 // Writing log and going to NewPassword()
-                writing.writeLog(getClass(), "Goto Details");
+                writing.writeLog(getClass(), " -> NewPassword");
                 new NewPassword();
             }
             case "CHANGE TABLE" -> {
                 // Writing log and going to TablesChange()
-                writing.writeLog(getClass(), "Goto show tables");
+                writing.writeLog(getClass(), " -> TablesChange");
                 new TablesChange();
             }
             case "TABLE MANAGEMENT" -> {
                 // Writing log and going to TablesManage()
-                writing.writeLog(getClass(), "Goto table management");
+                writing.writeLog(getClass(), " -> TableManage");
                 new TablesManage();
             }
             case "RESET" -> {
                 // Writing log going to Reset() and closing this window
-                writing.writeLog(getClass(), "Goto reset");
+                writing.writeLog(getClass(), " -> Reset");
                 Reset.reset();
                 frame.dispatchEvent((new WindowEvent(frame, WindowEvent.WINDOW_CLOSING)));
             }
             default -> {
                 // Writing log and closing this window
-                writing.writeLog(getClass(), "Closing");
+                writing.writeLog(getClass(), " <- Closing");
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         }

@@ -21,7 +21,7 @@ public class Writing {
     public void writeLog(Class<?> ob, String message) {
         try(PrintWriter out = new PrintWriter(new FileWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfesional\\Quiz\\Backend\\src\\main\\resources\\log.txt", true))){
             // Prints name of the class
-            out.print(ob.getName() + ":\t");
+            out.print(ob.getName() + ": ");
 
             // Prints the message
             out.print(message);

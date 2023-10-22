@@ -143,7 +143,7 @@ class Manage implements ActionListener {
      */
     void add() {
         // Writing log
-        writing.writeLog(getClass(), "Adding question");
+        writing.writeLog(getClass(), "Constructor()");
 
         // Default settings
         frame = new JFrame("Adding question");
@@ -194,19 +194,19 @@ class Manage implements ActionListener {
         switch (e.getActionCommand()) {
             case "DELETE QUESTION" -> {
                 // Writes log, deletes question and closes this window
-                writing.writeLog(getClass(), "Goto backend/deleting");
+                writing.writeLog(getClass(), " -> Deleting");
                 Deleting.delete(field.getText());
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
             case "ADD QUESTION" -> {
                 // Writes log, adds question and closes this window
-                writing.writeLog(getClass(), "Goto backend/string operations");
+                writing.writeLog(getClass(), " -> StringOperations");
                 StringOperations.addQuestion(toArray, checking, field.getText());
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
             default -> {
                 // Writes log and closes this window
-                writing.writeLog(getClass(), "Closing");
+                writing.writeLog(getClass(), " <- Closing");
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         }

@@ -15,6 +15,15 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/*
+How to configure writing log?
+When program calls other class use this ' -> CalledClass'
+When program is in the constructor type this ' Constructor() '
+When program closes current window type this ' <- Closing'
+If program exits use this ' <- EXIT'
+If program is doing anything else just describe this 'message'
+ */
+
 /**
  * Main class
  * @author Maciej
@@ -208,24 +217,24 @@ public final class Main implements ActionListener{
                     }
                 } else {
                     // If there aren't any questions goes to NoQuestions()
-                    writing.writeLog(getClass(), "Goto -> NoQuestions()");
+                    writing.writeLog(getClass(), " -> NoQuestions");
                     new NoQuestions();
                 }
             }
             case "TUTORIAL" -> {
                 // Writes log and goes to Tutorial()
-                writing.writeLog(getClass(),"Goto Tutorial");
+                writing.writeLog(getClass()," -> Tutorial");
                 new Tutorial();
             }
             case "UNDERSTOOD" -> {
                 // Writes log and configures visibility
-                writing.writeLog(getClass(),"Goto main menu");
+                writing.writeLog(getClass()," -> Main.menu");
                 frame2.setVisible(false);
                 frame.setVisible(true);
             }
             case "I AM" -> {
                 // Writes log and configures visibility and score
-                writing.writeLog(getClass(),"Showing score");
+                writing.writeLog(getClass()," -> Main.score");
                 frame3.setVisible(false);
                 score.setText(Count.getCount() + " out of " + howMany.howMany());
                 frame2.setVisible(true);
@@ -233,28 +242,28 @@ public final class Main implements ActionListener{
             }
             case "I'M NOT" -> {
                 // Writes log and shows main menu
-                writing.writeLog(getClass(),"Not showing score");
+                writing.writeLog(getClass()," -> Main.menu");
                 showMain();
             }
             case "ADMIN PANEL" -> {
                 // Writes log and goes to Logging()
-                writing.writeLog(getClass(),"Goto logging in");
+                writing.writeLog(getClass()," -> Logging");
                 frame.setVisible(false);
                 new Logging();
             }
             case "CREDITS" -> {
                 // Writes log and goes to Credit()
-                writing.writeLog(getClass(),"Showing credits");
+                writing.writeLog(getClass()," -> Credit");
                 new Credit();
             }
             case "INFO" -> {
                 // Writes log and goes to Info()
-                writing.writeLog(getClass(), "Showing info");
+                writing.writeLog(getClass(), " -> Info");
                 new Info();
             }
             default -> {
                 // Writes log and exits program
-                writing.writeLog(getClass(), "Ending");
+                writing.writeLog(getClass(), " <- EXIT");
                 System.exit(0);
             }
         }

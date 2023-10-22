@@ -35,7 +35,7 @@ public class NoQuestions implements ActionListener {
      */
     public NoQuestions() {
         // Writing log
-        writing.writeLog(getClass(), "No questions");
+        writing.writeLog(getClass(), "Constructor()");
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -73,7 +73,7 @@ public class NoQuestions implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // Writing log, showing main menu and closing this window
-        writing.writeLog(getClass(), "Closing");
+        writing.writeLog(getClass(), " <- Closing");
         main.showMain();
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }

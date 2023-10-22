@@ -34,6 +34,8 @@ public final class Connection {
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
 
         }catch (SQLException ignore){
+            writing.writeLog(Connection.class, " -> ExceptionUI");
+
             // If something went wrong informs user about this
             new ExceptionUI(Connection.class);
 

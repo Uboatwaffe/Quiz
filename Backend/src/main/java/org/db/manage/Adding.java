@@ -48,6 +48,7 @@ public final class Adding{
             // Executes query
             statement.executeUpdate();
         } catch (SQLException | NullPointerException e) {
+            writing.writeLog(Adding.class, " -> ExceptionUI");
             new ExceptionUI(Adding.class);
         }
     }

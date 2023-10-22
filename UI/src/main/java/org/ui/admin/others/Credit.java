@@ -30,7 +30,7 @@ public class Credit implements ActionListener {
      */
     public Credit() {
         // Writing log
-        writing.writeLog(getClass(),"Credits");
+        writing.writeLog(getClass(),"Constructor()");
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -88,7 +88,7 @@ public class Credit implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // Writing log and closing this window
-        writing.writeLog(getClass(), "Closing");
+        writing.writeLog(getClass(), " <- Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

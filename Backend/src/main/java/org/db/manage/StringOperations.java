@@ -29,7 +29,7 @@ public class StringOperations {
     public static void addQuestion(Functional functional, Functional2 functional2, String chain){
         try {
             // Writes log
-            writing.writeLog(StringOperations.class, "Goto Adding");
+            writing.writeLog(StringOperations.class, " -> Adding");
 
             // Gets string chain into array
             String[] db = functional.toArray(chain);
@@ -43,6 +43,7 @@ public class StringOperations {
             else
                 throw new CustomException(StringOperations.class, "Type of question is incorrect!");
         }catch (CustomException ignore){
+            writing.writeLog(StringOperations.class, " -> ExceptionUI");
             new ExceptionUI(StringOperations.class);
         }
     }

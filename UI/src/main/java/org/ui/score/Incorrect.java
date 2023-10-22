@@ -32,7 +32,7 @@ public class Incorrect implements ActionListener {
      */
     public Incorrect(String answer, String wron) {
         //Writes log
-        writing.writeLog(getClass(), "Incorrect answer");
+        writing.writeLog(getClass(), "Constructor()");
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -77,7 +77,7 @@ public class Incorrect implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // Writes log and closes this window
-        writing.writeLog(getClass(), "Closing");
+        writing.writeLog(getClass(), " <- Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

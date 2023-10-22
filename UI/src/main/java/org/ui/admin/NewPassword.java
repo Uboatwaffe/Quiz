@@ -89,11 +89,11 @@ class NewPassword implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("CLOSE")) {
             // Writes log and closes this window
-            writing.writeLog(getClass(), "Closing");
+            writing.writeLog(getClass(), " <- Closing");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }else if (e.getActionCommand().equals("SUBMIT")) {
             // Writes log, changes login and password then closes this window
-            writing.writeLog(getClass(), "Goto backend/change password");
+            writing.writeLog(getClass(), " -> ChangePassword");
             ChangePassword.change(login.getText(), password.getText(), user.getText());
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }

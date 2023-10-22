@@ -42,6 +42,7 @@ public final class Data {
 
         } catch (SQLException | NullPointerException ignored) {
             // If something went wrong informs user about this
+            writing.writeLog(getClass(), " -> ExceptionUI");
             new ExceptionUI(getClass());
         }
 

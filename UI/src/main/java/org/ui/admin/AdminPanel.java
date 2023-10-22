@@ -45,7 +45,7 @@ public class AdminPanel implements ActionListener {
      */
     public AdminPanel() {
         // Writing log
-        writing.writeLog(getClass(), "Admin Panel");
+        writing.writeLog(getClass(), "Constructor");
 
         // Hiding main menu
         main.hideMain();
@@ -109,32 +109,32 @@ public class AdminPanel implements ActionListener {
         switch (e.getActionCommand()){
             case "SHOW QUESTIONS" -> {
                 // Writing log and showing questions
-                writing.writeLog(getClass(), "Goto show questions");
+                writing.writeLog(getClass(), " -> ShowQuestions");
                 showAll.ShowQuestions();
             }
             case "SHOW ANSWERS" -> {
                 // Writing log and showing answers
-                writing.writeLog(getClass(), "Goto show answers");
+                writing.writeLog(getClass(), " -> ShowAnswers");
                 showAll.ShowAnswers();
             }
             case "ADD QUESTION" -> {
                 // Writing log and going to class that will add question
-                writing.writeLog(getClass(), "Goto add questions");
+                writing.writeLog(getClass(), " -> Manage.add");
                 manage.add();
             }
             case "DELETE QUESTION" -> {
                 // Writing log and going to class that will delete question
-                writing.writeLog(getClass(), "Goto delete question");
+                writing.writeLog(getClass(), " -> Manage.delete");
                 manage.delete();
             }
             case "OTHER" -> {
                 // Writing log and going to AdminOther()
-                writing.writeLog(getClass(), "Goto admin other");
+                writing.writeLog(getClass(), " -> AdminOther");
                 new AdminOther();
             }
             default -> {
                 // Writing log then closing this window and showing main menu
-                writing.writeLog(getClass(), "Closing");
+                writing.writeLog(getClass(), " <- Closing");
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
                 main.showMain();
             }

@@ -63,22 +63,30 @@ public class Reset {
             }
         }
 
+        writing.writeLog(Reset.class, " -> SQL");
+
         // Sets current table to 'set1' (it is always under 0 index)
         SQL.setCurrentTable(SQL.getAllTables()[0]);
 
+        writing.writeLog(Reset.class, " -> Deleting");
         // Clears 'set1' from all questions
         Deleting.delete("-1");
 
+        writing.writeLog(Reset.class, " -> Adding");
         // Adds default questions
         for (int j = 0; j < db1.length; j++) {
             Adding.add(db1[j], db2[j], db3[j]);
         }
+
+        writing.writeLog(Reset.class, " -> Delete");
 
         // Deletes other tables
         for (String x:
              toDelete) {
             Delete.delete(x);
         }
+
+        writing.writeLog(Reset.class, " -> ChangePassword");
 
         // Changes password and login to default ones
         ChangePassword.change("Login", "Password", "admin");

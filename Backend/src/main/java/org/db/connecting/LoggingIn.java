@@ -51,6 +51,7 @@ public final class LoggingIn {
 
         } catch (SQLException | NullPointerException ignored) {
             // If something went wrong informs user about this
+            writing.writeLog(LoggingIn.class, " -> ExceptionUI");
             new ExceptionUI(LoggingIn.class);
         }
         // Returning info

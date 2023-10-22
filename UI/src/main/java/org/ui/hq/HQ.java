@@ -61,6 +61,7 @@ public class HQ extends Thread{
             //Writes log
             writing.writeLog(getClass(), "All questions showed");
         }catch (SQLException ignored){
+            writing.writeLog(getClass(), " -> ExceptionUI");
             new ExceptionUI(getClass());
         }
     }

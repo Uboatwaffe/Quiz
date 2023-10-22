@@ -47,6 +47,7 @@ public class Delete{
             // Sets current table to 'set1'
             SQL.setCurrentTable(SQL.getAllTables()[0]);
         } catch (SQLException | NullPointerException e) {
+            writing.writeLog(Delete.class, " -> ExceptionUI");
             new ExceptionUI(Delete.class);
         }
     }

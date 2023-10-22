@@ -47,6 +47,7 @@ public final class Add{
 
             SQL.setCurrentTable(SQL.getAllTables()[SQL.getAllTables().length-1]);
         } catch (SQLException | NullPointerException e) {
+            writing.writeLog(Add.class, " -> ExceptionUI");
             new ExceptionUI(Add.class);
         }
     }

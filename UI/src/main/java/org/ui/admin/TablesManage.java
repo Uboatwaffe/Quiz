@@ -29,7 +29,7 @@ class TablesManage implements ActionListener {
      */
     TablesManage() {
         // Writing log
-        writing.writeLog(getClass(), "Tables management");
+        writing.writeLog(getClass(), "Constructor()");
 
         // Default settings
         frame = new JFrame("What to do");
@@ -77,17 +77,17 @@ class TablesManage implements ActionListener {
         switch (e.getActionCommand()){
             case "ADD TABLE" -> {
                 //Writes log and shows UI for adding table
-                writing.writeLog(getClass(), "Goto table add");
+                writing.writeLog(getClass(), " -> TableAdd");
                 new TableAdd();
             }
             case "DELETE TABLE" -> {
                 //Writes log and shows UI for deleting table
-                writing.writeLog(getClass(), "Goto table delete");
+                writing.writeLog(getClass(), " -> TableDelete");
                 new TableDelete();
             }
             default -> {
                 //Writes log and closes this window
-                writing.writeLog(getClass(), "Closing");
+                writing.writeLog(getClass(), " <- Closing");
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         }

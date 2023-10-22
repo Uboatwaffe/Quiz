@@ -45,6 +45,7 @@ public class HowMany {
             while (resultSet.next()) i++;
 
         }catch (SQLException ignore){
+            writing.writeLog(HowMany.class, " -> ExceptionUI");
             new ExceptionUI(getClass());
         }
         // Returns info
@@ -70,6 +71,7 @@ public class HowMany {
                 i = Integer.parseInt(resultSet.getString("id"));
             }
         } catch (SQLException ignore) {
+            writing.writeLog(HowMany.class, " -> ExceptionUI");
             new ExceptionUI(getClass());
         }
         // Returns info

@@ -34,7 +34,7 @@ class TablesChange implements ActionListener {
      */
     TablesChange() {
         // Writing log
-        writing.writeLog(getClass(), "Change tables");
+        writing.writeLog(getClass(), "Constructor");
 
         // Default settings
         frame = new JFrame("Changing table");
@@ -87,12 +87,12 @@ class TablesChange implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("OK")) {
             // Writes log, sets new current table and then closes this window
-            writing.writeLog(getClass(), "Goto backend/sql");
+            writing.writeLog(getClass(), " -> SQL");
             SQL.setCurrentTable(prevTable);
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         } else if (e.getActionCommand().equals("CLOSE")) {
             // Writes log and closes this window
-            writing.writeLog(getClass(), "Closing");
+            writing.writeLog(getClass(), " <- Closing");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
         }
     }

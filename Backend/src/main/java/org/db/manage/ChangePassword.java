@@ -38,6 +38,7 @@ public class ChangePassword {
             PreparedStatement statement = Connection.getConnection().prepareStatement(SQL);
             statement.executeUpdate();
         }catch (SQLException | NullPointerException ignore){
+            writing.writeLog(Deleting.class, " -> ExceptionUI");
             new ExceptionUI(ChangePassword.class);
         }
     }

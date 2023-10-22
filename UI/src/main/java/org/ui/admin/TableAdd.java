@@ -90,7 +90,7 @@ class TableAdd implements ActionListener {
         if (e.getActionCommand().equals("CLOSE")) {
 
             // Writes log and closes this window
-            writing.writeLog(getClass(), "Closing");
+            writing.writeLog(getClass(), " <- Closing");
             frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
 
         } else if (e.getActionCommand().equals("OK")) {
@@ -108,13 +108,13 @@ class TableAdd implements ActionListener {
 
             if (!exists) {
                 // If it doesn't exist writes log, hides error message, adds table and closes this window
-                writing.writeLog(getClass(), "Goto add table");
+                writing.writeLog(getClass(), " -> Add");
                 error.setVisible(false);
                 Add.add(newName);
                 frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             } else {
-                //Writes log and closes this window
-                writing.writeLog(getClass(), "Error");
+                // Writes log and closes this window
+                writing.writeLog(getClass(), "Show error");
                 error.setVisible(true);
             }
         }

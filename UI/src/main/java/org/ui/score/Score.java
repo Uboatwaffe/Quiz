@@ -30,7 +30,7 @@ public class Score implements ActionListener {
      */
     public Score(int sc) {
         //Writes log
-        writing.writeLog(getClass(), "Correct answer");
+        writing.writeLog(getClass(), "Constructor");
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -71,7 +71,7 @@ public class Score implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         // Writes log and closes this window
-        writing.writeLog(getClass(), "Closing");
+        writing.writeLog(getClass(), " <- Closing");
         frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
     }
 }

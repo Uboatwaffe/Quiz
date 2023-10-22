@@ -78,6 +78,7 @@ public class ToStrings {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("answer");
             }
         }catch (SQLException ignore){
+            writing.writeLog(ToStrings.class, " -> ExceptionUI");
             new ExceptionUI(getClass());
         }
 
