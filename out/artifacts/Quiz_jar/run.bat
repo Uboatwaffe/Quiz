@@ -1,1 +1,1 @@
-java -jar Quiz.jar
+java -jar C:\Users\PC\Desktop\Maciek\JavaProfessional\Quiz\out\artifacts\Quiz_jar\Quiz.jar

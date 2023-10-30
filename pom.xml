@@ -10,7 +10,7 @@
             <uniqueVersion>false</uniqueVersion>
             <id>corp1</id>
             <name>Quiz_with_JDBC</name>
-            <url>scp://repo/maven2</url>
+            <url>https://maven.apache.org/xsd/maven-4.0.0.xsd</url>
             <layout>default</layout>
         </repository>
     </distributionManagement>
