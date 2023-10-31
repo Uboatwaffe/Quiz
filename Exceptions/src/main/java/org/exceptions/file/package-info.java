@@ -2,7 +2,7 @@
  * Package that contains file responsible for writing error log
  * <ul>
  *     <li>
- *         {@code ERRORS}
+ *         {@code ERRORS.java}
  *     </li>
  * </ul>
  * @author Maciej

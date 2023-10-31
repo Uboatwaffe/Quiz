@@ -3,9 +3,20 @@
  * <ul>
  *     <li>
  *         Showing questions
- *     </li>
- *     <li>
- *         Keeping track of score
+ *         <ul>
+ *             <li>
+ *                 Closed ones ({@code QuestionABCD.java})
+ *             </li>
+ *             <li>
+ *                 Open ones ({@code QuestionOpen.java})
+ *             </li>
+ *             <li>
+ *                 About date ({@code QuestionDate.java})
+ *             </li>
+ *             <li>
+ *                 True or false ones ({@code QuestionTrueOrFalse.java})
+ *             </li>
+ *         </ul>
  *     </li>
  * </ul>
  * @author Maciej

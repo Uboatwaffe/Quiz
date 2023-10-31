@@ -3,7 +3,7 @@ package org.ui.hq;
 import org.db.connecting.Data;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
-import org.ui.questions.QuestionABC;
+import org.ui.questions.QuestionABCD;
 import org.ui.questions.QuestionDate;
 import org.ui.questions.QuestionOpen;
 import org.ui.questions.QuestionTrueOrFalse;
@@ -51,7 +51,7 @@ public class HQ extends Thread{
                     // Creates corresponding UI for type of the question
                     switch(type){
                         case "d" -> new QuestionDate(resultSet.getString("question"), resultSet.getString("answer"));
-                        case "c" -> new QuestionABC(resultSet.getString("question"), resultSet.getString("answer"));
+                        case "c" -> new QuestionABCD(resultSet.getString("question"), resultSet.getString("answer"));
                         case "o" -> new QuestionOpen(resultSet.getString("question"), resultSet.getString("answer"));
                         case "t" -> new QuestionTrueOrFalse(resultSet.getString("question"), resultSet.getString("answer"));
                         default -> new ExceptionUI(getClass());

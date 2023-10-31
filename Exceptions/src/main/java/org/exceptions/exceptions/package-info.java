@@ -2,7 +2,7 @@
  * Package that contains custom exceptions:
  * <ul>
  *     <li>
- *         {@code CustomException}
+ *         {@code CustomException.java}
  *     </li>
  * </ul>
  * @author Maciej

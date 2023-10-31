@@ -1,14 +1,14 @@
 /**
- * Package that have files responsible for
+ * Package that have packages responsible for
  * <ul>
  *     <li>
- *         Showing user something went wrong
+ *         Showing user something went wrong ({@code ui})
  *     </li>
  *     <li>
- *         Writing down which class made program stumble across problem
+ *         Writing down which class made program stumble across problem ({@code file})
  *     </li>
  *     <li>
- *         Custom exception
+ *         Custom exception ({@code exceptions})
  *     </li>
  * </ul>
  * @author Maciej

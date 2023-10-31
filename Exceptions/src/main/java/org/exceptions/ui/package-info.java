@@ -2,7 +2,7 @@
  * Package that contains UI version of exceptions
  * <ul>
  *     <li>
- *         {@code ExceptionUI}
+ *         {@code ExceptionUI.java}
  *     </li>
  * </ul>
  * @author Maciej

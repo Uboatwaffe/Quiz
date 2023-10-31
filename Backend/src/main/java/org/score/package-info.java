@@ -1,7 +1,9 @@
 /**
  * Package that contains
  * <ul>
- *     <li>{@code Count} and it is responsible for keeping eye on score</li>
+ *     <li>
+ *          File that is responsible for keeping eye on score ({@code Count.java})
+ *     </li>
  * </ul>
  *
  * @author Maciej

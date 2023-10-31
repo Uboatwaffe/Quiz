@@ -15,7 +15,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.1
  */
-public class QuestionABC implements ActionListener {
+public class QuestionABCD implements ActionListener {
     /**
      * Frame of the class
      */
@@ -37,7 +37,7 @@ public class QuestionABC implements ActionListener {
      * @param quest String with question
      * @param answer String with expected answer
      */
-    public QuestionABC(String quest, String answer) {
+    public QuestionABCD(String quest, String answer) {
         //Writes log
         writing.writeLog(getClass(),"Constructor()");
 
