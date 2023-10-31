@@ -1,5 +1,8 @@
 
 org.ui.Main: Start program
+org.ui.Main:  -> Credit
+org.ui.admin.others.Credit: Constructor()
+org.ui.admin.others.Credit:  <- Closing
 org.ui.Main: Starting quiz
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
@@ -18,26 +21,9 @@ org.ui.questions.QuestionOpen: Constructor()
 org.ui.hq.HQ: Showing question with type: d
 org.ui.questions.QuestionDate: Constructor()
 org.ui.hq.HQ: All questions showed
-org.ui.questions.QuestionDate:  <- Closing
-org.ui.score.Incorrect: Constructor()
-org.ui.score.Incorrect:  <- Closing
+org.ui.questions.QuestionDate:  <- Closing, Don't know the answer
 org.ui.questions.QuestionOpen:  <- Closing, Don't know the answer
-org.ui.questions.QuestionABCD:  <- Closing
-org.ui.score.Incorrect: Constructor()
-org.ui.score.Incorrect:  <- Closing
+org.ui.questions.QuestionABCD:  <- Closing, Don't know the answer
 org.ui.questions.QuestionTrueOrFalse:  <- Closing, Don't know the answer
-org.ui.Main:  -> Main.score
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
 org.ui.Main:  -> Main.menu
-org.ui.Main:  -> Info
-org.ui.admin.others.Info: Constructor()
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.ui.admin.others.Info:  <- Closing
-org.ui.Main:  -> Credit
-org.ui.admin.others.Credit: Constructor()
-org.ui.admin.others.Credit:  <- Closing
 org.ui.Main:  <- EXIT

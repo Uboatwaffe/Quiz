@@ -2,7 +2,7 @@ package org.connecting;
 
 import org.db.connecting.LoggingIn;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 /**
  * Test
  * @see LoggingIn
