@@ -2,10 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Connection;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 /**
  * Class that deletes questions
@@ -40,7 +39,7 @@ public class Deleting{
             // Executes query
             PreparedStatement statement = Connection.getConnection().prepareStatement(sql);
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException e) {
+        } catch (Exception ignore) {
             writing.writeLog(Deleting.class, " -> ExceptionUI");
             new ExceptionUI(Deleting.class);
         }

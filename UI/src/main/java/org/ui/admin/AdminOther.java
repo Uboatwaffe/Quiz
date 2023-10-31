@@ -1,7 +1,7 @@
 package org.ui.admin;
 
 import org.db.reset.Reset;
-import org.file.writing.Writing;
+import org.file.Writing;
 import org.ui.tutorial.AdminTutorial;
 
 import javax.swing.*;

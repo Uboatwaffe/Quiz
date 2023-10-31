@@ -2,10 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Data;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  * Class that sorts records in table
@@ -57,7 +56,7 @@ public class Sorting {
             for (int j = 0; j < i; j++) {
                 Adding.add(questions[j], answers[j], types[j]);
             }
-        }catch (SQLException ignore){
+        } catch (Exception ignore) {
             writing.writeLog(Sorting.class, " -> ExceptionUI");
             new ExceptionUI(getClass());
         }

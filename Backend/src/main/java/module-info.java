@@ -1,6 +1,7 @@
 /**
  * Module that takes care of whole connectivity with DB,
- * manages and prepares questions
+ * manages and prepares questions. In resources, it has {@code log.txt} which
+ * stores what is happening with program
  * @author Maciej
  */
 module Backend {
@@ -10,6 +11,7 @@ module Backend {
     exports org.db.manage to UI;
     exports org.db.tables to UI;
     exports org.db.reset to UI;
-    exports org.file.writing to UI;
     exports org.db.interfaces to UI;
+    exports org.score to UI;
+    exports org.file to UI;
 }

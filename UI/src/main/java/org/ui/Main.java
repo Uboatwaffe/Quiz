@@ -2,13 +2,13 @@ package org.ui;
 
 import org.db.manage.HowMany;
 import org.exceptions.file.ERRORS;
-import org.file.writing.Writing;
+import org.file.Writing;
+import org.score.Count;
 import org.ui.admin.Logging;
 import org.ui.admin.others.Credit;
 import org.ui.admin.others.Info;
 import org.ui.admin.others.NoQuestions;
 import org.ui.hq.HQ;
-import org.ui.questions.Count;
 import org.ui.tutorial.Tutorial;
 
 import javax.swing.*;

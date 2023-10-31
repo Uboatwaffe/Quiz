@@ -3,10 +3,9 @@ package org.db.tables;
 import org.db.connecting.Connection;
 import org.db.manage.SQL;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 /**
  * Class that is responsible for deleting tables from the DB
@@ -46,7 +45,7 @@ public class Delete{
 
             // Sets current table to 'set1'
             SQL.setCurrentTable(SQL.getAllTables()[0]);
-        } catch (SQLException | NullPointerException e) {
+        } catch (Exception ignore) {
             writing.writeLog(Delete.class, " -> ExceptionUI");
             new ExceptionUI(Delete.class);
         }

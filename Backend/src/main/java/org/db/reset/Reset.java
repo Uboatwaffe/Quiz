@@ -5,7 +5,7 @@ import org.db.manage.ChangePassword;
 import org.db.manage.Deleting;
 import org.db.manage.SQL;
 import org.db.tables.Delete;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 /**
  * Class that stores all default data

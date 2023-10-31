@@ -1,6 +1,6 @@
 package org.ui.score;
 
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

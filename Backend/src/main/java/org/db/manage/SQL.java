@@ -2,10 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Connection;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -76,7 +75,7 @@ public class SQL {
                 db[i++] = resultSet.getString("name");
             }
 
-        }catch (SQLException | NullPointerException ignore){
+        } catch (Exception ignore) {
             new ExceptionUI(SQL.class);
         }
 

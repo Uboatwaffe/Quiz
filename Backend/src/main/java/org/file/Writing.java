@@ -1,9 +1,8 @@
-package org.file.writing;
+package org.file;
 
 import org.exceptions.ui.ExceptionUI;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
@@ -28,7 +27,7 @@ public class Writing {
 
             // Prints empty line
             out.println();
-        }catch (IOException e){
+        } catch (Exception ignore) {
             new ExceptionUI(getClass());
         }
     }
@@ -40,7 +39,7 @@ public class Writing {
         try(PrintWriter out = new PrintWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfessional\\Quiz\\Backend\\src\\main\\resources\\log.txt")) {
             // Clears whole file
             out.println("");
-        }catch(IOException e){
+        } catch (Exception ignore) {
             new ExceptionUI(getClass());
         }
     }

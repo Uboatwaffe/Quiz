@@ -1,6 +1,6 @@
 package org.ui.admin.others;
 
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -50,7 +50,7 @@ public class Credit implements ActionListener {
         JLabel string4 = new JLabel("Start of realisation -- 07.10.2023");
         string4.setBounds(5,80, 200, 15);
 
-        JLabel string5 = new JLabel("End of realisation -- ??.10.2023");
+        JLabel string5 = new JLabel("End of realisation -- ??.??.2023");
         string5.setBounds(5,105, 200, 15);
 
         JLabel string6 = new JLabel("Company -- ");

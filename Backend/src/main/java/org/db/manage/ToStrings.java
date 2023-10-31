@@ -2,7 +2,7 @@ package org.db.manage;
 
 import org.db.connecting.Data;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -45,7 +45,7 @@ public class ToStrings {
             while (resultSet.next()) {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("question");
             }
-        }catch (SQLException ignore){
+        } catch (Exception ignore) {
             new ExceptionUI(getClass());
         }
         // Returns array

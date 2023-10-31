@@ -1,4 +1,4 @@
-package org.ui.questions;
+package org.score;
 
 /**
  * Class that keeps track on current score

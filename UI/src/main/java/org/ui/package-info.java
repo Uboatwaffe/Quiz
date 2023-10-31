@@ -3,11 +3,34 @@
  * <ul>
  *     <li>
  *         Other packages
+ *         <ul>
+ *             <li>
+ *                 {@code admin}
+ *                 <ul>
+ *                     <li>
+ *                         {@code others}
+ *                     </li>
+ *                 </ul>
+ *             </li>
+ *             <li>
+ *                 {@code hq}
+ *             </li>
+ *             <li>
+ *                 {@code questions}
+ *             </li>
+ *             <li>
+ *                 {@code score}
+ *             </li>
+ *             <li>
+ *                 {@code tutorial}
+ *             </li>
+ *         </ul>
  *     </li>
  *     <li>
- *         Main class
+ *         Main class ({@code Main.java})
  *     </li>
  * </ul>
+ * @see org.ui.Main
  * @author Maciej
  * @version 0.1
  */

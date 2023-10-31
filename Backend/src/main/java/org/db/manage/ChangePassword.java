@@ -2,10 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Connection;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 /**
  * Class responsible for changing login and password
@@ -37,7 +36,7 @@ public class ChangePassword {
             // Executes query
             PreparedStatement statement = Connection.getConnection().prepareStatement(SQL);
             statement.executeUpdate();
-        }catch (SQLException | NullPointerException ignore){
+        } catch (Exception ignore) {
             writing.writeLog(Deleting.class, " -> ExceptionUI");
             new ExceptionUI(ChangePassword.class);
         }
