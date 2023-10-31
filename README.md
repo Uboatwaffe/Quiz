@@ -15,9 +15,10 @@
 
 ## Used technologies:
 - MySQL Database
-- Intellij Community 2023
- 
-## Java language usage
+- MySQL Workbench
+- Intellij IDEA Community 2023
+
+## Java language usage:
 - Encapsulation
 - Overloading
 - Overriding
@@ -30,8 +31,38 @@
 - AWT
 - Swing
 - Generics
+- Annotations
+- Exceptions
 
-## !!! Important !!!
+## How to run this program:
+
+### From code:
+
+- Install Intellij IDEA
+- Install MySQL DataBase and set it up
+- Be sure that you have java compiler present (java --version)
+- Download the newest release from GitHub
+- Open the .zip file in some folder then open it with Intellij IDEA
+- Correct the path in the pom.xml's to the JDBC
+- Rebuild the project
+- Run it
+
+### With .jar file:
+
+- Install MySQL DataBase and set it up
+- Download the newest release from GitHub
+- Open the .zip file in some folder and extract: Quiz.jar and run.bat
+- Double click run.bat
+
+### If you want to know how to set up a database see DATABASE.md
+
+###
+
+##### Keep in mind that both of these files have to be in the same directory
+
+##### If you close the cmd that opens program will shut down
+
+## !!! IMPORTANT !!!
 ### Please read LICENSE before using this program
 
 ## Creators
@@ -40,5 +71,11 @@
 
 ## Contact
 ##### If you want to check out JavaDoc go to Quiz/JavaDoc/javadoc.txt and copy the link in the browser
-##### Any issues should be reported via GitHub
+
+##### Any issues ought to be reported via GitHub
 https://github.com/Uboatwaffe/Quiz
+
+
+
+
+

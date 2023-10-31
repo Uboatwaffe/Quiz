@@ -1,18 +1,3 @@
 
 org.ui.Main: Start program
-org.ui.Main:  -> Logging
-org.ui.admin.Logging: Constructor()
-org.db.connecting.LoggingIn: Getting data to logging in
-org.db.connecting.Connection: Establishing connection to DB
-org.ui.admin.Logging:  -> AdminPanel
-org.ui.admin.AdminPanel: Constructor
-org.ui.admin.AdminPanel:  -> Manage.add
-org.ui.admin.Manage: Constructor()
-org.ui.admin.Manage:  -> StringOperations
-org.db.manage.StringOperations:  -> Adding
-org.ui.admin.Manage: In lambda 'toArray'
-org.ui.admin.Manage: In lambda 'checking'
-org.ui.admin.Manage: In lambda 'toArray'
-org.db.manage.StringOperations:  -> ExceptionUI
-org.ui.admin.AdminPanel:  <- Closing
 org.ui.Main:  <- EXIT
