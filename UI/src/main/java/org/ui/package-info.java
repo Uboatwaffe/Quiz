@@ -30,6 +30,7 @@
  *         Main class ({@code Main.java})
  *     </li>
  * </ul>
+ * @see org.ui.Main
  * @author Maciej
  * @version 0.1
  */

@@ -5,6 +5,7 @@
  *         {@code Reset.java}
  *     </li>
  * </ul>
+ * @see org.db.reset.Reset
  * @author Maciej
  * @version 0.1
  */

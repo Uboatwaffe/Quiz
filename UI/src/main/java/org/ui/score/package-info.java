@@ -8,6 +8,8 @@
  *         {@code Incorrect.java}
  *     </li>
  * </ul>
+ * @see org.ui.score.Correct
+ * @see org.ui.score.Incorrect
  * @author Maciej
  * @version 0.1
  */

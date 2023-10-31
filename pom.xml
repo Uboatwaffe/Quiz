@@ -6,7 +6,7 @@
 
     <distributionManagement>
         <repository>
-            <uniqueVersion>false</uniqueVersion>
+            <uniqueVersion>true</uniqueVersion>
             <id>corp1</id>
             <name>Quiz_with_JDBC</name>
             <url>https://maven.apache.org/xsd/maven-4.0.0.xsd</url>

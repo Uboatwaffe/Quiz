@@ -11,6 +11,9 @@
  *         Getting details for logging in ({@code LoggingIn.java})
  *     </li>
  * </ul>
+ * @see org.db.connecting.Connection
+ * @see org.db.connecting.Data
+ * @see org.db.connecting.LoggingIn
  * @author Maciej
  * @version 0.1
  */

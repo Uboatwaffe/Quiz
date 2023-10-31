@@ -5,6 +5,7 @@
  *         {@code ERRORS.java}
  *     </li>
  * </ul>
+ * @see org.exceptions.file.ERRORS
  * @author Maciej
  * @version 0.1
  */

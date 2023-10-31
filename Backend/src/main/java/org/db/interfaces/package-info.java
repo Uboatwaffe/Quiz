@@ -8,6 +8,8 @@
  *         {@code Functional2.java}
  *     </li>
  * </ul>
+ * @see org.db.interfaces.Functional
+ * @see org.db.interfaces.Functional2
  * @author Maciej
  * @version 0.1
  */

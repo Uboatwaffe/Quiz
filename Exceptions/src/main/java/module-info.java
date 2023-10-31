@@ -6,6 +6,7 @@
  *         {@code org.exceptions}
  *     </li>
  * </ul>
+ * It also has file {@code errors.txt} which stores callers of exceptions
  * @author Maciej
  */
 module Exceptions {

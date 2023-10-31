@@ -5,6 +5,7 @@
  *         {@code CustomException.java}
  *     </li>
  * </ul>
+ * @see org.exceptions.exceptions.CustomException
  * @author Maciej
  * @version 0.1
  */

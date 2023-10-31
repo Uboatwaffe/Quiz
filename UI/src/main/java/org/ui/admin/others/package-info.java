@@ -15,6 +15,10 @@
  *         {@code WrongPassword.java}
  *     </li>
  * </ul>
+ * @see org.ui.admin.others.Credit
+ * @see org.ui.admin.others.Info
+ * @see org.ui.admin.others.NoQuestions
+ * @see org.ui.admin.others.WrongPassword
  * @author Maciej
  * @version 0.1
  */
