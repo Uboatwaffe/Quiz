@@ -5,7 +5,7 @@
  */
 module Backend {
     requires java.sql;
-    requires Exceptions;
+    requires transitive Exceptions;
     exports org.db.connecting to UI;
     exports org.db.manage to UI;
     exports org.db.tables to UI;

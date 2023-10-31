@@ -42,7 +42,7 @@ public class StringOperations {
                 Adding.add(db[0], db[1], db[2]);
             else
                 throw new CustomException(StringOperations.class, "Type of question is incorrect!");
-        }catch (CustomException ignore){
+        } catch (Exception ignore) {
             writing.writeLog(StringOperations.class, " -> ExceptionUI");
             new ExceptionUI(StringOperations.class);
         }

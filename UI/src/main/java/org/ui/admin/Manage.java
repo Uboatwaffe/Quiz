@@ -4,6 +4,7 @@ import org.db.interfaces.Functional;
 import org.db.interfaces.Functional2;
 import org.db.manage.Deleting;
 import org.db.manage.StringOperations;
+import org.exceptions.ui.ExceptionUI;
 import org.file.writing.Writing;
 
 import javax.swing.*;
@@ -48,16 +49,21 @@ class Manage implements ActionListener {
      * into 3 records array
      */
     private final Functional toArray = (chain) -> {
-        // Writing log
-        writing.writeLog(getClass(), "In lambda 'toArray'");
+        String[] db = null;
+        try {
+            // Writing log
+            writing.writeLog(getClass(), "In lambda 'toArray'");
 
-        // Creating array
-        String[] db = new String[3];
+            // Creating array
+            db = new String[3];
 
-        // Extracting useful info from given string
-        db[0] = chain.substring(0, chain.indexOf(";")).trim();
-        db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";")).trim();
-        db[2] = chain.substring(chain.lastIndexOf(";") + 1).trim();
+            // Extracting useful info from given string
+            db[0] = chain.substring(0, chain.indexOf(";")).trim();
+            db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";")).trim();
+            db[2] = chain.substring(chain.lastIndexOf(";") + 1).trim();
+        } catch (Exception ignore) {
+            new ExceptionUI(getClass());
+        }
 
         // Returns array with info
         return db;
