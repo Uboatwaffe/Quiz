@@ -27,7 +27,7 @@ public class Writing {
 
             // Prints empty line
             out.println();
-        } catch (Exception igonre) {
+        } catch (Exception ignore) {
             new ExceptionUI(getClass());
         }
     }

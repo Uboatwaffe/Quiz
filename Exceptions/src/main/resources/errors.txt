@@ -1,4 +1,2 @@
 
-org.exceptions.ui.ExceptionUI:	ERROR from:	org.ui.admin.Manage
-org.exceptions.ui.ExceptionUI:	ERROR from:	org.ui.admin.Manage
 org.exceptions.ui.ExceptionUI:	ERROR from:	org.db.manage.StringOperations

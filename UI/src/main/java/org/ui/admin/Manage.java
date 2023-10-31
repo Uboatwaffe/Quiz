@@ -4,7 +4,6 @@ import org.db.interfaces.Functional;
 import org.db.interfaces.Functional2;
 import org.db.manage.Deleting;
 import org.db.manage.StringOperations;
-import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
 import javax.swing.*;
@@ -62,7 +61,6 @@ class Manage implements ActionListener {
             db[1] = chain.substring(chain.indexOf(";") + 1, chain.lastIndexOf(";")).trim();
             db[2] = chain.substring(chain.lastIndexOf(";") + 1).trim();
         } catch (Exception ignore) {
-            new ExceptionUI(getClass());
         }
 
         // Returns array with info
