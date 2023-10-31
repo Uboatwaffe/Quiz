@@ -2,14 +2,14 @@ package org.ui.hq;
 
 import org.db.connecting.Data;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 import org.ui.questions.QuestionABC;
 import org.ui.questions.QuestionDate;
 import org.ui.questions.QuestionOpen;
 import org.ui.questions.QuestionTrueOrFalse;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
+
 /**
  * Class that has its own Thread
  * @author Maciej
@@ -60,7 +60,7 @@ public class HQ extends Thread{
             }
             //Writes log
             writing.writeLog(getClass(), "All questions showed");
-        }catch (SQLException ignored){
+        } catch (Exception ignored) {
             writing.writeLog(getClass(), " -> ExceptionUI");
             new ExceptionUI(getClass());
         }

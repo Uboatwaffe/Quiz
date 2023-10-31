@@ -2,7 +2,7 @@ package org.ui.admin;
 
 import org.db.manage.Sorting;
 import org.db.manage.ToStrings;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import javax.swing.*;
 

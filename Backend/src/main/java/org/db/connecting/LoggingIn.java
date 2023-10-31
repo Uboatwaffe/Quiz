@@ -1,10 +1,9 @@
 package org.db.connecting;
 
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -49,7 +48,7 @@ public final class LoggingIn {
                 db[2] = resultSet.getString("user");
             }
 
-        } catch (SQLException | NullPointerException ignored) {
+        } catch (Exception ignored) {
             // If something went wrong informs user about this
             writing.writeLog(LoggingIn.class, " -> ExceptionUI");
             new ExceptionUI(LoggingIn.class);

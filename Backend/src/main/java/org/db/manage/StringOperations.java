@@ -4,7 +4,7 @@ import org.db.interfaces.Functional;
 import org.db.interfaces.Functional2;
 import org.exceptions.exceptions.CustomException;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 /**
  * Class that works on String chains and send it to the adding class

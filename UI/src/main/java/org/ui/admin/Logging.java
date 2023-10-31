@@ -1,7 +1,7 @@
 package org.ui.admin;
 
 import org.db.connecting.LoggingIn;
-import org.file.writing.Writing;
+import org.file.Writing;
 import org.ui.Main;
 import org.ui.admin.others.WrongPassword;
 

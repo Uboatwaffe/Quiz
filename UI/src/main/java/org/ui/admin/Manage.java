@@ -5,7 +5,7 @@ import org.db.interfaces.Functional2;
 import org.db.manage.Deleting;
 import org.db.manage.StringOperations;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

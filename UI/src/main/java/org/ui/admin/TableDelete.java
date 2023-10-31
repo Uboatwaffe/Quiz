@@ -2,7 +2,7 @@ package org.ui.admin;
 
 import org.db.manage.SQL;
 import org.db.tables.Delete;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

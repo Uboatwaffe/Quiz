@@ -1,6 +1,6 @@
 package org.ui.admin.others;
 
-import org.file.writing.Writing;
+import org.file.Writing;
 import org.ui.Main;
 
 import javax.swing.*;

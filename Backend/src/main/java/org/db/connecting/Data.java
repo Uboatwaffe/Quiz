@@ -2,10 +2,9 @@ package org.db.connecting;
 
 import org.db.manage.SQL;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -40,7 +39,7 @@ public final class Data {
             // Gets data from DB
             resultSet = statement.executeQuery("SELECT * FROM " + SQL.getCurrentTable());
 
-        } catch (SQLException | NullPointerException ignored) {
+        } catch (Exception ignored) {
             // If something went wrong informs user about this
             writing.writeLog(getClass(), " -> ExceptionUI");
             new ExceptionUI(getClass());

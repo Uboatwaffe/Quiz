@@ -2,7 +2,7 @@ package org.ui.admin.others;
 
 import org.db.manage.HowMany;
 import org.db.manage.SQL;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

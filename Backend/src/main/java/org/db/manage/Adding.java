@@ -2,10 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Connection;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 /**
  * Class responsible for adding new questions to database
@@ -47,7 +46,7 @@ public final class Adding{
 
             // Executes query
             statement.executeUpdate();
-        } catch (SQLException | NullPointerException e) {
+        } catch (Exception ignore) {
             writing.writeLog(Adding.class, " -> ExceptionUI");
             new ExceptionUI(Adding.class);
         }

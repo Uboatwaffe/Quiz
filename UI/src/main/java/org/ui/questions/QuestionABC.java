@@ -1,6 +1,7 @@
 package org.ui.questions;
 
-import org.file.writing.Writing;
+import org.file.Writing;
+import org.score.Count;
 import org.ui.score.Correct;
 import org.ui.score.Incorrect;
 
@@ -92,19 +93,19 @@ public class QuestionABC implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(!e.getActionCommand().equals("I DO NOT KNOW")) {
-            try {
-                // If answer is correct lets know user and adds 1 point to the score
-                writing.writeLog(getClass(), " <- Closing");
-                if (e.getActionCommand().equals(answer)) {
-                    Count.setCount(Count.getCount() + 1);
-                    new Correct(Count.getCount());
-                } else {
-                    new Incorrect(answer, e.getActionCommand());
-                }
-            } finally {
-                // Closes this window
-                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+
+            // If answer is correct lets know user and adds 1 point to the score
+            writing.writeLog(getClass(), " <- Closing");
+            if (e.getActionCommand().equals(answer)) {
+                Count.setCount(Count.getCount() + 1);
+                new Correct(Count.getCount());
+            } else {
+                new Incorrect(answer, e.getActionCommand());
             }
+
+            // Closes this window
+            frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+
         }else{
             // Writes log and closes this window
             writing.writeLog(getClass()," <- Closing, Don't know the answer");

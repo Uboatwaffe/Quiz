@@ -1,10 +1,9 @@
 package org.db.connecting;
 
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 /**
  * Class responsible for establishing connection with database
@@ -33,7 +32,7 @@ public final class Connection {
             // Establishes connection with DB and returns it
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/quiz", "root", "password");
 
-        }catch (SQLException ignore){
+        } catch (Exception ignore) {
             writing.writeLog(Connection.class, " -> ExceptionUI");
 
             // If something went wrong informs user about this

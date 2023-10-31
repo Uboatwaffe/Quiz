@@ -3,4 +3,4 @@
  * @author Maciej
  * @version 0.1
  */
-package org.file.writing;
+package org.file;

@@ -2,10 +2,9 @@ package org.db.manage;
 
 import org.db.connecting.Data;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  * Class responsible for letting program know info about
@@ -44,7 +43,7 @@ public class HowMany {
             // Counts how many records there are
             while (resultSet.next()) i++;
 
-        }catch (SQLException ignore){
+        } catch (Exception ignore) {
             writing.writeLog(HowMany.class, " -> ExceptionUI");
             new ExceptionUI(getClass());
         }
@@ -70,7 +69,7 @@ public class HowMany {
             while (resultSet.next()) {
                 i = Integer.parseInt(resultSet.getString("id"));
             }
-        } catch (SQLException ignore) {
+        } catch (Exception ignore) {
             writing.writeLog(HowMany.class, " -> ExceptionUI");
             new ExceptionUI(getClass());
         }

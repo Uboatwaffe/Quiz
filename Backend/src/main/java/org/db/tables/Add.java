@@ -3,10 +3,9 @@ package org.db.tables;
 import org.db.connecting.Connection;
 import org.db.manage.SQL;
 import org.exceptions.ui.ExceptionUI;
-import org.file.writing.Writing;
+import org.file.Writing;
 
 import java.sql.PreparedStatement;
-import java.sql.SQLException;
 
 /**
  * Class that is responsible for adding new tables into the DB
@@ -46,7 +45,7 @@ public final class Add{
             statement3.executeUpdate();
 
             SQL.setCurrentTable(SQL.getAllTables()[SQL.getAllTables().length-1]);
-        } catch (SQLException | NullPointerException e) {
+        } catch (Exception ignore) {
             writing.writeLog(Add.class, " -> ExceptionUI");
             new ExceptionUI(Add.class);
         }
