@@ -1,5 +1,3 @@
 
 org.ui.Main: Starting program
 org.ui.Main: Showing two options
-org.ui.Main:  -> index.html
-org.ui.Main:  <- EXIT

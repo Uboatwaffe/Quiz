@@ -1,0 +1,34 @@
+#container {
+    background-color: #404040;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    grid-template-areas:
+    "div1 div2 div2 div2 div2"
+    "div1 div3 div3 div3 div3"
+    "div1 div3 div3 div3 div3"
+    "div1 div3 div3 div3 div3"
+    "div1 div4 div4 div4 div4";
+}
+
+#menu{
+    grid-area: div1;
+    background-color: red;
+}
+
+#title{
+    grid-area: div2;
+    background-color: green;
+}
+
+#content{
+    grid-area: div3;
+    background-color: yellow;
+}
+#footer{
+    grid-area: div4;
+    background-color: blue;
+}

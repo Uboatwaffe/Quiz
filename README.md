@@ -17,6 +17,7 @@
 - MySQL Database
 - MySQL Workbench
 - Intellij IDEA Community 2023
+- Visual Studio Code (for JS development)
 
 ## Java language usage:
 - Encapsulation
@@ -74,8 +75,3 @@
 
 ##### Any issues ought to be reported via GitHub
 https://github.com/Uboatwaffe/Quiz
-
-
-
-
-
