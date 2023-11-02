@@ -1,34 +1,103 @@
 #container {
-    background-color: #404040;
+    background-color: #606060;
     display: grid;
     height: 100%;
     width: 100%;
     position: fixed;
     top: 0px;
     left: 0px;
-    grid-template-areas:
-    "div1 div2 div2 div2 div2"
-    "div1 div3 div3 div3 div3"
-    "div1 div3 div3 div3 div3"
-    "div1 div3 div3 div3 div3"
-    "div1 div4 div4 div4 div4";
 }
 
 #menu{
-    grid-area: div1;
-    background-color: red;
+    background-color: #303030;
+    position: fixed;
+    margin-left: 5px;
+    margin-top: 5px;
+    top: 0px;
+    left: 0px;
+    width: 252px;
+    height: 915px;
 }
 
 #title{
-    grid-area: div2;
-    background-color: green;
+    background-color: #800000;
+    text-align: center;
+    font-size: 50px;
+    position: absolute;
+    margin-top: 5px;
+    top: 0px;
+    left: 257px;
+    height: 200px;
+    width: 1415px;
+    text-align: center;
 }
 
 #content{
-    grid-area: div3;
-    background-color: yellow;
+    position: absolute;
+    border-right-color: #202020;
+    top: 205px;
+    left: 257px;
+    height: 650px;
+    width: 1415px;
+    background-color: #404040;
+    text-align: center;
 }
 #footer{
-    grid-area: div4;
-    background-color: blue;
+    position: absolute;
+    top: 855px;
+    left: 257px;
+    height: 65px;
+    width: 1415px;
+    background-color: #202020;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.menu{
+    margin-right: 0px;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.co{
+    text-align: justify;
+    font-size: 20px;
+}
+
+li{
+    color: darkgray;
+}
+
+.li2{
+    font-size: 30px;
+    color: black;
+}
+
+h3{
+    color: darkgray;
+}
+
+hr{
+    width: 90%;
+}
+
+a{
+    color: darkgray;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:visited{
+    color: darkgray;
+}
+
+a:active{
+    color: darkgray;
+}
+
+.p2{
+    font-size: 50px;
 }

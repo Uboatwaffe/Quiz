@@ -32,32 +32,35 @@ public class Tutorial implements ActionListener {
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(210,250);
+        frame.setSize(210, 280);
         frame.setLayout(null);
 
         // Labels
         JLabel string1 = new JLabel("Welcome to the tutorial!");
         string1.setBounds(5, 5, 150, 15);
 
-        JLabel string2 = new JLabel("There are 3 types of data input:");
+        JLabel string2 = new JLabel("There are 4 types of data input:");
         string2.setBounds(5,30, 200, 15);
 
-        JLabel string3 = new JLabel("1) A, B, C, D just click the button");
+        JLabel string3 = new JLabel("1) For closed and T/F ones");
         string3.setBounds(5,55, 200, 15);
 
+        JLabel string7 = new JLabel(" just click the button");
+        string7.setBounds(5, 80, 200, 15);
+
         JLabel string4 = new JLabel("2) Date in format of DD.MM.YYYY");
-        string4.setBounds(5,80, 200, 15);
+        string4.setBounds(5, 105, 200, 15);
 
         JLabel string5 = new JLabel("3) Open question should be");
-        string5.setBounds(5,105, 200, 15);
+        string5.setBounds(5, 130, 200, 15);
 
         JLabel string6 = new JLabel("typed with CAPS LOCK");
-        string6.setBounds(5,130, 200, 15);
+        string6.setBounds(5, 155, 200, 15);
 
         // Buttons
         JButton understood = new JButton("UNDERSTOOD");
 
-        understood.setBounds(5, 155, 185, 50);
+        understood.setBounds(5, 180, 185, 50);
 
         understood.addActionListener(this);
 
@@ -66,6 +69,7 @@ public class Tutorial implements ActionListener {
         frame.add(string1);
         frame.add(string2);
         frame.add(string3);
+        frame.add(string7);
         frame.add(string4);
         frame.add(string5);
         frame.add(string6);
