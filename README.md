@@ -54,13 +54,13 @@
 - Open the .zip file in some folder and extract: Quiz.jar and run.bat
 - Double click run.bat
 
-### If you want to know how to set up a database see DATABASE.md
-
-###
-
 ##### Keep in mind that both of these files have to be in the same directory
 
 ##### If you close the cmd that opens program will shut down
+
+###
+
+### If you want to know how to set up a database see DATABASE.md
 
 ## !!! IMPORTANT !!!
 ### Please read LICENSE before using this program
