@@ -1,0 +1,96 @@
+package org.ui.swing.tutorial;
+
+import org.file.Writing;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+
+/**
+ * UI for showing tutorial for admin
+ * @author Maciej
+ * @version 0.1
+ */
+public class AdminTutorial implements ActionListener {
+    /**
+     * Frame of the class
+     */
+    private final JFrame frame = new JFrame("Tutorial");
+
+    /**
+     * Object used to write log
+     * @see Writing
+     */
+    private final static Writing writing = new Writing();
+    /**
+     * Constructor
+     */
+    public AdminTutorial() {
+        //Writes log
+        writing.writeLog(getClass(), "Constructor()");
+
+        // Default settings
+        frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+        frame.setSize(310,285);
+        frame.setLayout(null);
+
+        // Labels
+        JLabel string1 = new JLabel("Welcome to the tutorial!");
+        string1.setBounds(5, 5, 150, 15);
+
+        JLabel string2 = new JLabel("There are 3 types of data input:");
+        string2.setBounds(5,30, 200, 15);
+
+        JLabel string3 = new JLabel("1) Closed type is 'c', required answer is A/B/C/D");
+        string3.setBounds(5,55, 400, 15);
+
+        JLabel string4 = new JLabel("2) Date type is 'd', required answer is DD.MM.YYYY");
+        string4.setBounds(5,80, 400, 15);
+
+        JLabel string5 = new JLabel("3) Open question type is 'o', required answer is");
+        string5.setBounds(5,105, 400, 15);
+
+        JLabel string6 = new JLabel("typed with CAPS LOCK");
+        string6.setBounds(5,130, 400, 15);
+
+        JLabel string7 = new JLabel("4) True or false type is 't', required answer is");
+        string7.setBounds(5,150, 400, 15);
+
+        JLabel string8 = new JLabel("TRUE/FALSE");
+        string8.setBounds(5,170, 400, 15);
+
+        // Buttons
+        JButton understood = new JButton("UNDERSTOOD");
+
+        understood.setBounds(5, 190, 285, 50);
+
+        understood.addActionListener(this);
+
+
+        // Adding to the frame
+        frame.add(string1);
+        frame.add(string2);
+        frame.add(string3);
+        frame.add(string4);
+        frame.add(string5);
+        frame.add(string6);
+        frame.add(string7);
+        frame.add(string8);
+        frame.add(understood);
+
+
+        // Setting up the visibility
+        frame.setVisible(true);
+    }
+    /**
+     * Method that processes what to do
+     * @param e the event to be processed
+     */
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        // Writes log and closes this window
+        writing.writeLog(getClass(), " <- Closing");
+        frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+    }
+}

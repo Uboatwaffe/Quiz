@@ -1,5 +1,5 @@
 
-org.ui.Main: Start program
-org.ui.Main:  -> Credit
-org.ui.admin.others.Credit: Constructor()
-org.ui.admin.others.Credit:  <- Closing
+org.ui.Main: Starting program
+org.ui.Main: Showing two options
+org.ui.Main:  -> index.html
+org.ui.Main:  <- EXIT

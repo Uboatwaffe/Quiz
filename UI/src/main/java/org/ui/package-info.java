@@ -1,37 +1,14 @@
 /**
- * Package that have
+ * Package that have packages
  * <ul>
  *     <li>
- *         Other packages
- *         <ul>
- *             <li>
- *                 {@code admin}
- *                 <ul>
- *                     <li>
- *                         {@code others}
- *                     </li>
- *                 </ul>
- *             </li>
- *             <li>
- *                 {@code hq}
- *             </li>
- *             <li>
- *                 {@code questions}
- *             </li>
- *             <li>
- *                 {@code score}
- *             </li>
- *             <li>
- *                 {@code tutorial}
- *             </li>
- *         </ul>
+ *         {@code swing}
  *     </li>
  *     <li>
- *         Main class ({@code Main.java})
+ *         {@code website}
  *     </li>
  * </ul>
- * @see org.ui.Main
- * @author Maciej
- * @version 0.1
+ * that are responsible for different types of quiz. Also, it has file
+ * {@code MainSwing.java} that runs whole quiz
  */
 package org.ui;
