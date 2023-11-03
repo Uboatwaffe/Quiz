@@ -22,7 +22,7 @@ public class Main extends JFrame {
     private JLabel errors;
     private JLabel fun;
 
-    Main() {
+    public Main() {
         setContentPane(panel);
         setTitle("Quiz");
         setSize(530, 250);
@@ -59,12 +59,16 @@ public class Main extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                System.exit(0);
             }
         });
     }
 
     public static void main(String[] args) {
-        Main main = new Main();
+        new Main();
+    }
+
+    public void showMain() {
+        setVisible(true);
     }
 }

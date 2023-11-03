@@ -1,2 +1,13 @@
 
 org.ui.Main: Start program
+org.ui.Main:  -> Logging
+org.ui.admin.Logging: Constructor()
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
