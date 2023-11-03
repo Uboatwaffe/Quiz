@@ -54,7 +54,7 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new ShowAll().ShowQuestions();
             }
         });
         show_a.addActionListener(new ActionListener() {
@@ -65,7 +65,7 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new ShowAll().ShowAnswers();
             }
         });
         close.addActionListener(new ActionListener() {

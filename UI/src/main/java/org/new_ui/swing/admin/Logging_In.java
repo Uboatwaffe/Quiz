@@ -20,7 +20,7 @@ public class Logging_In extends JFrame {
     public Logging_In() {
         setContentPane(panel);
         setTitle("Log in");
-        setSize(400, 200);
+        setSize(540, 200);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
         log_in.addActionListener(new ActionListener() {
