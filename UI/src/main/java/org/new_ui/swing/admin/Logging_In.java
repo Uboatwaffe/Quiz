@@ -32,7 +32,10 @@ public class Logging_In extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
-                    System.exit(0);
+                    new org.new_ui.swing.admin.AdminPanel();
+                    dispatchEvent(new WindowEvent(Logging_In.this, WindowEvent.WINDOW_CLOSING));
+                } else {
+                    // TODO this
                 }
             }
         });
