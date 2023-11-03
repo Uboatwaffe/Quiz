@@ -1,5 +1,2 @@
 
 org.ui.Main: Start program
-org.ui.Main:  -> Credit
-org.ui.admin.others.Credit: Constructor()
-org.ui.admin.others.Credit:  <- Closing
