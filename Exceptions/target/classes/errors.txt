@@ -1,1 +1,3 @@
 
+org.db.manage.StringOperations:	Type of question is incorrect!
+org.exceptions.ui.ExceptionUI:	ERROR from:	org.db.manage.StringOperations

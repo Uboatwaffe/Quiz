@@ -13,14 +13,12 @@ public class Logging_In extends JFrame {
     private JPasswordField password;
     private JButton log_in;
     private JButton close;
-    private JLabel please;
     private JLabel insert_login;
-    private JLabel insert_password;
 
     public Logging_In() {
         setContentPane(panel);
         setTitle("Log in");
-        setSize(540, 200);
+        setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
         log_in.addActionListener(new ActionListener() {

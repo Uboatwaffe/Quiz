@@ -1,18 +1,330 @@
 
 org.ui.Main: Start program
-org.ui.Main:  -> Logging
-org.ui.admin.Logging: Constructor()
 org.db.connecting.LoggingIn: Getting data to logging in
 org.db.connecting.Connection: Establishing connection to DB
-org.ui.admin.Logging:  -> AdminPanel
-org.ui.admin.AdminPanel: Constructor
-org.ui.admin.AdminPanel:  -> ShowQuestions
-org.ui.admin.ShowAll: Showing questions
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.StringOperations:  -> ExceptionUI
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.Sorting: Sorts
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
@@ -23,6 +335,11 @@ org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
 org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Gets highest id of all records
 org.db.connecting.Data: Getting all data from DB
@@ -50,22 +367,12 @@ org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.ui.admin.AdminPanel:  -> Manage.delete
-org.ui.admin.Manage: Deleting question
-org.db.connecting.LoggingIn: Getting data to logging in
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.LoggingIn: Getting data to logging in
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.LoggingIn: Getting data to logging in
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.LoggingIn: Getting data to logging in
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Deleting: Deleting question
-org.db.connecting.Connection: Establishing connection to DB
-org.ui.admin.AdminPanel:  -> ShowQuestions
-org.ui.admin.ShowAll: Showing questions
 org.db.manage.Sorting: Sorts
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
@@ -95,25 +402,52 @@ org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.Adding: Adding questions
 org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.ToStrings: Getting questions in array
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.ui.admin.AdminPanel:  -> AdminOther
-org.ui.admin.AdminOther: Constructor
-org.ui.admin.AdminOther:  -> Reset
-org.db.manage.SQL: Getting all tables names
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.db.reset.Reset: Reseting
-org.db.reset.Reset:  -> SQL
-org.db.manage.SQL: Getting all tables names
+org.db.manage.Adding: Adding questions
 org.db.connecting.Connection: Establishing connection to DB
-org.db.reset.Reset:  -> Deleting
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
 org.db.manage.Deleting: Deleting question
 org.db.connecting.Connection: Establishing connection to DB
-org.db.reset.Reset:  -> Adding
 org.db.manage.HowMany: Gets highest id of all records
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
@@ -134,18 +468,65 @@ org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.Adding: Adding questions
 org.db.connecting.Connection: Establishing connection to DB
-org.db.reset.Reset:  -> Delete
-org.db.reset.Reset:  -> ChangePassword
-org.db.manage.ChangePassword: Updating admin details
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.LoggingIn: Getting data to logging in
+org.db.manage.Adding: Adding questions
 org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.LoggingIn: Getting data to logging in
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.ToStrings: Getting questions in array
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
 org.db.connecting.Data: Getting all data from DB
@@ -162,6 +543,338 @@ org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
 org.db.connecting.LoggingIn: Getting data to logging in
 org.db.connecting.Connection: Establishing connection to DB
 org.db.connecting.LoggingIn: Getting data to logging in
@@ -174,7 +887,1420 @@ org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
 org.db.connecting.LoggingIn: Getting data to logging in
 org.db.connecting.Connection: Establishing connection to DB
 org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.AddQ$2:  -> StringOperations
+org.db.manage.StringOperations:  -> Adding
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.new_ui.swing.admin.AddQ: In lambda 'checking'
+org.new_ui.swing.admin.AddQ: In lambda 'toArray'
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB

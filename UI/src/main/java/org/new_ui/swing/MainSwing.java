@@ -22,7 +22,7 @@ public class MainSwing extends JFrame {
     public MainSwing() {
         setContentPane(panel);
         setTitle("QuizSwing");
-        setSize(440, 170);
+        setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
         start.addActionListener(new ActionListener() {
