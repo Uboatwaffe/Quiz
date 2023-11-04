@@ -11,7 +11,26 @@
 - #### port: '3306'
 - #### username: 'root'
 
-## 5) In this connection create 3 tables
+## 5) Double click current schema and then click first icon that appears at the top ('Create a new SQL tab for executing queries')
+
+## SQL
+
+1. ``CREATE SCHEMA `quiz` ;``
+2. ``CREATE TABLE `quiz`.`admin` (`login` VARCHAR(40) NOT NULL,`password` VARCHAR(45) NOT NULL,`user` VARCHAR(45) NOT NULL, PRIMARY KEY (`user`));``
+3. ``CREATE TABLE `quiz`.`set1` (`id` INT NOT NULL,`question` VARCHAR(90) NOT NULL,`answer` VARCHAR(45) NOT NULL,`type` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`));``
+4. ``CREATE TABLE `quiz`.`tables` (`name` VARCHAR(45) NOT NULL, PRIMARY KEY (`name`));``
+5. ``INSERT INTO `quiz`.`admin` (`login`, `password`, `user`) VALUES ('Login', 'Password', 'admin');``
+6. ``INSERT INTO `quiz`.`tables` (`name`) VALUES ('set1');``
+7. ``INSERT INTO `quiz`.`set1` (`id`, `question`, `answer`, `type`) VALUES ('1', 'True or False', 'TRUE', 't');``
+8. ``INSERT INTO `quiz`.`set1` (`id`, `question`, `answer`, `type`) VALUES ('2', 'Open question', 'YES', 'o');``
+9. ``INSERT INTO `quiz`.`set1` (`id`, `question`, `answer`, `type`) VALUES ('3', 'Close question', 'A', 'c');``
+10. ``INSERT INTO `quiz`.`set1` (`id`, `question`, `answer`, `type`) VALUES ('4', 'Question about date', '11.11.111', 'd');``
+
+## After you copied one line of this code click lighting arrow above, then in the place of executed code insert next line of this code unless you copied whole code.
+
+## !!!Do this only if you didn't executed code from above!!!
+
+## Create 3 tables:
 
 - #### admin
 - #### set1
@@ -46,18 +65,6 @@
 
 - 'name' ; varchar(45) ; PK, NN ; set1
 
-## SQL
-
-1. ``CREATE SCHEMA `quiz` ;``
-2. ``CREATE TABLE `quiz`.`admin` (`login` VARCHAR(40) NOT NULL,`password` VARCHAR(45) NOT NULL,`user` VARCHAR(45) NOT NULL, PRIMARY KEY (`user`));``
-3. ``CREATE TABLE `quiz`.`set1` (`id` INT NOT NULL,`question` VARCHAR(90) NOT NULL,`answer` VARCHAR(45) NOT NULL,`type` VARCHAR(45) NOT NULL, PRIMARY KEY (`id`));``
-4. ``CREATE TABLE `quiz`.`tables` (`name` VARCHAR(45) NOT NULL, PRIMARY KEY (`name`));``
-5. ``INSERT INTO `quiz`.`admin` (`login`, `password`, `user`) VALUES ('Login', 'Password', 'admin');``
-6. ``INSERT INTO `quiz`.`tables` (`name`) VALUES ('set1');``
-7. ``INSERT INTO `quiz`.`set1` (`id`, `question`, `answer`, `type`) VALUES ('1', 'True or False', 'TRUE', 't');``
-8. ``INSERT INTO `quiz`.`set1` (`id`, `question`, `answer`, `type`) VALUES ('2', 'Open question', 'YES', 'o');``
-9. ``INSERT INTO `quiz`.`set1` (`id`, `question`, `answer`, `type`) VALUES ('3', 'Close question', 'A', 'c');``
-10. ``INSERT INTO `quiz`.`set1` (`id`, `question`, `answer`, `type`) VALUES ('4', 'Question about date', '11.11.111', 'd');``
 
 ## Tutorial
 
