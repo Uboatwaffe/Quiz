@@ -59,6 +59,7 @@ public class Main extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Main.class, " <- EXIT");
                 System.exit(0);
             }
         });
