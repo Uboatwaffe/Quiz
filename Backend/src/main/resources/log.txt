@@ -338,3 +338,41 @@ org.new_ui.swing.questions.OpenQuestion:  <- Closing
 org.new_ui.swing.questions.ClosedQuestion:  <- Closing
 org.new_ui.swing.questions.TorFQuestion:  <- Closing
 org.new_ui.Main:  <- EXIT
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.ui.Main:  <- EXIT
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.ui.swing.hq.HQ: Starts showing questions
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.ui.swing.hq.HQ: Showing question with type: t
+org.ui.swing.hq.HQ: Showing question with type: c
+org.ui.swing.hq.HQ: Showing question with type: o
+org.ui.swing.hq.HQ: Showing question with type: d
+org.ui.swing.hq.HQ: All questions showed
+org.ui.swing.questions.DateQuestion:  <- Closing
+org.ui.swing.questions.OpenQuestion:  <- Closing, Don't know the answer
+org.ui.swing.questions.ClosedQuestion:  <- Closing
+org.ui.swing.questions.TorFQuestion:  <- Closing
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.ui.Main:  <- EXIT
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.ui.Main:  <- EXIT
