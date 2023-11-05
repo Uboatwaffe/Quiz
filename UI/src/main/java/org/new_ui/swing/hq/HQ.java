@@ -7,6 +7,7 @@ import org.new_ui.swing.questions.ClosedQuestion;
 import org.new_ui.swing.questions.DateQuestion;
 import org.new_ui.swing.questions.OpenQuestion;
 import org.new_ui.swing.questions.TorFQuestion;
+import org.new_ui.swing.score.FinalScore;
 import org.score.Count;
 
 import java.sql.ResultSet;
@@ -46,6 +47,7 @@ public class HQ extends Thread {
             ResultSet resultSet = data.getData();
 
             if (resultSet != null) {
+                new FinalScore();
                 while (resultSet.next()) {
                     // Gets type of the question
                     String type = resultSet.getString("type");

@@ -273,3 +273,68 @@ org.new_ui.swing.questions.OpenQuestion:  <- Closing, Don't know the answer
 org.new_ui.swing.questions.ClosedQuestion:  <- Closing, Don't know the answer
 org.new_ui.swing.questions.TorFQuestion:  <- Closing, Don't know the answer
 org.new_ui.Main:  <- EXIT
+org.new_ui.swing.hq.HQ: Starts showing questions
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.hq.HQ: Showing question with type: t
+org.new_ui.swing.hq.HQ: Showing question with type: c
+org.new_ui.swing.hq.HQ: Showing question with type: o
+org.new_ui.swing.hq.HQ: Showing question with type: d
+org.new_ui.swing.hq.HQ: All questions showed
+org.new_ui.swing.questions.DateQuestion:  <- Closing
+org.new_ui.swing.questions.OpenQuestion:  <- Closing
+org.new_ui.swing.questions.ClosedQuestion:  <- Closing
+org.new_ui.swing.questions.TorFQuestion:  <- Closing
+org.new_ui.Main:  <- EXIT
+org.new_ui.swing.hq.HQ: Starts showing questions
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.hq.HQ: Showing question with type: t
+org.new_ui.swing.hq.HQ: Showing question with type: c
+org.new_ui.swing.hq.HQ: Showing question with type: o
+org.new_ui.swing.hq.HQ: Showing question with type: d
+org.new_ui.swing.hq.HQ: All questions showed
+org.new_ui.swing.questions.DateQuestion:  <- Closing
+org.new_ui.swing.hq.HQ: Starts showing questions
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.hq.HQ: Showing question with type: t
+org.new_ui.swing.hq.HQ: Showing question with type: c
+org.new_ui.swing.hq.HQ: Showing question with type: o
+org.new_ui.swing.hq.HQ: Showing question with type: d
+org.new_ui.swing.hq.HQ: All questions showed
+org.new_ui.swing.questions.DateQuestion:  <- Closing
+org.new_ui.swing.questions.OpenQuestion:  <- Closing
+org.new_ui.swing.questions.ClosedQuestion:  <- Closing
+org.new_ui.swing.questions.TorFQuestion:  <- Closing
+org.new_ui.swing.hq.HQ: Starts showing questions
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.hq.HQ: Showing question with type: t
+org.new_ui.swing.hq.HQ: Showing question with type: c
+org.new_ui.swing.hq.HQ: Showing question with type: o
+org.new_ui.swing.hq.HQ: Showing question with type: d
+org.new_ui.swing.hq.HQ: All questions showed
+org.new_ui.swing.questions.DateQuestion:  <- Closing
+org.new_ui.swing.questions.OpenQuestion:  <- Closing
+org.new_ui.swing.questions.ClosedQuestion:  <- Closing
+org.new_ui.swing.questions.TorFQuestion:  <- Closing
+org.new_ui.swing.hq.HQ: Starts showing questions
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.hq.HQ: Showing question with type: t
+org.new_ui.swing.hq.HQ: Showing question with type: c
+org.new_ui.swing.hq.HQ: Showing question with type: o
+org.new_ui.swing.hq.HQ: Showing question with type: d
+org.new_ui.swing.hq.HQ: All questions showed
+org.new_ui.swing.questions.DateQuestion:  <- Closing
+org.new_ui.swing.questions.OpenQuestion:  <- Closing
+org.new_ui.swing.questions.ClosedQuestion:  <- Closing
+org.new_ui.swing.questions.TorFQuestion:  <- Closing
+org.new_ui.Main:  <- EXIT
