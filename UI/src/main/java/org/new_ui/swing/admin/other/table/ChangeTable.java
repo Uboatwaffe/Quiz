@@ -68,6 +68,7 @@ public class ChangeTable extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                info.setText("Current set: " + SQL.getCurrentTable());
                 addData();
             }
         });

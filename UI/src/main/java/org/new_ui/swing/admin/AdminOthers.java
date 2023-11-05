@@ -3,6 +3,7 @@ package org.new_ui.swing.admin;
 import org.db.reset.Reset;
 import org.new_ui.swing.admin.other.details.Details;
 import org.new_ui.swing.admin.other.table.ChangeTable;
+import org.new_ui.swing.admin.other.table.TablesManage;
 import org.new_ui.swing.admin.other.tutorial.AdminTutorial;
 
 import javax.swing.*;
@@ -33,7 +34,8 @@ public class AdminOthers extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new TablesManage();
+                dispatchEvent(new WindowEvent(AdminOthers.this, WindowEvent.WINDOW_CLOSING));
             }
         });
         changeTable.addActionListener(new ActionListener() {

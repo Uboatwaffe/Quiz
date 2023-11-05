@@ -255,3 +255,300 @@ org.db.reset.Reset:  -> ChangePassword
 org.db.manage.ChangePassword: Updating admin details
 org.db.connecting.Connection: Establishing connection to DB
 org.new_ui.Main:  <- EXIT
+org.ui.admin.AdminOther:  -> TableManage
+org.ui.admin.TablesManage: Constructor()
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.Main:  <- EXIT
+org.ui.admin.AdminOther:  -> TableManage
+org.ui.admin.TablesManage: Constructor()
+org.ui.admin.TablesManage:  -> TableAdd
+org.ui.admin.TableAdd: Adding table
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.ui.admin.TableAdd: Show error
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1:  -> Add
+org.db.tables.Add: Adding tables
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1:  -> Add
+org.db.tables.Add: Adding tables
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.Main:  <- EXIT
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1:  -> Add
+org.db.tables.Add: Adding tables
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.Main:  <- EXIT
+org.ui.admin.TableAdd:  <- Closing
+org.ui.admin.TablesManage:  -> TableDelete
+org.ui.admin.TableDelete: Constructor()
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.ui.admin.TableDelete: Show error
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.AddTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Sorting: Sorts
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting questions in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.ToStrings: Getting answers in array
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Counts how many records
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.LoggingIn: Getting data to logging in
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.DeleteTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.DeleteTable$1: Show error
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.DeleteTable$1:  -> Delete
+org.db.tables.Delete: Deleting table
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.swing.admin.other.table.DeleteTable$1:  -> Delete
+org.db.tables.Delete: Deleting table
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.reset.Reset: Reseting
+org.db.reset.Reset:  -> SQL
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.reset.Reset:  -> Deleting
+org.db.manage.Deleting: Deleting question
+org.db.connecting.Connection: Establishing connection to DB
+org.db.reset.Reset:  -> Adding
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.HowMany: Gets highest id of all records
+org.db.connecting.Data: Getting all data from DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.Adding: Adding questions
+org.db.connecting.Connection: Establishing connection to DB
+org.db.reset.Reset:  -> Delete
+org.db.tables.Delete: Deleting table
+org.db.connecting.Connection: Establishing connection to DB
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.db.reset.Reset:  -> ChangePassword
+org.db.manage.ChangePassword: Updating admin details
+org.db.connecting.Connection: Establishing connection to DB
+org.db.manage.SQL: Getting all tables names
+org.db.connecting.Connection: Establishing connection to DB
+org.new_ui.Main:  <- EXIT
