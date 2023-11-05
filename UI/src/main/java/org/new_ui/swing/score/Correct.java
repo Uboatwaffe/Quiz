@@ -1,27 +1,27 @@
-package org.new_ui.swing.other;
+package org.new_ui.swing.score;
+
+import org.score.Count;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class Credits extends JFrame {
+public class Correct extends JFrame {
     private JPanel panel;
-    private JButton understood;
-    private JLabel CREDITS;
-    private JLabel con1;
-    private JLabel con2;
-    private JLabel start;
-    private JLabel end;
-    private JLabel company;
+    private JButton close;
+    private JLabel correct;
+    private JLabel score;
 
-    public Credits() {
+    public Correct() {
+        score.setText("Your score is equal to: " + Count.getCount());
+
         setContentPane(panel);
-        setTitle("Credits");
-        setSize(410, 230);
+        setTitle("Question");
+        setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
-        understood.addActionListener(new ActionListener() {
+        close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
              *
@@ -29,7 +29,7 @@ public class Credits extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispatchEvent(new WindowEvent(Credits.this, WindowEvent.WINDOW_CLOSING));
+                dispatchEvent(new WindowEvent(Correct.this, WindowEvent.WINDOW_CLOSING));
             }
         });
     }

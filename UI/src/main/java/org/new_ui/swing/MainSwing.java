@@ -1,6 +1,7 @@
 package org.new_ui.swing;
 
 import org.new_ui.Main;
+import org.new_ui.swing.hq.HQ;
 import org.new_ui.swing.tutorial.Tutorial;
 
 import javax.swing.*;
@@ -33,7 +34,8 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                HQ hq = new HQ();
+                hq.start();
             }
         });
         close.addActionListener(new ActionListener() {
