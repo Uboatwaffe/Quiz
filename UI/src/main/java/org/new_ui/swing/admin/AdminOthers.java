@@ -1,31 +1,31 @@
-package org.new_ui.swing;
+package org.new_ui.swing.admin;
 
-import org.new_ui.Main;
-import org.new_ui.swing.tutorial.Tutorial;
+import org.db.reset.Reset;
+import org.new_ui.swing.admin.other.details.Details;
+import org.new_ui.swing.admin.other.table.ChangeTable;
+import org.new_ui.swing.admin.other.tutorial.AdminTutorial;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class MainSwing extends JFrame {
-    private JPanel panel;
+public class AdminOthers extends JFrame {
+    private JButton tableManagement;
     private JButton tutorial;
-    private JButton adminPanel;
-    private JButton start;
-    private JButton info;
+    private JButton changeTable;
+    private JButton changeDetails;
     private JButton close;
-    private JButton credits;
-    private JLabel welocme;
-    private JLabel what_to_do;
+    private JButton reset;
+    private JPanel panel;
 
-    public MainSwing() {
+    public AdminOthers() {
         setContentPane(panel);
-        setTitle("QuizSwing");
+        setTitle("AdminOthers");
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
-        start.addActionListener(new ActionListener() {
+        tableManagement.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
              *
@@ -36,7 +36,7 @@ public class MainSwing extends JFrame {
 
             }
         });
-        close.addActionListener(new ActionListener() {
+        changeTable.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
              *
@@ -44,31 +44,7 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                Main main = new org.new_ui.Main();
-                main.showMain();
-                dispatchEvent(new WindowEvent(MainSwing.this, WindowEvent.WINDOW_CLOSING));
-            }
-        });
-        info.addActionListener(new ActionListener() {
-            /**
-             * Invoked when an action occurs.
-             *
-             * @param e the event to be processed
-             */
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new org.new_ui.swing.other.Info();
-            }
-        });
-        credits.addActionListener(new ActionListener() {
-            /**
-             * Invoked when an action occurs.
-             *
-             * @param e the event to be processed
-             */
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new org.new_ui.swing.other.Credits();
+                new ChangeTable();
             }
         });
         tutorial.addActionListener(new ActionListener() {
@@ -79,10 +55,10 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                new Tutorial();
+                new AdminTutorial();
             }
         });
-        adminPanel.addActionListener(new ActionListener() {
+        changeDetails.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
              *
@@ -90,8 +66,33 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                new org.new_ui.swing.admin.Logging_In();
-                dispatchEvent(new WindowEvent(MainSwing.this, WindowEvent.WINDOW_CLOSING));
+                new Details();
+                dispatchEvent(new WindowEvent(AdminOthers.this, WindowEvent.WINDOW_CLOSING));
+            }
+        });
+        close.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new AdminPanel();
+                dispatchEvent(new WindowEvent(AdminOthers.this, WindowEvent.WINDOW_CLOSING));
+            }
+        });
+        reset.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Reset.reset();
+                new AdminPanel();
+                dispatchEvent((new WindowEvent(AdminOthers.this, WindowEvent.WINDOW_CLOSING)));
             }
         });
     }

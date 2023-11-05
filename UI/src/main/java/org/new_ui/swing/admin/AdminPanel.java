@@ -88,7 +88,8 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new AdminOthers();
+                dispatchEvent(new WindowEvent(AdminPanel.this, WindowEvent.WINDOW_CLOSING));
             }
         });
     }

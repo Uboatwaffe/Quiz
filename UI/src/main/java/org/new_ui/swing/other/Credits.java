@@ -1,31 +1,26 @@
-package org.new_ui.swing.others;
-
-import org.db.manage.HowMany;
-import org.db.manage.SQL;
+package org.new_ui.swing.other;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class Info extends JFrame {
-
-    HowMany howMany = new HowMany();
-    private JButton understood;
+public class Credits extends JFrame {
     private JPanel panel;
-    private JLabel INFO;
-    private JLabel set;
-    private JLabel questions;
+    private JButton understood;
+    private JLabel CREDITS;
+    private JLabel con1;
+    private JLabel con2;
+    private JLabel start;
+    private JLabel end;
+    private JLabel company;
 
-    public Info() {
-        setSize(210, 175);
+    public Credits() {
         setContentPane(panel);
-        setTitle("Info");
+        setTitle("Credits");
+        setSize(410, 230);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
-
-        set.setText("Current set id: " + SQL.getCurrentTable());
-        questions.setText("Number of questions in it: " + howMany.howMany());
         understood.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
@@ -34,7 +29,7 @@ public class Info extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-                dispatchEvent(new WindowEvent(Info.this, WindowEvent.WINDOW_CLOSING));
+                dispatchEvent(new WindowEvent(Credits.this, WindowEvent.WINDOW_CLOSING));
             }
         });
     }

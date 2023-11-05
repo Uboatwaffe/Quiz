@@ -11,13 +11,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ShowA extends JFrame {
-    private final ToStrings toStrings = new ToStrings();
+    private final DefaultListModel<String> def;
+    private final ArrayList<String> sets;
     private JList<String> list;
     private JPanel panel;
     private JButton refresh;
     private JButton close;
-    private final DefaultListModel<String> def;
-    private final ArrayList<String> sets;
+    private final ToStrings toStrings = new ToStrings();
 
     public ShowA() {
         setContentPane(panel);
