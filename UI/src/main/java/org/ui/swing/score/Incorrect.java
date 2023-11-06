@@ -7,6 +7,15 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+
+/**
+ * Class that is responsible for letting user know that his answer was incorrect
+ * <br>
+ * It also shows what answer was expected
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class Incorrect extends JFrame {
 
     /**

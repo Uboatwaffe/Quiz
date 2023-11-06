@@ -10,6 +10,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * Class that is responsible for allowing user to add questions to the DB
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 class AddQ extends JFrame {
 
     Writing writing = new Writing();

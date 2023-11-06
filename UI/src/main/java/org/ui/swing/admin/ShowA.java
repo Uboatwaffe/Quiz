@@ -11,6 +11,13 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
+/**
+ * Class that is responsible for showing all answers
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class ShowA extends JFrame {
     private final DefaultListModel<String> def;
     private final ArrayList<String> sets;

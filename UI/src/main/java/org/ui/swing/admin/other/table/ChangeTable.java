@@ -12,6 +12,12 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+/**
+ * Class that is responsible for changing sets
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class ChangeTable extends JFrame {
     private final DefaultListModel<String> def;
     private final ArrayList<String> sets;

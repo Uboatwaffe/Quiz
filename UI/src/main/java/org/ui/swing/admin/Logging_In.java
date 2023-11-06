@@ -8,6 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * Class that is responsible for checking if password and login are correct
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class Logging_In extends JFrame {
 
     /**

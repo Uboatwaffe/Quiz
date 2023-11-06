@@ -10,6 +10,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * Class that is responsible for showing main menu to the user
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class MainSwing extends JFrame {
 
     /**

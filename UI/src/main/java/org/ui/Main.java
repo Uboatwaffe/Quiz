@@ -8,6 +8,12 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Main class
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class Main extends JFrame {
 
     static Writing writing = new Writing();

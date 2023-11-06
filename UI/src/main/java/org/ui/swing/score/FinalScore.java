@@ -8,6 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * Class that is responsible for delaying act of showing user his score to prevent from
+ * <br>
+ * to early initialisation of actual score which may not be right
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class FinalScore extends JFrame {
 
     /**

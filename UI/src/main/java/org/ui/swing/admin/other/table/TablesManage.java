@@ -8,6 +8,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * Class that is responsible for accessing files that add and delete tables in the DB
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class TablesManage extends JFrame {
 
     /**

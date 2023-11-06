@@ -11,6 +11,13 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+
+/**
+ * Class that is responsible for showing all questions
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 public class ShowQ extends JFrame {
 
     private final ToStrings toStrings = new ToStrings();

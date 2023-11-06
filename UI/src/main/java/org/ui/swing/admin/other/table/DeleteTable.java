@@ -9,6 +9,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+/**
+ * Class that is responsible for deleting tables from the DB
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 class DeleteTable extends JFrame {
     private final Writing writing = new Writing();
 

@@ -8,6 +8,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
+
+/**
+ * Class that is responsible for deleting questions from the DB
+ *
+ * @author Maciej
+ * @version 0.2
+ */
 class DeleteQ extends JFrame {
 
     /**
