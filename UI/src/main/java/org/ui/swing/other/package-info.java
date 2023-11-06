@@ -8,6 +8,8 @@
  *         info
  *     </li>
  * </ul>
+ * @see org.ui.swing.other.Credits
+ * @see org.ui.swing.other.Info
  * @version 0.2
  * @author Maciej
  */
