@@ -38,7 +38,17 @@ public class FinalScore extends JFrame {
      */
     private JPanel panel;
 
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public FinalScore() {
         writing.writeLog(FinalScore.class, "Constructor()");
 

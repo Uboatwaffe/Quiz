@@ -41,7 +41,17 @@ public class Details extends JFrame {
      * Content of the frame
      */
     private JPanel panel;
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public Details() {
         writing.writeLog(Details.class, " <- Close");
 

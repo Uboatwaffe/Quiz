@@ -16,6 +16,12 @@ import java.awt.event.WindowEvent;
  * @version 0.2
  */
 class DeleteTable extends JFrame {
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     private final Writing writing = new Writing();
 
     /**
@@ -48,6 +54,10 @@ class DeleteTable extends JFrame {
      */
     private JPanel panel;
 
+
+    /**
+     * Constructor
+     */
     DeleteTable() {
         writing.writeLog(DeleteTable.class, "Constructor()");
 

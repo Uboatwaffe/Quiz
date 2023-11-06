@@ -19,7 +19,15 @@ import java.util.Arrays;
  * @version 0.2
  */
 public class ShowA extends JFrame {
+
+    /**
+     * Field used by JList
+     */
     private final DefaultListModel<String> def;
+
+    /**
+     * Field used by JList
+     */
     private final ArrayList<String> sets;
 
     /**
@@ -41,9 +49,22 @@ public class ShowA extends JFrame {
      * Content of the frame
      */
     private JButton close;
+
+    /**
+     * Filed that gts all answers from the DB
+     */
     private final ToStrings toStrings = new ToStrings();
 
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public ShowA() {
         writing.writeLog(ShowA.class, "Constructor()");
 

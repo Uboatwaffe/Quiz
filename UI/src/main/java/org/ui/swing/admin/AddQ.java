@@ -18,6 +18,11 @@ import java.awt.event.WindowEvent;
  */
 class AddQ extends JFrame {
 
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
     /**
      * Lambda responsible for extracting data from one String chain
@@ -42,6 +47,7 @@ class AddQ extends JFrame {
         // Returns array with info
         return db;
     };
+
     /**
      * Lambda responsible for checking if type of the question is correct
      * and also for checking if any of the questions doesn't contain '.' except for
@@ -100,6 +106,10 @@ class AddQ extends JFrame {
      */
     private JLabel how_to;
 
+
+    /**
+     * Constructor
+     */
     AddQ() {
         writing.writeLog(AddQ.class, "Constructor()");
 

@@ -45,8 +45,17 @@ public class Logging_In extends JFrame {
      * Content of the frame
      */
     private JLabel insert_login;
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
 
+    /**
+     * Constructor
+     */
     public Logging_In() {
         writing.writeLog(Logging_In.class, "Constructor()");
 

@@ -61,7 +61,16 @@ public class AdminPanel extends JFrame {
      */
     private JLabel what_to_do;
 
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public AdminPanel() {
         writing.writeLog(AdminPanel.class, "Constructor()");
 

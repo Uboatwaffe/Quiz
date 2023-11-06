@@ -55,7 +55,17 @@ public class Tutorial extends JFrame {
      */
     private JPanel panel;
 
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public Tutorial() {
         writing.writeLog(Tutorial.class, "Constructor()");
 

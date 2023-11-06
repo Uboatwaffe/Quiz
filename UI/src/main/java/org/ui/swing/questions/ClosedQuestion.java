@@ -19,7 +19,6 @@ import java.awt.event.WindowEvent;
 public class ClosedQuestion extends JFrame implements ActionListener {
     /**
      * Object used to write log
-     *
      * @see Writing
      */
     private final static Writing writing = new Writing();
@@ -63,6 +62,10 @@ public class ClosedQuestion extends JFrame implements ActionListener {
      */
     private JLabel question;
 
+
+    /**
+     * Constructor
+     */
     public ClosedQuestion(String quest, String answer) {
         writing.writeLog(ClosedQuestion.class, "Constructor()");
 

@@ -33,7 +33,17 @@ public class ShowScore extends JFrame {
      */
     private JPanel panel;
 
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     ShowScore() {
         writing.writeLog(ShowScore.class, "Constructor()");
 

@@ -56,7 +56,16 @@ public class Credits extends JFrame {
      */
     private JLabel company;
 
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public Credits() {
         writing.writeLog(Credits.class, "Constructor()");
 

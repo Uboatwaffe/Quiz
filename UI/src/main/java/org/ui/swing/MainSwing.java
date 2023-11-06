@@ -63,7 +63,17 @@ public class MainSwing extends JFrame {
      */
     private JLabel what_to_do;
 
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public MainSwing() {
         writing.writeLog(MainSwing.class, "Constructor()");
 

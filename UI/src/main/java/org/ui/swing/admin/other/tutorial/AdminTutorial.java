@@ -56,7 +56,16 @@ public class AdminTutorial extends JFrame {
      */
     private JLabel About_date;
 
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public AdminTutorial() {
         writing.writeLog(AdminTutorial.class, "Constructor()");
 

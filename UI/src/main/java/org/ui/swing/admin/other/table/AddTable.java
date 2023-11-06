@@ -16,6 +16,12 @@ import java.awt.event.WindowEvent;
  * @version 0.2
  */
 class AddTable extends JFrame {
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     private final Writing writing = new Writing();
 
     /**
@@ -48,6 +54,9 @@ class AddTable extends JFrame {
      */
     private JTextField name;
 
+    /**
+     * Constructor
+     */
     AddTable() {
         writing.writeLog(AddTable.class, " <- Close");
 

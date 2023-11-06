@@ -37,7 +37,17 @@ public class Correct extends JFrame {
      */
     private JLabel score;
 
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public Correct() {
         writing.writeLog(Correct.class, "Constructor()");
 

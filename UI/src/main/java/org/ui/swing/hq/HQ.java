@@ -22,13 +22,11 @@ public class HQ extends Thread {
 
     /**
      * Object used to write log
-     *
      * @see Writing
      */
     private final static Writing writing = new Writing();
     /**
      * Object that gets data from DB
-     *
      * @see Data
      */
     private final Data data = new Data();

@@ -20,6 +20,9 @@ import java.util.Arrays;
  */
 public class ShowQ extends JFrame {
 
+    /**
+     * Field that gets questions from the DB
+     */
     private final ToStrings toStrings = new ToStrings();
 
     /**
@@ -41,9 +44,27 @@ public class ShowQ extends JFrame {
      * Content of the frame
      */
     private JButton close;
+
+    /**
+     * Field used by JList
+     */
     private final DefaultListModel<String> def;
+
+    /**
+     * Field used by JList
+     */
     private final ArrayList<String> sets;
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public ShowQ() {
         writing.writeLog(ShowQ.class, "Constructor()");
 

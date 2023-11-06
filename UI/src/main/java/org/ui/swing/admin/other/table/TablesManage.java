@@ -40,7 +40,17 @@ public class TablesManage extends JFrame {
      * Content of the frame
      */
     private JLabel what_to_do;
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public TablesManage() {
         writing.writeLog(TablesManage.class, "Constructor()");
 

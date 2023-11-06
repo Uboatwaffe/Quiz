@@ -19,6 +19,9 @@ import java.awt.event.WindowEvent;
  */
 public class Info extends JFrame {
 
+    /**
+     * Field that gets info about how many records are in the DB
+     */
     HowMany howMany = new HowMany();
 
     /**
@@ -51,7 +54,16 @@ public class Info extends JFrame {
      */
     private JLabel last_score;
 
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public Info() {
         writing.writeLog(Info.class, "Constructor()");
 

@@ -19,7 +19,15 @@ import java.util.Arrays;
  * @version 0.2
  */
 public class ChangeTable extends JFrame {
+
+    /**
+     * Field used by JList
+     */
     private final DefaultListModel<String> def;
+
+    /**
+     * Field used by JList
+     */
     private final ArrayList<String> sets;
 
     /**
@@ -51,10 +59,20 @@ public class ChangeTable extends JFrame {
      * Content of the frame
      */
     private JButton refresh;
-
-
-    private String prevTable;
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+    /**
+     * Field that stores pre-selected new table
+     */
+    private String prevTable;
+
+    /**
+     * Constructor
+     */
     public ChangeTable() {
         writing.writeLog(ChangeTable.class, " <- Close");
 

@@ -43,7 +43,17 @@ public class Incorrect extends JFrame {
      */
     private JLabel answer;
 
+
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public Incorrect(String answer, String user_input) {
         writing.writeLog(Incorrect.class, "Constructor()");
 

@@ -55,7 +55,16 @@ public class AdminOthers extends JFrame {
      */
     private JPanel panel;
 
+    /**
+     * Object used to write log
+     *
+     * @see Writing
+     */
     Writing writing = new Writing();
+
+    /**
+     * Constructor
+     */
     public AdminOthers() {
         writing.writeLog(AdminOthers.class, "Constructor()");
 
