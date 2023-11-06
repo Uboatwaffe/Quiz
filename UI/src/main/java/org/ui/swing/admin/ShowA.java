@@ -2,6 +2,7 @@ package org.ui.swing.admin;
 
 import org.db.manage.Sorting;
 import org.db.manage.ToStrings;
+import org.file.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -19,7 +20,10 @@ public class ShowA extends JFrame {
     private JButton close;
     private final ToStrings toStrings = new ToStrings();
 
+    Writing writing = new Writing();
     public ShowA() {
+        writing.writeLog(ShowA.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("All answers");
         setSize(540, 170);
@@ -39,8 +43,10 @@ public class ShowA extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(ShowA.class, " -> Sorting");
                 Sorting sorting = new Sorting();
                 sorting.sort();
+                writing.writeLog(ShowA.class, "Reload data");
                 addData();
             }
         });
@@ -52,6 +58,7 @@ public class ShowA extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(ShowA.class, " <- Close");
                 dispatchEvent(new WindowEvent(ShowA.this, WindowEvent.WINDOW_CLOSING));
             }
         });

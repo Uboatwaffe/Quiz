@@ -1,5 +1,7 @@
 package org.ui.swing.tutorial;
 
+import org.file.Writing;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +17,10 @@ public class Tutorial extends JFrame {
     private JLabel open;
     private JPanel panel;
 
+    Writing writing = new Writing();
     public Tutorial() {
+        writing.writeLog(Tutorial.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Tutorial");
         setSize(440, 230);
@@ -29,6 +34,7 @@ public class Tutorial extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Tutorial.class, " <- Close");
                 dispatchEvent(new WindowEvent(Tutorial.this, WindowEvent.WINDOW_CLOSING));
             }
         });

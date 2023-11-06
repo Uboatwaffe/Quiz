@@ -1,6 +1,7 @@
 package org.ui.swing.admin.other.table;
 
 import org.db.manage.SQL;
+import org.file.Writing;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -21,8 +22,10 @@ public class ChangeTable extends JFrame {
     private JLabel info;
     private JButton refresh;
     private String prevTable;
-
+    Writing writing = new Writing();
     public ChangeTable() {
+        writing.writeLog(ChangeTable.class, " <- Close");
+
         setContentPane(panel);
         setTitle("Changing of the table");
         setSize(540, 170);
@@ -45,7 +48,9 @@ public class ChangeTable extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(ChangeTable.class, "Set new current table");
                 SQL.setCurrentTable(prevTable);
+                writing.writeLog(ChangeTable.class, " <- Close");
                 dispatchEvent(new WindowEvent(ChangeTable.this, WindowEvent.WINDOW_CLOSING));
             }
         });
@@ -57,6 +62,7 @@ public class ChangeTable extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(ChangeTable.class, " <- Close");
                 dispatchEvent(new WindowEvent(ChangeTable.this, WindowEvent.WINDOW_CLOSING));
             }
         });
@@ -68,6 +74,7 @@ public class ChangeTable extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(ChangeTable.class, "Reloading data");
                 info.setText("Current set: " + SQL.getCurrentTable());
                 addData();
             }
@@ -80,6 +87,7 @@ public class ChangeTable extends JFrame {
              */
             @Override
             public void valueChanged(ListSelectionEvent e) {
+                writing.writeLog(ChangeTable.class, "Pre-select: " + list.getSelectedValue());
                 prevTable = list.getSelectedValue();
             }
         });

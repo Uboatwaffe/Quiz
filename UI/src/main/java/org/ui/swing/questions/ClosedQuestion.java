@@ -30,6 +30,8 @@ public class ClosedQuestion extends JFrame implements ActionListener {
     private JLabel question;
 
     public ClosedQuestion(String quest, String answer) {
+        writing.writeLog(ClosedQuestion.class, "Constructor()");
+
         // Assigns answer
         this.answer = answer;
 

@@ -19,6 +19,8 @@ class AddTable extends JFrame {
     private JTextField name;
 
     AddTable() {
+        writing.writeLog(AddTable.class, " <- Close");
+
         setContentPane(panel);
         setTitle("Adding table");
         setSize(540, 170);
@@ -49,6 +51,7 @@ class AddTable extends JFrame {
                     writing.writeLog(getClass(), " -> Add");
                     error.setVisible(false);
                     Add.add(newName);
+                    writing.writeLog(AddTable.class, " <- Close");
                     dispatchEvent(new WindowEvent(AddTable.this, WindowEvent.WINDOW_CLOSING));
                 } else {
                     // Writes log and closes this window
@@ -65,6 +68,7 @@ class AddTable extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AddTable.class, " <- Close");
                 dispatchEvent(new WindowEvent(AddTable.this, WindowEvent.WINDOW_CLOSING));
             }
         });

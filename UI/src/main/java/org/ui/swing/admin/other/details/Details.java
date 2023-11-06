@@ -2,6 +2,7 @@ package org.ui.swing.admin.other.details;
 
 import org.db.connecting.LoggingIn;
 import org.db.manage.ChangePassword;
+import org.file.Writing;
 import org.ui.swing.admin.AdminOthers;
 
 import javax.swing.*;
@@ -16,8 +17,10 @@ public class Details extends JFrame {
     private JButton close;
     private JLabel info;
     private JPanel panel;
-
+    Writing writing = new Writing();
     public Details() {
+        writing.writeLog(Details.class, " <- Close");
+
         setContentPane(panel);
         setTitle("Change details");
         setSize(540, 170);
@@ -31,8 +34,11 @@ public class Details extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Details.class, "Set new password and login");
                 ChangePassword.change(newLogin.getText(), newPassword.getText(), LoggingIn.getLoginAndPassword()[2]);
+                writing.writeLog(Details.class, " <- Close");
                 dispatchEvent(new WindowEvent(Details.this, WindowEvent.WINDOW_CLOSING));
+                writing.writeLog(Details.class, " -> AdminOthers");
                 new AdminOthers();
             }
         });
@@ -44,7 +50,9 @@ public class Details extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Details.class, " -> AdminOthers");
                 new AdminOthers();
+                writing.writeLog(Details.class, " <- Close");
                 dispatchEvent(new WindowEvent(Details.this, WindowEvent.WINDOW_CLOSING));
             }
         });

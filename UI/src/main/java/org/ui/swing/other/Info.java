@@ -2,6 +2,7 @@ package org.ui.swing.other;
 
 import org.db.manage.HowMany;
 import org.db.manage.SQL;
+import org.file.Writing;
 import org.score.Count;
 
 import javax.swing.*;
@@ -19,7 +20,10 @@ public class Info extends JFrame {
     private JLabel questions;
     private JLabel last_score;
 
+    Writing writing = new Writing();
     public Info() {
+        writing.writeLog(Info.class, "Constructor()");
+
         setSize(210, 190);
         setContentPane(panel);
         setTitle("Info");
@@ -37,6 +41,7 @@ public class Info extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Info.class, " <- Closing");
                 dispatchEvent(new WindowEvent(Info.this, WindowEvent.WINDOW_CLOSING));
             }
         });

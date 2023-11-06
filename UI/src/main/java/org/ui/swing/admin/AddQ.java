@@ -71,6 +71,8 @@ class AddQ extends JFrame {
     private JLabel how_to;
 
     AddQ() {
+        writing.writeLog(AddQ.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Add Question");
         setSize(540, 170);
@@ -85,6 +87,7 @@ class AddQ extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AddQ.class, " <- Close");
                 dispatchEvent(new WindowEvent(AddQ.this, WindowEvent.WINDOW_CLOSING));
             }
         });
@@ -99,6 +102,7 @@ class AddQ extends JFrame {
                 // Writes log, adds question and closes this window
                 writing.writeLog(getClass(), " -> StringOperations");
                 StringOperations.addQuestion(toArray, checking, textField.getText());
+                writing.writeLog(AddQ.class, " <- Close");
                 dispatchEvent(new WindowEvent(org.ui.swing.admin.AddQ.this, WindowEvent.WINDOW_CLOSING));
             }
         });

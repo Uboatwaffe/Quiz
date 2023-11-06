@@ -1,5 +1,6 @@
 package org.ui.swing.admin.other.table;
 
+import org.file.Writing;
 import org.ui.swing.admin.AdminOthers;
 
 import javax.swing.*;
@@ -13,8 +14,10 @@ public class TablesManage extends JFrame {
     private JButton close;
     private JPanel panel;
     private JLabel what_to_do;
-
+    Writing writing = new Writing();
     public TablesManage() {
+        writing.writeLog(TablesManage.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Table management");
         setSize(540, 170);
@@ -28,6 +31,7 @@ public class TablesManage extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(TablesManage.class, " -> AddTable");
                 new AddTable();
             }
         });
@@ -39,6 +43,7 @@ public class TablesManage extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(TablesManage.class, " -> DeleteTable");
                 new DeleteTable();
             }
         });
@@ -50,7 +55,9 @@ public class TablesManage extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(TablesManage.class, " <- Close");
                 dispatchEvent(new WindowEvent(TablesManage.this, WindowEvent.WINDOW_CLOSING));
+                writing.writeLog(TablesManage.class, " -> AdminOthers");
                 new AdminOthers();
             }
         });

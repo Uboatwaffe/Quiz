@@ -47,6 +47,7 @@ public class HQ extends Thread {
             ResultSet resultSet = data.getData();
 
             if (resultSet != null) {
+                writing.writeLog(HQ.class, " -> FinalScore");
                 new FinalScore();
                 while (resultSet.next()) {
                     // Gets type of the question

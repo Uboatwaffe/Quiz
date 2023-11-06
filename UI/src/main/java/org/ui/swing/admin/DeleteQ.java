@@ -1,6 +1,7 @@
 package org.ui.swing.admin;
 
 import org.db.manage.Deleting;
+import org.file.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -14,8 +15,10 @@ class DeleteQ extends JFrame {
     private JLabel welcome;
     private JLabel how_to;
     private JPanel panel;
-
+    Writing writing = new Writing();
     DeleteQ() {
+        writing.writeLog(DeleteQ.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Delete Question");
         setSize(540, 170);
@@ -30,7 +33,9 @@ class DeleteQ extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Writes log, deletes question and closes this window
+                writing.writeLog(DeleteQ.class, " -> Deleting");
                 Deleting.delete(textField.getText());
+                writing.writeLog(DeleteQ.class, " <- Close");
                 dispatchEvent(new WindowEvent(DeleteQ.this, WindowEvent.WINDOW_CLOSING));
             }
         });
@@ -42,6 +47,7 @@ class DeleteQ extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(DeleteQ.class, " <- Close");
                 dispatchEvent(new WindowEvent(DeleteQ.this, WindowEvent.WINDOW_CLOSING));
             }
         });

@@ -19,6 +19,8 @@ class DeleteTable extends JFrame {
     private JPanel panel;
 
     DeleteTable() {
+        writing.writeLog(DeleteTable.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Deleting table");
         setSize(540, 170);
@@ -52,6 +54,7 @@ class DeleteTable extends JFrame {
                     writing.writeLog(getClass(), " -> Delete");
                     error.setVisible(false);
                     Delete.delete(newName);
+                    writing.writeLog(DeleteTable.class, " <- Close");
                     dispatchEvent(new WindowEvent(DeleteTable.this, WindowEvent.WINDOW_CLOSING));
 
                 } else {
@@ -71,6 +74,7 @@ class DeleteTable extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(DeleteTable.class, " <- Close");
                 dispatchEvent(new WindowEvent(DeleteTable.this, WindowEvent.WINDOW_CLOSING));
             }
         });

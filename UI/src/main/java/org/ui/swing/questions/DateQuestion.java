@@ -28,6 +28,8 @@ public class DateQuestion extends JFrame implements ActionListener {
     private JPanel panel;
 
     public DateQuestion(String quest, String answer) {
+        writing.writeLog(DateQuestion.class, "Constructor()");
+
         // Assigns answer
         this.answer = answer;
 

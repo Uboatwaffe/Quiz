@@ -1,6 +1,7 @@
 package org.ui.swing.admin;
 
 import org.db.connecting.LoggingIn;
+import org.file.Writing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -14,8 +15,11 @@ public class Logging_In extends JFrame {
     private JButton log_in;
     private JButton close;
     private JLabel insert_login;
+    Writing writing = new Writing();
 
     public Logging_In() {
+        writing.writeLog(Logging_In.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Log in");
         setSize(540, 170);
@@ -30,9 +34,13 @@ public class Logging_In extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {
-                    new org.ui.swing.admin.AdminPanel();
+                    writing.writeLog(Logging_In.class, "Logged successfully");
+                    writing.writeLog(Logging_In.class, " -> AdminPanel");
+                    new AdminPanel();
+                    writing.writeLog(Logging_In.class, " <- Close");
                     dispatchEvent(new WindowEvent(Logging_In.this, WindowEvent.WINDOW_CLOSING));
                 } else {
+                    writing.writeLog(Logging_In.class, "Logging in was unsuccessful");
                     // TODO this
                 }
             }
@@ -45,6 +53,7 @@ public class Logging_In extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Logging_In.class, " <- Close");
                 dispatchEvent(new WindowEvent(Logging_In.this, WindowEvent.WINDOW_CLOSING));
             }
         });

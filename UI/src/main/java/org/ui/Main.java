@@ -1,5 +1,6 @@
 package org.ui;
 
+import org.exceptions.file.ERRORS;
 import org.file.Writing;
 import org.ui.swing.MainSwing;
 
@@ -9,8 +10,9 @@ import java.awt.event.ActionListener;
 
 public class Main extends JFrame {
 
-    Writing writing = new Writing();
+    static Writing writing = new Writing();
 
+    static ERRORS errors2 = new ERRORS();
     private JPanel panel;
     private JButton swing;
     private JButton website;
@@ -23,6 +25,8 @@ public class Main extends JFrame {
     private JLabel fun;
 
     public Main() {
+        writing.writeLog(Main.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Quiz");
         setSize(530, 250);
@@ -36,7 +40,9 @@ public class Main extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Main.class, " -> MainSwing");
                 new MainSwing();
+                writing.writeLog(Main.class, "Hide");
                 setVisible(false);
             }
         });
@@ -48,7 +54,7 @@ public class Main extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                writing.writeLog(Main.class, " -> Website");
             }
         });
         quit.addActionListener(new ActionListener() {
@@ -66,10 +72,14 @@ public class Main extends JFrame {
     }
 
     public static void main(String[] args) {
+        writing.clear();
+        errors2.clear();
+        writing.writeLog(Main.class, "Starting program");
         new Main();
     }
 
     public void showMain() {
+        writing.writeLog(Main.class, "Showing main");
         setVisible(true);
     }
 }

@@ -27,6 +27,8 @@ public class TorFQuestion extends JFrame implements ActionListener {
     private JPanel panel;
 
     public TorFQuestion(String quest, String answer) {
+        writing.writeLog(TorFQuestion.class, "Constructor()");
+
         // Assigns answer
         this.answer = answer;
 

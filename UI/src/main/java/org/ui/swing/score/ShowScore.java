@@ -1,5 +1,6 @@
 package org.ui.swing.score;
 
+import org.file.Writing;
 import org.score.Count;
 import org.ui.swing.MainSwing;
 
@@ -13,7 +14,10 @@ public class ShowScore extends JFrame {
     private JLabel score;
     private JPanel panel;
 
+    Writing writing = new Writing();
     ShowScore() {
+        writing.writeLog(ShowScore.class, "Constructor()");
+
         score.setText("Your final score: " + Count.getCount());
 
         setContentPane(panel);
@@ -29,6 +33,8 @@ public class ShowScore extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(ShowScore.class, " <- Close");
+                writing.writeLog(ShowScore.class, " -> MainSwing");
                 new MainSwing();
                 dispatchEvent(new WindowEvent(ShowScore.this, WindowEvent.WINDOW_CLOSING));
             }

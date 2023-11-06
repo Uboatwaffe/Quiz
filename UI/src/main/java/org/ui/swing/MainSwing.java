@@ -1,5 +1,6 @@
 package org.ui.swing;
 
+import org.file.Writing;
 import org.ui.Main;
 import org.ui.swing.hq.HQ;
 import org.ui.swing.tutorial.Tutorial;
@@ -20,7 +21,10 @@ public class MainSwing extends JFrame {
     private JLabel welocme;
     private JLabel what_to_do;
 
+    Writing writing = new Writing();
     public MainSwing() {
+        writing.writeLog(MainSwing.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("QuizSwing");
         setSize(540, 170);
@@ -34,6 +38,7 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(MainSwing.class, " -> HQ");
                 HQ hq = new HQ();
                 hq.start();
             }
@@ -46,6 +51,7 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(MainSwing.class, " -> Main");
                 Main main = new org.ui.Main();
                 main.showMain();
                 dispatchEvent(new WindowEvent(MainSwing.this, WindowEvent.WINDOW_CLOSING));
@@ -59,6 +65,7 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(MainSwing.class, " -> Info");
                 new org.ui.swing.other.Info();
             }
         });
@@ -70,6 +77,7 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(MainSwing.class, " -> Credits");
                 new org.ui.swing.other.Credits();
             }
         });
@@ -81,6 +89,7 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(MainSwing.class, " -> Tutorial");
                 new Tutorial();
             }
         });
@@ -92,6 +101,7 @@ public class MainSwing extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(MainSwing.class, " -> Logging_In");
                 new org.ui.swing.admin.Logging_In();
                 dispatchEvent(new WindowEvent(MainSwing.this, WindowEvent.WINDOW_CLOSING));
             }

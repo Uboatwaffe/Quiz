@@ -29,6 +29,8 @@ public class OpenQuestion extends JFrame implements ActionListener {
 
 
     public OpenQuestion(String quest, String answer) {
+        writing.writeLog(OpenQuestion.class, "Constructor()");
+
         // Assigns answer
         this.answer = answer;
 

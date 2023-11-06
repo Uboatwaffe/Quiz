@@ -1,6 +1,7 @@
 package org.ui.swing.admin;
 
 import org.db.reset.Reset;
+import org.file.Writing;
 import org.ui.swing.admin.other.details.Details;
 import org.ui.swing.admin.other.table.ChangeTable;
 import org.ui.swing.admin.other.table.TablesManage;
@@ -20,7 +21,10 @@ public class AdminOthers extends JFrame {
     private JButton reset;
     private JPanel panel;
 
+    Writing writing = new Writing();
     public AdminOthers() {
+        writing.writeLog(AdminOthers.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Admin others");
         setSize(540, 170);
@@ -34,7 +38,9 @@ public class AdminOthers extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminOthers.class, " -> TablesManage");
                 new TablesManage();
+                writing.writeLog(AdminOthers.class, " <- Close");
                 dispatchEvent(new WindowEvent(AdminOthers.this, WindowEvent.WINDOW_CLOSING));
             }
         });
@@ -46,6 +52,7 @@ public class AdminOthers extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminOthers.class, " -> ChangeTable");
                 new ChangeTable();
             }
         });
@@ -57,6 +64,7 @@ public class AdminOthers extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminOthers.class, " -> AdminTutorial");
                 new AdminTutorial();
             }
         });
@@ -68,7 +76,9 @@ public class AdminOthers extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminOthers.class, " -> Details");
                 new Details();
+                writing.writeLog(AdminOthers.class, " <- Close");
                 dispatchEvent(new WindowEvent(AdminOthers.this, WindowEvent.WINDOW_CLOSING));
             }
         });
@@ -80,7 +90,9 @@ public class AdminOthers extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminOthers.class, " -> AdminPanel");
                 new AdminPanel();
+                writing.writeLog(AdminOthers.class, " <- Close");
                 dispatchEvent(new WindowEvent(AdminOthers.this, WindowEvent.WINDOW_CLOSING));
             }
         });
@@ -92,8 +104,11 @@ public class AdminOthers extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminOthers.class, " -> Reset");
                 Reset.reset();
+                writing.writeLog(AdminOthers.class, " -> AdminPanel");
                 new AdminPanel();
+                writing.writeLog(AdminOthers.class, " <- Close");
                 dispatchEvent((new WindowEvent(AdminOthers.this, WindowEvent.WINDOW_CLOSING)));
             }
         });

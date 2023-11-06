@@ -1,5 +1,6 @@
 package org.ui.swing.admin;
 
+import org.file.Writing;
 import org.ui.swing.MainSwing;
 
 import javax.swing.*;
@@ -18,7 +19,10 @@ public class AdminPanel extends JFrame {
     private JLabel welcome;
     private JLabel what_to_do;
 
+    Writing writing = new Writing();
     public AdminPanel() {
+        writing.writeLog(AdminPanel.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Admin panel");
         setSize(540, 170);
@@ -32,6 +36,7 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminPanel.class, " -> AddQ");
                 new AddQ();
             }
         });
@@ -43,6 +48,7 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminPanel.class, " -> DeleteQ");
                 new DeleteQ();
             }
         });
@@ -54,6 +60,7 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminPanel.class, " -> ShowQ");
                 new ShowQ();
             }
         });
@@ -65,6 +72,7 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminPanel.class, " -> ShowA");
                 new ShowA();
             }
         });
@@ -76,7 +84,9 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminPanel.class, " -> MainSwing");
                 new MainSwing();
+                writing.writeLog(AdminPanel.class, " <- Close");
                 dispatchEvent(new WindowEvent(AdminPanel.this, WindowEvent.WINDOW_CLOSING));
             }
         });
@@ -88,7 +98,9 @@ public class AdminPanel extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminPanel.class, " -> AdminOthers");
                 new AdminOthers();
+                writing.writeLog(AdminPanel.class, " <- Close");
                 dispatchEvent(new WindowEvent(AdminPanel.this, WindowEvent.WINDOW_CLOSING));
             }
         });

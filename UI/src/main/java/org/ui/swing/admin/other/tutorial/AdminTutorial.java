@@ -1,5 +1,7 @@
 package org.ui.swing.admin.other.tutorial;
 
+import org.file.Writing;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,7 +17,10 @@ public class AdminTutorial extends JFrame {
     private JLabel Open_ones;
     private JLabel About_date;
 
+    Writing writing = new Writing();
     public AdminTutorial() {
+        writing.writeLog(AdminTutorial.class, "Constructor()");
+
         setContentPane(panel);
         setTitle("Tutorial");
         setSize(540, 230);
@@ -29,6 +34,7 @@ public class AdminTutorial extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(AdminTutorial.class, " <- Close");
                 dispatchEvent(new WindowEvent(AdminTutorial.this, WindowEvent.WINDOW_CLOSING));
             }
         });

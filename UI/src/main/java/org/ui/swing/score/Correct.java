@@ -1,5 +1,6 @@
 package org.ui.swing.score;
 
+import org.file.Writing;
 import org.score.Count;
 
 import javax.swing.*;
@@ -13,7 +14,10 @@ public class Correct extends JFrame {
     private JLabel correct;
     private JLabel score;
 
+    Writing writing = new Writing();
     public Correct() {
+        writing.writeLog(Correct.class, "Constructor()");
+
         score.setText("Your score is equal to: " + Count.getCount());
 
         setContentPane(panel);
@@ -29,6 +33,7 @@ public class Correct extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Correct.class, " <- Close");
                 dispatchEvent(new WindowEvent(Correct.this, WindowEvent.WINDOW_CLOSING));
             }
         });

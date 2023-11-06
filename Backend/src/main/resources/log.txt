@@ -1,51 +1,24 @@
 
-org.ui.Main: Start program
-org.ui.Main: Starting quiz
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
+org.ui.Main: Starting program
+org.ui.Main: Constructor()
+org.ui.Main:  -> MainSwing
+org.ui.swing.MainSwing: Constructor()
+org.ui.Main: Hide
+org.ui.swing.MainSwing:  -> Tutorial
+org.ui.swing.tutorial.Tutorial: Constructor()
+org.ui.swing.tutorial.Tutorial:  <- Close
+org.ui.swing.MainSwing:  -> Info
+org.ui.swing.other.Info: Constructor()
 org.db.manage.SQL: Getting all tables names
 org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.ui.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.ui.hq.HQ: Showing question with type: t
-org.ui.questions.QuestionTrueOrFalse: Constructor()
-org.ui.hq.HQ: Showing question with type: c
-org.ui.questions.QuestionABC: Constructor()
-org.ui.hq.HQ: Showing question with type: o
-org.ui.questions.QuestionOpen: Constructor()
-org.ui.hq.HQ: Showing question with type: d
-org.ui.questions.QuestionDate: Constructor()
-org.ui.hq.HQ: All questions showed
-org.ui.questions.QuestionDate:  <- Closing
-org.ui.score.Incorrect: Constructor()
-org.ui.score.Incorrect:  <- Closing
-org.ui.questions.QuestionOpen:  <- Closing, Don't know the answer
-org.ui.questions.QuestionABC:  <- Closing
-org.ui.score.Correct: Constructor
-org.ui.score.Correct:  <- Closing
-org.ui.questions.QuestionTrueOrFalse:  <- Closing
-org.ui.score.Incorrect: Constructor()
-org.ui.score.Incorrect:  <- Closing
-org.ui.Main:  -> Main.score
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
-org.ui.Main:  -> Main.menu
-org.ui.Main: Starting quiz
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.ui.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.ui.hq.HQ: Showing question with type: t
-org.ui.questions.QuestionTrueOrFalse: Constructor()
-org.ui.hq.HQ: Showing question with type: c
-org.ui.questions.QuestionABC: Constructor()
-org.ui.hq.HQ: Showing question with type: o
-org.ui.questions.QuestionOpen: Constructor()
-org.ui.hq.HQ: Showing question with type: d
-org.ui.questions.QuestionDate: Constructor()
-org.ui.hq.HQ: All questions showed
+org.ui.swing.other.Info:  <- Closing
+org.ui.swing.MainSwing:  -> Credits
+org.ui.swing.other.Credits: Constructor()
+org.ui.swing.other.Credits:  <- Close
+org.ui.swing.MainSwing:  -> Main
+org.ui.Main: Constructor()
+org.ui.Main: Showing main
+org.ui.Main:  <- EXIT

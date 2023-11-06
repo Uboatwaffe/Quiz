@@ -1,5 +1,7 @@
 package org.ui.swing.score;
 
+import org.file.Writing;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +14,10 @@ public class Incorrect extends JFrame {
     private JLabel user_input;
     private JLabel answer;
 
+    Writing writing = new Writing();
     public Incorrect(String answer, String user_input) {
+        writing.writeLog(Incorrect.class, "Constructor()");
+
         this.answer.setText("Correct answer was: " + answer);
         this.user_input.setText("You inserted: " + user_input);
 
@@ -28,6 +33,7 @@ public class Incorrect extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                writing.writeLog(Incorrect.class, " <- Close");
                 dispatchEvent(new WindowEvent(Incorrect.this, WindowEvent.WINDOW_CLOSING));
             }
         });
