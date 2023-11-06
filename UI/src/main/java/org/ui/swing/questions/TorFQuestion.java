@@ -56,6 +56,8 @@ public class TorFQuestion extends JFrame implements ActionListener {
 
     /**
      * Constructor
+     * @param quest question
+     * @param answer correct answer
      */
     public TorFQuestion(String quest, String answer) {
         writing.writeLog(TorFQuestion.class, "Constructor()");

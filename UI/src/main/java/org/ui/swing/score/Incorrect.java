@@ -53,6 +53,8 @@ public class Incorrect extends JFrame {
 
     /**
      * Constructor
+     * @param answer correct answer
+     * @param user_input users answer
      */
     public Incorrect(String answer, String user_input) {
         writing.writeLog(Incorrect.class, "Constructor()");

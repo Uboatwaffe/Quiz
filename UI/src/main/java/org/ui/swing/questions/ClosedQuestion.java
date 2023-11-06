@@ -65,6 +65,8 @@ public class ClosedQuestion extends JFrame implements ActionListener {
 
     /**
      * Constructor
+     * @param answer correct answer
+     * @param quest question
      */
     public ClosedQuestion(String quest, String answer) {
         writing.writeLog(ClosedQuestion.class, "Constructor()");

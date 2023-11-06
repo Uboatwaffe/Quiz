@@ -56,6 +56,8 @@ public class DateQuestion extends JFrame implements ActionListener {
 
     /**
      * Constructor
+     * @param answer correct answer
+     * @param quest question
      */
     public DateQuestion(String quest, String answer) {
         writing.writeLog(DateQuestion.class, "Constructor()");
