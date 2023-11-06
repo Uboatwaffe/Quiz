@@ -33,6 +33,7 @@
 - Generics
 - Annotations
 - Exceptions
+- Swing GUI designer
 
 ## How to run this program:
 
