@@ -8,5 +8,7 @@
  *         info
  *     </li>
  * </ul>
+ * @version 0.2
+ * @author Maciej
  */
 package org.ui.swing.other;
