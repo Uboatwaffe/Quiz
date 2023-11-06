@@ -17,7 +17,7 @@ public class Correct extends JFrame {
         score.setText("Your score is equal to: " + Count.getCount());
 
         setContentPane(panel);
-        setTitle("Question");
+        setTitle("Correct");
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);

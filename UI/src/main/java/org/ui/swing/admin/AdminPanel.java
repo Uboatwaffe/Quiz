@@ -20,7 +20,7 @@ public class AdminPanel extends JFrame {
 
     public AdminPanel() {
         setContentPane(panel);
-        setTitle("AdminPanel");
+        setTitle("Admin panel");
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);

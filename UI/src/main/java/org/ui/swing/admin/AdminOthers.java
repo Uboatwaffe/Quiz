@@ -22,7 +22,7 @@ public class AdminOthers extends JFrame {
 
     public AdminOthers() {
         setContentPane(panel);
-        setTitle("AdminOthers");
+        setTitle("Admin others");
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);

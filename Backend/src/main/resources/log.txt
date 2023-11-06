@@ -12,7 +12,7 @@ org.db.connecting.Connection: Establishing connection to DB
 org.ui.hq.HQ: Showing question with type: t
 org.ui.questions.QuestionTrueOrFalse: Constructor()
 org.ui.hq.HQ: Showing question with type: c
-org.ui.questions.QuestionABCD: Constructor()
+org.ui.questions.QuestionABC: Constructor()
 org.ui.hq.HQ: Showing question with type: o
 org.ui.questions.QuestionOpen: Constructor()
 org.ui.hq.HQ: Showing question with type: d
@@ -20,359 +20,32 @@ org.ui.questions.QuestionDate: Constructor()
 org.ui.hq.HQ: All questions showed
 org.ui.questions.QuestionDate:  <- Closing
 org.ui.score.Incorrect: Constructor()
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.OpenQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.TorFQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
+org.ui.score.Incorrect:  <- Closing
+org.ui.questions.QuestionOpen:  <- Closing, Don't know the answer
+org.ui.questions.QuestionABC:  <- Closing
+org.ui.score.Correct: Constructor
+org.ui.score.Correct:  <- Closing
+org.ui.questions.QuestionTrueOrFalse:  <- Closing
 org.ui.score.Incorrect: Constructor()
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.OpenQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.TorFQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
+org.ui.score.Incorrect:  <- Closing
+org.ui.Main:  -> Main.score
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
-org.db.connecting.LoggingIn: Getting data to logging in
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.LoggingIn: Getting data to logging in
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.ToStrings: Getting questions in array
+org.ui.Main:  -> Main.menu
+org.ui.Main: Starting quiz
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
 org.db.manage.HowMany: Counts how many records
+org.ui.hq.HQ: Starts showing questions
 org.db.connecting.Data: Getting all data from DB
 org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Sorting: Sorts
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.manage.Deleting: Deleting question
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.ToStrings: Getting questions in array
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.ToStrings: Getting answers in array
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.reset.Reset: Reseting
-org.db.reset.Reset:  -> SQL
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.reset.Reset:  -> Deleting
-org.db.manage.Deleting: Deleting question
-org.db.connecting.Connection: Establishing connection to DB
-org.db.reset.Reset:  -> Adding
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.reset.Reset:  -> Delete
-org.db.reset.Reset:  -> ChangePassword
-org.db.manage.ChangePassword: Updating admin details
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.ToStrings: Getting questions in array
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Sorting: Sorts
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.manage.Deleting: Deleting question
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Gets highest id of all records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.Adding: Adding questions
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.ToStrings: Getting questions in array
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.OpenQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing, Don't know the answer
-org.new_ui.swing.questions.TorFQuestion:  <- Closing, Don't know the answer
-org.new_ui.Main:  <- EXIT
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
-org.new_ui.Main:  <- EXIT
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
-org.new_ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.new_ui.swing.hq.HQ: Showing question with type: t
-org.new_ui.swing.hq.HQ: Showing question with type: c
-org.new_ui.swing.hq.HQ: Showing question with type: o
-org.new_ui.swing.hq.HQ: Showing question with type: d
-org.new_ui.swing.hq.HQ: All questions showed
-org.new_ui.swing.questions.DateQuestion:  <- Closing
-org.new_ui.swing.questions.OpenQuestion:  <- Closing
-org.new_ui.swing.questions.ClosedQuestion:  <- Closing
-org.new_ui.swing.questions.TorFQuestion:  <- Closing
-org.new_ui.Main:  <- EXIT
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.ui.Main:  <- EXIT
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.ui.swing.hq.HQ: Starts showing questions
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.ui.swing.hq.HQ: Showing question with type: t
-org.ui.swing.hq.HQ: Showing question with type: c
-org.ui.swing.hq.HQ: Showing question with type: o
-org.ui.swing.hq.HQ: Showing question with type: d
-org.ui.swing.hq.HQ: All questions showed
-org.ui.swing.questions.DateQuestion:  <- Closing
-org.ui.swing.questions.OpenQuestion:  <- Closing, Don't know the answer
-org.ui.swing.questions.ClosedQuestion:  <- Closing
-org.ui.swing.questions.TorFQuestion:  <- Closing
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.ui.Main:  <- EXIT
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.ui.Main:  <- EXIT
+org.ui.hq.HQ: Showing question with type: t
+org.ui.questions.QuestionTrueOrFalse: Constructor()
+org.ui.hq.HQ: Showing question with type: c
+org.ui.questions.QuestionABC: Constructor()
+org.ui.hq.HQ: Showing question with type: o
+org.ui.questions.QuestionOpen: Constructor()
+org.ui.hq.HQ: Showing question with type: d
+org.ui.questions.QuestionDate: Constructor()
+org.ui.hq.HQ: All questions showed

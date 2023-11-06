@@ -24,7 +24,7 @@ public class ChangeTable extends JFrame {
 
     public ChangeTable() {
         setContentPane(panel);
-        setTitle("All answers");
+        setTitle("Changing of the table");
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);

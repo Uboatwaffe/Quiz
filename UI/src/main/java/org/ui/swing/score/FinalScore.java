@@ -15,7 +15,7 @@ public class FinalScore extends JFrame {
 
     public FinalScore() {
         setContentPane(panel);
-        setTitle("Question");
+        setTitle("Score");
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
