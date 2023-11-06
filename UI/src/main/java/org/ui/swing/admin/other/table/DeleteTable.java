@@ -9,7 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
-public class DeleteTable extends JFrame {
+class DeleteTable extends JFrame {
     private final Writing writing = new Writing();
     private JTextField name;
     private JButton delete;
