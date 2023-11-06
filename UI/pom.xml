@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--suppress MavenModelInspection -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -16,9 +15,9 @@
         <dependency>
             <groupId>JDBC</groupId>
             <artifactId>JDBC</artifactId>
-            <scope>system</scope>
             <version>1.0</version>
-            <systemPath>C:\Users\PC\Desktop\Maciek\JavaProfessional\Quiz\lib\JDBC.jar</systemPath>
+            <scope>system</scope>
+            <systemPath>${basedir}/lib/JDBC.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

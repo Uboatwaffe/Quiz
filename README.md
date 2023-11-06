@@ -17,6 +17,7 @@
 - MySQL Database
 - MySQL Workbench
 - Intellij IDEA Community 2023
+- Editor Config
 
 ## Java language usage:
 - Encapsulation
