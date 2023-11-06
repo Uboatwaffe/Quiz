@@ -22,13 +22,13 @@ public class Main extends JFrame {
      *
      * @see Writing
      */
-    static Writing writing = new Writing();
+    static final Writing writing = new Writing();
 
     /**
      * Object used to write errors log
      * @see ERRORS
      */
-    static ERRORS errors2 = new ERRORS();
+    static final ERRORS errors2 = new ERRORS();
 
     /**
      * Content of the frame

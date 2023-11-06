@@ -60,7 +60,7 @@ public class ShowQ extends JFrame {
      *
      * @see Writing
      */
-    Writing writing = new Writing();
+    final Writing writing = new Writing();
 
     /**
      * Constructor
@@ -110,6 +110,7 @@ public class ShowQ extends JFrame {
     /**
      * Method that adds elements to the ArrayList
      */
+    @SuppressWarnings("CollectionAddedToSelf")
     private void addData() {
         sets.removeAll(sets);
         sets.addAll(Arrays.asList(toStrings.questionsInStringArray()));

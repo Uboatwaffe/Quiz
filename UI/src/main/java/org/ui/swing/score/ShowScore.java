@@ -39,7 +39,7 @@ public class ShowScore extends JFrame {
      *
      * @see Writing
      */
-    Writing writing = new Writing();
+    final Writing writing = new Writing();
 
     /**
      * Constructor

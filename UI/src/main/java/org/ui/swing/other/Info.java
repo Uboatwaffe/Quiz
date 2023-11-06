@@ -22,7 +22,7 @@ public class Info extends JFrame {
     /**
      * Field that gets info about how many records are in the DB
      */
-    HowMany howMany = new HowMany();
+    final HowMany howMany = new HowMany();
 
     /**
      * Content of the frame
@@ -59,7 +59,7 @@ public class Info extends JFrame {
      *
      * @see Writing
      */
-    Writing writing = new Writing();
+    final Writing writing = new Writing();
 
     /**
      * Constructor

@@ -69,7 +69,7 @@ public class MainSwing extends JFrame {
      *
      * @see Writing
      */
-    Writing writing = new Writing();
+    final Writing writing = new Writing();
 
     /**
      * Constructor
@@ -87,6 +87,7 @@ public class MainSwing extends JFrame {
              * Invoked when an action occurs.
              * @param e the event to be processed
              */
+            @SuppressWarnings("InstantiatingAThreadWithDefaultRunMethod")
             @Override
             public void actionPerformed(ActionEvent e) {
                 writing.writeLog(MainSwing.class, " -> HQ");

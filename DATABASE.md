@@ -28,7 +28,7 @@
 
 ## After you copied one line of this code click lighting arrow above, then in the place of executed code insert next line of this code unless you copied whole code.
 
-## !!!Do this only if you didn't executed code from above!!!
+## !!!Do this only if you didn't execute code from above!!!
 
 ## Create 3 tables:
 

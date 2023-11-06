@@ -23,7 +23,7 @@ class AddQ extends JFrame {
      *
      * @see Writing
      */
-    Writing writing = new Writing();
+    final Writing writing = new Writing();
     /**
      * Lambda responsible for extracting data from one String chain
      * into 3 records array

@@ -51,7 +51,7 @@ public class Logging_In extends JFrame {
      *
      * @see Writing
      */
-    Writing writing = new Writing();
+    final Writing writing = new Writing();
 
     /**
      * Constructor
@@ -69,6 +69,7 @@ public class Logging_In extends JFrame {
              * Invoked when an action occurs.
              * @param e the event to be processed
              */
+            @SuppressWarnings("deprecation")
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (login.getText().equals(LoggingIn.getLoginAndPassword()[0]) && password.getText().equals(LoggingIn.getLoginAndPassword()[1])) {

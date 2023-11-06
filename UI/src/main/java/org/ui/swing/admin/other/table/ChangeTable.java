@@ -64,7 +64,7 @@ public class ChangeTable extends JFrame {
      *
      * @see Writing
      */
-    Writing writing = new Writing();
+    final Writing writing = new Writing();
     /**
      * Field that stores pre-selected new table
      */
@@ -142,6 +142,7 @@ public class ChangeTable extends JFrame {
     /**
      * Method that adds elements to the ArrayList
      */
+    @SuppressWarnings("CollectionAddedToSelf")
     private void addData() {
         sets.removeAll(sets);
         sets.addAll(Arrays.asList(SQL.getAllTables()));

@@ -21,9 +21,11 @@ public class Tutorial extends JFrame {
     private JButton understood;
 
     /**
-     * Content of the frame
+     * Object used to write log
+     *
+     * @see Writing
      */
-    private JLabel welocme;
+    final Writing writing = new Writing();
 
     /**
      * Content of the frame
@@ -54,14 +56,10 @@ public class Tutorial extends JFrame {
      * Content of the frame
      */
     private JPanel panel;
-
-
     /**
-     * Object used to write log
-     *
-     * @see Writing
+     * Content of the frame
      */
-    Writing writing = new Writing();
+    private JLabel welcome;
 
     /**
      * Constructor
