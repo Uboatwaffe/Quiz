@@ -3,6 +3,6 @@
  *
  * @author Maciej
  * @version 0.1
- * @see org.ui.hq.HQ
+ * @see org.ui.swing.hq.HQ
  */
 package org.ui.swing.hq;
