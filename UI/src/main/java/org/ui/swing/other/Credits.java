@@ -61,7 +61,6 @@ public class Credits extends JFrame {
         understood.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override

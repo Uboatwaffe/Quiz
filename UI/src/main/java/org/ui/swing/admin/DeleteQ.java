@@ -51,7 +51,6 @@ class DeleteQ extends JFrame {
         delete.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -66,7 +65,6 @@ class DeleteQ extends JFrame {
         close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override

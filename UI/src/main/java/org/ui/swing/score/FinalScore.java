@@ -42,7 +42,6 @@ public class FinalScore extends JFrame {
         iDoButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -57,7 +56,6 @@ public class FinalScore extends JFrame {
         iDonTButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override

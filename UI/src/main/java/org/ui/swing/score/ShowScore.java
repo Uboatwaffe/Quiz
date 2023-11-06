@@ -40,7 +40,6 @@ public class ShowScore extends JFrame {
         understoodButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override

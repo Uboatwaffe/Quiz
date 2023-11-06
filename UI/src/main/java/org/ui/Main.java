@@ -75,7 +75,6 @@ public class Main extends JFrame {
         swing.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -89,7 +88,6 @@ public class Main extends JFrame {
         website.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -100,7 +98,6 @@ public class Main extends JFrame {
         quit.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -111,6 +108,11 @@ public class Main extends JFrame {
         });
     }
 
+    /**
+     * Method that starts whole program
+     *
+     * @param args argument required to launching program
+     */
     public static void main(String[] args) {
         writing.clear();
         errors2.clear();
@@ -118,6 +120,9 @@ public class Main extends JFrame {
         new Main();
     }
 
+    /**
+     * Method that shows content of this class to user
+     */
     public void showMain() {
         writing.writeLog(Main.class, "Showing main");
         setVisible(true);

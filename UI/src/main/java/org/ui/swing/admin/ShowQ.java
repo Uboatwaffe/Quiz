@@ -55,7 +55,6 @@ public class ShowQ extends JFrame {
         reload.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -70,7 +69,6 @@ public class ShowQ extends JFrame {
         close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -81,12 +79,18 @@ public class ShowQ extends JFrame {
         });
     }
 
+    /**
+     * Method that adds elements to the ArrayList
+     */
     private void addData() {
         sets.removeAll(sets);
         sets.addAll(Arrays.asList(toStrings.questionsInStringArray()));
         refreshData();
     }
 
+    /**
+     * Method that refreshes content of JList
+     */
     private void refreshData() {
         def.removeAllElements();
         for (String x : sets) {

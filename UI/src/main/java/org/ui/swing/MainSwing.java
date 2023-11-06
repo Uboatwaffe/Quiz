@@ -69,7 +69,6 @@ public class MainSwing extends JFrame {
         start.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -82,7 +81,6 @@ public class MainSwing extends JFrame {
         close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -96,7 +94,6 @@ public class MainSwing extends JFrame {
         info.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -108,7 +105,6 @@ public class MainSwing extends JFrame {
         credits.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -120,7 +116,6 @@ public class MainSwing extends JFrame {
         tutorial.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -132,7 +127,6 @@ public class MainSwing extends JFrame {
         adminPanel.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override

@@ -67,7 +67,6 @@ public class AdminPanel extends JFrame {
         add.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -79,7 +78,6 @@ public class AdminPanel extends JFrame {
         delete.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -91,7 +89,6 @@ public class AdminPanel extends JFrame {
         show_q.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -103,7 +100,6 @@ public class AdminPanel extends JFrame {
         show_a.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -115,7 +111,6 @@ public class AdminPanel extends JFrame {
         close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -129,7 +124,6 @@ public class AdminPanel extends JFrame {
         others.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override

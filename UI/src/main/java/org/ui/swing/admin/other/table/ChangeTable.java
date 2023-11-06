@@ -69,7 +69,6 @@ public class ChangeTable extends JFrame {
         choose.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -83,7 +82,6 @@ public class ChangeTable extends JFrame {
         close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -95,7 +93,6 @@ public class ChangeTable extends JFrame {
         refresh.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -108,7 +105,6 @@ public class ChangeTable extends JFrame {
         list.addListSelectionListener(new ListSelectionListener() {
             /**
              * Called whenever the value of the selection changes.
-             *
              * @param e the event that characterizes the change.
              */
             @Override
@@ -119,12 +115,18 @@ public class ChangeTable extends JFrame {
         });
     }
 
+    /**
+     * Method that adds elements to the ArrayList
+     */
     private void addData() {
         sets.removeAll(sets);
         sets.addAll(Arrays.asList(SQL.getAllTables()));
         refreshData();
     }
 
+    /**
+     * Method that refreshes content of JList
+     */
     private void refreshData() {
         def.removeAllElements();
         for (String x : sets) {

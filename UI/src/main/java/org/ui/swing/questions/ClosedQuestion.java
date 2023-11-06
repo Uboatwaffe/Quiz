@@ -80,7 +80,6 @@ public class ClosedQuestion extends JFrame implements ActionListener {
 
     /**
      * Invoked when an action occurs.
-     *
      * @param e the event to be processed
      */
     @Override

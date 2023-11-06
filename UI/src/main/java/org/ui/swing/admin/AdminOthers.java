@@ -61,7 +61,6 @@ public class AdminOthers extends JFrame {
         tableManagement.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -75,7 +74,6 @@ public class AdminOthers extends JFrame {
         changeTable.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -87,7 +85,6 @@ public class AdminOthers extends JFrame {
         tutorial.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -99,7 +96,6 @@ public class AdminOthers extends JFrame {
         changeDetails.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -113,7 +109,6 @@ public class AdminOthers extends JFrame {
         close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -127,7 +122,6 @@ public class AdminOthers extends JFrame {
         reset.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override

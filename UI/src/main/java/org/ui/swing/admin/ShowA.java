@@ -54,7 +54,6 @@ public class ShowA extends JFrame {
         refresh.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -69,7 +68,6 @@ public class ShowA extends JFrame {
         close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
-             *
              * @param e the event to be processed
              */
             @Override
@@ -80,12 +78,18 @@ public class ShowA extends JFrame {
         });
     }
 
+    /**
+     * Method that adds elements to the ArrayList
+     */
     private void addData() {
         sets.removeAll(sets);
         sets.addAll(Arrays.asList(toStrings.answersInStringArray()));
         refreshData();
     }
 
+    /**
+     * Method that refreshes content of JList
+     */
     private void refreshData() {
         def.removeAllElements();
         for (String x : sets) {
