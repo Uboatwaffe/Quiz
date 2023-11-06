@@ -11,11 +11,35 @@ import java.awt.event.WindowEvent;
 
 class DeleteTable extends JFrame {
     private final Writing writing = new Writing();
+
+    /**
+     * Content of the frame
+     */
     private JTextField name;
+
+    /**
+     * Content of the frame
+     */
     private JButton delete;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JLabel info;
+
+    /**
+     * Content of the frame
+     */
     private JLabel error;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
 
     DeleteTable() {

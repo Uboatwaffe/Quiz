@@ -14,9 +14,25 @@ import java.util.Arrays;
 public class ShowQ extends JFrame {
 
     private final ToStrings toStrings = new ToStrings();
+
+    /**
+     * Content of the frame
+     */
     private JButton reload;
+
+    /**
+     * Content of the frame
+     */
     private JList<String> list;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
     private final DefaultListModel<String> def;
     private final ArrayList<String> sets;

@@ -14,9 +14,25 @@ import java.util.Arrays;
 public class ShowA extends JFrame {
     private final DefaultListModel<String> def;
     private final ArrayList<String> sets;
+
+    /**
+     * Content of the frame
+     */
     private JList<String> list;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton refresh;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
     private final ToStrings toStrings = new ToStrings();
 

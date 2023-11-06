@@ -10,8 +10,20 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class ShowScore extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JButton understoodButton;
+
+    /**
+     * Content of the frame
+     */
     private JLabel score;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
 
     Writing writing = new Writing();

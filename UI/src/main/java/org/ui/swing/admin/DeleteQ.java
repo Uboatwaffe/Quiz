@@ -9,11 +9,35 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 class DeleteQ extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JTextField textField;
+
+    /**
+     * Content of the frame
+     */
     private JButton delete;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JLabel welcome;
+
+    /**
+     * Content of the frame
+     */
     private JLabel how_to;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
     Writing writing = new Writing();
     DeleteQ() {

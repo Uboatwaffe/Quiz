@@ -13,12 +13,40 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminOthers extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JButton tableManagement;
+
+    /**
+     * Content of the frame
+     */
     private JButton tutorial;
+
+    /**
+     * Content of the frame
+     */
     private JButton changeTable;
+
+    /**
+     * Content of the frame
+     */
     private JButton changeDetails;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JButton reset;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
 
     Writing writing = new Writing();

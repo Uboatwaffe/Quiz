@@ -8,13 +8,45 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Credits extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton understood;
+
+    /**
+     * Content of the frame
+     */
     private JLabel CREDITS;
+
+    /**
+     * Content of the frame
+     */
     private JLabel con1;
+
+    /**
+     * Content of the frame
+     */
     private JLabel con2;
+
+    /**
+     * Content of the frame
+     */
     private JLabel start;
+
+    /**
+     * Content of the frame
+     */
     private JLabel end;
+
+    /**
+     * Content of the frame
+     */
     private JLabel company;
 
     Writing writing = new Writing();

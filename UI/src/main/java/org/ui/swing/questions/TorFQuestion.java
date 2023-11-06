@@ -20,10 +20,30 @@ public class TorFQuestion extends JFrame implements ActionListener {
      * Field that stores user's answer
      */
     private final String answer;
+
+    /**
+     * Content of the frame
+     */
     private JButton trueButton;
+
+    /**
+     * Content of the frame
+     */
     private JButton falseButton;
+
+    /**
+     * Content of the frame
+     */
     private JButton iDonTKnowButton;
+
+    /**
+     * Content of the frame
+     */
     private JLabel question;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
 
     public TorFQuestion(String quest, String answer) {

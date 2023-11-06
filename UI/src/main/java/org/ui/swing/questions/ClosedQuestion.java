@@ -21,12 +21,40 @@ public class ClosedQuestion extends JFrame implements ActionListener {
      * Field that stores user's answer
      */
     private final String answer;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton aButton;
+
+    /**
+     * Content of the frame
+     */
     private JButton bButton;
+
+    /**
+     * Content of the frame
+     */
     private JButton cButton;
+
+    /**
+     * Content of the frame
+     */
     private JButton dButton;
+
+    /**
+     * Content of the frame
+     */
     private JButton idk;
+
+    /**
+     * Content of the frame
+     */
     private JLabel question;
 
     public ClosedQuestion(String quest, String answer) {

@@ -13,11 +13,35 @@ import java.awt.event.WindowEvent;
 public class Info extends JFrame {
 
     HowMany howMany = new HowMany();
+
+    /**
+     * Content of the frame
+     */
     private JButton understood;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JLabel INFO;
+
+    /**
+     * Content of the frame
+     */
     private JLabel set;
+
+    /**
+     * Content of the frame
+     */
     private JLabel questions;
+
+    /**
+     * Content of the frame
+     */
     private JLabel last_score;
 
     Writing writing = new Writing();

@@ -9,14 +9,50 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminPanel extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JButton add;
+
+    /**
+     * Content of the frame
+     */
     private JButton delete;
+
+    /**
+     * Content of the frame
+     */
     private JButton show_q;
+
+    /**
+     * Content of the frame
+     */
     private JButton show_a;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JButton others;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JLabel welcome;
+
+    /**
+     * Content of the frame
+     */
     private JLabel what_to_do;
 
     Writing writing = new Writing();

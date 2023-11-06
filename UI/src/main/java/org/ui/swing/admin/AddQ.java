@@ -63,11 +63,35 @@ class AddQ extends JFrame {
         // Returns true if everything is correct otherwise false
         return correct;
     };
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JTextField textField;
+
+    /**
+     * Content of the frame
+     */
     private JButton AddQ;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JLabel welcome;
+
+    /**
+     * Content of the frame
+     */
     private JLabel how_to;
 
     AddQ() {

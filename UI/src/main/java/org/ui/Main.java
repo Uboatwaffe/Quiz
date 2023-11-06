@@ -13,15 +13,55 @@ public class Main extends JFrame {
     static Writing writing = new Writing();
 
     static ERRORS errors2 = new ERRORS();
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton swing;
+
+    /**
+     * Content of the frame
+     */
     private JButton website;
+
+    /**
+     * Content of the frame
+     */
     private JButton quit;
+
+    /**
+     * Content of the frame
+     */
     private JLabel welcome;
+
+    /**
+     * Content of the frame
+     */
     private JLabel types;
+
+    /**
+     * Content of the frame
+     */
     private JLabel GUI;
+
+    /**
+     * Content of the frame
+     */
     private JLabel web;
+
+    /**
+     * Content of the frame
+     */
     private JLabel errors;
+
+    /**
+     * Content of the frame
+     */
     private JLabel fun;
 
     public Main() {

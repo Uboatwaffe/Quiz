@@ -11,14 +11,50 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class MainSwing extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton tutorial;
+
+    /**
+     * Content of the frame
+     */
     private JButton adminPanel;
+
+    /**
+     * Content of the frame
+     */
     private JButton start;
+
+    /**
+     * Content of the frame
+     */
     private JButton info;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JButton credits;
+
+    /**
+     * Content of the frame
+     */
     private JLabel welocme;
+
+    /**
+     * Content of the frame
+     */
     private JLabel what_to_do;
 
     Writing writing = new Writing();

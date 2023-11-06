@@ -15,12 +15,38 @@ import java.util.Arrays;
 public class ChangeTable extends JFrame {
     private final DefaultListModel<String> def;
     private final ArrayList<String> sets;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JList<String> list;
+
+    /**
+     * Content of the frame
+     */
     private JButton choose;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JLabel info;
+
+    /**
+     * Content of the frame
+     */
     private JButton refresh;
+
+
     private String prevTable;
     Writing writing = new Writing();
     public ChangeTable() {

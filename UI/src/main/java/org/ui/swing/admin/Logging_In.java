@@ -9,11 +9,35 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Logging_In extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JTextField login;
+
+    /**
+     * Content of the frame
+     */
     private JPasswordField password;
+
+    /**
+     * Content of the frame
+     */
     private JButton log_in;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JLabel insert_login;
     Writing writing = new Writing();
 

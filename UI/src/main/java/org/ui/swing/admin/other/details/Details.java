@@ -11,11 +11,29 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Details extends JFrame {
+    /**
+     * Content of the frame
+     */
     private JTextField newLogin;
+    /**
+     * Content of the frame
+     */
     private JTextField newPassword;
+    /**
+     * Content of the frame
+     */
     private JButton submit;
+    /**
+     * Content of the frame
+     */
     private JButton close;
+    /**
+     * Content of the frame
+     */
     private JLabel info;
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
     Writing writing = new Writing();
     public Details() {

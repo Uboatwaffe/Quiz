@@ -8,13 +8,45 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Tutorial extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JButton understood;
+
+    /**
+     * Content of the frame
+     */
     private JLabel welocme;
+
+    /**
+     * Content of the frame
+     */
     private JLabel types;
+
+    /**
+     * Content of the frame
+     */
     private JLabel closed;
+
+    /**
+     * Content of the frame
+     */
     private JLabel true_or_false;
+
+    /**
+     * Content of the frame
+     */
     private JLabel date;
+
+    /**
+     * Content of the frame
+     */
     private JLabel open;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
 
     Writing writing = new Writing();

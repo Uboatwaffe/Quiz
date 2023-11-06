@@ -9,9 +9,25 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class FinalScore extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JButton iDoButton;
+
+    /**
+     * Content of the frame
+     */
     private JButton iDonTButton;
+
+    /**
+     * Content of the frame
+     */
     private JLabel what_to_do;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
 
     Writing writing = new Writing();

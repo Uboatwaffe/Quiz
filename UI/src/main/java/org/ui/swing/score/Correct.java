@@ -9,9 +9,25 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Correct extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JLabel correct;
+
+    /**
+     * Content of the frame
+     */
     private JLabel score;
 
     Writing writing = new Writing();

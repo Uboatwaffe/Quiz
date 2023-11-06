@@ -21,10 +21,30 @@ public class DateQuestion extends JFrame implements ActionListener {
      * Field that stores user's answer
      */
     private final String answer;
+
+    /**
+     * Content of the frame
+     */
     private JTextField textField;
+
+    /**
+     * Content of the frame
+     */
     private JButton submit;
+
+    /**
+     * Content of the frame
+     */
     private JButton idk;
+
+    /**
+     * Content of the frame
+     */
     private JLabel question;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
 
     public DateQuestion(String quest, String answer) {

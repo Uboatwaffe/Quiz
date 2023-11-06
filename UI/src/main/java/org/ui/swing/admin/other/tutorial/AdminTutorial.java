@@ -8,13 +8,45 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class AdminTutorial extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JLabel welcome;
+
+    /**
+     * Content of the frame
+     */
     private JLabel introduction;
+
+    /**
+     * Content of the frame
+     */
     private JLabel closed_ones;
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JLabel TrueOrFalse_ones;
+
+    /**
+     * Content of the frame
+     */
     private JLabel Open_ones;
+
+    /**
+     * Content of the frame
+     */
     private JLabel About_date;
 
     Writing writing = new Writing();

@@ -8,10 +8,30 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 public class Incorrect extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton understoodButton;
+
+    /**
+     * Content of the frame
+     */
     private JLabel incorrect;
+
+    /**
+     * Content of the frame
+     */
     private JLabel user_input;
+
+    /**
+     * Content of the frame
+     */
     private JLabel answer;
 
     Writing writing = new Writing();
