@@ -93,6 +93,7 @@ public class MainSwing extends JFrame {
             @SuppressWarnings("InstantiatingAThreadWithDefaultRunMethod")
             @Override
             public void actionPerformed(ActionEvent e) {
+                dispatchEvent(new WindowEvent(MainSwing.this, WindowEvent.WINDOW_CLOSING));
                 writing.writeLog(MainSwing.class, " -> HQ");
                 HQ hq = new HQ();
                 hq.start();

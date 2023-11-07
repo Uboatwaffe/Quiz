@@ -2,6 +2,7 @@ package org.ui.swing.admin;
 
 import org.db.connecting.LoggingIn;
 import org.file.Writing;
+import org.ui.swing.exceptions.WrongPassword;
 import org.uiProperties.Properties;
 
 import javax.swing.*;
@@ -82,7 +83,8 @@ public class Logging_In extends JFrame {
                     dispatchEvent(new WindowEvent(Logging_In.this, WindowEvent.WINDOW_CLOSING));
                 } else {
                     writing.writeLog(Logging_In.class, "Logging in was unsuccessful");
-                    // TODO this
+                    new WrongPassword();
+                    dispatchEvent(new WindowEvent(Logging_In.this, WindowEvent.WINDOW_CLOSING));
                 }
             }
         });

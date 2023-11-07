@@ -1,9 +1,11 @@
 package org.ui.swing.hq;
 
 import org.db.connecting.Data;
+import org.db.manage.HowMany;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 import org.score.Count;
+import org.ui.swing.exceptions.NoQuestions;
 import org.ui.swing.questions.ClosedQuestion;
 import org.ui.swing.questions.DateQuestion;
 import org.ui.swing.questions.OpenQuestion;
@@ -31,10 +33,12 @@ public class HQ extends Thread {
      */
     private final Data data = new Data();
 
+    HowMany howMany = new HowMany();
     /**
      * Method that calls other classes that show questions
      */
     public void start() {
+        boolean any = true;
         try {
             Count.setCount(0);
 
@@ -44,15 +48,18 @@ public class HQ extends Thread {
             // Gets data from DB
             ResultSet resultSet = data.getData();
 
-            if (resultSet != null) {
+            if (howMany.howMany() > 0) {
                 writing.writeLog(HQ.class, " -> FinalScore");
-                new FinalScore();
                 while (resultSet.next()) {
                     // Gets type of the question
                     String type = resultSet.getString("type");
 
                     //Writes log
                     writing.writeLog(getClass(), "Showing question with type: " + type);
+                    if (any) {
+                        any = false;
+                        new FinalScore();
+                    }
 
                     // Creates corresponding UI for type of the question
                     switch (type) {
@@ -63,9 +70,11 @@ public class HQ extends Thread {
                         default -> new ExceptionUI(getClass(), "Type of question wasn't correct");
                     }
                 }
+                //Writes log
+                writing.writeLog(getClass(), "All questions showed");
+            } else {
+                new NoQuestions();
             }
-            //Writes log
-            writing.writeLog(getClass(), "All questions showed");
         } catch (Exception ignored) {
             writing.writeLog(getClass(), " -> ExceptionUI");
             new ExceptionUI(getClass(), "Something went wrong with ResultSet from database");
