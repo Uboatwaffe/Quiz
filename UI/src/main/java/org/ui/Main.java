@@ -65,21 +65,7 @@ public class Main extends JFrame {
      * Content of the frame
      */
     private JLabel GUI;
-
-    /**
-     * Content of the frame
-     */
-    private JLabel web;
-
-    /**
-     * Content of the frame
-     */
-    private JLabel errors;
-
-    /**
-     * Content of the frame
-     */
-    private JLabel fun;
+    private JButton setUpDebugButton;
 
     /**
      * Constructor
@@ -106,16 +92,6 @@ public class Main extends JFrame {
                 setVisible(false);
             }
         });
-        website.addActionListener(new ActionListener() {
-            /**
-             * Invoked when an action occurs.
-             * @param e the event to be processed
-             */
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                writing.writeLog(Main.class, " -> Website");
-            }
-        });
         quit.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.
@@ -125,6 +101,17 @@ public class Main extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 writing.writeLog(Main.class, " <- EXIT");
                 System.exit(0);
+            }
+        });
+        setUpDebugButton.addActionListener(new ActionListener() {
+            /**
+             * Invoked when an action occurs.
+             *
+             * @param e the event to be processed
+             */
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }

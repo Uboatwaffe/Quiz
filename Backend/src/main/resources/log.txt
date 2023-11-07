@@ -4,28 +4,6 @@ org.ui.Main: Constructor()
 org.ui.Main:  -> MainSwing
 org.ui.swing.MainSwing: Constructor()
 org.ui.Main: Hide
-org.ui.swing.MainSwing:  -> Logging_In
-org.ui.swing.admin.Logging_In: Constructor()
-org.db.connecting.LoggingIn: Getting data to logging in
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.LoggingIn: Getting data to logging in
-org.db.connecting.Connection: Establishing connection to DB
-org.ui.swing.admin.Logging_In: Logged successfully
-org.ui.swing.admin.Logging_In:  -> AdminPanel
-org.ui.swing.admin.AdminPanel: Constructor()
-org.ui.swing.admin.Logging_In:  <- Close
-org.ui.swing.admin.AdminPanel:  -> AddQ
-org.ui.swing.admin.AddQ: Constructor()
-org.ui.swing.admin.AddQ$2:  -> StringOperations
-org.db.manage.StringOperations:  -> Adding
-org.ui.swing.admin.AddQ: In lambda 'toArray'
-org.ui.swing.admin.AddQ: In lambda 'checking'
-org.ui.swing.admin.AddQ: In lambda 'toArray'
-org.db.manage.StringOperations:  -> ExceptionUI
-org.ui.swing.admin.AddQ:  <- Close
-org.ui.swing.admin.AdminPanel:  -> MainSwing
-org.ui.swing.MainSwing: Constructor()
-org.ui.swing.admin.AdminPanel:  <- Close
 org.ui.swing.MainSwing:  -> Main
 org.ui.Main: Constructor()
 org.ui.Main: Showing main

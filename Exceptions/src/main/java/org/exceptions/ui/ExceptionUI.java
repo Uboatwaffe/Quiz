@@ -36,13 +36,10 @@ public class ExceptionUI implements ActionListener {
         JLabel welcome = new JLabel("SORRY!", SwingConstants.CENTER);
         welcome.setBounds(185, 5, 150, 15);
 
-        JLabel info = new JLabel(message, SwingConstants.CENTER);
+        JLabel info = new JLabel("Something went wrong", SwingConstants.CENTER);
         info.setHorizontalTextPosition(SwingConstants.CENTER);
         info.setHorizontalAlignment(SwingConstants.CENTER);
         info.setBounds(140, 25, 240, 15);
-
-        JLabel score = new JLabel("Caller: " + ob.getName());
-        score.setBounds(5, 45, 2000, 15);
 
         // Button
         JButton understood = new JButton("UNDERSTOOD");
@@ -56,7 +53,7 @@ public class ExceptionUI implements ActionListener {
         // Adding to the frame
         frame.add(welcome);
         frame.add(info);
-        //frame.add(score);
+
         frame.add(understood);
 
         // Setting up the visibility
