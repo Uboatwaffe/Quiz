@@ -1,5 +1,6 @@
 package org.ui.swing.admin;
 
+import org.annotation.UI;
 import org.db.reset.Reset;
 import org.file.Writing;
 import org.ui.swing.admin.other.details.Details;
@@ -19,6 +20,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class AdminOthers extends JFrame {
 
     /**

@@ -1,5 +1,6 @@
 package org.ui.swing.admin.other.tutorial;
 
+import org.annotation.UI;
 import org.file.Writing;
 import org.uiProperties.Properties;
 
@@ -15,6 +16,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class AdminTutorial extends JFrame {
 
     /**

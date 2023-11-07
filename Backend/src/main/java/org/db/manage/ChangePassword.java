@@ -1,5 +1,6 @@
 package org.db.manage;
 
+import org.annotation.DataBase;
 import org.db.connecting.Connection;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
@@ -12,6 +13,7 @@ import java.sql.PreparedStatement;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
+@DataBase
 public class ChangePassword {
 
     /**

@@ -1,5 +1,6 @@
 package org.db.connecting;
 
+import org.annotation.DataBase;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -12,6 +13,7 @@ import java.sql.Statement;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
+@DataBase
 public final class LoggingIn {
 
     /**

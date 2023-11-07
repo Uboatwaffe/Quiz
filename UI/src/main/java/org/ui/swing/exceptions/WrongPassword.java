@@ -1,5 +1,6 @@
 package org.ui.swing.exceptions;
 
+import org.annotation.UI;
 import org.ui.swing.MainSwing;
 import org.uiProperties.Properties;
 
@@ -13,6 +14,7 @@ import java.awt.event.WindowEvent;
  * @version 0.1
  * @author Maciej
  */
+@UI
 public class WrongPassword extends JFrame {
 
     /**

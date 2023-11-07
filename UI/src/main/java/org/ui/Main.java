@@ -1,5 +1,6 @@
 package org.ui;
 
+import org.annotation.UI;
 import org.exceptions.file.ERRORS;
 import org.file.Writing;
 import org.ui.swing.MainSwing;
@@ -15,6 +16,7 @@ import java.awt.event.ActionListener;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class Main extends JFrame {
 
 

@@ -1,5 +1,7 @@
 package org.ui.swing.questions;
 
+import org.annotation.Question;
+import org.annotation.UI;
 import org.file.Writing;
 import org.score.Count;
 import org.ui.swing.score.Correct;
@@ -18,6 +20,8 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
+@Question
 public class OpenQuestion extends JFrame implements ActionListener {
     /**
      * Object used to write log

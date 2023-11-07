@@ -1,5 +1,6 @@
 package org.ui.swing.admin.other.table;
 
+import org.annotation.UI;
 import org.db.connecting.SQL;
 import org.file.Writing;
 import org.uiProperties.Properties;
@@ -19,6 +20,7 @@ import java.util.Arrays;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class ChangeTable extends JFrame {
 
     /**

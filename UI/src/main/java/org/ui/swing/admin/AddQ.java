@@ -1,5 +1,7 @@
 package org.ui.swing.admin;
 
+import org.annotation.LambdaUsage;
+import org.annotation.UI;
 import org.db.interfaces.Functional;
 import org.db.interfaces.Functional2;
 import org.db.manage.StringOperations;
@@ -17,6 +19,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 class AddQ extends JFrame {
 
     /**
@@ -29,6 +32,8 @@ class AddQ extends JFrame {
      * Lambda responsible for extracting data from one String chain
      * into 3 records array
      */
+
+    @LambdaUsage
     private final Functional toArray = (chain) -> {
         String[] db = null;
         try {
@@ -54,6 +59,7 @@ class AddQ extends JFrame {
      * and also for checking if any of the questions doesn't contain '.' except for
      * questions about date
      */
+    @LambdaUsage
     private final Functional2 checking = (chain) -> {
         // Writing log
         writing.writeLog(getClass(), "In lambda 'checking'");

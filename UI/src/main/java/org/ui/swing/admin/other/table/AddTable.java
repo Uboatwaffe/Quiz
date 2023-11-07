@@ -1,5 +1,6 @@
 package org.ui.swing.admin.other.table;
 
+import org.annotation.UI;
 import org.db.connecting.SQL;
 import org.db.tables.Add;
 import org.file.Writing;
@@ -16,6 +17,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 class AddTable extends JFrame {
 
     /**

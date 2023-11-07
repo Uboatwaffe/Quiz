@@ -1,5 +1,6 @@
 package org.ui.swing;
 
+import org.annotation.UI;
 import org.file.Writing;
 import org.ui.Main;
 import org.ui.swing.hq.HQ;
@@ -17,6 +18,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class MainSwing extends JFrame {
 
     /**

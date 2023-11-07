@@ -1,5 +1,6 @@
 package org.ui.swing.admin;
 
+import org.annotation.UI;
 import org.db.connecting.LoggingIn;
 import org.file.Writing;
 import org.ui.swing.exceptions.WrongPassword;
@@ -16,6 +17,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class Logging_In extends JFrame {
 
     /**

@@ -1,5 +1,6 @@
 package org.ui.swing.admin.other.details;
 
+import org.annotation.UI;
 import org.db.connecting.LoggingIn;
 import org.db.manage.ChangePassword;
 import org.file.Writing;
@@ -17,6 +18,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class Details extends JFrame {
     /**
      * Content of the frame

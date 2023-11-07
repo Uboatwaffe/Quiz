@@ -1,5 +1,6 @@
 package org.db.manage;
 
+import org.annotation.DataBase;
 import org.db.connecting.Connection;
 import org.db.connecting.SQL;
 import org.exceptions.ui.ExceptionUI;
@@ -13,6 +14,7 @@ import java.sql.PreparedStatement;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
+@DataBase
 public final class Adding{
 
     /**

@@ -1,5 +1,6 @@
 package org.ui.swing.other;
 
+import org.annotation.UI;
 import org.db.connecting.SQL;
 import org.db.manage.HowMany;
 import org.file.Writing;
@@ -18,6 +19,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class Info extends JFrame {
 
     /**

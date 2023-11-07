@@ -1,5 +1,6 @@
 package org.ui.swing.admin;
 
+import org.annotation.UI;
 import org.db.manage.Sorting;
 import org.db.manage.ToStrings;
 import org.file.Writing;
@@ -19,6 +20,7 @@ import java.util.Arrays;
  * @author Maciej
  * @version 0.2
  */
+@UI
 public class ShowA extends JFrame {
 
     /**

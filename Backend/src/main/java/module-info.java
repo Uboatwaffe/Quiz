@@ -15,4 +15,5 @@ module Backend {
     exports org.db.interfaces to UI;
     exports org.score to UI;
     exports org.file to UI;
+    exports org.annotation;
 }

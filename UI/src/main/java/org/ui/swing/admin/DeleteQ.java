@@ -1,5 +1,6 @@
 package org.ui.swing.admin;
 
+import org.annotation.UI;
 import org.db.manage.Deleting;
 import org.file.Writing;
 import org.uiProperties.Properties;
@@ -16,6 +17,7 @@ import java.awt.event.WindowEvent;
  * @author Maciej
  * @version 0.2
  */
+@UI
 class DeleteQ extends JFrame {
 
     /**

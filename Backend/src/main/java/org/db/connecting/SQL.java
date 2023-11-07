@@ -1,5 +1,6 @@
 package org.db.connecting;
 
+import org.annotation.DataBase;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -10,6 +11,7 @@ import java.sql.Statement;
  * Class that stores info about tables in DB
  */
 @SuppressWarnings("DataFlowIssue")
+@DataBase
 public class SQL {
 
     /**
