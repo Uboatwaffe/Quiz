@@ -33,6 +33,11 @@ public class HQ extends Thread {
      */
     private final Data data = new Data();
 
+    /**
+     * Field that gets how many records are in database
+     *
+     * @see HowMany
+     */
     HowMany howMany = new HowMany();
     /**
      * Method that calls other classes that show questions

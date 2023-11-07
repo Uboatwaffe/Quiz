@@ -22,6 +22,7 @@ public class ExceptionUI implements ActionListener {
     /**
      * Constructor
      * @param ob Name of class that thrown this Exception
+     * @param message Massage that will be shown to the user
      */
     public ExceptionUI(Class<?> ob, String message) {
 

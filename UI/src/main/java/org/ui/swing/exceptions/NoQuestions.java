@@ -8,14 +8,35 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * @author
+ * UI for showing that there aren't any questions
+ * @version 0.1
+ * @author Maciej
  */
 public class NoQuestions extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton close;
+
+    /**
+     * Content of the frame
+     */
     private JLabel info;
+
+    /**
+     * Content of the frame
+     */
     private JLabel why;
 
+    /**
+     * Constructor
+     */
     public NoQuestions() {
         setContentPane(panel);
         setTitle("No questions");

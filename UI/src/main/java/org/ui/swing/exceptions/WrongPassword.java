@@ -9,14 +9,36 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 
 /**
- * @author
+ * UI that shows to the user that given login/password is incorrect
+ * @version 0.1
+ * @author Maciej
  */
 public class WrongPassword extends JFrame {
+
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+
+    /**
+     * Content of the frame
+     */
     private JButton understoodButton;
+
+    /**
+     * Content of the frame
+     */
     private JLabel info;
+
+    /**
+     * Content of the frame
+     */
     private JLabel why;
 
+
+    /**
+     * Constructor
+     */
     public WrongPassword() {
         setContentPane(panel);
         setTitle("Wrong password");
