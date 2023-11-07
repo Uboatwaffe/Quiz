@@ -23,19 +23,22 @@ public class ExceptionUI implements ActionListener {
      * Constructor
      * @param ob Name of class that thrown this Exception
      */
-    public ExceptionUI(Class<?> ob){
+    public ExceptionUI(Class<?> ob, String message) {
 
         // Default settings
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-        frame.setSize(440,170);
+        frame.setSize(540, 170);
         frame.setLayout(null);
+        frame.setResizable(false);
 
         // Labels
-        JLabel welcome = new JLabel("SORRY!");
+        JLabel welcome = new JLabel("SORRY!", SwingConstants.CENTER);
         welcome.setBounds(185, 5, 150, 15);
 
-        JLabel info = new JLabel("Something went wrong...");
-        info.setBounds(140, 25, 150, 15);
+        JLabel info = new JLabel(message, SwingConstants.CENTER);
+        info.setHorizontalTextPosition(SwingConstants.CENTER);
+        info.setHorizontalAlignment(SwingConstants.CENTER);
+        info.setBounds(140, 25, 240, 15);
 
         JLabel score = new JLabel("Caller: " + ob.getName());
         score.setBounds(5, 45, 2000, 15);
@@ -44,7 +47,7 @@ public class ExceptionUI implements ActionListener {
         JButton understood = new JButton("UNDERSTOOD");
 
         // Setting size
-        understood.setBounds(5, 65, 415, 60);
+        understood.setBounds(5, 65, 515, 60);
 
         // Action Listeners
         understood.addActionListener(this);
@@ -62,7 +65,7 @@ public class ExceptionUI implements ActionListener {
         ERRORS errors = new ERRORS();
 
         // Writing error log
-        errors.writeLog(getClass(), "ERROR from:\t" + ob.getName());
+        errors.writeLog(getClass(), "ERROR from:\t" + ob.getName() + " ISSUE: " + message);
     }
 
 

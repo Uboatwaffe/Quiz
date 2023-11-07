@@ -4,6 +4,7 @@ import org.file.Writing;
 import org.score.Count;
 import org.ui.swing.score.Correct;
 import org.ui.swing.score.Incorrect;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -81,6 +82,7 @@ public class ClosedQuestion extends JFrame implements ActionListener {
         setSize(540, 210);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
 
         aButton.addActionListener(this);
         bButton.addActionListener(this);

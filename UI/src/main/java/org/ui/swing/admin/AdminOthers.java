@@ -6,6 +6,7 @@ import org.ui.swing.admin.other.details.Details;
 import org.ui.swing.admin.other.table.ChangeTable;
 import org.ui.swing.admin.other.table.TablesManage;
 import org.ui.swing.admin.other.tutorial.AdminTutorial;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -73,6 +74,7 @@ public class AdminOthers extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         tableManagement.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

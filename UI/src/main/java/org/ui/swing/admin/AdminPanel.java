@@ -2,6 +2,7 @@ package org.ui.swing.admin;
 
 import org.file.Writing;
 import org.ui.swing.MainSwing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -79,6 +80,7 @@ public class AdminPanel extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         add.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

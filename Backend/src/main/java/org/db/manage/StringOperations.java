@@ -44,7 +44,7 @@ public class StringOperations {
                 throw new CustomException(StringOperations.class, "Type of question is incorrect!");
         } catch (Exception ignore) {
             writing.writeLog(StringOperations.class, " -> ExceptionUI");
-            new ExceptionUI(StringOperations.class);
+            new ExceptionUI(StringOperations.class, "Wrong type of question");
         }
     }
 }

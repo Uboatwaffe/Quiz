@@ -1,8 +1,9 @@
 package org.ui.swing.admin.other.table;
 
-import org.db.manage.SQL;
+import org.db.connecting.SQL;
 import org.db.tables.Add;
 import org.file.Writing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -65,6 +66,7 @@ class AddTable extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         error.setVisible(false);
+        setResizable(Properties.getScalable());
 
         setVisible(true);
         create.addActionListener(new ActionListener() {

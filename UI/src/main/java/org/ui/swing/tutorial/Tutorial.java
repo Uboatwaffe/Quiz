@@ -1,6 +1,7 @@
 package org.ui.swing.tutorial;
 
 import org.file.Writing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -72,6 +73,7 @@ public class Tutorial extends JFrame {
         setSize(440, 230);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         understood.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

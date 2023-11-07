@@ -4,6 +4,7 @@ import org.db.interfaces.Functional;
 import org.db.interfaces.Functional2;
 import org.db.manage.StringOperations;
 import org.file.Writing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -118,6 +119,7 @@ class AddQ extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
 
         close.addActionListener(new ActionListener() {
             /**

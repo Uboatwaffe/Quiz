@@ -45,7 +45,7 @@ public class HowMany {
 
         } catch (Exception ignore) {
             writing.writeLog(HowMany.class, " -> ExceptionUI");
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Something went wrong while counting how many records are in the database");
         }
         // Returns info
         return i;
@@ -71,7 +71,7 @@ public class HowMany {
             }
         } catch (Exception ignore) {
             writing.writeLog(HowMany.class, " -> ExceptionUI");
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Something went wrong while getting highest id from the database");
         }
         // Returns info
         return i;

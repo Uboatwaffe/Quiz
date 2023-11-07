@@ -60,7 +60,7 @@ public class HQ extends Thread {
                         case "c" -> new ClosedQuestion(resultSet.getString("question"), resultSet.getString("answer"));
                         case "o" -> new OpenQuestion(resultSet.getString("question"), resultSet.getString("answer"));
                         case "t" -> new TorFQuestion(resultSet.getString("question"), resultSet.getString("answer"));
-                        default -> new ExceptionUI(getClass());
+                        default -> new ExceptionUI(getClass(), "Type of question wasn't correct");
                     }
                 }
             }
@@ -68,7 +68,7 @@ public class HQ extends Thread {
             writing.writeLog(getClass(), "All questions showed");
         } catch (Exception ignored) {
             writing.writeLog(getClass(), " -> ExceptionUI");
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Something went wrong with ResultSet from database");
         }
     }
 }

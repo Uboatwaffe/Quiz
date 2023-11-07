@@ -1,6 +1,5 @@
 package org.db.connecting;
 
-import org.db.manage.SQL;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -42,7 +41,7 @@ public final class Data {
         } catch (Exception ignored) {
             // If something went wrong informs user about this
             writing.writeLog(getClass(), " -> ExceptionUI");
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Something went wrong when extracting data from database");
         }
 
         // Returns data

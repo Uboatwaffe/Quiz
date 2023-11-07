@@ -3,6 +3,7 @@ package org.ui.swing.score;
 import org.file.Writing;
 import org.score.Count;
 import org.ui.swing.MainSwing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -54,6 +55,7 @@ public class ShowScore extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         understoodButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

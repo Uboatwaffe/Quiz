@@ -28,7 +28,7 @@ public class Writing {
             // Prints empty line
             out.println();
         } catch (Exception ignore) {
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Couldn't find file or couldn't print anything out");
         }
     }
 
@@ -40,7 +40,7 @@ public class Writing {
             // Clears whole file
             out.println("");
         } catch (Exception ignore) {
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Couldn't find file or couldn't print anything out");
         }
     }
 }

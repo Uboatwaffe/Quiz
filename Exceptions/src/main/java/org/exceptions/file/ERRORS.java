@@ -29,7 +29,7 @@ public class ERRORS {
             // Writes empty line
             out.println();
         }catch (IOException e){
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Couldn't find file or couldn't print log");
         }
     }
 
@@ -42,7 +42,7 @@ public class ERRORS {
             // Clears whole file
             out.println("");
         }catch(IOException e){
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Couldn't find file or couldn't print log");
         }
     }
 }

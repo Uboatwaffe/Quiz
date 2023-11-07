@@ -1,6 +1,6 @@
 package org.manage;
 
-import org.db.manage.SQL;
+import org.db.connecting.SQL;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;

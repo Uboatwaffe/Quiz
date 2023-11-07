@@ -4,6 +4,7 @@ import org.file.Writing;
 import org.score.Count;
 import org.ui.swing.score.Correct;
 import org.ui.swing.score.Incorrect;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -73,6 +74,7 @@ public class OpenQuestion extends JFrame implements ActionListener {
         setSize(540, 210);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
 
         submit.addActionListener(this);
         idk.addActionListener(this);

@@ -1,6 +1,7 @@
 package org.ui.swing.score;
 
 import org.file.Writing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -67,6 +68,7 @@ public class Incorrect extends JFrame {
         setSize(540, 210);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         understoodButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

@@ -4,6 +4,7 @@ import org.db.connecting.LoggingIn;
 import org.db.manage.ChangePassword;
 import org.file.Writing;
 import org.ui.swing.admin.AdminOthers;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -60,6 +61,7 @@ public class Details extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         submit.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

@@ -38,7 +38,7 @@ public class ChangePassword {
             statement.executeUpdate();
         } catch (Exception ignore) {
             writing.writeLog(Deleting.class, " -> ExceptionUI");
-            new ExceptionUI(ChangePassword.class);
+            new ExceptionUI(ChangePassword.class, "Something went wrong when inserting new values into the database");
         }
     }
 }

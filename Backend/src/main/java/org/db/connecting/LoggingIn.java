@@ -51,7 +51,7 @@ public final class LoggingIn {
         } catch (Exception ignored) {
             // If something went wrong informs user about this
             writing.writeLog(LoggingIn.class, " -> ExceptionUI");
-            new ExceptionUI(LoggingIn.class);
+            new ExceptionUI(LoggingIn.class, "Something went wrong while extracting data for logging in purposes");
         }
         // Returning info
         return db;

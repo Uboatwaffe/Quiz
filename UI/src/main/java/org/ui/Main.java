@@ -3,6 +3,7 @@ package org.ui;
 import org.exceptions.file.ERRORS;
 import org.file.Writing;
 import org.ui.swing.MainSwing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -91,6 +92,7 @@ public class Main extends JFrame {
         setSize(530, 250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         swing.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

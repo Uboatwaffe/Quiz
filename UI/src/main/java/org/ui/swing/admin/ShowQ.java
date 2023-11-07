@@ -3,6 +3,7 @@ package org.ui.swing.admin;
 import org.db.manage.Sorting;
 import org.db.manage.ToStrings;
 import org.file.Writing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -74,6 +75,7 @@ public class ShowQ extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
 
         sets = new ArrayList<>();
         def = new DefaultListModel<>();

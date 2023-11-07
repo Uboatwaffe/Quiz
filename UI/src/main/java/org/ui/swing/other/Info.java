@@ -1,9 +1,10 @@
 package org.ui.swing.other;
 
+import org.db.connecting.SQL;
 import org.db.manage.HowMany;
-import org.db.manage.SQL;
 import org.file.Writing;
 import org.score.Count;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -72,6 +73,7 @@ public class Info extends JFrame {
         setTitle("Info");
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
 
         last_score.setText("Last score: " + Count.getCount());
         set.setText("Current set id: " + SQL.getCurrentTable());

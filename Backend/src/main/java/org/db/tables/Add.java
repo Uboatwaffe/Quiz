@@ -1,7 +1,7 @@
 package org.db.tables;
 
 import org.db.connecting.Connection;
-import org.db.manage.SQL;
+import org.db.connecting.SQL;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -47,7 +47,7 @@ public final class Add{
             SQL.setCurrentTable(SQL.getAllTables()[SQL.getAllTables().length-1]);
         } catch (Exception ignore) {
             writing.writeLog(Add.class, " -> ExceptionUI");
-            new ExceptionUI(Add.class);
+            new ExceptionUI(Add.class, "Something went wrong while adding new table to the database");
         }
     }
 }

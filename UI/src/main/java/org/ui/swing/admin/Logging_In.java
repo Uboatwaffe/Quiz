@@ -2,6 +2,7 @@ package org.ui.swing.admin;
 
 import org.db.connecting.LoggingIn;
 import org.file.Writing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -64,6 +65,7 @@ public class Logging_In extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         log_in.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

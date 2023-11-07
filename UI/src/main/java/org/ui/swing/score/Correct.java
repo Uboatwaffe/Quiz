@@ -2,6 +2,7 @@ package org.ui.swing.score;
 
 import org.file.Writing;
 import org.score.Count;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -58,6 +59,7 @@ public class Correct extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         close.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

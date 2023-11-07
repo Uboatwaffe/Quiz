@@ -2,6 +2,7 @@ package org.ui.swing.admin;
 
 import org.db.manage.Deleting;
 import org.file.Writing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -65,6 +66,7 @@ class DeleteQ extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         delete.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

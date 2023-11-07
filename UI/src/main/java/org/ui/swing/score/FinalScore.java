@@ -2,6 +2,7 @@ package org.ui.swing.score;
 
 import org.file.Writing;
 import org.ui.swing.MainSwing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -57,6 +58,7 @@ public class FinalScore extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
         iDoButton.addActionListener(new ActionListener() {
             /**
              * Invoked when an action occurs.

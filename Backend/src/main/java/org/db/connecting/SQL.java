@@ -1,6 +1,5 @@
-package org.db.manage;
+package org.db.connecting;
 
-import org.db.connecting.Connection;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -76,7 +75,7 @@ public class SQL {
             }
 
         } catch (Exception ignore) {
-            new ExceptionUI(SQL.class);
+            new ExceptionUI(SQL.class, "Something went wrong while getting all names of tables in database");
         }
 
         // Returns array

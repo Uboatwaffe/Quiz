@@ -1,7 +1,8 @@
 package org.ui.swing.admin.other.table;
 
-import org.db.manage.SQL;
+import org.db.connecting.SQL;
 import org.file.Writing;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -81,6 +82,7 @@ public class ChangeTable extends JFrame {
         setSize(540, 170);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
 
         info.setText("Current set: " + SQL.getCurrentTable());
 

@@ -4,20 +4,6 @@ org.ui.Main: Constructor()
 org.ui.Main:  -> MainSwing
 org.ui.swing.MainSwing: Constructor()
 org.ui.Main: Hide
-org.ui.swing.MainSwing:  -> Tutorial
-org.ui.swing.tutorial.Tutorial: Constructor()
-org.ui.swing.tutorial.Tutorial:  <- Close
-org.ui.swing.MainSwing:  -> Info
-org.ui.swing.other.Info: Constructor()
-org.db.manage.SQL: Getting all tables names
-org.db.connecting.Connection: Establishing connection to DB
-org.db.connecting.Data: Getting all data from DB
-org.db.connecting.Connection: Establishing connection to DB
-org.db.manage.HowMany: Counts how many records
-org.ui.swing.other.Info:  <- Closing
-org.ui.swing.MainSwing:  -> Credits
-org.ui.swing.other.Credits: Constructor()
-org.ui.swing.other.Credits:  <- Close
 org.ui.swing.MainSwing:  -> Main
 org.ui.Main: Constructor()
 org.ui.Main: Showing main

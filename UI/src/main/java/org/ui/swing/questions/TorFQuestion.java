@@ -3,6 +3,7 @@ package org.ui.swing.questions;
 import org.file.Writing;
 import org.score.Count;
 import org.ui.swing.score.Correct;
+import org.uiProperties.Properties;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -72,6 +73,7 @@ public class TorFQuestion extends JFrame implements ActionListener {
         setSize(540, 210);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
+        setResizable(Properties.getScalable());
 
         trueButton.addActionListener(this);
         falseButton.addActionListener(this);
