@@ -43,7 +43,6 @@
 - Be sure that you have java compiler present (java --version)
 - Download the newest release from GitHub
 - Open the .zip file in some folder then open it with Intellij IDEA
-- Correct the path in the pom.xml's to the JDBC
 - Rebuild the project
 - Run it
 
