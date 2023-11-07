@@ -28,7 +28,7 @@
  * @see org.db.manage.Sorting
  * @see org.db.manage.StringOperations
  * @see org.db.manage.ChangePassword
- * @see org.db.manage.SQL
+ * @see org.db.connecting.SQL
  * @see org.db.manage.ToStrings
  * @author Maciej
  * @version 0.1

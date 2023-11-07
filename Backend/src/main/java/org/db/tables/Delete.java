@@ -1,7 +1,8 @@
 package org.db.tables;
 
+import org.annotation.DataBase;
 import org.db.connecting.Connection;
-import org.db.manage.SQL;
+import org.db.connecting.SQL;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -13,6 +14,7 @@ import java.sql.PreparedStatement;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
+@DataBase
 public class Delete{
 
     /**
@@ -47,7 +49,7 @@ public class Delete{
             SQL.setCurrentTable(SQL.getAllTables()[0]);
         } catch (Exception ignore) {
             writing.writeLog(Delete.class, " -> ExceptionUI");
-            new ExceptionUI(Delete.class);
+            new ExceptionUI(Delete.class, "Something went wrong while deleting table from database");
         }
     }
 }

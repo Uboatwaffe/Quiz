@@ -1,6 +1,8 @@
 package org.db.manage;
 
+import org.annotation.DataBase;
 import org.db.connecting.Connection;
+import org.db.connecting.SQL;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -12,6 +14,7 @@ import java.sql.PreparedStatement;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
+@DataBase
 public class Deleting{
 
     /**
@@ -41,7 +44,7 @@ public class Deleting{
             statement.executeUpdate();
         } catch (Exception ignore) {
             writing.writeLog(Deleting.class, " -> ExceptionUI");
-            new ExceptionUI(Deleting.class);
+            new ExceptionUI(Deleting.class, "Something went wrong while deleting question from the database");
         }
 
 

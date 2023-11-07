@@ -58,7 +58,7 @@ public class Sorting {
             }
         } catch (Exception ignore) {
             writing.writeLog(Sorting.class, " -> ExceptionUI");
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Something went wrong while sorting the data");
         }
     }
 }

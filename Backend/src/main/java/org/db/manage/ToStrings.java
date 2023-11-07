@@ -46,7 +46,7 @@ public class ToStrings {
                 db[i++] = resultSet.getString("id") + ") " + resultSet.getString("question");
             }
         } catch (Exception ignore) {
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Something went wrong while getting all questions");
         }
         // Returns array
         return db;
@@ -79,7 +79,7 @@ public class ToStrings {
             }
         }catch (SQLException ignore){
             writing.writeLog(ToStrings.class, " -> ExceptionUI");
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Something went wrong while getting all answers");
         }
 
         // Returns array

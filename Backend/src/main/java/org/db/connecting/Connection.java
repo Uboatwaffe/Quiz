@@ -1,5 +1,6 @@
 package org.db.connecting;
 
+import org.annotation.DataBase;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -10,6 +11,8 @@ import java.sql.DriverManager;
  * @author Maciej
  * @version 0.1
  */
+
+@DataBase
 public final class Connection {
 
     /**
@@ -36,7 +39,7 @@ public final class Connection {
             writing.writeLog(Connection.class, " -> ExceptionUI");
 
             // If something went wrong informs user about this
-            new ExceptionUI(Connection.class);
+            new ExceptionUI(Connection.class, "Something went wrong when establishing connection to the database");
 
             // Doesn't return connection
             return null;

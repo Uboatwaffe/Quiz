@@ -8,7 +8,7 @@
       <element id="module-output" name="UI" />
       <element id="module-output" name="Exceptions" />
       <element id="module-output" name="Backend" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/lib/JDBC.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/UI/lib/JDBC.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

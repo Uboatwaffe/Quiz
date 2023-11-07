@@ -7,6 +7,7 @@
 module Backend {
     requires java.sql;
     requires transitive Exceptions;
+    exports org.uiProperties to UI;
     exports org.db.connecting to UI;
     exports org.db.manage to UI;
     exports org.db.tables to UI;
@@ -14,4 +15,5 @@ module Backend {
     exports org.db.interfaces to UI;
     exports org.score to UI;
     exports org.file to UI;
+    exports org.annotation;
 }

@@ -1,6 +1,8 @@
 package org.db.manage;
 
+import org.annotation.DataBase;
 import org.db.connecting.Connection;
+import org.db.connecting.SQL;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
 
@@ -12,6 +14,7 @@ import java.sql.PreparedStatement;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
+@DataBase
 public final class Adding{
 
     /**
@@ -48,7 +51,7 @@ public final class Adding{
             statement.executeUpdate();
         } catch (Exception ignore) {
             writing.writeLog(Adding.class, " -> ExceptionUI");
-            new ExceptionUI(Adding.class);
+            new ExceptionUI(Adding.class, "Something went wrong while inserting new question to the database");
         }
     }
 

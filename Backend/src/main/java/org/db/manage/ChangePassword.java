@@ -1,5 +1,6 @@
 package org.db.manage;
 
+import org.annotation.DataBase;
 import org.db.connecting.Connection;
 import org.exceptions.ui.ExceptionUI;
 import org.file.Writing;
@@ -12,6 +13,7 @@ import java.sql.PreparedStatement;
  * @version 0.1
  */
 @SuppressWarnings("DataFlowIssue")
+@DataBase
 public class ChangePassword {
 
     /**
@@ -38,7 +40,7 @@ public class ChangePassword {
             statement.executeUpdate();
         } catch (Exception ignore) {
             writing.writeLog(Deleting.class, " -> ExceptionUI");
-            new ExceptionUI(ChangePassword.class);
+            new ExceptionUI(ChangePassword.class, "Something went wrong when inserting new values into the database");
         }
     }
 }

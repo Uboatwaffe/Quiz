@@ -1,9 +1,9 @@
 package org.db.reset;
 
+import org.db.connecting.SQL;
 import org.db.manage.Adding;
 import org.db.manage.ChangePassword;
 import org.db.manage.Deleting;
-import org.db.manage.SQL;
 import org.db.tables.Delete;
 import org.file.Writing;
 

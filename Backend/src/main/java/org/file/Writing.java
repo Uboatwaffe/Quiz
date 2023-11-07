@@ -18,7 +18,7 @@ public class Writing {
      * @param message Text that will be put into the file
      */
     public void writeLog(Class<?> ob, String message) {
-        try(PrintWriter out = new PrintWriter(new FileWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfessional\\Quiz\\Backend\\src\\main\\resources\\log.txt", true))){
+        try (PrintWriter out = new PrintWriter(new FileWriter("Backend\\src\\main\\resources\\log.txt", true))) {
             // Prints name of the class
             out.print(ob.getName() + ": ");
 
@@ -28,7 +28,7 @@ public class Writing {
             // Prints empty line
             out.println();
         } catch (Exception ignore) {
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Couldn't find file or couldn't print anything out");
         }
     }
 
@@ -36,11 +36,11 @@ public class Writing {
      * Clears whole file
      */
     public void clear(){
-        try(PrintWriter out = new PrintWriter("C:\\Users\\PC\\Desktop\\Maciek\\JavaProfessional\\Quiz\\Backend\\src\\main\\resources\\log.txt")) {
+        try (PrintWriter out = new PrintWriter("Backend\\src\\main\\resources\\log.txt")) {
             // Clears whole file
             out.println("");
         } catch (Exception ignore) {
-            new ExceptionUI(getClass());
+            new ExceptionUI(getClass(), "Couldn't find file or couldn't print anything out");
         }
     }
 }

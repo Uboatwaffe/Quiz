@@ -1,2 +1,10 @@
 
-org.ui.Main: Start program
+org.ui.Main: Starting program
+org.ui.Main: Constructor()
+org.ui.Main:  -> MainSwing
+org.ui.swing.MainSwing: Constructor()
+org.ui.Main: Hide
+org.ui.swing.MainSwing:  -> Main
+org.ui.Main: Constructor()
+org.ui.Main: Showing main
+org.ui.Main:  <- EXIT

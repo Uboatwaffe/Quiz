@@ -1,37 +1,7 @@
 /**
- * Package that have
- * <ul>
- *     <li>
- *         Other packages
- *         <ul>
- *             <li>
- *                 {@code admin}
- *                 <ul>
- *                     <li>
- *                         {@code others}
- *                     </li>
- *                 </ul>
- *             </li>
- *             <li>
- *                 {@code hq}
- *             </li>
- *             <li>
- *                 {@code questions}
- *             </li>
- *             <li>
- *                 {@code score}
- *             </li>
- *             <li>
- *                 {@code tutorial}
- *             </li>
- *         </ul>
- *     </li>
- *     <li>
- *         Main class ({@code Main.java})
- *     </li>
- * </ul>
+ * Main package that contains Main file and two sub-packages
  * @see org.ui.Main
+ * @version 0.2
  * @author Maciej
- * @version 0.1
  */
 package org.ui;
