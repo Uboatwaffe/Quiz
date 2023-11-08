@@ -11,6 +11,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/*
+!!! This is final version!!!
+Released on 8th November 2023 at 20:23
+ */
+
 /**
  * Main class
  *
