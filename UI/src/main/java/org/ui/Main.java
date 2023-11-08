@@ -4,6 +4,7 @@ import org.annotation.UI;
 import org.exceptions.file.ERRORS;
 import org.file.Writing;
 import org.ui.swing.MainSwing;
+import org.ui.swing.debuging.Debugging;
 import org.uiProperties.Properties;
 
 import javax.swing.*;
@@ -67,6 +68,10 @@ public class Main extends JFrame {
      * Content of the frame
      */
     private JLabel GUI;
+
+    /**
+     * Content of the frame
+     */
     private JButton setUpDebugButton;
 
     /**
@@ -113,7 +118,8 @@ public class Main extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new Debugging();
+                setVisible(false);
             }
         });
     }

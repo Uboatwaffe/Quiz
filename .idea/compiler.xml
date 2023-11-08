@@ -13,6 +13,7 @@
     <bytecodeTargetLevel>
       <module name="Connecting" target="20" />
       <module name="Connection" target="20" />
+      <module name="DB" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>
