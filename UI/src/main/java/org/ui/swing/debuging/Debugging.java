@@ -17,15 +17,39 @@ import java.io.IOException;
  * @version 0.1
  */
 public class Debugging extends JFrame {
+
+    /**
+     * Field that returns properties to default if any change wasn't made
+     */
+    Boolean change = false;
+    /**
+     * Content of the frame
+     */
     private JPanel panel;
+    /**
+     * Content of the frame
+     */
     private JButton errorsButton;
+    /**
+     * Content of the frame
+     */
     private JButton logButton;
+    /**
+     * Content of the frame
+     */
     private JButton closeButton;
+    /**
+     * Content of the frame
+     */
     private JCheckBox resizable;
+    /**
+     * Content of the frame
+     */
     private JLabel welcome;
 
-    Boolean change = false;
-
+    /**
+     * Constructor
+     */
     public Debugging() {
         setContentPane(panel);
         setTitle("Debugging");

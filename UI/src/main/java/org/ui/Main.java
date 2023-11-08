@@ -68,6 +68,10 @@ public class Main extends JFrame {
      * Content of the frame
      */
     private JLabel GUI;
+
+    /**
+     * Content of the frame
+     */
     private JButton setUpDebugButton;
 
     /**
