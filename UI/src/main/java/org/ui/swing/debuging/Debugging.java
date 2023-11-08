@@ -1,10 +1,14 @@
 package org.ui.swing.debuging;
 
+import org.exceptions.ui.ExceptionUI;
 import org.ui.Main;
 import org.uiProperties.Properties;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Class that allows to manipulate properties and makes debugging easier
@@ -20,10 +24,12 @@ public class Debugging extends JFrame {
     private JCheckBox resizable;
     private JLabel welcome;
 
+    Boolean change = false;
+
     public Debugging() {
         setContentPane(panel);
         setTitle("Debugging");
-        setSize(540, 170);
+        setSize(540, 230);
         setDefaultCloseOperation(HIDE_ON_CLOSE);
         setVisible(true);
         setResizable(Properties.getScalable());
@@ -37,7 +43,8 @@ public class Debugging extends JFrame {
              */
             @Override
             public void itemStateChanged(ItemEvent e) {
-                System.out.println(e.getStateChange());
+                Properties.setScalable(e.getStateChange() == ItemEvent.SELECTED);
+                change = true;
             }
         });
         logButton.addActionListener(new ActionListener() {
@@ -48,7 +55,11 @@ public class Debugging extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    openInBrowser("Backend\\src\\main\\resources\\log.txt");
+                } catch (IOException ignore) {
+                    new ExceptionUI(Debugging.class, "Couldn't open file");
+                }
             }
         });
         errorsButton.addActionListener(new ActionListener() {
@@ -59,7 +70,11 @@ public class Debugging extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                try {
+                    openInBrowser("Exceptions\\src\\main\\resources\\errors.txt");
+                } catch (IOException ignore) {
+                    new ExceptionUI(Debugging.class, "Couldn't open file");
+                }
             }
         });
         closeButton.addActionListener(new ActionListener() {
@@ -70,10 +85,24 @@ public class Debugging extends JFrame {
              */
             @Override
             public void actionPerformed(ActionEvent e) {
+                if (!change) {
+                    Properties.setScalable(false);
+                }
                 Main main = new Main();
                 main.showMain();
                 dispatchEvent(new WindowEvent(Debugging.this, WindowEvent.WINDOW_CLOSING));
             }
         });
+    }
+
+    /**
+     * Method that opens index.html in browser
+     *
+     * @param url path to the file
+     * @throws IOException throws when error occurs
+     */
+    public static void openInBrowser(String url) throws IOException {
+        File file = new File(url);
+        Desktop.getDesktop().browse(file.toURI());
     }
 }

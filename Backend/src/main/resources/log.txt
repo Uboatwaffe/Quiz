@@ -1,2 +1,12 @@
 
-org.ui.Main: Start program
+org.ui.Main: Starting program
+org.ui.Main: Constructor()
+org.ui.Main: Constructor()
+org.ui.Main: Showing main
+org.ui.Main: Constructor()
+org.ui.Main: Showing main
+org.ui.Main: Constructor()
+org.ui.Main: Showing main
+org.ui.Main: Constructor()
+org.ui.Main: Showing main
+org.ui.Main:  <- EXIT
